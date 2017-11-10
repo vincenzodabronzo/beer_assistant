@@ -19,6 +19,8 @@
 		
 		$(document).ready(function() {
 
+			var update_graph = false;
+			
 			$('#stop').hide();
 			
 			setInterval(function() {
@@ -57,33 +59,37 @@
 			 
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
-				$('#start').click( function(){        
+				$('#start').click( function(){
+					update_graph = true;     
 					doUpdate();      
 					$(this).hide();
 					$('#stop').show();
 			   });
-				$('#stop').click( function(){             
-				      $(this).hide();
-				      $('#start').show();
+				$('#stop').click( function(){
+					update_graph = false;       
+					$(this).hide();
+					$('#start').show();
 				});
 			   
 			 
-			   function doUpdate() {      
-			      if(data.length > n-1){
-			         data.shift();
-			      }
-			      var y = Math.random()*100;
-			      var x = (new Date()).getTime();
-			      data.push([x,y]);
-			      if (plot1) {
-			    	plot1.destroy();
-			      }
-			      plot1.series[0].data = data; 
-			      options.axes.xaxis.min = data[0][0];
-			      options.axes.xaxis.max = data[data.length-1][0];
-			      plot1 = $.jqplot ('myChart', [data],options);
-
-			      setTimeout(doUpdate, t);
+				function doUpdate() {
+					if (update_graph) {
+						if(data.length > n-1){
+							data.shift();
+						}
+    					var y = Math.random()*100;
+    					var x = (new Date()).getTime();
+    					data.push([x,y]);
+    					if (plot1) {
+    						plot1.destroy();
+    					}
+    					plot1.series[0].data = data; 
+    					options.axes.xaxis.min = data[0][0];
+    					options.axes.xaxis.max = data[data.length-1][0];
+    					plot1 = $.jqplot ('myChart', [data],options);
+    
+    					setTimeout(doUpdate, t);
+					}
 			   }
 
 			
