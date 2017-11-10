@@ -22,10 +22,9 @@
 			var update_graph = false;
 			
 			$('#stop').hide();
-			
-			setInterval(function() {
-				$('#show').load('lib/data.php');
-			}, t );
+
+			// Old function to get Data from php library
+			// setInterval(function() { }, t );
 			
 			var x = (new Date()).getTime(); // current time
 			
@@ -74,6 +73,9 @@
 			 
 				function doUpdate() {
 					if (update_graph) {
+
+						$('#show').load('lib/data.php');
+						
 						if(data.length > n-1){
 							data.shift();
 						}
