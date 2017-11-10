@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
     <script type="text/javascript" src="js/jqplot.canvasAxisLabelRendener.js"></script>
-    <script type="text/javascript" src="js/jqplot.canvasAxisTickRenderer.js"></script>
+    <script type="text/javascript" src="js/jqplot.canvasAxisTickRendener.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
     
