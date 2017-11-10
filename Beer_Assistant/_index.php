@@ -7,7 +7,9 @@
     
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="js/jqplot.dateAxisRemderer.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
+	
     
     <script type="text/javascript">
 		$(document).ready(function() {
