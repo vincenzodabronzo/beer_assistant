@@ -15,9 +15,11 @@
 
     	// 1 sec interval
     	var t = 2000;
-    	$('#stop').hide();
+    	
 		
 		$(document).ready(function() {
+
+			$('#stop').hide();
 			
 			setInterval(function() {
 				$('#show').load('lib/data.php');
@@ -105,8 +107,8 @@
 <body>
     <div id="myChart" style="height:400px; width:600px; "></div>
     <br><br>
-    <div id="start" data-role="button">Start Updates</div>
-    <div id="stop" data-role="button">Stop Updates</div>
+    <button id="start" data-role="button">Start Updates</button>
+    <button id="stop" data-role="button">Stop Updates</button>
     <br>
     <div id="show"></div>
 
