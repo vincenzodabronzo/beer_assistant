@@ -54,7 +54,7 @@
 			            min: -10, 
 			            max: 120,
 			            numberTicks: 14,   	        
-			            tickOptions:{formatString:'%.1f'}  	 
+			            tickOptions:{formatString:'%.1f'},
 						label:'Temperature Celsius'   
 					}      
 			      },      
