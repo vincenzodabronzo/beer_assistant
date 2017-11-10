@@ -55,11 +55,16 @@
 			 
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
-			   $('button').click( function(){        
-			      doUpdate();      
-			      $(this).hide();
-			      $('stop').show();
+				$('start').click( function(){        
+					doUpdate();      
+					$(this).hide();
+					$('stop').show();
 			   });
+				$('stop').click( function(){             
+				      $(this).hide();
+				      $('start').show();
+				});
+			   
 			 
 			   function doUpdate() {      
 			      if(data.length > n-1){
@@ -86,8 +91,8 @@
     
     <div id="myChart" style="height:400px; width:600px; "></div>
     <br><br>
-    <button>Start Updates</button>
-    <button id="stop">Stop Updates</button>
+    <button id='start'>Start Updates</button>
+    <button id='stop'>Stop Updates</button>
     <br>
     
     <!--  Chart Example 2
