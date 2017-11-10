@@ -54,7 +54,7 @@
 			   });
 			 
 			   function doUpdate() {      
-			      if(data.length &gt; n-1){
+			      if(data.length > n-1){
 			         data.shift();
 			      }
 			      var y = Math.random();
