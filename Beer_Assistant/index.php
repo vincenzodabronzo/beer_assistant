@@ -17,7 +17,7 @@
     
     <!--  Plotting graph -->
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	    
     
