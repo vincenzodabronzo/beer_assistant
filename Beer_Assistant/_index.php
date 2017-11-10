@@ -45,7 +45,7 @@
 			            max: data[data.length-1][0] 	   
 			         }, 	    
 			         yaxis: {
-			        	 tickOptions: { formatString: "°C%'d"  },
+			        	tickOptions: { formatString: "°C%'d"  },
 			            min: -10, 
 			            max: 120,
 			            numberTicks: 14,   	        
