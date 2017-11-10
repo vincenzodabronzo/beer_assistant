@@ -12,13 +12,16 @@
 	
     
     <script type="text/javascript">
+
+    	// 1 sec interval
+    	var t = 2000;
+		
 		$(document).ready(function() {
 			
 			setInterval(function() {
 				$('#show').load('lib/data.php');
-			}, 1000 );
+			}, t );
 			
-			var t = 2000;
 			var x = (new Date()).getTime(); // current time
 			
 			var n = 20;
@@ -70,6 +73,7 @@
 			      options.axes.xaxis.min = data[0][0];
 			      options.axes.xaxis.max = data[data.length-1][0];
 			      plot1 = $.jqplot ('myChart', [data],options);
+
 			      setTimeout(doUpdate, t);
 			   }
 
