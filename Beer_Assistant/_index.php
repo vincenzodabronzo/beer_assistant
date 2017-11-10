@@ -50,7 +50,8 @@
 			         }, 	    
 			         yaxis: {
 				        	label:'Temperature Celsius',
-			        	tickOptions: { formatString: "°C%'d"  },
+				        	labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+			        	// tickOptions: { formatString: "°C%'d"  },
 			            min: -10, 
 			            max: 120,
 			            numberTicks: 14,   	        
