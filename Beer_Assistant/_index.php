@@ -41,8 +41,7 @@
 			
 			var options = {      
 			      axes: {   	    
-			         xaxis: {   
-			        	label:'Temperature °C',  	   
+			         xaxis: {     	   
 			            numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{formatString:'%H:%M:%S'},            
@@ -50,6 +49,7 @@
 			            max: data[data.length-1][0] 	   
 			         }, 	    
 			         yaxis: {
+				        	label:'Temperature Celsius',
 			        	tickOptions: { formatString: "°C%'d"  },
 			            min: -10, 
 			            max: 120,
