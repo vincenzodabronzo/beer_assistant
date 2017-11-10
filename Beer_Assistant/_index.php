@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
+    <script type="text/javascript" src="js/jqplot.canvasAxisLabelRendener.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
     
@@ -38,7 +39,9 @@
 			
 			var options = {      
 			      axes: {   	    
-			         xaxis: {   	   	   
+			         xaxis: {   
+			        	label:'Temperature °C',
+			        	labelRenderer: $.jqplot.CanvasAxisLabelRenderer,   	   
 			            numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{formatString:'%H:%M:%S'},            
