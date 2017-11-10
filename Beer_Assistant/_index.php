@@ -60,7 +60,7 @@
 			      if(data.length > n-1){
 			         data.shift();
 			      }
-			      var y = Math.random();
+			      var y = Math.random()*100;
 			      var x = (new Date()).getTime();
 			      data.push([x,y]);
 			      if (plot1) {
