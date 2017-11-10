@@ -42,8 +42,7 @@
 			var options = {      
 			      axes: {   	    
 			         xaxis: {   
-			        	label:'Temperature °C',
-			        	labelRenderer: $.jqplot.CanvasAxisLabelRenderer,   	   
+			        	label:'Temperature °C',  	   
 			            numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{formatString:'%H:%M:%S'},            
