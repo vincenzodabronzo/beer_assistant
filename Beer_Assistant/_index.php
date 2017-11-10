@@ -43,14 +43,15 @@
 			var options = {      
 			      axes: {   	    
 			         xaxis: {     	   
-			            numberTicks: 10,            
+			        	tickRenderer:$.jqplot.CanvasAxisTickRenderer,
+				        numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{formatString:'%H:%M:%S'},            
 			            min : data[0][0],           
-			            max: data[data.length-1][0] 	   
+			            max: data[data.length-1][0],
+			            label:'Time'	   
 					}, 	    
 					yaxis: {
-						tickRenderer:$.jqplot.CanvasAxisTickRenderer,
 						labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
 			            min: -10, 
 			            max: 120,
