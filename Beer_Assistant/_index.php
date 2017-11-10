@@ -31,7 +31,7 @@
 			var options = {      
 			      axes: {   	    
 			         xaxis: {   	   	   
-			            numberTicks: 4,            
+			            numberTicks: 100,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{formatString:'%H:%M:%S'},            
 			            min : data[0][0],           
@@ -78,7 +78,7 @@
     </script>
     
     
-    <div id="myChart" style="height:400px; width:300px; "></div>
+    <div id="myChart" style="height:400px; width:600px; "></div>
     <br><br>
     <button>Start Updates</button>
     <br>
