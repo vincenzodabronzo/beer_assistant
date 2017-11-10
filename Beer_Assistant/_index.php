@@ -88,13 +88,6 @@
 		});
     </script>
     
-    
-    <div id="myChart" style="height:400px; width:600px; "></div>
-    <br><br>
-    <button id='start'>Start Updates</button>
-    <button id='stop'>Stop Updates</button>
-    <br>
-    
     <!--  Chart Example 2
     <div id="chartdiv" style="height:400px; width:300px; "></div>
     <script type="text/javascript">
@@ -110,6 +103,11 @@
 </head>
 
 <body>
+    <div id="myChart" style="height:400px; width:600px; "></div>
+    <br><br>
+    <div id="start" data-role="button">Start Updates</div>
+    <div id="stop" data-role="button">Stop Updates</div>
+    <br>
     <div id="show"></div>
 
 </body>
