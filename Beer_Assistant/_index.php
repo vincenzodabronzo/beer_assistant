@@ -20,6 +20,7 @@
 			
 			var t = 2000;
 			var x = (new Date()).getTime(); // current time
+			
 			var n = 20;
 			data = [];
 			
@@ -37,10 +38,10 @@
 			            max: data[data.length-1][0] 	   
 			         }, 	    
 			         yaxis: {
-			            min:0, 
-			            max: 1,
-			            numberTicks: 6,   	        
-			            tickOptions:{formatString:'%.1f'}  	    
+			            min: -10, 
+			            max: 120,
+			            numberTicks: 13,   	        
+			            tickOptions:{formatString:'%1f'}  	    
 			         }      
 			      },      
 			      seriesDefaults: {   	    
@@ -78,8 +79,9 @@
     
     
     <div id="myChart" style="height:400px; width:300px; "></div>
+    <br><br>
     <button>Start Updates</button>
-    
+    <br>
     <!--  Chart Example 2
     <div id="chartdiv" style="height:400px; width:300px; "></div>
     <script type="text/javascript">
