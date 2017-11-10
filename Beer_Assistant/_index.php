@@ -8,13 +8,14 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>
+    <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
     
     <script type="text/javascript">
 
-    	// 5 sec interval
-    	var t = 5000;
+    	// 1 sec interval
+    	var t = 1000;
     	
 		
 		$(document).ready(function() {
