@@ -52,7 +52,10 @@
 			         }      
 			      },      
 			      seriesDefaults: {   	    
-			         rendererOptions: { smooth: true}      
+			    	  pointLabels: {
+		                    show: true
+		                },
+				         rendererOptions: { smooth: true}      
 			      }  
 			  };  
 			 
