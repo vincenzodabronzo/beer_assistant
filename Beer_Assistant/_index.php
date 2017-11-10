@@ -31,7 +31,7 @@
 			var options = {      
 			      axes: {   	    
 			         xaxis: {   	   	   
-			            numberTicks: 100,            
+			            numberTicks: 20,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{formatString:'%H:%M:%S'},            
 			            min : data[0][0],           
