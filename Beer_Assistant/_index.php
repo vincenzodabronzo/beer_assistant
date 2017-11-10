@@ -47,16 +47,16 @@
 			            tickOptions:{formatString:'%H:%M:%S'},            
 			            min : data[0][0],           
 			            max: data[data.length-1][0] 	   
-			         }, 	    
-			         yaxis: {
-				        	label:'Temperature Celsius',
-				        	labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-			        	// tickOptions: { formatString: "°C%'d"  },
+					}, 	    
+					yaxis: {
+						tickRenderer:$.jqplot.CanvasAxisTickRenderer,
+						labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
 			            min: -10, 
 			            max: 120,
 			            numberTicks: 14,   	        
-			            tickOptions:{formatString:'%.1f'}  	    
-			         }      
+			            tickOptions:{formatString:'%.1f'}  	 
+						label:'Temperature Celsius'   
+					}      
 			      },      
 			      seriesDefaults: {   	    
 			    	  pointLabels: {
