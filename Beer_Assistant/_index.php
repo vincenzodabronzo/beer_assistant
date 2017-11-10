@@ -13,8 +13,8 @@
     
     <script type="text/javascript">
 
-    	// 1 sec interval
-    	var t = 2000;
+    	// 5 sec interval
+    	var t = 5000;
     	
 		
 		$(document).ready(function() {
