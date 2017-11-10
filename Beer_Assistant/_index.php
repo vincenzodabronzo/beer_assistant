@@ -11,6 +11,7 @@
     <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
     <script type="text/javascript" src="js/jqplot.canvasAxisLabelRendener.js"></script>
     <script type="text/javascript" src="js/jqplot.canvasAxisTickRendener.js"></script>
+    <script type="text/javascript" src="js/jqplot.canvasOverlay.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
     
