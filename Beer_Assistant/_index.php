@@ -96,11 +96,6 @@
 
 <body>
     <div id="show"></div>
-    
-    <?php
-    
-    
-    ?>
 
 </body>
 
