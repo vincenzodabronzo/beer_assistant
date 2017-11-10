@@ -11,6 +11,7 @@
     
     <script type="text/javascript">
 		$(document).ready(function() {
+			
 			setInterval(function() {
 				$('#show').load('lib/data.php');
 			}, 1000 );
@@ -19,9 +20,11 @@
 			var x = (new Date()).getTime(); // current time
 			var n = 20;
 			data = [];
-			for(i=0; i&lt;n; i++){  
+			
+			for(i=0; i<n; i++){  
 			    data.push([x - (n-1-i)*t,0]);  
 			}   
+			
 			var options = {      
 			      axes: {   	    
 			         xaxis: {   	   	   
@@ -41,7 +44,7 @@
 			      seriesDefaults: {   	    
 			         rendererOptions: { smooth: true}      
 			      }  
-			   };  
+			  };  
 			 
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
@@ -73,6 +76,7 @@
     
     
     <div id="myChart" style="height:400px; width:300px; "></div>
+    <button>Start Updates</button>
     
     <!--  Chart Example 2
     <div id="chartdiv" style="height:400px; width:300px; "></div>
