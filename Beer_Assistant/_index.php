@@ -15,6 +15,7 @@
 
     	// 1 sec interval
     	var t = 2000;
+    	$('stop').hide();
 		
 		$(document).ready(function() {
 			
@@ -56,7 +57,8 @@
 			 
 			   $('button').click( function(){        
 			      doUpdate();      
-			      $(this).hide();  
+			      $(this).hide();
+			      $('stop').show();
 			   });
 			 
 			   function doUpdate() {      
@@ -85,7 +87,9 @@
     <div id="myChart" style="height:400px; width:600px; "></div>
     <br><br>
     <button>Start Updates</button>
+    <button id="stop">Stop Updates</button>
     <br>
+    
     <!--  Chart Example 2
     <div id="chartdiv" style="height:400px; width:300px; "></div>
     <script type="text/javascript">
