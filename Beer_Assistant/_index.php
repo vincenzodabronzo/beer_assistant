@@ -15,7 +15,7 @@
 
     	// 1 sec interval
     	var t = 2000;
-    	$('stop').hide();
+    	$('#stop').hide();
 		
 		$(document).ready(function() {
 			
@@ -55,14 +55,14 @@
 			 
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
-				$('start').click( function(){        
+				$('#start').click( function(){        
 					doUpdate();      
 					$(this).hide();
-					$('stop').show();
+					$('#stop').show();
 			   });
-				$('stop').click( function(){             
+				$('#stop').click( function(){             
 				      $(this).hide();
-				      $('start').show();
+				      $('#start').show();
 				});
 			   
 			 
