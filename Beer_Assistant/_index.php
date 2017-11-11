@@ -100,6 +100,8 @@
 						// var dir = loc.substring(0, loc.lastIndexOf('/'));
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
+						<?php shell_exec("python py/temp_mashing_nosensor_v1_3.py > /dev/null 2>/dev/null &"); ?>
+						
 						$('#show').load('lib/data.php');
 						
 						if(data.length > n-1){
