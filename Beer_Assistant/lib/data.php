@@ -9,7 +9,7 @@
     }
     
     #$result = $dbconn->query("SELECT temperature FROM temp_mashing", $query);
-    $result = $dbconn->query("SELECT * FROM temp_mashing ORDER BY timestamp DESC LIMIT 1", $query);
+    $result = $dbconn->query("SELECT * FROM temp_mashing ORDER BY timestamp DESC LIMIT 1");
     
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
