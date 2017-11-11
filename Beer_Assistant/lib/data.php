@@ -1,5 +1,6 @@
 <?php
-    
+    ini_set('display_errors', 'On');
+
     exec("python ../py/temp_mashing_nosensor_v1_3.py &");
 
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
