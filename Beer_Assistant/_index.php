@@ -71,7 +71,14 @@
 		                    show: true
 		                },
 				         rendererOptions: { smooth: true}      
-			      }  
+			      },
+			      highlighter: {
+			          show: true,
+			          sizeAdjust: 7.5
+			        },
+			        cursor: {
+			          show: false
+			        }
 			  };  
 			 
 			   var plot1 = $.jqplot ('myChart', [data],options); 
