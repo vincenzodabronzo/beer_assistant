@@ -110,7 +110,6 @@
 					}
 			   }
 
-				$('#myChart').toggleClass('fullscreen');
 			
 		});
     </script>
@@ -119,7 +118,7 @@
 </head>
 
 <body>
-    <div id="myChart" style="height:400px; width:600px; "></div>
+    <div id="myChart" style="height:400px; width:100%; "></div>
     <br><br>
     <button id="start" data-role="button">Start Mashing</button>
     <button id="stop" data-role="button">Mash out</button>
