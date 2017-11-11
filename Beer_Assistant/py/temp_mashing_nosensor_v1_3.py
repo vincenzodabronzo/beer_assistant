@@ -17,7 +17,7 @@ def getTemp():
     temp_c = random.randint(0,100)
     return round(temp_c,1)
  
-for n in range(1, 5):
+for n in range(1, 20):
     temp = getTemp()
     print temp
     
