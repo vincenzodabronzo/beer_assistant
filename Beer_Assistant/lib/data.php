@@ -10,9 +10,10 @@
     
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
-            echo 'Current Temperature: 
-                        <div id="mashng_temp">' . $row['temperature'] . '</div>
-                        <div id="current_timestamp">' . $row['timestamp'] . '</div>';
+            echo    'Temperature &deg;C: 
+                    <div id="mashng_temp">' . $row['temperature'] . '</div>
+                    Collected at:
+                    <div id="current_timestamp">' . $row['timestamp'] . '</div>';
         }
     }
     
