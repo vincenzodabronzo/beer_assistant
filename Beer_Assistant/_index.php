@@ -99,13 +99,11 @@
 						var loc = window.location.pathname;
 						var dir = loc.substring(0, loc.lastIndexOf('/'));
 						var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
-
-						alert(dir);
 						
 						$('#show').load('lib/data.php');
 
 						$.ajax({
-							   url: path
+							   url: '/beer_assistant/Beer_Assistant/py/temp_mashing_nosensor_v1_3.py'
 							   // success: function(response) {
 							     // here you do whatever you want with the response variable
 							   // }
