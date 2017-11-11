@@ -74,7 +74,7 @@
 			      },
 			      highlighter: {
 			          show: true,
-			          shadow:false,
+			          shadow: true,
 			          sizeAdjust: 7.5
 			        },
 			        cursor: {
