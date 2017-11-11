@@ -103,7 +103,7 @@
 						$('#show').load('lib/data.php');
 
 						$.ajax({
-							   url: 'beer_assistant/Beer_Assistant/py/temp_mashing_nosensor_v1_3.py'
+							   url: 'py/temp_mashing_nosensor_v1_3.py'
 							   // success: function(response) {
 							     // here you do whatever you want with the response variable
 							   // }
