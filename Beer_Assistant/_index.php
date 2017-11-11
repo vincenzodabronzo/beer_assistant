@@ -97,6 +97,13 @@
 					if (update_graph) {
 
 						$('#show').load('lib/data.php');
+
+						$.ajax({
+							   url: "py/temp_mashing_nosensor_v1_3.py",
+							   // success: function(response) {
+							     // here you do whatever you want with the response variable
+							   // }
+						});
 						
 						if(data.length > n-1){
 							data.shift();
