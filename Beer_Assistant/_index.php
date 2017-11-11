@@ -44,10 +44,12 @@
 			      axes: {   	    
 			         xaxis: {     	   
 			        	tickRenderer:$.jqplot.CanvasAxisTickRenderer,
-				        numberTicks: 10,            
+				        numberTicks: 20,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
-				            	formatString:'%H:%M:%S'
+				            	formatString:'%H:%M:%S',
+				            	labelPosition: 'middle', 
+				                angle:-30
 						},            
 			            min : data[0][0],           
 			            max: data[data.length-1][0],
