@@ -134,6 +134,7 @@
     <button id="start" data-role="button">Start Mashing</button>
     <button id="stop" data-role="button">Mash out</button>
     <br>
+
     <div id="show"></div>
     
     <div id="myvalue"></div>
