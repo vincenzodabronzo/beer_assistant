@@ -47,9 +47,7 @@
 				        numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
-				            	formatString:'%H:%M:%S',
-				            	// labelPosition: 'middle',
-								angle:-90
+				            	formatString:'%H:%M:%S'
 						},            
 			            min : data[0][0],           
 			            max: data[data.length-1][0],
