@@ -102,7 +102,7 @@
 							data.shift();
 						}
     					// var y = Math.random()*100;
-						var y = $("#mashing_temp").text();
+						var y = $('#mashing_temp').text();
     					var x = (new Date()).getTime();
     					
     					data.push([x,y]);
