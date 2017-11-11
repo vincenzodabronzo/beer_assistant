@@ -46,7 +46,7 @@
 			      axes: {   	    
 			         xaxis: {     	   
 			        	tickRenderer:$.jqplot.CanvasAxisTickRenderer,
-				        numberTicks: 20,            
+				        numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
 				            	formatString:'%H:%M:%S',
@@ -74,7 +74,6 @@
 			      },
 			      highlighter: {
 			          show: true,
-			          shadow: true,
 			          sizeAdjust: 7.5
 			        },
 			        cursor: {
