@@ -21,7 +21,7 @@
     <script type="text/javascript">
 
     	//  microsec interval
-    	var t = 5000;
+    	var t = 3000;
     	
 		
 		$(document).ready(function() {
@@ -74,6 +74,7 @@
 			      },
 			      highlighter: {
 			          show: true,
+			          shadow:false,
 			          sizeAdjust: 7.5
 			        },
 			        cursor: {
