@@ -29,9 +29,6 @@
 			var update_graph = false;
 			
 			$('#stop').hide();
-
-			// Old function to get Data from php library
-			// setInterval(function() { }, t );
 			
 			var x = (new Date()).getTime(); // current time
 			
@@ -63,7 +60,7 @@
 			            max: 120,
 			            numberTicks: 14,   	        
 			            tickOptions:{formatString:'%.1f'},
-						label:'Temperature &deg;C'   
+						label:'Temperature Celsius'   
 					}      
 			      },      
 			      seriesDefaults: {   	    
@@ -100,14 +97,14 @@
 					if (update_graph) {
 
 						$('#show').load('lib/data.php');
-
-						$('#myvalue').text( $('#show').text() );
 						
 						if(data.length > n-1){
 							data.shift();
 						}
-    					var y = Math.random()*100;
+    					// var y = Math.random()*100;
+						var y = $("#mashing_temp").text();
     					var x = (new Date()).getTime();
+    					
     					data.push([x,y]);
     					if (plot1) {
     						plot1.destroy();
@@ -136,8 +133,6 @@
     <br>
 
     <div id="show"></div>
-    
-    <div id="myvalue"></div>
 
 </body>
 
