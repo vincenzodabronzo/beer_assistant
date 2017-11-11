@@ -49,7 +49,7 @@
 			            tickOptions:{
 				            	formatString:'%H:%M:%S',
 				            	// labelPosition: 'middle',
-								angle:-30
+								angle:-90
 						},            
 			            min : data[0][0],           
 			            max: data[data.length-1][0],
