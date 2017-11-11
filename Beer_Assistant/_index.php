@@ -110,6 +110,7 @@
 					}
 			   }
 
+				$('#myChart').toggleClass('fullscreen');
 			
 		});
     </script>
