@@ -100,6 +100,8 @@
 					if (update_graph) {
 
 						$('#show').load('lib/data.php');
+
+						$('#myvalue').text( $('#show').text() );
 						
 						if(data.length > n-1){
 							data.shift();
@@ -133,6 +135,8 @@
     <button id="stop" data-role="button">Mash out</button>
     <br>
     <div id="show"></div>
+    
+    <div id="myvalue"></div>
 
 </body>
 
