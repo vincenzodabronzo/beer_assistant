@@ -13,6 +13,8 @@
     <script type="text/javascript" src="js/jqplot.canvasTextRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.canvasAxisTickRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.canvasOverlay.js"></script>
+    <script type="text/javascript" src="js/plugins/jqplot.highlighter.js"></script>
+	<script type="text/javascript" src="js/plugins/jqplot.cursor.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
     
