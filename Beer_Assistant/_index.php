@@ -50,7 +50,7 @@
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
 				            	formatString:'%H:%M:%S',
-				            	labelPosition: 'middle', 
+				            	//labelPosition: 'middle', 
 				                angle:-30
 						},            
 			            min : data[0][0],           
