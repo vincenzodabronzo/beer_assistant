@@ -20,8 +20,8 @@
     
     <script type="text/javascript">
 
-    	// 1 sec interval
-    	var t = 1000;
+    	//  microsec interval
+    	var t = 5000;
     	
 		
 		$(document).ready(function() {
