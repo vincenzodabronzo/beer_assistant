@@ -1,7 +1,7 @@
 <?php
     ini_set('display_errors', 'On');
 
-    shell_exec("python ../py/temp_mashing_nosensor_v1_3.py &> /dev/null &");
+    shell_exec("python ../py/temp_mashing_nosensor_v1_3.py > /dev/null 2>/dev/null &");
 
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
     if($dbconn->connect_error) {
