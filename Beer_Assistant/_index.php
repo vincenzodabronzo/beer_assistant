@@ -113,7 +113,7 @@
 
     					// var x = (new Date()).getTime();
     					
-    					var ts = moment( $('#current_timestamp').text() ).add(1, 'hours').split(/[- :]/);
+    					var ts = moment( $('#current_timestamp').text() ).add(1, 'hours').toString().split(/[- :]/);
 
     					
 
