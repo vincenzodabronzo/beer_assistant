@@ -185,6 +185,7 @@
 	<div id="abort" class="band">
           <div class="wrapper">
             <!-- Layout tabellare -->
+            <button id="sbort" data-role="button">Abort</button>
           </div>
 	</div>
 
