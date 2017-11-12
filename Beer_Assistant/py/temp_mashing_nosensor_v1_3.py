@@ -7,17 +7,29 @@ Created on 8 Nov 2017
 import random
 import MySQLdb
 import time
+
+import argparse
  
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
-id = 1
+
+parser = argparse.ArgumentParser()
+parser.add_argument("id", help="give batch id", type=int)
+args = parser.parse_args()
+id = args.id
+
+# id = 1 # id batch - check if ending_time != null
+interval = 1 # sec waiting
  
 def getTemp():
     temp_c = random.randint(0,100)
     return round(temp_c,1)
  
 for n in range(1, 20):
+    
+    
+    
     temp = getTemp()
     print temp
     
@@ -35,7 +47,7 @@ for n in range(1, 20):
         db.rollback()
         print "Failed writing to database"
 
-    time.sleep(1)
+    time.sleep(interval)
     
 cur.close()
 db.close()

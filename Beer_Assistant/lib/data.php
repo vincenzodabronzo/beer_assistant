@@ -6,16 +6,20 @@
         die('Connection error: ' . $dbconn->connect_error);
     }
     
-    #$result = $dbconn->query("SELECT temperature FROM temp_mashing", $query);
+    // Selezionare il corretto ID 
     
-    $result = $dbconn->query("SELECT * FROM temp_mashing ORDER BY timestamp DESC LIMIT 1");
+    
+    $result = $dbconn->query("SELECT tm.id, ba.name, tm.temperature, tm.timestamp, ba.starting_time, ba.ending_time 
+                FROM temp_mashing AS tm INNER JOIN batch AS ba ON tm.id = ba.id ORDER BY timestamp DESC LIMIT 1");
     
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             echo    'Temperature &deg;C: 
                     <div id="mashing_temp">' . $row['temperature'] . '</div>
                     Collected at:
-                    <div id="current_timestamp">' . $row['timestamp'] . '</div>';
+                    <div id="current_timestamp">' . $row['timestamp'] . '</div>
+                    Starting time at:
+                    <div id="starting_time">' . $row['starting_time'] . '</div>';
         }
     }
     

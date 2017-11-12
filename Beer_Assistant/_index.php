@@ -21,7 +21,7 @@
     <script type="text/javascript">
 
     	//  microsec interval
-    	var t = 3000;
+    	var t = 1000;
     	
 		
 		$(document).ready(function() {
@@ -109,7 +109,8 @@
 						}
     					// var y = Math.random()*100;
 						var y = $('#mashing_temp').text();
-    					var x = (new Date()).getTime();
+    					// var x = (new Date()).getTime();
+    					var x = $('#current_timestamp').text();
     					
     					data.push([x,y]);
     					if (plot1) {
