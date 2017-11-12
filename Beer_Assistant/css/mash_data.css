@@ -1,16 +1,16 @@
 .band { width: 100%; }
 
 div#show_data {
-
-	width:50%:
+	float: left;
+	width:50%;
 	background-color:#27416E;
 	color:#FFFFFF;
 
 }
 
 div#show_devices {
-
-	width:50%:
+	float: right;
+	width:50%;
 	background-color:#27216E;
 	color:#FFFFFF;
 
