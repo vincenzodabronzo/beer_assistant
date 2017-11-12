@@ -151,7 +151,14 @@
 	<div id="data" class="banda">
           <div class="wrapper">
             <!-- Layout a Griglia, con YUI grids -->
-            <div id="show"></div>
+            <div id="show">
+                Temperature &deg;C: 
+                <div id="mashing_temp">n/a</div>
+                Collected at:
+                <div id="current_timestamp">n/a</div>
+                Starting time at:
+                <div id="starting_time">n/a</div>';
+            </div>
           </div>
 	</div>      
 	<div id="myChart" class="banda">
