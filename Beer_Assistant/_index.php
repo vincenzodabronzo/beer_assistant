@@ -48,9 +48,9 @@
 				        numberTicks: 10,            
 			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
-				            	formatString:'%H:%M:%S',
+				            	// formatString:'%H:%M:%S',
 				            	// //labelPosition: 'middle', 
-				                angle:-30
+				                angle:-90
 						},            
 			            min : data[0][0],           
 			            max: data[data.length-1][0],
@@ -110,13 +110,12 @@
 						}
 
 						var y = $('#mashing_temp').text();
-
     					// var x = (new Date()).getTime();    					
 
 						var ts = $('#current_timestamp').text().split(/[- :]/);
         				// Apply each element to the Date function
        					var x = ( new Date(Date.UTC(ts[0], ts[1], ts[2], ts[3], ts[4], ts[5])) ).getTime();
-       					x = x - 3600000; // Timezone: subtract 1 Hour
+       					// x = x - 3600000; // Timezone: subtract 1 Hour
     					
     					
     					data.push([x,y]);
