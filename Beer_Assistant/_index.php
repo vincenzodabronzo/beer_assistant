@@ -92,6 +92,7 @@
 					$('#start').show();
 				});
 
+				
 				Date.prototype.addHours = function(h) {    
 					   this.setTime(this.getTime() + (h*60*60*1000)); 
 					   return this;   
@@ -121,7 +122,7 @@
 						var ts = $('#current_timestamp').text().split(/[- :]/);
         				// Apply each element to the Date function
        					var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
-       					x.setHours(x.getHours() + 1);
+       					x.addHours(1);
     					
     					
     					data.push([x,y]);
