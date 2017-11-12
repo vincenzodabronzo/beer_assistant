@@ -30,15 +30,13 @@
 			
 			$('#stop').hide();
 			
-			// var x = (new Date()).getTime(); // current time
-			var x = 'YYYY-MM-DD HH:MM:SS';
+			var x = (new Date()).getTime(); // current time
 			
 			var n = 20;
 			data = [];
 			
 			for(i=0; i<n; i++){  
-			    // data.push([x - (n-1-i)*t, 0]);  
-				data.push(['YYYY-MM-DD HH:MM:SS', 0]);
+			    data.push([x - (n-1-i)*t, 0]);  
 			}   
 			
 			var options = {      
@@ -46,9 +44,9 @@
 			         xaxis: {     	   
 			        	tickRenderer:$.jqplot.CanvasAxisTickRenderer,
 				        numberTicks: 10,            
-			            // renderer:$.jqplot.DateAxisRenderer,           
+			            renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
-				            	// formatString:'%H:%M:%S',
+				            	formatString:'%H:%M:%S',
 				            	// //labelPosition: 'middle', 
 				                angle:-30
 						},            
@@ -109,10 +107,10 @@
 						if(data.length > n-1){
 							data.shift();
 						}
-    					// var y = Math.random()*100;
+
 						var y = $('#mashing_temp').text();
-    					// var x = (new Date()).getTime();
-    					var x = $('#current_timestamp').text();
+    					var x = (new Date()).getTime();
+    					// var x = $('#current_timestamp').text();
     					
     					data.push([x,y]);
     					if (plot1) {
