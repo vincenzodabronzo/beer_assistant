@@ -117,9 +117,11 @@
     					// var mySQLDate = '2015-04-29 10:29:08';
     					// new Date(Date.parse(mySQLDate.replace('-','/','g')));
     					
-    					var sdate = $('#current_timestamp').text();
-    					var date = sdate.split(/[- :]/);
-    					var x = (new Date(Date.UTC(date[0], date[1]-1, date[2], date[3], date[4], date[5]))).getTime();
+						var ts = $('#current_timestamp').text().split(/[- :]/);
+
+        				// Apply each element to the Date function
+       					 // var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
+       					 var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
     					
     					
     					data.push([x,y]);
