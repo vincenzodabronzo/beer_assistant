@@ -139,13 +139,38 @@
 </head>
 
 <body>
-    <div id="myChart" style="height:400px; width:100%; "></div>
-    <br><br>
-    <button id="start" data-role="button">Start Mashing</button>
-    <button id="stop" data-role="button">Mash out</button>
-    <br>
+    <!--   <div id="myChart" style="height:400px; width:100%; "></div> -->
 
-    <div id="show"></div>
+
+
+	<div id="header" class="banda">
+          <div class="wrapper">
+            <!-- Layout a Griglia, con Blueprint -->
+          </div>
+	</div>     
+	<div id="data" class="banda">
+          <div class="wrapper">
+            <!-- Layout a Griglia, con YUI grids -->
+            <div id="show"></div>
+          </div>
+	</div>      
+	<div id="myChart" class="banda">
+          <div class="wrapper">
+            <!-- Layout classico -->
+          </div>
+        </div>
+	<div id="command" class="banda">
+          <div class="wrapper">
+            <!-- Layout tabellare -->
+                <button id="start" data-role="button">Start Mashing</button>
+    			<button id="stop" data-role="button">Mash out</button>
+          </div>
+	</div>
+	<div id="abort" class="banda">
+          <div class="wrapper">
+            <!-- Layout tabellare -->
+          </div>
+	</div>
 
 </body>
 
