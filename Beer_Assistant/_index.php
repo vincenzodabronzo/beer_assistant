@@ -111,13 +111,9 @@
 
 						var y = $('#mashing_temp').text();
 
-    					// var x = (new Date()).getTime();
-    					
-    					var ts = moment( $('#current_timestamp').text() ).add(1, 'hours').toString().split(/[- :]/);
+    					// var x = (new Date()).getTime();    					
 
-    					
-
-						// var ts = $('#current_timestamp').text().split(/[- :]/);
+						var ts = $('#current_timestamp').text().split(/[- :]/);
         				// Apply each element to the Date function
        					var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
     					
