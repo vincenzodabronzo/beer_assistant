@@ -5,6 +5,8 @@
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
     
+     <link href="css/mash_data.css" rel="stylesheet" type="text/css">
+    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
@@ -143,12 +145,12 @@
 
 
 
-	<div id="header" class="banda">
+	<div id="header" class="band">
           <div class="wrapper">
             <!-- Layout a Griglia, con Blueprint -->
           </div>
 	</div>     
-	<div id="data" class="banda">
+	<div id="data" class="band">
           <div class="wrapper">
             <!-- Layout a Griglia, con YUI grids -->
             <div id="show">
@@ -157,23 +159,23 @@
                 Collected at:
                 <div id="current_timestamp">n/a</div>
                 Starting time at:
-                <div id="starting_time">n/a</div>';
+                <div id="starting_time">n/a</div>
             </div>
           </div>
 	</div>      
-	<div id="myChart" class="banda">
+	<div id="myChart" class="band">
           <div class="wrapper">
             <!-- Layout classico -->
           </div>
         </div>
-	<div id="command" class="banda">
+	<div id="command" class="band">
           <div class="wrapper">
             <!-- Layout tabellare -->
                 <button id="start" data-role="button">Start Mashing</button>
     			<button id="stop" data-role="button">Mash out</button>
           </div>
 	</div>
-	<div id="abort" class="banda">
+	<div id="abort" class="band">
           <div class="wrapper">
             <!-- Layout tabellare -->
           </div>
