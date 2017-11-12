@@ -144,15 +144,40 @@
     <!--   <div id="myChart" style="height:400px; width:100%; "></div> -->
 
 
+<div class="container">
+
+<header>
+   <h1>City Gallery</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="#">London</a></li>
+    <li><a href="#">Paris</a></li>
+    <li><a href="#">Tokyo</a></li>
+  </ul>
+</nav>
+
+<article>
+  <h1>London</h1>
+  <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+</article>
+
+<footer>Abort</footer>
+
+</div>
+
+<!--  ######################################
 
 	<div id="header" class="band">
           <div class="wrapper">
-            <!-- Layout a Griglia, con Blueprint -->
+
           </div>
 	</div>     
 	<div id="data" class="band">
           <div class="wrapper">
-            <!-- Layout a Griglia, con YUI grids -->
+
             
             <div id="show_data">
                 Temperature &deg;C: 
@@ -172,22 +197,24 @@
 	</div>      
 	<div id="myChart" class="band">
           <div class="wrapper">
-            <!-- Layout classico -->
+
           </div>
         </div>
 	<div id="command" class="band">
           <div class="wrapper">
-            <!-- Layout tabellare -->
+
                 <button id="start" data-role="button">Start Mashing</button>
     			<button id="stop" data-role="button">Mash out</button>
           </div>
 	</div>
 	<div id="abort" class="band">
           <div class="wrapper">
-            <!-- Layout tabellare -->
+
             <button id="sbort" data-role="button">Abort</button>
           </div>
 	</div>
+	
+###################################### -->	
 
 </body>
 
