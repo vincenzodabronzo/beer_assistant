@@ -36,7 +36,8 @@
 			data = [];
 			
 			for(i=0; i<n; i++){  
-			    data.push([x - (n-1-i)*t,0]);  
+			    // data.push([x - (n-1-i)*t, 0]);  
+				data.push(['YYYY-MM-DD HH:MM:SS', 0]);
 			}   
 			
 			var options = {      
