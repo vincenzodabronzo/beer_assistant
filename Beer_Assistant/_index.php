@@ -110,18 +110,12 @@
 
 						var y = $('#mashing_temp').text();
 
-    					// var x = (new Date()).getTime();
-    					// var x = Date.parse( $('#current_timestamp').text() );
+    					var x = (new Date()).getTime();
     					
-    					
-    					// var mySQLDate = '2015-04-29 10:29:08';
-    					// new Date(Date.parse(mySQLDate.replace('-','/','g')));
-    					
-						var ts = $('#current_timestamp').text().split(/[- :]/);
 
+						var ts = $('#current_timestamp').text().split(/[- :]/);
         				// Apply each element to the Date function
-       					 // var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-       					 var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
+       					 // var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
     					
     					
     					data.push([x,y]);
