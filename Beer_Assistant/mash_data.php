@@ -146,9 +146,9 @@
 
 <div class="container">
 
-<header>
+<div class="header">
    <h1>City Gallery</h1>
-</header>
+</div>
   
 <nav>
   <ul>
