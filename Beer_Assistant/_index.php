@@ -110,9 +110,14 @@
 
 						var y = $('#mashing_temp').text();
 
-    					var x = (new Date()).getTime();
+    					// var x = (new Date()).getTime();
 
-    					var x = Date.parse( $('#current_timestamp').text() );
+    					//var x = Date.parse( $('#current_timestamp').text() );
+    					//var mySQLDate = '2015-04-29 10:29:08';
+    					// new Date(Date.parse(mySQLDate.replace('-','/','g')));
+    					
+    					var x = ( new Date(Date.parse($('#current_timestamp').text().replace('-','/','g'))) ).getTime(); 
+    					
     					
     					data.push([x,y]);
     					if (plot1) {
