@@ -119,7 +119,7 @@
     					
     					var sdate = $('#current_timestamp').text();
     					var date = sdate.split(/[- :]/);
-    					var x = new Date(Date.UTC(date[0], date[1]-1, date[2], date[3], date[4], date[5]));
+    					var x = (new Date(Date.UTC(date[0], date[1]-1, date[2], date[3], date[4], date[5]))).getTime();
     					
     					
     					data.push([x,y]);
