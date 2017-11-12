@@ -109,8 +109,10 @@
 						}
 
 						var y = $('#mashing_temp').text();
+
     					var x = (new Date()).getTime();
-    					// var x = $('#current_timestamp').text();
+
+    					var x = Date.parse( $('#current_timestamp').text() );
     					
     					data.push([x,y]);
     					if (plot1) {
