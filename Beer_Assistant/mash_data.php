@@ -162,6 +162,9 @@
                 Starting time at:
                 <div id="starting_time">n/a</div>
             </div>
+            <div id="show_devices">
+                Pump connected
+            </div>
             
             
             
