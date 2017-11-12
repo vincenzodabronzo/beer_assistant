@@ -105,7 +105,7 @@
 						
 						<?php shell_exec("python py/temp_mashing_nosensor_v1_3.py > /dev/null 2>/dev/null &"); ?>
 						
-						$('#show').load('lib/data.php');
+						$('#show_data').load('lib/data.php');
 						
 						if(data.length > n-1){
 							data.shift();
@@ -153,7 +153,8 @@
 	<div id="data" class="band">
           <div class="wrapper">
             <!-- Layout a Griglia, con YUI grids -->
-            <div id="show">
+            
+            <div id="show_data">
                 Temperature &deg;C: 
                 <div id="mashing_temp">n/a</div>
                 Collected at:
@@ -161,6 +162,9 @@
                 Starting time at:
                 <div id="starting_time">n/a</div>
             </div>
+            
+            
+            
           </div>
 	</div>      
 	<div id="myChart" class="band">
