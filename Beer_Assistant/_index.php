@@ -30,7 +30,8 @@
 			
 			$('#stop').hide();
 			
-			var x = (new Date()).getTime(); // current time
+			// var x = (new Date()).getTime(); // current time
+			var x = 'YYYY-MM-DD HH:MM:SS';
 			
 			var n = 20;
 			data = [];
@@ -45,10 +46,10 @@
 			         xaxis: {     	   
 			        	tickRenderer:$.jqplot.CanvasAxisTickRenderer,
 				        numberTicks: 10,            
-			            renderer:$.jqplot.DateAxisRenderer,           
+			            // renderer:$.jqplot.DateAxisRenderer,           
 			            tickOptions:{
-				            	//formatString:'%H:%M:%S',
-				            	//labelPosition: 'middle', 
+				            	// formatString:'%H:%M:%S',
+				            	// //labelPosition: 'middle', 
 				                angle:-30
 						},            
 			            min : data[0][0],           
