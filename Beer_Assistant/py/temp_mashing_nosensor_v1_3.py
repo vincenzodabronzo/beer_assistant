@@ -19,7 +19,7 @@ cur = db.cursor()
 #args = parser.parse_args()
 #id = args.id
 
-id = 1 # id batch - check if ending_time != null
+id = 2 # id batch - check if ending_time != null
 interval = 1 # sec waiting
  
 def getTemp():
@@ -27,8 +27,6 @@ def getTemp():
     return round(temp_c,1)
  
 for n in range(1, 20):
-    
-    
     
     temp = getTemp()
     print temp
