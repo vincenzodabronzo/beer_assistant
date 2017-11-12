@@ -6,6 +6,8 @@
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
     <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
@@ -91,13 +93,6 @@
 					$(this).hide();
 					$('#start').show();
 				});
-
-				
-				Date.prototype.addHours = function(h) {    
-					   this.setTime(this.getTime() + (h*60*60*1000)); 
-					   return this;   
-					}
-			   
 			 
 				function doUpdate() {
 					if (update_graph) {
@@ -118,11 +113,13 @@
 
     					// var x = (new Date()).getTime();
     					
+    					var ts = moment( $('#current_timestamp').text() ).add(1, 'hours').split(/[- :]/);
 
-						var ts = $('#current_timestamp').text().split(/[- :]/);
+    					
+
+						// var ts = $('#current_timestamp').text().split(/[- :]/);
         				// Apply each element to the Date function
        					var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
-       					x.addHours(1);
     					
     					
     					data.push([x,y]);
