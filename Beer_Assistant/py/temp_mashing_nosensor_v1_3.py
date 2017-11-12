@@ -14,12 +14,12 @@ import argparse
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
 
-parser = argparse.ArgumentParser()
-parser.add_argument("id", help="give batch id", type=int)
-args = parser.parse_args()
-id = args.id
+#parser = argparse.ArgumentParser()
+#parser.add_argument("id", help="give batch id", type=int)
+#args = parser.parse_args()
+#id = args.id
 
-# id = 1 # id batch - check if ending_time != null
+id = 1 # id batch - check if ending_time != null
 interval = 1 # sec waiting
  
 def getTemp():
