@@ -150,19 +150,17 @@
    <h1>City Gallery</h1>
 </div>
   
-<nav>
-  <ul>
-    <li><a href="#">London</a></li>
-    <li><a href="#">Paris</a></li>
-    <li><a href="#">Tokyo</a></li>
-  </ul>
-</nav>
-
-<article>
-  <h1>London</h1>
-  <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-  <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-</article>
+            <div id="show_data">
+                Temperature &deg;C: 
+                <div id="mashing_temp">--</div>
+                Collected at:
+                <div id="current_timestamp">--</div>
+                Starting time at:
+                <div id="starting_time">--</div>
+            </div>
+            <div id="show_devices">
+                Pump connected
+            </div>
 
 <div id="myChart" class="footer"></div>
 
