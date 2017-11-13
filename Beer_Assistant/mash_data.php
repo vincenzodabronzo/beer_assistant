@@ -137,7 +137,7 @@
 		});
     </script>
     
-	<title>Mashing Temperature</title>
+	<title>Mashing</title>
 </head>
 
 <body>
@@ -147,10 +147,10 @@
 <div class="container">
 
 <div class="header">
-   <h1>City Gallery</h1>
+   <h1>Batch / Receipe (details)</h1>
 </div>
   
-            <div id="show_data">
+            <div class="data" id="show_data">
                 Temperature &deg;C: 
                 <div id="mashing_temp">--</div>
                 Collected at:
@@ -158,7 +158,7 @@
                 Starting time at:
                 <div id="starting_time">--</div>
             </div>
-            <div id="show_devices">
+            <div class="device" id="show_devices">
                 Pump connected
             </div>
 
