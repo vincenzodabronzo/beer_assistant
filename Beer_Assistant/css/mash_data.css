@@ -50,6 +50,21 @@ text-align: center;
 padding: 4px 0;
 }
 
+#myChart{
+	clear: left;
+	width: 100%;
+	
+	background-color: orange;
+	
+	/*
+	background: black;
+	color: #FFF;
+	text-align: center;
+	
+	padding: 4px 0;
+	*/
+}
+
 #footer a{
 color: #FFFF80;
 }

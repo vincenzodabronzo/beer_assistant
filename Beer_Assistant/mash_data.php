@@ -149,20 +149,22 @@
 <div id="topsection"><div class="innertube"><h1>CSS Liquid Layout #3.3- (Fluid-Fluid-Fluid)</h1></div></div>
 
 <div id="contentwrapper">
-<div id="contentcolumn">
-<div class="innertube"><b>Content Column: <em>Fluid</em></b> <script type="text/javascript">filltext(45)</script></div>
-</div>
-</div>
+    <div id="contentcolumn">
+    <div class="innertube"><b>Content Column: <em>Fluid</em></b> <script type="text/javascript">filltext(45)</script></div>
+    </div>
+    </div>
 
-<div id="leftcolumn">
-<div class="innertube"><b>Left Column: <em>20%</em></b> <script type="text/javascript">filltext(20)</script></div>
-</div>
+    <div id="leftcolumn">
+    <div class="innertube"><b>Left Column: <em>20%</em></b> <script type="text/javascript">filltext(20)</script></div>
+    </div>
 
-<div id="rightcolumn">
-<div class="innertube"><b>Right Column: <em>15%</em></b> <script type="text/javascript">filltext(15)</script></div>
-</div>
+    <div id="rightcolumn">
+    <div class="innertube"><b>Right Column: <em>15%</em></b> <script type="text/javascript">filltext(15)</script></div>
+    </div>
 
 <div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+
+ <div id="myChart"></div>
 
 </div>
 
