@@ -90,8 +90,9 @@ margin-top: 0;
 	}
 	
 	#contentcolumn{
-	margin-right: 0;
+	margin-left: 20%; /*Set margin to (LeftColumnWidth) */
 	}
+
 }
 
 @media (max-width: 600px){ /* 2nd level responsive layout break point- drop left column down */
