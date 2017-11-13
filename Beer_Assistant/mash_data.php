@@ -170,7 +170,7 @@
     <div id="rightcolumn">
     	<div class="innertube"><b>Devices: <em>20%</em></b>
     	     <div class="device" id="show_devices">
-                Pump - Status <b color="green">OK</b>
+                Pump - Status <b>OK</b>
             </div>
     	</div>
     </div>
@@ -178,12 +178,12 @@
 	<div id="myChart"></div>
 	
 	<div id="command">
-		<button class="action_button" id="start" data-role="button">Start Mashing</button>
-		<button class="action_button" id="stop" data-role="button">Mash out</button>
-		<button class="action_button" id="option" data-role="button">Options</button>
+		<button id="start" data-role="button">Start Mashing</button>
+		<button id="stop" data-role="button">Mash out</button>
+		<button id="option" data-role="button">Options</button>
 	</div>
 	
-	<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+	<div id="footer">( Final info here )</div>
 
 </div>
 
