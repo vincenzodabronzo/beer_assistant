@@ -1,43 +1,89 @@
-.container {
-    width: 100%;
-    border: 1px solid gray;
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
 }
 
+b{font-size: 110%;}
+em{color: red;}
 
-.header {
-    padding: 1em;
-    color: black;
-    background-color: orange;
-    clear: left;
-    text-align: center;
+
+#topsection{
+background: #EAEAEA;
+height: 90px; /*Height of top section*/
 }
 
-.data {
-	float: left;
-	width: 50%;
-    padding: 1em;
-    color: black;
-    background-color: #ff80c0; /*pink*/
-    margin: -100%
-    /* clear: left; */
-    text-align: center;
+#topsection h1{
+margin: 0;
+padding-top: 15px;
 }
 
-.device {
-	float: left;
-	width: 50%;
-    padding: 1em;
-    color: black;
-    background-color: #80ffff; /*cyan*/
-    margin: -50%;
-    /* clear: left; */
-    text-align: center;
+#contentwrapper{
+float: left;
+width: 100%;
 }
 
-.footer {
-    padding: 1em;
-    color: black;
-    background-color: yellow;
-    clear: left;
-    text-align: center;
+#contentcolumn{
+margin: 0 15% 0 20%; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 20%; /*Width of left column in percentage*/
+margin-left: -100%;
+background: #C8FC98;
+}
+
+#rightcolumn{
+float: left;
+width: 15%; /*Width of right column in pixels*/
+margin-left: -15%; /*Set margin to that of -(RightColumnWidth)*/
+background: #FDE95E;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+/* ####### responsive layout CSS ####### */
+
+@media (max-width: 840px){ /* 1st level responsive layout break point- drop right column down*/
+	
+	#rightcolumn{
+	float: none;
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	}
+	
+	#contentcolumn{
+	margin-right: 0;
+	}
+}
+
+@media (max-width: 600px){ /* 2nd level responsive layout break point- drop left column down */
+	#leftcolumn{
+	float: none;
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+	}
+	
+	#contentcolumn{
+	margin-left: 0;
+	}
 }
