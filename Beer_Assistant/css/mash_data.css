@@ -18,7 +18,8 @@ div.container {
     padding: 1em;
     color: black;
     background-color: gray;
-    clear: left;
+    margin: -100%
+    /* clear: left; */
     text-align: center;
 }
 
@@ -28,7 +29,8 @@ div.container {
     padding: 1em;
     color: black;
     background-color: gray;
-    clear: left;
+    margin: -50%;
+    /* clear: left; */
     text-align: center;
 }
 
