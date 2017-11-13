@@ -150,12 +150,23 @@
 
 <div id="contentwrapper">
     <div id="contentcolumn">
-    <div class="innertube"><b>Content Column: <em>Fluid</em></b> <script type="text/javascript">filltext(45)</script></div>
+    <div class="innertube">
+    	
+    </div>
     </div>
     </div>
 
     <div id="leftcolumn">
-    <div class="innertube"><b>Left Column: <em>20%</em></b> <script type="text/javascript">filltext(20)</script></div>
+        <div class="innertube">
+        	    <div id="show_data">
+                Temperature &deg;C: 
+                <div id="mashing_temp">n/a</div>
+                Collected at:
+                <div id="current_timestamp">n/a</div>
+                Starting time at:
+                <div id="starting_time">n/a</div>
+            </div>
+        </div> 
     </div>
 
     <div id="rightcolumn">
@@ -180,14 +191,7 @@
   
   	<div class="container">
             
-            <div class="data" id="show_data">
-                Temperature &deg;C: 
-                <div id="mashing_temp">--</div>
-                Collected at:
-                <div id="current_timestamp">--</div>
-                Starting time at:
-                <div id="starting_time">--</div>
-            </div>
+            
             
             <div class="device" id="show_devices">
                 Pump connected
