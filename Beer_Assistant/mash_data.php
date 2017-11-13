@@ -144,12 +144,14 @@
     <!--   <div id="myChart" style="height:400px; width:100%; "></div> -->
 
 
-<div class="container">
+<div class="maincontainer">
 
 <div class="header">
    <h1>Batch / Receipe (details)</h1>
 </div>
   
+  	<div class="container">
+            
             <div class="data" id="show_data">
                 Temperature &deg;C: 
                 <div id="mashing_temp">--</div>
@@ -162,6 +164,7 @@
             <div class="device" id="show_devices">
                 Pump connected
             </div>
+      </div>
 
 <div id="myChart" class="footer"></div>
 
