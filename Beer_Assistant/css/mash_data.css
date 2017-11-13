@@ -39,7 +39,7 @@ height:100%;
 #rightcolumn{
 float: left;
 width: 20%; /*Width of right column in pixels*/
-margin-left: -15%; /*Set margin to that of -(RightColumnWidth)*/
+margin-left: -20%; /*Set margin to that of -(RightColumnWidth)*/
 background: #FDE95E;
 height:100%;
 }
