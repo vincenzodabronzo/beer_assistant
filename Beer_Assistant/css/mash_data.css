@@ -24,9 +24,9 @@ width: 100%;
 }
 
 #contentcolumn{
-margin: 0 20% 0 20%; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
-height:100%;
-background-color: cyan;
+	/*margin: 0 20% 0 20%; Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+	margin-left: 40%;
+	background-color: cyan;
 }
 
 #leftcolumn{
@@ -34,15 +34,15 @@ float: left;
 width: 20%; /*Width of left column in percentage*/
 margin-left: -100%;
 background: #C8FC98;
-height:100%;
+
 }
 
 #rightcolumn{
 float: left;
 width: 20%; /*Width of right column in pixels*/
-margin-left: -20%; /*Set margin to that of -(RightColumnWidth)*/
+margin-left: -80%; /*Set margin to that of -(RightColumnWidth)*/
 background: #FDE95E;
-height:100%;
+
 }
 
 #footer{
