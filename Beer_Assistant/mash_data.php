@@ -157,14 +157,14 @@
     <div id="leftcolumn">
     	<div class="innertube"><b>Left Column: <em>20%</em></b>
     	
-    	    <div class="data" id="show_data">
+    	    <p class="data" id="show_data">
                 Temperature &deg;C: 
-                <div id="mashing_temp">--</div>
+                <p id="mashing_temp">--</p>
                 Collected at:
-                <div id="current_timestamp">--</div>
+                <p id="current_timestamp">--</p>
                 Starting time at:
-                <div id="starting_time">--</div>
-            </div>
+                <p id="starting_time">--</p>
+            </p>
     	
     	</div>
     </div>
