@@ -26,7 +26,7 @@ width: 100%;
 #contentcolumn{
 margin: 0 20% 0 20%; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
 height:100%;
-color: cyan;
+background-color: cyan;
 }
 
 #leftcolumn{
