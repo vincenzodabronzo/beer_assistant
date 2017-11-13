@@ -150,13 +150,12 @@
 
     <div id="contentwrapper">
         <div id="contentcolumn">
-        	<div class="innertube"><b>Content Column: <em>Fluid</em></b></div>
+        	<div class="innertube"><b>Mashing steps: </b></div>
         </div>
     </div>
 
     <div id="leftcolumn">
-    	<div class="innertube"><b>Left Column: <em>20%</em></b>
-    	
+    	<div class="innertube"><b>Status: <em>20%</em></b>
     	    <div class="data" id="show_data">
                 Temperature &deg;C: 
                 <div id="mashing_temp">--</div>
@@ -165,12 +164,11 @@
                 Starting time at:
                 <div id="starting_time">--</div>
             </div>
-    	
     	</div>
     </div>
 
     <div id="rightcolumn">
-    	<div class="innertube"><b>Right Column: <em>15%</em></b></div>
+    	<div class="innertube"><b>Devices: <em>20%</em></b></div>
     </div>
 
 	<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
