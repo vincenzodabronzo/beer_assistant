@@ -180,6 +180,7 @@
 	<div id="command">
 		<button id="start" data-role="button">Start Mashing</button>
 		<button id="stop" data-role="button">Mash out</button>
+		<button id="option" data-role="button">Options</button>
 	</div>
 	
 	<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
