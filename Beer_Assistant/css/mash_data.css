@@ -23,7 +23,7 @@ div.container {
 }
 
 .device {
-	float: right;
+	float: left;
 	width: 50%;
     padding: 1em;
     color: black;
