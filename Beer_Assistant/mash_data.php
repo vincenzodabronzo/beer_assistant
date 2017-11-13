@@ -158,7 +158,7 @@
     	<div class="innertube"><b>Status: <em>20%</em></b>
     	    <div class="data" id="show_data">
                 Temperature &deg;C: 
-                <div id="mashing_temp">0</div>
+                <div id="mashing_temp">0.0</div>
                 Collected at:
                 <div id="current_timestamp">--</div>
                 Starting time at:
