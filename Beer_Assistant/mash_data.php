@@ -168,93 +168,24 @@
     </div>
 
     <div id="rightcolumn">
-    	<div class="innertube"><b>Devices: <em>20%</em></b></div>
+    	<div class="innertube"><b>Devices: <em>20%</em></b>
+    	     <div class="device" id="show_devices">
+                Pump - Status <b color="green">OK</b>
+            </div>
+    	</div>
     </div>
-
-	<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
 	
 	<div id="myChart"></div>
-
-</div>
-
-
-
-<!-- ######################################
-
-
-<div class="maincontainer">
-
-<div class="header">
-   <h1>Batch / Receipe (details)</h1>
-</div>
-  
-  	<div class="container">
-            
-            <div class="data" id="show_data">
-                Temperature &deg;C: 
-                <div id="mashing_temp">--</div>
-                Collected at:
-                <div id="current_timestamp">--</div>
-                Starting time at:
-                <div id="starting_time">--</div>
-            </div>
-            
-            <div class="device" id="show_devices">
-                Pump connected
-            </div>
-      </div>
-
-<div id="myChart" class="footer"></div>
-
-</div>
-
-  ######################################
-
-	<div id="header" class="band">
-          <div class="wrapper">
-
-          </div>
-	</div>     
-	<div id="data" class="band">
-          <div class="wrapper">
-
-            
-            <div id="show_data">
-                Temperature &deg;C: 
-                <div id="mashing_temp">n/a</div>
-                Collected at:
-                <div id="current_timestamp">n/a</div>
-                Starting time at:
-                <div id="starting_time">n/a</div>
-            </div>
-            <div id="show_devices">
-                Pump connected
-            </div>
-            
-            
-            
-          </div>
-	</div>      
-	<div id="myChart" class="band">
-          <div class="wrapper">
-
-          </div>
-        </div>
-	<div id="command" class="band">
-          <div class="wrapper">
-
-                <button id="start" data-role="button">Start Mashing</button>
-    			<button id="stop" data-role="button">Mash out</button>
-          </div>
-	</div>
-	<div id="abort" class="band">
-          <div class="wrapper">
-
-            <button id="sbort" data-role="button">Abort</button>
-          </div>
+	
+	<div id="command">
+		<button id="start" data-role="button">Start Mashing</button>
+		<button id="stop" data-role="button">Mash out</button>
 	</div>
 	
-###################################### -->	
+	<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+
+</div>
+
 
 </body>
 

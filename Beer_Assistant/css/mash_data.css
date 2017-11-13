@@ -69,6 +69,21 @@ padding: 4px 0;
 	*/
 }
 
+#command{
+	clear: left;
+	width: 100%;
+	background-color: #008040;
+	text-align: center;
+	
+	/*
+	background: black;
+	color: #FFF;
+	text-align: center;
+	
+	padding: 4px 0;
+	*/
+}
+
 #footer a{
 color: #FFFF80;
 }
