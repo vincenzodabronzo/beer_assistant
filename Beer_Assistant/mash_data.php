@@ -31,7 +31,7 @@
 		$(document).ready(function() {
 
 			var update_graph = false;
-			
+			var start_script = true;
 			$('#stop').hide();
 			
 			var x = (new Date()).getTime(); // current time
@@ -103,7 +103,10 @@
 						// var dir = loc.substring(0, loc.lastIndexOf('/'));
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
-						<?php shell_exec("python py/temp_mashing_nosensor_v1_3.py > /dev/null 2>/dev/null &"); ?>
+						if (start_script) {
+	                        <?php shell_exec("python py/temp_mashing_nosensor_v1_3.py > /dev/null 2>/dev/null &"); ?>
+							start_script = false;
+						}
 						
 						$('#show_data').load('lib/data.php');
 						
