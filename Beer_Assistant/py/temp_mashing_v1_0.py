@@ -34,7 +34,8 @@ def getTemp():
     return round(temperature, 1)
  
 while(mashing):  
-    sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))  
+    sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))
+    cur.execute(*sql)
     rows = cur.fetchall()
     for row in rows:
         if(row[0]==NULL): 
