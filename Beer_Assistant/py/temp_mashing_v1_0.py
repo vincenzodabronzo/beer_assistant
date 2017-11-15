@@ -8,6 +8,7 @@ import random
 import MySQLdb
 import time
 from w1thermsensor import W1ThermSensor 
+from _mysql import NULL
 
 # import argparse
  
@@ -23,6 +24,8 @@ cur = db.cursor()
 id = 2 # id batch - check if ending_time != null
 interval = 1 # sec waiting
 
+mashing = true;
+
 sensor = W1ThermSensor()  
  
 def getTemp():
@@ -30,26 +33,32 @@ def getTemp():
     temperature = sensor.get_temperature()
     return round(temperature, 1)
  
-for n in range(1, 20):
-    
-    temp = getTemp()
-    print temp
-    
-    sql = ("""INSERT INTO temp_mashing (timestamp, id, temperature) VALUES (CURRENT_TIMESTAMP,%s,%s)""",(id,temp))
-    
-    try:
-        print "Writing to database..."
-        # Execute the SQL command
-        cur.execute(*sql)
-        # Commit your changes in the database
-        db.commit()
-        print "Write OK"
-    except:
-        # Rollback in case there is any error
-        db.rollback()
-        print "Failed writing to database"
+while(mashing):  
+    sql = ("""SELECT * FROM batch WHERE id=%s""", (id, ))  
+    rows = cur.fetchall()
+    for row in rows:
+        
+        if(row[0]==NULL): 
+            temp = getTemp()
+            print temp
+            
+            sql = ("""INSERT INTO temp_mashing (timestamp, id, temperature) VALUES (CURRENT_TIMESTAMP,%s,%s)""",(id,temp))
+            
+            try:
+                print "Writing to database..."
+                # Execute the SQL command
+                cur.execute(*sql)
+                # Commit your changes in the database
+                db.commit()
+                print "Write OK"
+            except:
+                # Rollback in case there is any error
+                db.rollback()
+                print "Failed writing to database"
+        
+            time.sleep(interval)
+        else:
+            mashing = false
 
-    time.sleep(interval)
-    
 cur.close()
 db.close()
