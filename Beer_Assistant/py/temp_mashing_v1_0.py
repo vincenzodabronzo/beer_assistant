@@ -24,7 +24,7 @@ cur = db.cursor()
 id = 2 # id batch - check if ending_time != null
 interval = 1 # sec waiting
 
-mashing = true;
+mashing = 1;
 
 sensor = W1ThermSensor()  
  
@@ -57,7 +57,7 @@ while(mashing):
         
             time.sleep(interval)
         else:
-            mashing = false
+            mashing = 0
 
 cur.close()
 db.close()

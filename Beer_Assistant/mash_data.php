@@ -93,6 +93,7 @@
 					$(this).hide();
 					$('#stop').show();
 			   });
+				   
 				$('#stop').click( function(){
 					update_graph = false;      
 					endMashing(); 
