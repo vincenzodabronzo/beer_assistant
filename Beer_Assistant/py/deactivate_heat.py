@@ -11,7 +11,7 @@ pinList = [17, 27]
 #GPIO.setup(17, GPIO.OUT) 
 GPIO.output(17, GPIO.HIGH)
 #GPIO.setup(22, GPIO.OUT) 
-GPIO.output(22, GPIO.HIGH)
+GPIO.output(27, GPIO.HIGH)
 
 #GPIO.output(17, GPIO.LOW)
 #GPIO.output(27, GPIO.LOW)
