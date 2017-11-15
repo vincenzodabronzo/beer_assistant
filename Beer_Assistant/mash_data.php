@@ -94,10 +94,15 @@
 					$('#stop').show();
 			   });
 				$('#stop').click( function(){
-					update_graph = false;       
+					update_graph = false;      
+					endMashing(); 
 					$(this).hide();
 					$('#start').show();
 				});
+
+				function endMashing() {
+					$('#show_data').load('lib/end_mashing.php');
+				}
 			 
 				function doUpdate() {
 					if (update_graph) {
@@ -169,6 +174,8 @@
                 <div id="current_timestamp">--</div>
                 Starting time at:
                 <div id="starting_time">--</div>
+                Ending time at:
+                <div id="ending_time">--</div>
             </div>
     	</div>
     </div>
