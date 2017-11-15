@@ -21,6 +21,9 @@
 	<script type="text/javascript" src="js/jqplot.cursor.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
     
     <script type="text/javascript">
 
@@ -153,7 +156,7 @@
 
     <div id="contentwrapper">
         <div id="contentcolumn">
-        	<div class="innertube"><b>Mashing steps: </b></div>
+        	<div class="innertube"><b>Manual mashing: </b></div>
         </div>
     </div>
 
@@ -182,7 +185,7 @@
 	
 	<div id="command">
 		<button id="start" data-role="button">Start Mashing</button>
-		<button id="stop" data-role="button">Mash out</button>
+		<button id="stop" data-role="button">End</button>
 		<button id="option" data-role="button">Options</button>
 	</div>
 	
