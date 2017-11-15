@@ -33,15 +33,20 @@ def getTemp():
     temperature = sensor.get_temperature()
     return round(temperature, 1)
  
-while(mashing==1):  
+while(mashing):  
     
     print "Checking ending time..."
     
     sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
+    
+    print rows
+    
     for row in rows:
         print "Analysing results..."
+        
+        print row
         
         if(row[0]==NULL): 
             temp = getTemp()
