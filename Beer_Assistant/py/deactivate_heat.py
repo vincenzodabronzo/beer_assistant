@@ -13,6 +13,7 @@ GPIO.output(17, GPIO.HIGH)
 GPIO.setup(18, GPIO.OUT) 
 GPIO.output(18, GPIO.HIGH)
 
+
 #GPIO.output(17, GPIO.LOW)
 #GPIO.output(27, GPIO.LOW)
 
