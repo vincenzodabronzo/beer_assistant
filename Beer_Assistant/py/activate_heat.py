@@ -8,7 +8,7 @@ pinList = [17, 27]
 
 # loop through pins and set mode and state to 'low'
 
-GPIO.cleanup()
+#GPIO.cleanup()
 
 GPIO.setup(17, GPIO.OUT) 
 GPIO.output(17, GPIO.HIGH)
