@@ -41,14 +41,11 @@ while(mashing):
     cur.execute(*sql)
     rows = cur.fetchall()
     
-    print rows
-    
     for row in rows:
-        print "Analysing results..."
-        
+        print "Found results:"
         print row
         
-        if(row[0]==NULL): 
+        if(row[0] is None): 
             temp = getTemp()
             print temp
             
