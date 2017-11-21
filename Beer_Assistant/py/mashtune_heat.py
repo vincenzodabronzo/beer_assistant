@@ -14,14 +14,17 @@ pinHeat = 26    # GPIO pin connected to heat Relay
 interval = 1    # sec waiting
 heat = 0        # if set to 1, controller will activate heating
 
+GPIO.setmode(GPIO.BCM)
+pinList = [19, 20, 21, 26]
+# loop through pins and set mode and state to 'low'
+for i in init.pinList: 
+    GPIO.setup(i, GPIO.OUT) 
+    GPIO.output(i, GPIO.LOW)
+
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
 
-# Initializing GPIO
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(pinHeat, GPIO.OUT) 
-GPIO.output(pinHeat, GPIO.LOW)
 # Initializing Sensor GPIO (4)
 sensor = W1ThermSensor()
 
