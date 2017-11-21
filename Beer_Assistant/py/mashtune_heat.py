@@ -19,7 +19,7 @@ pinList = [19, 20, 21, 26]
 # loop through pins and set mode and state to 'low'
 for i in pinList: 
     GPIO.setup(i, GPIO.OUT) 
-    GPIO.output(i, GPIO.LOW)
+    GPIO.output(i, GPIO.HIGH)
 
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
@@ -40,7 +40,7 @@ for row in rows:
 
 if(heat):
     print "Activating heating element"
-    GPIO.output(pinHeat, GPIO.HIGH)
+    GPIO.output(pinHeat, GPIO.LOW)
  
 def getTemp():
     #temp_c = random.randint(0,100)
