@@ -9,3 +9,6 @@ pinList = [19, 20, 21, 26]
 for i in pinList: 
     GPIO.setup(i, GPIO.OUT) 
     GPIO.output(i, GPIO.HIGH)
+    
+sleep(2)
+GPIO.cleanup()

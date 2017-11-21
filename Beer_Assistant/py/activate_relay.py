@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 GPIO.setmode(GPIO.BCM)
 pinList = [19, 20, 21, 26]
