@@ -12,5 +12,5 @@ for i in pinList:
     GPIO.output(i, GPIO.LOW)
     
 
-sleep(2)
+time.sleep(2)
 GPIO.cleanup()
