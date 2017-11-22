@@ -11,8 +11,9 @@ from w1thermsensor import W1ThermSensor
 import RPi.GPIO as GPIO
 
 pinHeat = 26    # GPIO pin connected to heat Relay
-interval = 1    # sec waiting
+interval = 2    # sec waiting
 heat = 0        # if set to 1, controller will activate heating
+mash = 0        # if set to 1, controller will mash
 
 GPIO.setmode(GPIO.BCM)
 pinList = [19, 20, 21, 26]
@@ -34,12 +35,11 @@ cur.execute(sql,)
 rows = cur.fetchall()
 for row in rows:
     id = row[0]
-    print "Found active batch with id:"
-    print id
-    heat = 1
+    print ("Found active batch with id: %s", id)
+    mash = 1
 
 if(heat):
-    print "Activating heating element"
+    print "*** Activating heating element"
     GPIO.output(pinHeat, GPIO.LOW)
  
 def getTemp():
@@ -47,7 +47,7 @@ def getTemp():
     temperature = sensor.get_temperature()
     return round(temperature, 1)
  
-while(heat):  
+while(mash):  
     print "Checking ending time"
     sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))
     cur.execute(*sql)
@@ -73,15 +73,33 @@ while(heat):
                 # Rollback in case there is any error
                 db.rollback()
                 print "Failed writing to database"
-        
+            
+            # Checking current temperature (single step)
+            # ****** Add multimple steps
+            sql = ("""SELECT target_temp FROM mashing_step WHERE id=%s""", (id, ))
+            cur.execute(*sql)
+            steps = cur.fetchall()
+            for step in steps:
+                if (temp<step[0]):
+                    heat = 1
+                else:
+                    heat = 0
+
+            # Managing heat element
+            if(heat):
+                print "*** Activating heating element"
+                GPIO.output(pinHeat, GPIO.LOW)
+            else:
+                print "*** Deactivating heating element"
+                GPIO.output(pinHeat, GPIO.HIGH)
+            
             time.sleep(interval)
         else:
-            heat = 0
-
+            mash = 0
+        
 
 cur.close()
 db.close()
 
 print "Deactivating heating element and cleaning up"
-GPIO.output(pinHeat, GPIO.LOW)
 GPIO.cleanup()
