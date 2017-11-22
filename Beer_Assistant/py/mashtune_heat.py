@@ -56,20 +56,7 @@ while(mashing):
         if(row[0] is None): 
             temp = getTemp()
             print temp
-            sql = ("""INSERT INTO temp_mashing (timestamp, id, temperature) VALUES (CURRENT_TIMESTAMP,%s,%s)""",(id,temp))
-            
-            try:
-                print "Writing to database..."
-                # Execute the SQL command
-                cur.execute(*sql)
-                # Commit your changes in the database
-                db.commit()
-                print "Write OK"
-            except:
-                # Rollback in case there is any error
-                db.rollback()
-                print "Failed writing to database"
-            
+
             # Checking current temperature (single step)
             # ****** Add multimple steps
             sql = ("""SELECT target_temp FROM mashing_step WHERE id=%s""", (id, ))
@@ -88,6 +75,21 @@ while(mashing):
             else:
                 print "*** Deactivating heating element"
                 GPIO.output(pinHeat, GPIO.HIGH)
+            
+            
+            sql = ("""INSERT INTO temp_mashing (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
+            
+            try:
+                print "Writing to database..."
+                # Execute the SQL command
+                cur.execute(*sql)
+                # Commit your changes in the database
+                db.commit()
+                print "Write OK"
+            except:
+                # Rollback in case there is any error
+                db.rollback()
+                print "Failed writing to database"
             
             time.sleep(interval)
         else:
