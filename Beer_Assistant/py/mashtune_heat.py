@@ -13,7 +13,7 @@ import RPi.GPIO as GPIO
 pinHeat = 26    # GPIO pin connected to heat Relay
 interval = 2    # sec waiting
 heat = 0        # if set to 1, controller will activate heating
-mash = 0        # if set to 1, controller will mash
+mashing = 0        # if set to 0, controller will not perform mashing
 
 GPIO.setmode(GPIO.BCM)
 pinList = [19, 20, 21, 26]
@@ -36,18 +36,14 @@ rows = cur.fetchall()
 for row in rows:
     id = row[0]
     print ("Found active batch with id: %s", id)
-    mash = 1
-
-if(heat):
-    print "*** Activating heating element"
-    GPIO.output(pinHeat, GPIO.LOW)
+    mashing = 1
  
 def getTemp():
     #temp_c = random.randint(0,100)
     temperature = sensor.get_temperature()
     return round(temperature, 1)
  
-while(mash):  
+while(mashing):  
     print "Checking ending time"
     sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))
     cur.execute(*sql)
@@ -95,11 +91,11 @@ while(mash):
             
             time.sleep(interval)
         else:
-            mash = 0
+            mashing = 0
         
 
 cur.close()
 db.close()
 
-print "Deactivating heating element and cleaning up"
+print "Cleaning up GPIO"
 GPIO.cleanup()
