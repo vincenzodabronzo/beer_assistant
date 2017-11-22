@@ -50,8 +50,7 @@ while(mashing):
     rows = cur.fetchall()
     
     for row in rows:
-        print "Found results:"
-        print row
+        print ("Found results: %s", row)
         
         if(row[0] is None): 
             temp = getTemp()
