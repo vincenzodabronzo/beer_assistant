@@ -30,7 +30,7 @@ sensor = W1ThermSensor()
 
 # Checking last active batch
 sql = ("""SELECT id FROM batch WHERE ending_time is NULL""")
-cur.execute(*sql)
+cur.execute(sql,)
 rows = cur.fetchall()
 for row in rows:
     id = row[0]
