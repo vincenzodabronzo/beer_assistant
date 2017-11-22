@@ -13,7 +13,7 @@ import RPi.GPIO as GPIO
 pinHeat = 26    # GPIO pin connected to heat Relay
 interval = 2    # sec waiting
 heat = 0        # if set to 1, controller will activate heating
-mashing = 0        # if set to 0, controller will not perform mashing
+mashing = 0     # if set to 0, controller will not perform mashing
 
 GPIO.setmode(GPIO.BCM)
 pinList = [19, 20, 21, 26]
