@@ -46,7 +46,7 @@ cur.execute(sql,)
 rows = cur.fetchall()
 for row in rows:
     id = row[0]
-    print ("Found 1 active batch with id: %s", id)
+    print ('Found 1 active batch with id: %s', str(id))
     mashing = 1
  
 def getTemp():
@@ -80,7 +80,7 @@ while(mashing):
             else:
                 GPIO.output(pinPump, GPIO.HIGH)
             
-            print ("[1 Mashing opened] Temp: ", str(temp), " C (Target: ", str(target_temp), " C) - Pump ", str(pump_recirculation), " - Heat: ", str(heat))
+            print ('[1 Mashing opened] Temp: ', str(temp), ' C (Target: ', str(target_temp), ' C) - Pump ', str(pump_recirculation), ' - Heat: ', str(heat))
             
             sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
             
