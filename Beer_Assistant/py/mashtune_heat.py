@@ -84,7 +84,7 @@ while(mashing):
                 pump_recirculation = "OFF"
                 GPIO.output(pinPump, GPIO.HIGH)
             
-            print ("Mashing opened: 1 - Temp °C: %s vs %s - Pump %s", temp, target_temp, pump_recirculation)
+            print ("Mashing opened: 1 - Temp ($^\circ$C): %s vs %s - Pump %s", temp, target_temp, pump_recirculation)
             
             sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
             
