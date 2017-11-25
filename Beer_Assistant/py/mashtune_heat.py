@@ -20,8 +20,8 @@ import RPi.GPIO as GPIO
 pinHeat = 26                # GPIO pin connected to heat Relay
 pinPump = 19                # GPIO pin connected to pump Relay
 interval = 2                # sec waiting
-heat = "OFF"                # if set to 1, controller will activate heating
-pump_recirculation = "OFF"  # if set to 0, pump will not recirculate water
+heat = 0                    # if set to 1, controller will activate heating
+pump_recirculation = 0      # if set to 0, pump will not recirculate water
 mashing = 0                 # if set to 0, controller will not perform mashing
 
 # Initializing GPIO
@@ -68,23 +68,19 @@ while(mashing):
             
             # Checking current temperature (single step)
             if (temp<target_temp):
-                heat = "ON"
-                print "*** Heating element: ON"
+                heat = 1
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
-                heat = "OFF"
-                print "*** Heating element: OFF"
+                heat = 0
                 GPIO.output(pinHeat, GPIO.HIGH)
                 
             # Checking recirculation pump config
             if(pump_recirculation):
-                pump_recirculation = "ON"
                 GPIO.output(pinPump, GPIO.LOW)
             else:
-                pump_recirculation = "OFF"
                 GPIO.output(pinPump, GPIO.HIGH)
             
-            print ("[1 Mashing opened] Temp: %s C (Target: %s C) - Pump %s", temp, target_temp, pump_recirculation)
+            print ("[1 Mashing opened] Temp: %s C (Target: %s C) - Pump %s - Heat: %s", temp, target_temp, pump_recirculation, heat)
             
             sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
             
