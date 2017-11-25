@@ -31,7 +31,7 @@ cur = db.cursor()
 sensor = W1ThermSensor()
 
 # Checking last active batch
-sql = ("""SELECT ba.id, ba.name, mc.starting_time, mc.ending_time FROM mashing_config AS mc INNER JOIN batch AS ba ON mc.id = ba.id where mc.ending_time is NULL ORDER BY timestamp DESC LIMIT 1""")
+sql = ("""SELECT ba.id, ba.name, mc.starting_time, mc.ending_time FROM mashing_config AS mc INNER JOIN batch AS ba ON mc.id = ba.id where mc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""")
 
 cur.execute(sql,)
 rows = cur.fetchall()
