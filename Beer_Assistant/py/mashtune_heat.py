@@ -2,6 +2,12 @@
 Created on 8 Nov 2017
 
 @author: kenzo
+
+TODOS:
+
+1 - Add multistep support (auto)
+2 - 
+
 '''
 
 
@@ -11,27 +17,30 @@ from w1thermsensor import W1ThermSensor
 #from _mysql import NULL
 import RPi.GPIO as GPIO
 
-pinHeat = 26    # GPIO pin connected to heat Relay
-interval = 2    # sec waiting
-heat = 0        # if set to 1, controller will activate heating
-mashing = 0     # if set to 0, controller will not perform mashing
+pinHeat = 26                # GPIO pin connected to heat Relay
+pinPump = 19                # GPIO pin connected to pump Relay
+interval = 2                # sec waiting
+heat = "OFF"                # if set to 1, controller will activate heating
+pump_recirculation = "OFF"  # if set to 0, pump will not recirculate water
+mashing = 0                 # if set to 0, controller will not perform mashing
 
+# Initializing GPIO
 GPIO.setmode(GPIO.BCM)
 pinList = [19, 20, 21, 26]
 # loop through pins and set mode and state to 'low'
 for i in pinList: 
     GPIO.setup(i, GPIO.OUT) 
     GPIO.output(i, GPIO.HIGH)
+# Initializing Sensor GPIO (4)
+sensor = W1ThermSensor()
+
 
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
-
-# Initializing Sensor GPIO (4)
-sensor = W1ThermSensor()
-
 # Checking last active batch
 sql = ("""SELECT ba.id, ba.name, mc.starting_time, mc.ending_time FROM mashing_config AS mc INNER JOIN batch AS ba ON mc.id = ba.id where mc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""")
+
 
 cur.execute(sql,)
 rows = cur.fetchall()
@@ -47,35 +56,35 @@ def getTemp():
  
 while(mashing):  
     print "------------------------------------"
-    sql = ("""SELECT ending_time FROM mashing_config WHERE id=%s""", (id, ))
+    sql = ("""SELECT mc.ending_time, mc.pump_recirculation, ms.target_temp FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
     for row in rows:
         if(row[0] is None):
-            print ("Mashing opened: 1") 
             temp = getTemp()
-            print temp
-
+            pump_recirculation = row[1]
+            target_temp = row[2]
+            
             # Checking current temperature (single step)
-            # ****** Add multimple steps
-            sql = ("""SELECT target_temp FROM mashing_step WHERE id=%s""", (id, ))
-            cur.execute(*sql)
-            steps = cur.fetchall()
-            for step in steps:
-                if (temp<step[0]):
-                    heat = 1
-                else:
-                    heat = 0
-
-            # Managing heat element
-            if(heat):
+            if (temp<target_temp):
+                heat = "ON"
                 print "*** Heating element: ON"
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
+                heat = "OFF"
                 print "*** Heating element: OFF"
                 GPIO.output(pinHeat, GPIO.HIGH)
+                
+            # Checking recirculation pump config
+            if(pump_recirculation):
+                pump_recirculation = "ON"
+                GPIO.output(pinPump, GPIO.LOW)
+            else:
+                pump_recirculation = "OFF"
+                GPIO.output(pinPump, GPIO.HIGH)
             
+            print ("Mashing opened: 1 - Temp °C: %s vs %s - Pump %s", temp, target_temp, pump_recirculation)
             
             sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
             
