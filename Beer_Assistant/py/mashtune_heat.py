@@ -103,7 +103,7 @@ while(mashing):
             except:
                 # Rollback in case there is any error
                 db.rollback()
-                print "Writing to database...ERROR"
+                print "*** Writing to database...ERROR ***"
             
             time.sleep(interval)
         else:
