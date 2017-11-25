@@ -51,9 +51,8 @@ while(mashing):
     rows = cur.fetchall()
     
     for row in rows:
-        print ("Found results: %s", row)
-        
-        if(row[0] is None): 
+        if(row[0] is None):
+            print ("Mashing opened: 1") 
             temp = getTemp()
             print temp
 
@@ -77,7 +76,7 @@ while(mashing):
                 GPIO.output(pinHeat, GPIO.HIGH)
             
             
-            sql = ("""INSERT INTO temp_mashing (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
+            sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
             
             try:
                 print "Writing to database..."
