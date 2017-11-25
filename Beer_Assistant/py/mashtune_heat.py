@@ -36,7 +36,7 @@ cur.execute(sql,)
 rows = cur.fetchall()
 for row in rows:
     id = row[0]
-    print ("Found active batch with id: %s", id)
+    print ("Found 1 active batch with id: %s", id)
     mashing = 1
  
 def getTemp():
@@ -45,6 +45,7 @@ def getTemp():
     return round(temperature, 1)
  
 while(mashing):  
+    print "------------------------------------"
     print "Checking ending time"
     sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))
     cur.execute(*sql)
@@ -69,10 +70,10 @@ while(mashing):
 
             # Managing heat element
             if(heat):
-                print "*** Activating heating element"
+                print "*** Heating element: ON"
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
-                print "*** Deactivating heating element"
+                print "*** Heating element: OFF"
                 GPIO.output(pinHeat, GPIO.HIGH)
             
             
