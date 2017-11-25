@@ -31,7 +31,8 @@ cur = db.cursor()
 sensor = W1ThermSensor()
 
 # Checking last active batch
-sql = ("""SELECT id FROM batch WHERE ending_time is NULL""")
+sql = ("""SELECT ba.id, ba.name, mc.starting_time, mc.ending_time FROM mashing_config AS mc INNER JOIN batch AS ba ON mc.id = ba.id where mc.ending_time is NULL ORDER BY timestamp DESC LIMIT 1""")
+
 cur.execute(sql,)
 rows = cur.fetchall()
 for row in rows:
@@ -46,8 +47,7 @@ def getTemp():
  
 while(mashing):  
     print "------------------------------------"
-    print "Checking ending time"
-    sql = ("""SELECT ending_time FROM batch WHERE id=%s""", (id, ))
+    sql = ("""SELECT ending_time FROM mashing_config WHERE id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
@@ -80,16 +80,15 @@ while(mashing):
             sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s)""",(id,temp,heat))
             
             try:
-                print "Writing to database..."
                 # Execute the SQL command
                 cur.execute(*sql)
                 # Commit your changes in the database
                 db.commit()
-                print "Write OK"
+                print "Writing to database...OK"
             except:
                 # Rollback in case there is any error
                 db.rollback()
-                print "Failed writing to database"
+                print "Writing to database...ERROR"
             
             time.sleep(interval)
         else:
