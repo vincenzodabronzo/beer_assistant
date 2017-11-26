@@ -1,7 +1,5 @@
 
-pinList = [19, 20, 21, 26] associated to relay board (4)
+pinList = [20, 21] associated to relay board (2)
 
-GPIO 19 -> IN2
-GPIO 20 -> IN3
-GPIO 21 -> IN4
-GPIO 26 -> IN1
+GPIO 20 -> IN1
+GPIO 21 -> IN2

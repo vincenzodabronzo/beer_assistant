@@ -17,8 +17,8 @@ from w1thermsensor import W1ThermSensor
 #from _mysql import NULL
 import RPi.GPIO as GPIO
 
-pinHeat = 26                # GPIO pin connected to heat Relay
-pinPump = 19                # GPIO pin connected to pump Relay
+pinHeat = 20                # GPIO pin connected to heat Relay
+pinPump = 21                # GPIO pin connected to pump Relay
 interval = 2                # sec waiting
 heat = 0                    # if set to 1, controller will activate heating
 pump_recirculation = 0      # if set to 0, pump will not recirculate water
@@ -26,7 +26,7 @@ mashing = 0                 # if set to 0, controller will not perform mashing
 
 # Initializing GPIO
 GPIO.setmode(GPIO.BCM)
-pinList = [19, 20, 21, 26]
+pinList = [20, 21]
 # loop through pins and set mode and state to 'low'
 for i in pinList: 
     GPIO.setup(i, GPIO.OUT) 
