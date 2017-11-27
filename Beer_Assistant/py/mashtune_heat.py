@@ -62,6 +62,8 @@ while(mashing):
     cur.execute(*sql)
     rows = cur.fetchall()
     
+    ##### inserire controllo mancanza di riga del mashing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 같같같같� se non ci sono risultati nella select non esce masi: mashing=1 sempre !!!
+    
     for row in rows:
         if(row[0] is None):
             temp = getTemp()
