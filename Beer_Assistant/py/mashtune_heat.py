@@ -84,7 +84,7 @@ while(mashing):
     cur.execute(*sql)
     rows = cur.fetchall()
     
-    ##### inserire controllo mancanza di riga del mashing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! se non ci sono risultati nella select non esce masi: mashing=1 sempre !!!
+    ##### inserire controllo mancanza di riga del mashing step !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! se non ci sono risultati nella select non esce masi: mashing=1 sempre !!!
     
     for row in rows:
         if(row[0] is None):
