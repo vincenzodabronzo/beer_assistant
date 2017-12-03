@@ -6,10 +6,15 @@
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
     
      <link href="css/mash_data.css" rel="stylesheet" type="text/css">
+     <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+    
     <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
@@ -19,6 +24,7 @@
     <script type="text/javascript" src="js/jqplot.canvasOverlay.js"></script>
     <script type="text/javascript" src="js/jqplot.highlighter.js"></script>
 	<script type="text/javascript" src="js/jqplot.cursor.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
 	
