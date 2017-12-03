@@ -35,7 +35,7 @@
 
     	//  microsec interval
     	var t = 1000;
-    	var id = 3;
+    	var id = $('#batch_id').text();
     	
 		
 		$(document).ready(function() {
@@ -189,16 +189,13 @@
     					setTimeout(doUpdate, t);
 					}
 			   }
-
-
-
-
-				alert ($('#batch_id').text());
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#stop').hide();
 				} else {
 					$('#start').hide();
+					update_graph = true;
+					doUpdate();
 				}
 		});
     </script>
@@ -212,7 +209,17 @@
 
 <div id="maincontainer">
 
-	<div id="topsection"><div class="innertube"><h1 id="batch_title">(Receipe / Batch details)<div id="batch_id">(none)</div></h1></div></div>
+	<div id="topsection">
+		<div class="innertube">
+	
+		<h1 id="batch_title">
+			<?php 
+			 include 'lib/get_open_batch.php';
+			?>
+		</h1>
+		</div>
+	
+	</div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
