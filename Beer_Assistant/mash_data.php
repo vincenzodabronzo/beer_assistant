@@ -45,6 +45,10 @@
 			
 			$('#stop').hide();
 
+			// Check for open batch (if yes, collect graph data and hide "start mashing")
+			$('#batch_title').load('lib/get_open_batch.php');
+			
+
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
@@ -202,7 +206,7 @@
 
 <div id="maincontainer">
 
-	<div id="topsection"><div class="innertube"><h1>Receipe / Batch details</h1></div></div>
+	<div id="topsection"><div class="innertube"><h1 id="batch_title">(Receipe / Batch details)</h1><div id="batch_id">none</div></div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
