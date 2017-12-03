@@ -22,7 +22,7 @@ from w1thermsensor import W1ThermSensor
 import RPi.GPIO as GPIO
 # Checking single instalce
 from tendo import singleton
-me = singleton.SingleInstance() # will sys.exit(-1) if other instance is running
+# me = singleton.SingleInstance() # will sys.exit(-1) if other instance is running
 
 def getTemp():
     #temp_c = random.randint(0,100)
