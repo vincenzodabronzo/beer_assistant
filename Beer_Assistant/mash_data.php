@@ -40,7 +40,6 @@
 		$(document).ready(function() {
 
 			var update_graph = false;
-			var start_script = true;
 
 			// Check for open batch (if yes, collect graph data and hide "start mashing")
 			$('#batch_title').load( 'lib/get_open_batch.php' );
@@ -157,10 +156,9 @@
 						// var dir = loc.substring(0, loc.lastIndexOf('/'));
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
-						if (start_script) {
-	                        <?php shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?>
-							start_script = false;
-						}
+
+	                    <?php shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?>
+
 						
 						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
 						
@@ -195,7 +193,6 @@
 				} else {
 					$('#start').hide();
 					update_graph = true;
-					start_script = true;
 					doUpdate();
 				}
 		});
