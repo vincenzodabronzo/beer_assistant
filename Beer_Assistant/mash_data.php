@@ -216,7 +216,6 @@
     <div id="rightcolumn">
 		<div class="innertube"><b>Devices: <em>20%</em></b>
 			<div class="device" id="show_devices">
-				<h2>Radio Group</h2>
 				<fieldset>
                     <legend>Heat activation: </legend>
                     <label for="radio-1">Auto</label>
@@ -225,6 +224,13 @@
                     <input type="radio" name="radio-1" id="heat_on">
                     <label for="radio-3">OFF</label>
                     <input type="radio" name="radio-1" id="heat_off">
+				</fieldset>
+				<fieldset>
+                    <legend>Pump Control: </legend>
+                    <label for="radio-1">ON</label>
+                    <input type="radio" name="radio-1" id="pump_on" checked="checked">
+                    <label for="radio-2">OFF</label>
+                    <input type="radio" name="radio-1" id="pump_off">
 				</fieldset>
 			</div>
 		</div>

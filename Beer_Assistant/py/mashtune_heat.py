@@ -34,7 +34,6 @@ for i in pinList:
 # Initializing Sensor GPIO (4)
 sensor = W1ThermSensor()
 
-
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
@@ -49,14 +48,29 @@ for row in rows:
     print "Found 1 active batch with id:"
     print id
     mashing = 1
-    print "Processing Data... "
+    print "Initializing data... "
+    
+    sql = ("""UPDATE mashing_config SET heat=NULL, pump_recirculation =0 WHERE mashing.config.id=%s""", (id))
+    
+    try:
+        # Execute the SQL command
+        cur.execute(*sql)
+        # Commit your changes in the database
+        db.commit()
+        print "Initialization...OK"
+    except:
+        # Rollback in case there is any error
+        db.rollback()
+        print "*** Initialization ERROR ***"
+    
  
 def getTemp():
     #temp_c = random.randint(0,100)
     temperature = sensor.get_temperature()
     return round(temperature, 1)
  
-while(mashing):  
+while(mashing):            
+
     sql = ("""SELECT mc.ending_time, mc.pump_recirculation, ms.target_temp, mc.heat FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
