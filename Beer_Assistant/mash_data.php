@@ -42,6 +42,7 @@
 
 			var update_graph = false;
 			var start_script = true;
+			
 			$('#stop').hide();
 
 			// RADIO BUTTON HANDLING  ------------------------------
