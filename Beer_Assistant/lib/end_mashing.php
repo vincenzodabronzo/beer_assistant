@@ -8,9 +8,9 @@
         die('Connection error: ' . $dbconn->connect_error);
     }
 
-   $dbconn->query("UPDATE batch SET ending_time = CURRENT_TIMESTAMP WHERE batch.id = ".$id.";");
+   $dbconn->query("UPDATE mashing_config SET ending_time = CURRENT_TIMESTAMP WHERE mashing_config.id = ".$id.";");
    
-   $result = $dbconn->query("SELECT tm.id, ba.name, tm.temperature, tm.timestamp, ba.starting_time, ba.ending_time FROM temp_mashing AS tm INNER JOIN batch AS ba ON tm.id = ba.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
+   $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mc.starting_time, mc.ending_time FROM batch AS ba INNER JOIN ba ON mt.id = ba.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
    
    if ($result->num_rows > 0) {
        while ($row = $result->fetch_assoc()){
