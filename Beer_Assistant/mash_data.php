@@ -206,7 +206,7 @@
 
 <div id="maincontainer">
 
-	<div id="topsection"><div class="innertube"><h1 id="batch_title">(Receipe / Batch details)</h1><div id="batch_id">(none)</div></div></div>
+	<div id="topsection"><div class="innertube"><h1 id="batch_title">(Receipe / Batch details)</h1><div id="batch_id">null</div></div></div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
