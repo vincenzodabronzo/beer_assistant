@@ -17,6 +17,6 @@
     
     echo    '(Receipe name)<div id="batch_id">'. $id .'</div> ';
     
-    shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &");
+    shell_exec("python ../py/mashtune_heat.py > /dev/null 2>/dev/null &");
 
 ?>
