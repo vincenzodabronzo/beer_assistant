@@ -188,12 +188,21 @@
     </div>
 
     <div id="rightcolumn">
-    	<div class="innertube"><b>Devices: <em>20%</em></b>
-    	     <div class="device" id="show_devices">
-                Pump - Status <b>OK</b>
-            </div>
-    	</div>
-    </div>
+		<div class="innertube"><b>Devices: <em>20%</em></b>
+			<div class="device" id="show_devices">
+				<h2>Radio Group</h2>
+				<fieldset>
+                    <legend>Heat activation: </legend>
+                    <label for="radio-1">Auto</label>
+                    <input type="radio" name="radio-1" id="radio-1">
+                    <label for="radio-2">ON</label>
+                    <input type="radio" name="radio-1" id="radio-2">
+                    <label for="radio-3">OFF</label>
+                    <input type="radio" name="radio-1" id="radio-3">
+				</fieldset>
+			</div>
+		</div>
+	</div>
 	
 	<div id="myChart"></div>
 	
