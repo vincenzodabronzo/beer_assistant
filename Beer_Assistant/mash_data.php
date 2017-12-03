@@ -44,25 +44,36 @@
 			var start_script = true;
 			$('#stop').hide();
 
-			// RADIO BUTTON HANDLING ------------------------------
+			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat auto");
                     $.ajax( "lib/heat_control.php?c=NULL&id="+id )
                 }
    			});
-   			
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat on");
                     $.ajax( "lib/heat_control.php?c=1&id="+id )
                 }
     		});
-    		
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat off");
                     $.ajax( "lib/heat_control.php?c=0&id="+id )
+                }
+    		});
+    		
+    		$('#pump_on').click(function () {
+                if ($(this).is(':checked')) {
+                    alert("heat on");
+                    $.ajax( "lib/pump_control.php?c=1&id="+id )
+                }
+    		});
+    		$('#pump_off').click(function () {
+                if ($(this).is(':checked')) {
+                    alert("heat off");
+                    $.ajax( "lib/pump_control.php?c=0&id="+id )
                 }
     		});
     		
@@ -228,9 +239,9 @@
 				<fieldset id="pump_group">
                     <legend>Pump Control: </legend>
                     <label for="radio-1">ON</label>
-                    <input type="radio" name="pump_group" id="pump_on" checked="checked">
+                    <input type="radio" name="pump_group" id="pump_on">
                     <label for="radio-2">OFF</label>
-                    <input type="radio" name="pump_group" id="pump_off">
+                    <input type="radio" name="pump_group" id="pump_off" checked="checked">
 				</fieldset>
 			</div>
 		</div>

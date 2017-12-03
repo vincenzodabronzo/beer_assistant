@@ -8,6 +8,6 @@ if($dbconn->connect_error) {
     die('Connection error: ' . $dbconn->connect_error);
 }
 
-$dbconn->query("UPDATE mashing_config SET heat = ".$command." WHERE mashing_config.id = ".$id.";");
+$dbconn->query("UPDATE mashing_config SET pump_recirculation = ".$command." WHERE mashing_config.id = ".$id.";");
 
 ?>
