@@ -43,6 +43,9 @@
 			var update_graph = false;
 			var start_script = true;
 
+			// Check for open batch (if yes, collect graph data and hide "start mashing")
+			$('#batch_title').load( 'lib/get_open_batch.php' );
+
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
@@ -188,8 +191,7 @@
 			   }
 
 
-				// Check for open batch (if yes, collect graph data and hide "start mashing")
-				$('#batch_title').load( 'lib/get_open_batch.php' );
+
 
 				alert ($('#batch_id').text());
 				
