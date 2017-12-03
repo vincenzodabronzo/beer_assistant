@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
         // shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &");
     } 
 } else {
-    echo    '(No open batched found - Start mashing)<div id="batch_id">0</div> ';
+    echo    '(No open batch found - Start mashing)<div id="batch_id">0</div> ';
 }
 
 ?>
