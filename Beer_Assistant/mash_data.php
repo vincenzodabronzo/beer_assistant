@@ -198,6 +198,8 @@
 					update_graph = true;
 					doUpdate();
 				}
+
+				alert(id);
 		});
     </script>
     
