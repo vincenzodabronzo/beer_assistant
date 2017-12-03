@@ -157,7 +157,7 @@
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
 						if (start_script) {
-	                        <?php shell_exec("python py/temp_mashing_v1_0.py > /dev/null 2>/dev/null &"); ?>
+	                        <?php shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?>
 							start_script = false;
 						}
 						
