@@ -22,7 +22,6 @@
                     <div id="starting_time">' . $row['starting_time'] . '</div>
                     Ending time at:
                     <div id="ending_time">' . $row['ending_time'] . '</div>';
-           
        }
    }
     
