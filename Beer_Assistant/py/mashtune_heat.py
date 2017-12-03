@@ -3,6 +3,10 @@ Created on 8 Nov 2017
 
 @author: kenzo
 
+DONE:
+sudo apt-get install python-pip
+pip install tendo
+
 TODOS:
 
 1 - Add multistep support (auto)
@@ -16,6 +20,9 @@ import time
 from w1thermsensor import W1ThermSensor 
 #from _mysql import NULL
 import RPi.GPIO as GPIO
+# Checking single instalce
+from tendo import singleton
+me = singleton.SingleInstance() # will sys.exit(-1) if other instance is running
 
 def getTemp():
     #temp_c = random.randint(0,100)
