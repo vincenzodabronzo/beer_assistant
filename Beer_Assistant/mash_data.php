@@ -255,7 +255,7 @@
 		<button id="option" data-role="button">Options</button>
 	</div>
 	
-	<div id="footer">( Final info here )</div>
+	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 
 </div>
 
