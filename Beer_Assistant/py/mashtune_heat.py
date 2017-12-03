@@ -58,7 +58,7 @@ def getTemp():
  
 while(mashing):  
     print "------------------------------------"
-    sql = ("""SELECT mc.ending_time, mc.pump_recirculation, ms.target_temp FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
+    sql = ("""SELECT mc.ending_time, mc.pump_recirculation, ms.target_temp, mc.heat FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
@@ -70,8 +70,10 @@ while(mashing):
             pump_recirculation = row[1]
             target_temp = row[2]
             
+            shutdown_heat = row[3]
+            
             # Checking current temperature (single step)
-            if (temp<target_temp):
+            if (temp<target_temp and shutdown_heat!=0 ):
                 heat = 1
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
