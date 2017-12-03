@@ -10,7 +10,7 @@
     
     $dbconn->query("INSERT INTO batch(name) VALUES ('".$receipe_name."') " );
     
-    $id = $mysqli->insert_id;
+    $id = $dbconn->insert_id;
     
     $dbconn->query("INSERT INTO mashing_config(id, starting_time, pump_recirculation) VALUES ( '".$id."', CURRENT_TIMESTAMP, '0' ) " );
  
