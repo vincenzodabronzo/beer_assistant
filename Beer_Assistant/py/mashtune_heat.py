@@ -48,8 +48,8 @@ for row in rows:
     id = row[0]
     print "Found 1 active batch with id:"
     print id
-    
     mashing = 1
+    print "------ Processing Data -------------"
  
 def getTemp():
     #temp_c = random.randint(0,100)
