@@ -3,7 +3,7 @@
     
     $id = $_GET["id"];
     
-    shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &");
+    shell_exec("python ../py/mashtune_heat.py > /dev/null 2>/dev/null &");
     
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
     if($dbconn->connect_error) {
