@@ -48,21 +48,21 @@
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat auto");
-                    $.ajax( "het_control.php?c=NULL&id="+id )
+                    $.ajax( "lib/heat_control.php?c=NULL&id="+id )
                 }
    			});
    			
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat on");
-                    $.ajax( "het_control.php?c=1&id="+id )
+                    $.ajax( "lib/heat_control.php?c=1&id="+id )
                 }
     		});
     		
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat off");
-                    $.ajax( "het_control.php?c=0&id="+id )
+                    $.ajax( "lib/heat_control.php?c=0&id="+id )
                 }
     		});
     		
