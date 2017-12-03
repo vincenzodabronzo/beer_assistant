@@ -50,7 +50,7 @@ for row in rows:
     mashing = 1
     print "Initializing data... "
     
-    sql = ("""UPDATE mashing_config SET heat=NULL, pump_recirculation =0 WHERE mashing.config.id=%s""", (id))
+    sql = ("""UPDATE mashing_config SET heat=NULL, pump_recirculation =0 WHERE mashing_config.id=%s""", (id))
     
     try:
         # Execute the SQL command
