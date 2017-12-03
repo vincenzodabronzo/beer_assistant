@@ -133,7 +133,8 @@
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
 				$('#start').click( function(){
-					update_graph = true;     
+					update_graph = true;
+					$('#batch_title').load( 'lib/start_mashing.php' );
 					doUpdate();      
 					$(this).hide();
 					$('#stop').show();
