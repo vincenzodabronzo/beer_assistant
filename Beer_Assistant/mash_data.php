@@ -194,11 +194,11 @@
 				<fieldset>
                     <legend>Heat activation: </legend>
                     <label for="radio-1">Auto</label>
-                    <input type="radio" name="radio-1" id="radio-1">
+                    <input type="radio" name="radio-1" id="heat_auto">
                     <label for="radio-2">ON</label>
-                    <input type="radio" name="radio-1" id="radio-2">
+                    <input type="radio" name="radio-1" id="heat_on">
                     <label for="radio-3">OFF</label>
-                    <input type="radio" name="radio-1" id="radio-3">
+                    <input type="radio" name="radio-1" id="heat_off">
 				</fieldset>
 			</div>
 		</div>

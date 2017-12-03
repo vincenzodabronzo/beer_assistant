@@ -49,7 +49,7 @@ for row in rows:
     print "Found 1 active batch with id:"
     print id
     mashing = 1
-    print "------ Processing Data -------------"
+    print "Processing Data... "
  
 def getTemp():
     #temp_c = random.randint(0,100)
@@ -57,7 +57,6 @@ def getTemp():
     return round(temperature, 1)
  
 while(mashing):  
-    print "------------------------------------"
     sql = ("""SELECT mc.ending_time, mc.pump_recirculation, ms.target_temp, mc.heat FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
@@ -113,6 +112,7 @@ while(mashing):
         else:
             mashing = 0
         
+    print "------------------------------------"
 
 cur.close()
 db.close()
