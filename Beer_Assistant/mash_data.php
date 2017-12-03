@@ -35,7 +35,6 @@
 
     	//  microsec interval
     	var t = 1000;
-    	var id = $('#batch_id').text();
     	
 		
 		$(document).ready(function() {
@@ -50,32 +49,32 @@
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat auto");
-                    $.ajax( "lib/heat_control.php?c=NULL&id="+id )
+                    $.ajax( "lib/heat_control.php?c=NULL&id="+$('#batch_id').text() )
                 }
    			});
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat on");
-                    $.ajax( "lib/heat_control.php?c=1&id="+id )
+                    $.ajax( "lib/heat_control.php?c=1&id="+$('#batch_id').text() )
                 }
     		});
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat off");
-                    $.ajax( "lib/heat_control.php?c=0&id="+id )
+                    $.ajax( "lib/heat_control.php?c=0&id="+$('#batch_id').text() )
                 }
     		});
     		
     		$('#pump_on').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat on");
-                    $.ajax( "lib/pump_control.php?c=1&id="+id )
+                    $.ajax( "lib/pump_control.php?c=1&id="+$('#batch_id').text() )
                 }
     		});
     		$('#pump_off').click(function () {
                 if ($(this).is(':checked')) {
                     alert("heat off");
-                    $.ajax( "lib/pump_control.php?c=0&id="+id )
+                    $.ajax( "lib/pump_control.php?c=0&id="+$('#batch_id').text() )
                 }
     		});
     		
@@ -148,7 +147,7 @@
 				});
 
 				function endMashing() {
-					$('#show_data').load('lib/end_mashing.php?id='+id);
+					$('#show_data').load('lib/end_mashing.php?id='+$('#batch_id').text());
 				}
 			 
 				function doUpdate() {
@@ -163,7 +162,7 @@
 							start_script = false;
 						}
 						
-						$('#show_data').load('lib/data.php?id='+id);
+						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
 						
 						if(data.length > n-1){
 							data.shift();
@@ -198,8 +197,6 @@
 					update_graph = true;
 					doUpdate();
 				}
-
-				alert(id);
 		});
     </script>
     
