@@ -160,7 +160,7 @@
 							start_script = false;
 						}
 						
-						$('#show_data').load('lib/data.php');
+						$('#show_data').load('lib/data.php?id='+id');
 						
 						if(data.length > n-1){
 							data.shift();
