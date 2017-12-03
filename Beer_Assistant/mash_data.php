@@ -42,6 +42,25 @@
 			var update_graph = false;
 			var start_script = true;
 			$('#stop').hide();
+
+			// RADIO BUTTON HANDLING ------------------------------
+			$('#heat_auto').click(function () {
+                if ($(this).is(':checked')) {
+                    alert("heat auto");
+                }
+   			});
+    		$('#heat_on').click(function () {
+                if ($(this).is(':checked')) {
+                    alert("heat on");
+                }
+    		});
+    		$('#heat_off').click(function () {
+                if ($(this).is(':checked')) {
+                    alert("heat off");
+                }
+    		});
+    		// END RADIO BUTTON HANDLING ------------------------------
+    		
 			
 			var x = (new Date()).getTime(); // current time
 			
