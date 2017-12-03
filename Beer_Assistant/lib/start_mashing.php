@@ -18,7 +18,7 @@
     
     $dbconn->query("INSERT INTO mashing_step(id, target_temp, minutes, step_number) VALUES ( '".$id."', '68.0', '60', '1' ) " );
     
-   $cmd = shell_exec("python mashtune_heat.py > /dev/null 2>/dev/null &");
+   $cmd = shell_exec("python mashtune_heat.py");
    echo $cmd;
     // shell_exec("python mashtune_heat.py");
 ?>
