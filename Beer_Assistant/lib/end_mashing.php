@@ -1,13 +1,12 @@
 <?php
     // ini_set('display_errors', 'On');
+    
+    $id = $_GET["id"];
 
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
     if($dbconn->connect_error) {
         die('Connection error: ' . $dbconn->connect_error);
     }
-    
-    // Selezionare il corretto ID 
-    $id = 2;
 
    $dbconn->query("UPDATE batch SET ending_time = CURRENT_TIMESTAMP WHERE batch.id = ".$id.";");
    

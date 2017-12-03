@@ -145,7 +145,7 @@
 				});
 
 				function endMashing() {
-					$('#show_data').load('lib/end_mashing.php');
+					$('#show_data').load('lib/end_mashing.php?id='+id);
 				}
 			 
 				function doUpdate() {
