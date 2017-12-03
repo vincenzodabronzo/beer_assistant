@@ -190,6 +190,8 @@
 
 				// Check for open batch (if yes, collect graph data and hide "start mashing")
 				$('#batch_title').load( 'lib/get_open_batch.php' );
+
+				alert ($('#batch_id').text());
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#stop').hide();
