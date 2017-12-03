@@ -70,10 +70,10 @@ while(mashing):
             pump_recirculation = row[1]
             target_temp = row[2]
             
-            shutdown_heat = row[3]
+            force_heat = row[3]
             
             # Checking current temperature (single step)
-            if (temp<target_temp and shutdown_heat!=0 ):
+            if ( (temp<target_temp and force_heat!=0 ) or force_heat==1 ):
                 heat = 1
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
