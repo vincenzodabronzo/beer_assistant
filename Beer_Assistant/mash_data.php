@@ -195,6 +195,7 @@
 				} else {
 					$('#start').hide();
 					update_graph = true;
+					start_script = true;
 					doUpdate();
 				}
 		});
