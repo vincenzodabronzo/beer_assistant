@@ -16,25 +16,11 @@ import time
 from w1thermsensor import W1ThermSensor 
 #from _mysql import NULL
 import RPi.GPIO as GPIO
-# check if is only instance
-import __main__, os
-import sys
 
 def getTemp():
     #temp_c = random.randint(0,100)
     temperature = sensor.get_temperature()
-    return round(temperature, 1)
-
-def isOnlyInstance():
-    # Determine if there are more than the current instance of the application
-    # running at the current time.
-    return os.system("(( $(ps -ef | grep python | grep '[" +
-                     __main__.__file__[0] + "]" + __main__.__file__[1:] +
-                     "' | wc -l) > 1 ))") != 0
-                     
-
-if (isOnlyInstance() == False):
-    sys.exit("Script mashtune_heat.py already running")
+    return round(temperature, 1)                     
 
 pinHeat = 20                # GPIO pin connected to heat Relay
 pinPump = 21                # GPIO pin connected to pump Relay
