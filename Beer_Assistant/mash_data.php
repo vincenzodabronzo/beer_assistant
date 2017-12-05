@@ -132,9 +132,9 @@
 					// doUpdate();
 					
 					$('#batch_title').load( 'lib/start_mashing.php' ).done(function() {
-						  doUpdate() );
+						  doUpdate();
 						});
-	
+
 					     
 					$(this).hide();
 					$('#stop').show();
