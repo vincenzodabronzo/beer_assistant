@@ -231,6 +231,10 @@
                 <div id="mashing_temp">0.0</div>
                 Collected at:
                 <div id="current_timestamp">--</div>
+                     Heat:
+                    <div id="heat">--</div>
+                    Pump recirculation:
+                    <div id="pump_recirculation">--</div>               
                 Starting time at:
                 <div id="starting_time">--</div>
                 Ending time at:
