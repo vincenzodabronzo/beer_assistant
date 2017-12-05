@@ -127,8 +127,15 @@
 			 
 				$('#start').click( function(){
 					update_graph = true;
-					$('#batch_title').load( 'lib/start_mashing.php' );
-					doUpdate();      
+
+					// $('#batch_title').load( 'lib/start_mashing.php' );
+					// doUpdate();
+					
+					$('#batch_title').load( 'lib/start_mashing.php' ).done(function() {
+						  doUpdate() );
+						});
+	
+					     
 					$(this).hide();
 					$('#stop').show();
 			   });
