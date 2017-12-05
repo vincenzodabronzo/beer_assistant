@@ -31,8 +31,6 @@ import RPi.GPIO as GPIO
 import singleton
 me = singleton.SingleInstance()
 
-
-
 def getTemp():
     #temp_c = random.randint(0,100)
     temperature = sensor.get_temperature()
