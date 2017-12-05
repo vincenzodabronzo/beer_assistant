@@ -17,5 +17,7 @@
     echo    '(Receipe name)<div id="batch_id">'. $id .'</div> ';
     
     $dbconn->query("INSERT INTO mashing_step(id, target_temp, minutes, step_number) VALUES ( '".$id."', '68.0', '60', '1' ) " );
+    
+    echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py 2>&1"); ?> 
 
 ?>
