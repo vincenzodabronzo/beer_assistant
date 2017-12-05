@@ -157,7 +157,7 @@
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
 
-	                    // <     ?    php shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?>
+	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>/dev/null &"); ?>
 
 						
 						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
