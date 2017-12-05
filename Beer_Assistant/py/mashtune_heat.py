@@ -24,6 +24,7 @@ import RPi.GPIO as GPIO
 
 import fcntl
 
+# Avoid multiple instance same script
 def lockFile(lockfile):
     fp = open(lockfile, 'w')
     try:
@@ -32,9 +33,9 @@ def lockFile(lockfile):
         return False
 
     return True
-
 if not lockFile(".lock.pod"):
         sys.exit(0)
+
 
 def getTemp():
     #temp_c = random.randint(0,100)
