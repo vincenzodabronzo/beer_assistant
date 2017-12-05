@@ -152,7 +152,7 @@
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
 						
-    					<?php echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py 2>&1"); ?> // error collection
+    					<?php echo "/*"; echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py 2>&1"); echo "*/"; ?> // error collection
 	                    // < ?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
 						// < ? php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>&1 &"); ?>
 						
