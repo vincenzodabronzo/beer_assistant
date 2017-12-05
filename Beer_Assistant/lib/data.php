@@ -8,7 +8,7 @@
         die('Connection error: ' . $dbconn->connect_error);
     }
     
-    $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mc.starting_time, mc.ending_time, mc.pump_recirculation, mc.heat FROM batch AS ba INNER JOIN mashing_temp as mt ON ba.id = mt.id INNER JOIN mashing_config AS mc ON mt.id = mc.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
+    $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mc.starting_time, mc.ending_time, mc.pump_recirculation, mc.heat, ms.target_temp FROM batch AS ba INNER JOIN mashing_temp as mt ON ba.id = mt.id INNER JOIN mashing_config AS mc ON mt.id = mc.id INNER JOIN mashing_step as ms ON mc.id = ms.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
     
     if ($row['heat'] == "") {
         $row['heat'] == "AUTO";
@@ -18,6 +18,8 @@
         while ($row = $result->fetch_assoc()){
             echo    'Temperature &deg;C:
                     <div id="mashing_temp">' . $row['temperature'] . '</div>
+                    Target temp &deg;C:
+                    <div id="target_temp">' . $row['target_temp'] . '</div>
                     Collected at:
                     <div id="current_timestamp">' . $row['timestamp'] . '</div>
                     Heat:
@@ -32,6 +34,8 @@
     } else {
         echo 'Temperature &deg;C: (No data collected)
                      <div id="mashing_temp">0.0</div>
+                    Target temp &deg;C:
+                    <div id="target_temp">0.0</div>
                      Collected at:
                     <div id="current_timestamp">--</div>
                     Heat:

@@ -226,6 +226,8 @@
     	    <div class="data" id="show_data">
                 Temperature &deg;C: 
                 <div id="mashing_temp">0.0</div>
+                Target temp &deg;C: 
+                <div id="target_temp">0.0</div>
                 Collected at:
                 <div id="current_timestamp">--</div>
                      Heat:
