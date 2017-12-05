@@ -22,7 +22,7 @@
                     <div id="ending_time">' . $row['ending_time'] . '</div>';
         }
     } else {
-        echo 'Temperature &deg;C: (No results found)
+        echo 'Temperature &deg;C: (No data collected)
                      <div id="mashing_temp">0.0</div>
                      Collected at:
                     <div id="current_timestamp">--</div>

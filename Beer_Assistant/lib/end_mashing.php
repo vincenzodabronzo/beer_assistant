@@ -23,6 +23,15 @@
                     Ending time at:
                     <div id="ending_time">' . $row['ending_time'] . '</div>';
        }
+   } else {
+       echo 'Temperature &deg;C: (No data collected)
+                     <div id="mashing_temp">0.0</div>
+                     Collected at:
+                    <div id="current_timestamp">--</div>
+                    Starting time at:
+                    <div id="starting_time">--</div>
+                    Ending time at:
+                    <div id="ending_time">--</div>' ;
    }
     
 ?>
