@@ -161,7 +161,7 @@
 
 						
 						// $('#show_data').load('lib/data.php?id='+$('#batch_id').text());
-						$('#show_data').load('lib/data.php?id=4');
+						$('#show_data').load('lib/data.php?id=3');
 						
 						if(data.length > n-1){
 							data.shift();
