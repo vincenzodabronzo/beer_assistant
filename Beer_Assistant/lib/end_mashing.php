@@ -19,9 +19,9 @@
                     <div id="target_temp">' . $row['target_temp'] . '</div>
                     Collected at:
                     <div id="current_timestamp">' . $row['timestamp'] . '</div>
-                    Heat:
+                    Heated:
                     <div id="heated">' . $row['heated'] . '</div>
-                    Pump recirculation:
+                    Pump recirculated:
                     <div id="pump_recirculated">' . $row['pump_recirculated'] . '</div>
                     Starting time at:
                     <div id="starting_time">' . $row['starting_time'] . '</div>
