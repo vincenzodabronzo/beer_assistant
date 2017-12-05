@@ -47,32 +47,27 @@
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
-                    alert("heat auto");
                     $.ajax( "lib/heat_control.php?c=NULL&id="+$('#batch_id').text() )
                 }
    			});
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
-                    alert("heat on");
                     $.ajax( "lib/heat_control.php?c=1&id="+$('#batch_id').text() )
                 }
     		});
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
-                    alert("heat off");
                     $.ajax( "lib/heat_control.php?c=0&id="+$('#batch_id').text() )
                 }
     		});
     		
     		$('#pump_on').click(function () {
                 if ($(this).is(':checked')) {
-                    alert("heat on");
                     $.ajax( "lib/pump_control.php?c=1&id="+$('#batch_id').text() )
                 }
     		});
     		$('#pump_off').click(function () {
                 if ($(this).is(':checked')) {
-                    alert("heat off");
                     $.ajax( "lib/pump_control.php?c=0&id="+$('#batch_id').text() )
                 }
     		});
@@ -156,7 +151,8 @@
 						// var dir = loc.substring(0, loc.lastIndexOf('/'));
 						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
 						
-
+						
+    					// echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py 2>&1");  // error collection
 	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
 
 						
