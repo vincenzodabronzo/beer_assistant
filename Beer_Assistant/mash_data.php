@@ -39,8 +39,6 @@
 		
 		$(document).ready(function() {
 
-			var update_graph = false;
-
 			// Check for open batch (if yes, collect graph data and hide "start mashing")
 			$('#batch_title').load( 'lib/get_open_batch.php' );
 
@@ -126,10 +124,9 @@
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
 				$('#start').click( function(){
-					update_graph = true;
-
 					$('#batch_title').load( 'lib/start_mashing.php' );
-					doUpdate();
+					location.reload();
+					// doUpdate();
 					     
 					$(this).hide();
 					$('#stop').show();
@@ -144,10 +141,11 @@
 
 				function endMashing() {
 					$('#show_data').load('lib/end_mashing.php?id='+$('#batch_id').text());
+					location.reload();
 				}
 			 
 				function doUpdate() {
-					if (update_graph) {
+
 
 						// var loc = window.location.pathname;
 						// var dir = loc.substring(0, loc.lastIndexOf('/'));
@@ -184,14 +182,13 @@
     					plot1 = $.jqplot ('myChart', [data],options);
     
     					setTimeout(doUpdate, t);
-					}
+
 			   }
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#stop').hide();
 				} else {
 					$('#start').hide();
-					update_graph = true;
 					doUpdate();
 				}
 		});

@@ -17,6 +17,4 @@
     
     echo    '(Receipe name)<div id="batch_id">'. $id .'</div> ';
     
-    header('Location: '.$_SERVER['PHP_SELF'].'/beer_assistant/Beer_Assistant/mash_data.php');
-    
 ?>
