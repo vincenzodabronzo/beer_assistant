@@ -217,7 +217,7 @@
 
     <div id="contentwrapper">
         <div id="contentcolumn">
-        	<div class="innertube"><b>Manual mashing: </b></div>
+        	<div class="innertube"><b>Information: </b></div>
         </div>
     </div>
 
