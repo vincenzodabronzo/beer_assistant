@@ -19,7 +19,7 @@
                     Starting time at:
                     <div id="starting_time">' . $row['starting_time'] . '</div>
                     Ending time at:
-                    <div id="ending_time">' . $row['ending_time'] . '</div>';
+                    <div id="ending_time">--</div>';
         }
     } else {
         echo 'Temperature &deg;C: (No data collected)
