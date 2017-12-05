@@ -9,8 +9,9 @@
         die('Connection error: ' . $dbconn->connect_error);
     }
     
+    // not working
     if ($end_mash == "1") {
-        $dbconn->query("UPDATE batch SET ending_time = CURRENT_TIMESTAMP WHERE batch.id = ".$id.";");
+        $dbconn->query("UPDATE mashing_config SET ending_time = CURRENT_TIMESTAMP WHERE mashing_config.id = ".$id.";");
     }
     
     
