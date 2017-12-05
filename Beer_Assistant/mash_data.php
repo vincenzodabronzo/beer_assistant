@@ -153,8 +153,8 @@
 						
 						
     					// echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py 2>&1");  // error collection
-	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
-
+	                    // < ?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
+						<?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>&1 &"); ?>
 						
 						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
 						// $('#show_data').load('lib/data.php?id=3');
