@@ -21,8 +21,20 @@ from w1thermsensor import W1ThermSensor
 #from _mysql import NULL
 import RPi.GPIO as GPIO
 # Checking single instalce
-from tendo import singleton
-me = singleton.SingleInstance() # will sys.exit(-1) if other instance is running
+
+import fcntl
+
+def lockFile(lockfile):
+    fp = open(lockfile, 'w')
+    try:
+        fcntl.lockf(fp, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except IOError:
+        return False
+
+    return True
+
+if not lockFile(".lock.pod"):
+        sys.exit(0)
 
 def getTemp():
     #temp_c = random.randint(0,100)
