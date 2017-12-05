@@ -9,8 +9,9 @@ sudo rpi-update
 sudo reboot
 sudo apt-get update
 sudo apt-get upgrade
-sudo adduser pi gpio
-sudo reboot
+sudo adduser pi gpio ????
+sudo adduser www-data gpio
+sudo systemctl restart apache2
 
 TODOS:
 
