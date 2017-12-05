@@ -5,7 +5,11 @@ Created on 8 Nov 2017
 
 DONE:
 sudo apt-get install python-pip
-pip install tendo
+sudo rpi-update
+sudo reboot
+sudo apt-get update
+sudo apt-get upgrade
+sudo adduser pi gpio
 
 TODOS:
 
