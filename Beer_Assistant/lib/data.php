@@ -9,7 +9,7 @@
         die('Connection error: ' . $dbconn->connect_error);
     }
     
-    if ($end_mash) {
+    if ($end_mash == "1") {
         $dbconn->query("UPDATE batch SET ending_time = CURRENT_TIMESTAMP WHERE batch.id = ".$id.";");
     }
     
