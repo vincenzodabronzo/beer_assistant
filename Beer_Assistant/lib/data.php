@@ -10,12 +10,6 @@
     
     $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mc.starting_time, mc.ending_time, mc.pump_recirculation, mc.heat, ms.target_temp FROM batch AS ba INNER JOIN mashing_temp as mt ON ba.id = mt.id INNER JOIN mashing_config AS mc ON mt.id = mc.id INNER JOIN mashing_step as ms ON mc.id = ms.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
     
-    $heat_status = "AUTO";
-    if ($row['heat'] == "1") {
-        $heat_status = "ON";
-    } else if ($row['heat'] == "0") {
-        $heat_status = "OFF";
-    }
     
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
@@ -26,7 +20,7 @@
                     Collected at:
                     <div id="current_timestamp">' . $row['timestamp'] . '</div>
                     Heat:
-                    <div id="heat">' . $heat_status . '</div>
+                    <div id="heat">' . $row['heat'] . '</div>
                     Pump recirculation:
                     <div id="pump_recirculation">' . $row['pump_recirculation'] . '</div>
                     Starting time at:
