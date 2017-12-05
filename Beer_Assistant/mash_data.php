@@ -263,6 +263,10 @@
                     <label for="radio-2">OFF</label>
                     <input type="radio" name="pump_group" id="pump_off" checked="checked">
 				</fieldset>
+				<fieldset id="target_temp_group">
+                    <legend>Target temperature: </legend>
+                    
+				</fieldset>
 			</div>
 		</div>
 	</div>
