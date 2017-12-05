@@ -17,6 +17,6 @@
     
     echo    '(Receipe name)<div id="batch_id">'. $id .'</div> ';
     
-   
+    header('Location: http://localhost/beer_assistant/Beer_Assistant/mash_data.php');
     
 ?>
