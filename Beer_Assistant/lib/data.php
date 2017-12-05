@@ -10,6 +10,10 @@
     
     $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mc.starting_time, mc.ending_time, mc.pump_recirculation, mc.heat FROM batch AS ba INNER JOIN mashing_temp as mt ON ba.id = mt.id INNER JOIN mashing_config AS mc ON mt.id = mc.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
     
+    if ($row['heat'] == "") {
+        $row['heat'] == "AUTO";
+    }
+    
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             echo    'Temperature &deg;C:
