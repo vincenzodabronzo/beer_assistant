@@ -23,7 +23,7 @@ import RPi.GPIO as GPIO
 
 # Checking single instance
 import singleton
-me = SingleInstance()
+me = singleton.SingleInstance()
 
 
 
