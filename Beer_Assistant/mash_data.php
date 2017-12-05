@@ -160,7 +160,8 @@
 	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/lib/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
 
 						
-						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
+						// $('#show_data').load('lib/data.php?id='+$('#batch_id').text());
+						$('#show_data').load('lib/data.php?id=4');
 						
 						if(data.length > n-1){
 							data.shift();
