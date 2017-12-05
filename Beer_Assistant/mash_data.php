@@ -140,7 +140,7 @@
 				});
 
 				function endMashing() {
-					$('#show_data').load('lib/end_mashing.php?id='+$('#batch_id').text());
+					$('#show_data').load('lib/data.php?id='+$('#batch_id').text()+'&end_mash=1' );
 					location.reload();
 				}
 			 
