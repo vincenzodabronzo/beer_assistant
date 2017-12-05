@@ -240,6 +240,8 @@
     	</div>
     </div>
 
+	<!-- prevedere meccanismo di gestione della concorrenza per i radio button aggiornati da piu interfacce -->
+
     <div id="rightcolumn">
 		<div class="innertube"><b>Devices: <em>20%</em></b>
 			<div class="device" id="show_devices">
