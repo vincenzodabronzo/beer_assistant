@@ -13,7 +13,7 @@
     $id = $dbconn->insert_id;
     
     $dbconn->query("INSERT INTO mashing_config(id, starting_time, pump_recirculation) VALUES ( '".$id."', CURRENT_TIMESTAMP, '0' ) " );
-    $dbconn->query("INSERT INTO mashing_step(id, target_temp, minutes, step_number) VALUES ( '".$id."', '68.0', '60', '1' ) " );
+    $dbconn->query("INSERT INTO mashing_step(id, target_temp, minutes, step_number) VALUES ( '".$id."', '66.7', '60', '1' ) " );
     
     echo    '(Receipe name)<div id="batch_id">'. $id .'</div> ';
     
