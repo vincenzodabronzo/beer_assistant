@@ -146,18 +146,11 @@
 			 
 				function doUpdate() {
 
+	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
 
-						// var loc = window.location.pathname;
-						// var dir = loc.substring(0, loc.lastIndexOf('/'));
-						// var path = dir + '/py/temp_mashing_nosensor_v1_3.py';
-						
-						
-    					// < ?php echo "/*"; echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py 2>&1"); echo "*/"; ?> // error collection
-	                    // <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
-						// < ? php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py > /dev/null 2>&1 &"); ?>
 						
 						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
-						// $('#show_data').load('lib/data.php?id=3');
+
 						
 						if(data.length > n-1){
 							data.shift();
@@ -165,12 +158,6 @@
 
 						var y = $('#mashing_temp').text();
     					var x = (new Date()).getTime();    					
-
-						//var ts = $('#current_timestamp').text().split(/[- :]/);
-        				// Apply each element to the Date function
-       					// var x = ( new Date(Date.UTC(ts[0], ts[1]-1, ts[2], ts[3], ts[4], ts[5])) ).getTime();
-       					// x = x - 3600000; // Timezone: subtract 1 Hour
-    					
     					
     					data.push([x,y]);
     					if (plot1) {
