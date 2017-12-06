@@ -26,6 +26,7 @@ import time
 from w1thermsensor import W1ThermSensor 
 #from _mysql import NULL
 import RPi.GPIO as GPIO
+import random
 
 # Checking single instance
 import singleton
