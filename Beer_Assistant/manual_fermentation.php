@@ -24,9 +24,7 @@
     <script type="text/javascript" src="js/jqplot.canvasAxisTickRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.canvasOverlay.js"></script>
     <script type="text/javascript" src="js/jqplot.highlighter.js"></script>
-	<script type="text/javascript" src="js/jqplot.cursor.js"></script>
-	<script type="text/javascript" src="js/jquery-gauge.min.js"></script>
-	
+	<script type="text/javascript" src="js/jqplot.cursor.js"></script>	
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
