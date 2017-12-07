@@ -231,7 +231,7 @@
                     <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="5" size="5" value="22.5"> (Example <b>22.5</b>)<br>
                     <label for="temp_lower_limit">Temp min &deg;C</label>
                     <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="5" size="5" value="20.0"> (Example <b>20.0</b>)<br>
-                    <button id="update_temp" data-role="button">Update temp limits</button>                   
+                    <button id="update_temp" data-role="button">Update values</button>                   
 			</fieldset>
         </div>
     </div>
