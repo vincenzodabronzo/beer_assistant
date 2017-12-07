@@ -216,10 +216,10 @@
 
 </div>
 
-            <div class="temperature_gauge tg_1"></div>
+            <div class="gauge1 tg_1"></div>
 
 <script>
-$('.temperature_gauge').gauge({
+$('.gauge1').gauge({
     values: {
         0 : '0',
         20: '2',
