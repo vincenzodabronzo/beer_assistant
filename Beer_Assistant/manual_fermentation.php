@@ -343,9 +343,11 @@
       });
       document.getElementById('gg1_text').innerHTML = "<b>UPDATE</b>: 0-25 is green, 26-100 is red"
     });
+    */
+    
   });
 
-    */
+    
     
   </script>
 
