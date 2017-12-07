@@ -1,5 +1,5 @@
 
 pinList = [20, 21] associated to relay board (2)
 
-GPIO 20 -> IN1
-GPIO 21 -> IN2
+GPIO 20 -> IN1 - heater
+GPIO 21 -> IN2 - pump/cooler

@@ -29,8 +29,8 @@ def getTemp():
     temperature = sensor.get_temperature()
     return round(temperature, 1)                     
 
-pinHeat = 20                # GPIO pin connected to heat Relay
-pinPump = 21                # GPIO pin connected to pump Relay
+pinHeat = 20                # GPIO pin connected to heater Relay
+pinPump = 21                # GPIO pin connected to cooler Relay
 interval = 2                # sec waiting
 heat = 0                    # if set to 1, controller will activate heating
 pump_recirculation = 0      # if set to 0, pump will not recirculate water
