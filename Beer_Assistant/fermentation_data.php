@@ -235,7 +235,7 @@
 		<div class="innertube"><b>Devices: <em>20%</em></b>
 			<div class="device" id="show_devices">
 				<fieldset id="heat_group">
-                    <legend>Heat activation: </legend>
+                    <legend>Heater management: </legend>
                     <label for="heat_auto">Auto</label>
                     <input type="radio" name="heat_group" id="heat_auto" checked="checked">
                     <label for="heat_on">ON</label>
@@ -244,14 +244,14 @@
                     <input type="radio" name="heat_group" id="heat_off">
 				</fieldset>
 				<fieldset id="pump_group">
-                    <legend>Pump Control: </legend>
+                    <legend>Cooler management: </legend>
                     <label for="pump_on">ON</label>
                     <input type="radio" name="pump_group" id="pump_on">
                     <label for="pump_off">OFF</label>
                     <input type="radio" name="pump_group" id="pump_off" checked="checked">
 				</fieldset>
 				<fieldset id="target_temp_group">
-                    <legend>Target temperature: </legend>
+                    <legend>Temperature management: </legend>
                     <label for="temp_upper_limit">Temperature max</label>
                     <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="3" size="3">.<input type="text" name="target_temp_group" id="temp_upper_limit_decimal" maxlength="1" size="1"><br>
                     <label for="temp_lower_limit">Temperature min</label>
