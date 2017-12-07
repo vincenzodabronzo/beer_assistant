@@ -24,7 +24,7 @@
                 Max temp &deg;C:
                 <div id="max_temp">' . $row['temp_max'] . '</div>
                 Min temp &deg;C:
-                <div id="max_temp">' . $row['temp_min'] . '</div>
+                <div id="min_temp">' . $row['temp_min'] . '</div>
                 Collected at:
                 <div id="current_timestamp">' . $row['timestamp'] . '</div>
                 Heat:
@@ -40,7 +40,7 @@
                 Max temp &deg;C: 
                 <div id="max_temp">0.0</div>
                 Min temp &deg;C: 
-                <div id="max_temp">0.0</div>
+                <div id="min_temp">0.0</div>
                 Collected at:
                 <div id="current_timestamp">--</div>
                 Heat:

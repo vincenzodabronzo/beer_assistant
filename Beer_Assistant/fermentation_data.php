@@ -131,11 +131,7 @@
 			 
 				$('#start').click( function(){
 					$('#batch_title').load( 'lib/start_fermentation.php' );
-					location.reload();
-					// doUpdate();
-					     
-					$(this).hide();
-					$('#stop').show();
+					location.reload();					     
 			   });
 				   
 				$('#stop').click( function(){
@@ -143,6 +139,11 @@
 					endFermentation(); 
 					$(this).hide();
 					$('#start').show();
+				});
+				
+				$('#update_temp').click( function(){
+					updateTemp(); 
+					$.ajax( "lib/fermentationtemp_limits.php?id="+$('#batch_id').text()+"&upper_limit="+$('#temp_upper_limit').val()+"&lower_limit="+$('#temp_lower_limit').val() );
 				});
 
 				function endFermentation() {
@@ -157,6 +158,9 @@
 						
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
+						// update radio buttons --------------------------------------------------------------
+						$('#temp_upper_limit').val( $('#max_temp').val() );
+						$('#temp_lower_limit').val( $('#min_temp').val() );
 						
 						if(data.length > n-1){
 							data.shift();
@@ -263,9 +267,10 @@
 				<fieldset id="target_temp_group">
                     <legend>Temperature management: </legend>
                     <label for="temp_upper_limit">Temp max &deg;C</label>
-                    <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="3" size="3">.<input type="text" name="target_temp_group" id="temp_upper_limit_decimal" maxlength="1" size="1"><br>
+                    <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="3" size="5" value="22.5"> (Example <b>22.5</b>b>)<br>
                     <label for="temp_lower_limit">Temp min &deg;C</label>
-                    <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="3" size="3">.<input type="text" name="target_temp_group" id="temp_lower_limit_decimal" maxlength="1" size="1"><br>                   
+                    <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="3" size="5" value="20.0"> (Example <b>20.0</b>b>)<br>
+                    <button id="update_temp" data-role="button">Update temp limits</button>                   
 				</fieldset>
 			</div>
 		</div>
