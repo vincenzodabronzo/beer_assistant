@@ -142,6 +142,7 @@
 					endFermentation(); 
 					$(this).hide();
 					$('#start').show();
+					$('#receipe_info').show();
 				});
 				
 				$('#update_temp').click( function(){
