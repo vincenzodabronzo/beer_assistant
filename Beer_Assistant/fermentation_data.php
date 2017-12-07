@@ -10,6 +10,7 @@
     
      <link href="css/fermentation_data.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+     <link href="css/jquery-gauge.css" rel="stylesheet" type="text/css">
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     
