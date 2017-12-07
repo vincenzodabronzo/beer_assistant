@@ -12,15 +12,7 @@
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-gauge.css" rel="stylesheet" type="text/css">
      
-         <style>
-        .demo1 {
-            position: relative;
-            width: 20vw;
-            height: 20vw;
-            box-sizing: border-box;
-            float:left;
-            margin:20px
-        }
+    <style>
 
         .demo2 {
             position: relative;
@@ -242,9 +234,6 @@
 
     <script>
 
-        // first example
-        var gauge = new Gauge($('.gauge1'), {value: 70});
-
         // second example
         $('.gauge2').gauge({
             values: {
@@ -262,8 +251,8 @@
                 80: '#f00'
             },
             angles: [
-                180,
-                360
+                150,
+                390
             ],
             lineWidth: 10,
             arrowWidth: 20,
