@@ -146,16 +146,16 @@
 				});
 
 				function endMashing() {
-					$('#show_data').load('lib/data.php?id='+$('#batch_id').text()+'&end_mash=1' );
+					$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text()+'&end_mash=1' );
 					location.reload();
 				}
 			 
 				function doUpdate() {
 
-	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
+	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/fermentation_control.py > /dev/null 2>/dev/null &"); ?> 
 
 						
-						$('#show_data').load('lib/data.php?id='+$('#batch_id').text());
+						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
 						
 						if(data.length > n-1){
