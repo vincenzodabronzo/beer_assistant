@@ -286,7 +286,7 @@
                 Starting time at:
                 <div id="starting_time">--</div>
             </div>
-            <div class="temperature_gauge" id="show_data_gauge">
+            <div class="temperature_gauge tg_1" id="show_data_gauge">
             </div>
     	</div>
     </div>
