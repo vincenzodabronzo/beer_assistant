@@ -220,7 +220,7 @@
         	<fieldset id="receipe_info">
                     <legend>Receipe details: </legend>
                     <label for="receipe_name">Receipe name</label>
-                    <input type="text" name="receipe_info" id="receipe_name" maxlength="255" value="(receipe name)"><br>         
+                    <input type="text" name="receipe_info" id="receipe_name" maxlength="255"><br>         
 			</fieldset>
         </div>
     </div>
