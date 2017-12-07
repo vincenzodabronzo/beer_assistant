@@ -40,7 +40,7 @@
 		$(document).ready(function() {
 
 			// Check for open batch (if yes, collect graph data and hide "start mashing")
-			$('#batch_title').load( 'lib/get_open_batch.php' );
+			$('#batch_title').load( 'lib/get_open_batch.php?step=mashing' );
 
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
@@ -195,7 +195,7 @@
 	
 		<h1 id="batch_title">
 			<?php 
-			 include 'lib/get_open_batch.php';
+			 include 'lib/get_open_batch.php?step=mashing';
 			?>
 		</h1>
 		</div>
