@@ -222,6 +222,14 @@
                     <label for="receipe_name">Receipe name</label>
                     <input type="text" name="receipe_info" id="receipe_name" maxlength="255" value="insert receipe name"><br>         
 			</fieldset>
+			<fieldset id="target_temp_group">
+                    <legend>Temperature management: </legend>
+                    <label for="temp_upper_limit">Temp max &deg;C</label>
+                    <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="5" size="5" value="22.5"> (Example <b>22.5</b>)<br>
+                    <label for="temp_lower_limit">Temp min &deg;C</label>
+                    <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="5" size="5" value="20.0"> (Example <b>20.0</b>)<br>
+                    <button id="update_temp" data-role="button">Update temp limits</button>                   
+			</fieldset>
         </div>
     </div>
 
@@ -268,15 +276,6 @@
                     <input type="radio" name="cool_group" id="cool_on">
                     <label for="cool_off">OFF</label>
                     <input type="radio" name="cool_group" id="cool_off">
-				</fieldset>
-
-				<fieldset id="target_temp_group">
-                    <legend>Temperature management: </legend>
-                    <label for="temp_upper_limit">Temp max &deg;C</label>
-                    <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="5" size="5" value="22.5"> (Example <b>22.5</b>)<br>
-                    <label for="temp_lower_limit">Temp min &deg;C</label>
-                    <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="5" size="5" value="20.0"> (Example <b>20.0</b>)<br>
-                    <button id="update_temp" data-role="button">Update temp limits</button>                   
 				</fieldset>
 			</div>
 		</div>
