@@ -185,6 +185,7 @@
                 <div id="cool">--</div>
                 Starting time at:
                 <div id="starting_time">--</div>
+                <div class="gauge2 demo2"></div>
             </div>
 
     	</div>
@@ -228,9 +229,8 @@
 
 </div>
 
-    <div class="gauge1 demo1"></div>
 
-    <div class="gauge2 demo2"></div>
+    
 
     <script>
 
