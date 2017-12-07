@@ -145,6 +145,9 @@
 				}
 			 
 				function doUpdate() {
+					<?php
+					echo "Current user is: " . get_current_user();
+					echo "Command output is " . shell_exec("sudo python /var/www/html/reboot.py"); ?>
 
 	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashtune_heat.py > /dev/null 2>/dev/null &"); ?> 
 
