@@ -32,19 +32,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	
-          <style>
-          .container {
-            width: 450px;
-            margin: 0 auto;
-            text-align: center;
-          }
-        
-          .gauge {
-            width: 450px;
-            height: 450px;
-          }
-        
-          </style>
+
     
     <script type="text/javascript">
 
