@@ -299,8 +299,7 @@
 
 </div>
 
-            <div class="temperature_gauge tg_1" id="show_data_gauge">
-            </div>
+            <div class="temperature_gauge tg_1"></div>
 
 <script>
 $('.temperature_gauge').gauge({
