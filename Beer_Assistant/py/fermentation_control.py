@@ -4,14 +4,7 @@ Created on 8 Nov 2017
 @author: kenzo
 
 DONE:
-sudo apt-get install python-pip
-sudo rpi-update
-sudo reboot
-sudo apt-get update
-sudo apt-get upgrade
-sudo adduser pi gpio ????
-sudo adduser www-data gpio
-sudo systemctl restart apache2
+
 
 TODOS:
 
