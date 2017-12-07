@@ -159,8 +159,8 @@
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
 						// update radio buttons --------------------------------------------------------------
-						$('#temp_upper_limit').val( $('#max_temp').val() );
-						$('#temp_lower_limit').val( $('#min_temp').val() );
+						$('#temp_upper_limit').val( $('#max_temp').text() );
+						$('#temp_lower_limit').val( $('#min_temp').text() );
 						
 						if(data.length > n-1){
 							data.shift();
