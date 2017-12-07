@@ -162,7 +162,7 @@
 							data.shift();
 						}
 
-						// gg1.refresh( $('#fermentation_temp').text() );
+						gg1.refresh( $('#fermentation_temp').text() );
 
 						var y = $('#fermentation_temp').text();
     					var x = (new Date()).getTime();    					
