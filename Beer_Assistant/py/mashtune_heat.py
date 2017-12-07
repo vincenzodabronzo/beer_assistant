@@ -67,22 +67,6 @@ for row in rows:
     print "Found 1 active batch with id:"
     print id
     mashing = 1
-    print "Initializing data... "
-    
-    sql = ("""UPDATE mashing_config SET heater=NULL, pump=0 WHERE mashing_config.id=%s""", (id, ))
-    
-    try:
-        # Execute the SQL command
-        cur.execute(*sql)
-        # Commit your changes in the database
-        db.commit()
-        print "Initialization...OK"
-    except:
-        # Rollback in case there is any error
-        db.rollback()
-        print "*** Initialization ERROR ***"
-    
- 
 
  
 while(mashing):            
