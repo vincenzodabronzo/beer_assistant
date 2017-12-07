@@ -253,9 +253,9 @@
 				<fieldset id="target_temp_group">
                     <legend>Target temperature: </legend>
                     <label for="temp_upper_limit">Temperature max</label>
-                    <input type="text" name="target_temp_group" id="temp_upper_limit">
+                    <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="3">
                     <label for="temp_lower_limit">Temperature min</label>
-                    <input type="text" name="target_temp_group" id="temp_lower_limit">                   
+                    <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="3">                   
 				</fieldset>
 			</div>
 		</div>
