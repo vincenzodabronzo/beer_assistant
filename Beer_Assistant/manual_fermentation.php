@@ -323,6 +323,7 @@
       counter: true
     });
 
+    /*
     document.getElementById('gg1_refresh').addEventListener('click', function() {
       gg1.refresh(getRandomInt(0, 100));
     });
@@ -343,6 +344,9 @@
       document.getElementById('gg1_text').innerHTML = "<b>UPDATE</b>: 0-25 is green, 26-100 is red"
     });
   });
+
+    */
+    
   </script>
 
 </body>
