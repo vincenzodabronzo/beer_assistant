@@ -223,7 +223,7 @@
         	<fieldset id="receipe_info">
                     <legend>Receipe details: </legend>
                     <label for="receipe_name">Receipe name</label>
-                    <input type="text" name="receipe_info" id="receipe_name" maxlength="255" value="insert receipe name"><br>         
+                    <input type="text" name="receipe_info" id="receipe_name" maxlength="255" value="insert-receipe-name(no-spaces)"><br>         
 			</fieldset>
 			<fieldset id="target_temp_group">
                     <legend>Temperature management: </legend>
