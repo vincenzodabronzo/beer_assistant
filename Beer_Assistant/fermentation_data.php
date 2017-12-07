@@ -39,11 +39,6 @@
 		
 		$(document).ready(function() {
 
-
-	      
-
-	        
-
 			// Check for open batch (if yes, collect graph data and hide "start fermentation")
 			// $('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
 
@@ -298,37 +293,6 @@
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 
 </div>
-
-            <div class="temperature_gauge tg_1"></div>
-
-<script>
-$('.temperature_gauge').gauge({
-    values: {
-        0 : '0',
-        20: '2',
-        40: '4',
-        60: '6',
-        80: '8',
-        100: '10'
-    },
-    colors: {
-        0 : '#666',
-		9 : '#378618',
-        60: '#ffa500',
-        80: '#f00'
-    },
-    angles: [
-        180,
-        360
-    ],
-    lineWidth: 10,
-    arrowWidth: 20,
-    arrowColor: '#ccc',
-    inset:true,
-
-    value: 30
-});
-</script>
 
 </body>
 
