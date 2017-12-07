@@ -35,35 +35,7 @@
     <script type="text/javascript">
 
     	//  microsec interval
-    	var t = 1000;
-
-    	  $('.temperature_gauge').gauge({
-	            values: {
-	                0 : '0',
-	                20: '2',
-	                40: '4',
-	                60: '6',
-	                80: '8',
-	                100: '10'
-	            },
-	            colors: {
-	                0 : '#666',
-					9 : '#378618',
-	                60: '#ffa500',
-	                80: '#f00'
-	            },
-	            angles: [
-	                180,
-	                360
-	            ],
-	            lineWidth: 10,
-	            arrowWidth: 20,
-	            arrowColor: '#ccc',
-	            inset:true,
-
-	            value: 30
-	        });
-    	
+    	var t = 1000;    	
 		
 		$(document).ready(function() {
 
@@ -329,6 +301,35 @@
 
             <div class="temperature_gauge tg_1" id="show_data_gauge">
             </div>
+
+<script>
+$('.temperature_gauge').gauge({
+    values: {
+        0 : '0',
+        20: '2',
+        40: '4',
+        60: '6',
+        80: '8',
+        100: '10'
+    },
+    colors: {
+        0 : '#666',
+		9 : '#378618',
+        60: '#ffa500',
+        80: '#f00'
+    },
+    angles: [
+        180,
+        360
+    ],
+    lineWidth: 10,
+    arrowWidth: 20,
+    arrowColor: '#ccc',
+    inset:true,
+
+    value: 30
+});
+</script>
 
 </body>
 
