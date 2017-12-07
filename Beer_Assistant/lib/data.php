@@ -14,7 +14,7 @@
     }
     
     
-    $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mt.heated, mt.pump_recirculated, mc.starting_time, mc.ending_time, mc.pump_recirculation, mc.heat, ms.target_temp FROM batch AS ba INNER JOIN mashing_temp as mt ON ba.id = mt.id INNER JOIN mashing_config AS mc ON mt.id = mc.id INNER JOIN mashing_step as ms ON mc.id = ms.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
+    $result = $dbconn->query("SELECT ba.id, ba.name, mt.temperature, mt.timestamp, mt.heated, mt.pump_recirculated, mc.starting_time, mc.ending_time, mc.pump, mc.heater, ms.target_temp FROM batch AS ba INNER JOIN mashing_temp as mt ON ba.id = mt.id INNER JOIN mashing_config AS mc ON mt.id = mc.id INNER JOIN mashing_step as ms ON mc.id = ms.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
     
     
     if ($result->num_rows > 0) {
@@ -41,9 +41,9 @@
                     <div id="target_temp">0.0</div>
                      Collected at:
                     <div id="current_timestamp">--</div>
-                    Heat:
+                    Heated:
                     <div id="heat">--</div>
-                    Pump recirculation:
+                    Pump recirculated:
                     <div id="pump_recirculation">--</div>
                     Starting time at:
                     <div id="starting_time">--</div>

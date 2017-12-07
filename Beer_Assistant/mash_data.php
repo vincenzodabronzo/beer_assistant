@@ -45,28 +45,28 @@
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?c=NULL&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/device_control.php?command=NULL&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
    			});
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?c=1&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/heat_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
     		});
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?c=0&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/heat_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
     		});
     		
     		$('#pump_on').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/pump_control.php?c=1&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/device_control.php?c=1&id="+$('#batch_id').text()+"&step=mashing&device=pump" )
                 }
     		});
     		$('#pump_off').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/pump_control.php?c=0&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/device_control.php?c=0&id="+$('#batch_id').text()+"&step=mashing&device=pump" )
                 }
     		});
     		

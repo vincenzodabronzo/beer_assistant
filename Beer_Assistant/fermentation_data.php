@@ -45,30 +45,20 @@
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?c=NULL&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/device_control.php?command=NULL&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
    			});
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?c=1&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/heat_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
     		});
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?c=0&id="+$('#batch_id').text()+"&step=mashing" )
+                    $.ajax( "lib/heat_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
     		});
     		
-    		$('#pump_on').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/pump_control.php?c=1&id="+$('#batch_id').text()+"&step=mashing" )
-                }
-    		});
-    		$('#pump_off').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/pump_control.php?c=0&id="+$('#batch_id').text()+"&step=mashing" )
-                }
-    		});
     		
     		// END RADIO BUTTON HANDLING ------------------------------
     		
@@ -220,8 +210,8 @@
                 <div id="current_timestamp">--</div>
                 Heat:
                 <div id="heat">--</div>
-                Pump recirculation:
-                <div id="pump_recirculation">--</div>               
+
+            
                 Starting time at:
                 <div id="starting_time">--</div>
                 Ending time at:
@@ -244,13 +234,7 @@
                     <label for="heat_off">OFF</label>
                     <input type="radio" name="heat_group" id="heat_off">
 				</fieldset>
-				<fieldset id="pump_group">
-                    <legend>Cooler management: </legend>
-                    <label for="pump_on">ON</label>
-                    <input type="radio" name="pump_group" id="pump_on">
-                    <label for="pump_off">OFF</label>
-                    <input type="radio" name="pump_group" id="pump_off" checked="checked">
-				</fieldset>
+
 				<fieldset id="target_temp_group">
                     <legend>Temperature management: </legend>
                     <label for="temp_upper_limit">Temp max &deg;C</label>
@@ -265,7 +249,7 @@
 	<div id="myChart"></div>
 	
 	<div id="command">
-		<button id="start" data-role="button">Start Mashing</button>
+		<button id="start" data-role="button">Start Fermentation</button>
 		<button id="stop" data-role="button">End</button>
 		<button id="option" data-role="button">Options</button>
 	</div>
