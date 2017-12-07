@@ -1,0 +1,123 @@
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#topsection{
+background: #EAEAEA;
+height: 90px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+	/*margin: 0 20% 0 20%; Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+	margin-left: 40%;
+	background-color: cyan;
+}
+
+#leftcolumn{
+float: left;
+width: 20%; /*Width of left column in percentage*/
+margin-left: -100%;
+background: #C8FC98;
+
+}
+
+#rightcolumn{
+float: left;
+width: 20%; /*Width of right column in pixels*/
+margin-left: -80%; /*Set margin to that of -(RightColumnWidth)*/
+background: #FDE95E;
+
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#myChart{
+	clear: left;
+	width: 100%;
+	
+	background-color: orange;
+	
+	/*
+	background: black;
+	color: #FFF;
+	text-align: center;
+	
+	padding: 4px 0;
+	*/
+}
+
+#command{
+	clear: left;
+	width: 100%;
+	background-color: #008040;
+	text-align: center;
+	
+	/*
+	background: black;
+	color: #FFF;
+	text-align: center;
+	
+	padding: 4px 0;
+	*/
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+/* ####### responsive layout CSS ####### */
+
+@media (max-width: 840px){ /* 1st level responsive layout break point- drop right column down*/
+	
+	#rightcolumn{
+	float: none;
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	}
+	
+	#contentcolumn{
+	margin-left: 20%; /*Set margin to (LeftColumnWidth) */
+	}
+
+}
+
+@media (max-width: 600px){ /* 2nd level responsive layout break point- drop left column down */
+	#leftcolumn{
+	float: none;
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+	}
+	
+	#contentcolumn{
+	margin-left: 0;
+	}
+}
