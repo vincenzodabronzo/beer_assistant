@@ -265,6 +265,13 @@
                 Starting time at:
                 <div id="starting_time">--</div>
             </div>
+              <div class="container">
+    <div id="gg1" class="gauge"></div>
+    <p id="gg1_text">0-50 is green, 51-100 is red</p>
+    <a href="#" id="gg1_refresh" class="button grey">Random Refresh</a>
+    <a href="#" id="gg1_update" class="button grey">Update Sectors</a>
+  </div>
+  
 
     	</div>
     </div>
@@ -308,13 +315,7 @@
 
 </div>
 
-  <div class="container">
-    <div id="gg1" class="gauge"></div>
-    <p id="gg1_text">0-50 is green, 51-100 is red</p>
-    <a href="#" id="gg1_refresh" class="button grey">Random Refresh</a>
-    <a href="#" id="gg1_update" class="button grey">Update Sectors</a>
-  </div>
-  
+
    <script src="js/raphael-2.1.4.min.js"></script>
   <script src="js/justgage.js"></script>
   <script>
