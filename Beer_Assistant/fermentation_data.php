@@ -133,7 +133,7 @@
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
 				$('#start').click( function(){
-					$('#batch_title').load( 'lib/start_fermentation.php?'+"&receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#temp_upper_limit').val()+"&lower_limit="+$('#temp_lower_limit').val() );
+					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#temp_upper_limit').val()+"&lower_limit="+$('#temp_lower_limit').val() );
 					location.reload();					     
 			   });
 				   
