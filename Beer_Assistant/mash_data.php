@@ -236,18 +236,18 @@
 			<div class="device" id="show_devices">
 				<fieldset id="heat_group">
                     <legend>Heat activation: </legend>
-                    <label for="radio-1">Auto</label>
+                    <label for="heat_auto">Auto</label>
                     <input type="radio" name="heat_group" id="heat_auto" checked="checked">
-                    <label for="radio-2">ON</label>
+                    <label for="heat_on">ON</label>
                     <input type="radio" name="heat_group" id="heat_on">
-                    <label for="radio-3">OFF</label>
+                    <label for="heat_off">OFF</label>
                     <input type="radio" name="heat_group" id="heat_off">
 				</fieldset>
 				<fieldset id="pump_group">
                     <legend>Pump Control: </legend>
-                    <label for="radio-1">ON</label>
+                    <label for="pump_on">ON</label>
                     <input type="radio" name="pump_group" id="pump_on">
-                    <label for="radio-2">OFF</label>
+                    <label for="pump_off">OFF</label>
                     <input type="radio" name="pump_group" id="pump_off" checked="checked">
 				</fieldset>
 				<fieldset id="target_temp_group">
