@@ -11,6 +11,26 @@
      <link href="css/fermentation_data.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-gauge.css" rel="stylesheet" type="text/css">
+     
+         <style>
+        .demo1 {
+            position: relative;
+            width: 20vw;
+            height: 20vw;
+            box-sizing: border-box;
+            float:left;
+            margin:20px
+        }
+
+        .demo2 {
+            position: relative;
+            width: 40vw;
+            height: 40vw;
+            box-sizing: border-box;
+            float:right;
+            margin:20px
+        }
+    </style>
 
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -216,37 +236,43 @@
 
 </div>
 
-            <div class="gauge1 tg_1"></div>
+    <div class="gauge1 demo1"></div>
 
-<script>
-$('.gauge1').gauge({
-    values: {
-        0 : '0',
-        20: '2',
-        40: '4',
-        60: '6',
-        80: '8',
-        100: '10'
-    },
-    colors: {
-        0 : '#666',
-		9 : '#378618',
-        60: '#ffa500',
-        80: '#f00'
-    },
-    angles: [
-        180,
-        360
-    ],
-    lineWidth: 10,
-    arrowWidth: 20,
-    arrowColor: '#ccc',
-    inset:true,
+    <div class="gauge2 demo2"></div>
 
-    value: 30
-});
-</script>
+    <script>
 
+        // first example
+        var gauge = new Gauge($('.gauge1'), {value: 70});
+
+        // second example
+        $('.gauge2').gauge({
+            values: {
+                0 : '0',
+                20: '2',
+                40: '4',
+                60: '6',
+                80: '8',
+                100: '10'
+            },
+            colors: {
+                0 : '#666',
+				9 : '#378618',
+                60: '#ffa500',
+                80: '#f00'
+            },
+            angles: [
+                180,
+                360
+            ],
+            lineWidth: 10,
+            arrowWidth: 20,
+            arrowColor: '#ccc',
+            inset:true,
+
+            value: 30
+        });
+    </script>
 </body>
 
 </html>
