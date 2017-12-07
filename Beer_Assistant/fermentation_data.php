@@ -194,8 +194,9 @@
 		<div class="innertube">
 	
 		<h1 id="batch_title">
-			<?php 
-			 include 'lib/get_open_batch.php?step=mashing';
+			<?php
+			 $step = "fermentation";
+			 include 'lib/get_open_batch.php';
 			?>
 		</h1>
 		</div>
