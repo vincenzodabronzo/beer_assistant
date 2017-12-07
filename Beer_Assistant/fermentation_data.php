@@ -162,7 +162,7 @@
 							data.shift();
 						}
 
-						var y = $('#mashing_temp').text();
+						var y = $('#fermentation_temp').text();
     					var x = (new Date()).getTime();    					
     					
     					data.push([x,y]);
