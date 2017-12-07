@@ -133,7 +133,7 @@
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
 				$('#start').click( function(){
-					$('#batch_title').load( 'lib/start_fermentation.php' );
+					$('#batch_title').load( 'lib/start_fermentation.php&'+"&receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#temp_upper_limit').val()+"&lower_limit="+$('#temp_lower_limit').val() );
 					location.reload();					     
 			   });
 				   
@@ -182,8 +182,10 @@
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#stop').hide();
+					
 				} else {
 					$('#start').hide();
+					$('#receipe_info').hide();
 					doUpdate();
 				}
 		});
@@ -214,6 +216,11 @@
     <div id="contentwrapper">
         <div id="contentcolumn">
         	<div class="innertube"><b>Information: </b></div>
+        	<fieldset id="receipe_info">
+                    <legend>Receipe details: </legend>
+                    <label for="receipe_name">Receipe name</label>
+                    <input type="text" name="receipe_info" id="receipe_name" maxlength="255" value="(receipe name)"><br>         
+			</fieldset>
         </div>
     </div>
 
