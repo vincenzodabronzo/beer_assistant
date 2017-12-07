@@ -11,14 +11,12 @@
      <link href="css/fermentation_data.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-gauge.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
-    
     <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>
     <script type="text/javascript" src="js/jqplot.pointLabels.js"></script>
@@ -28,10 +26,7 @@
     <script type="text/javascript" src="js/jqplot.canvasOverlay.js"></script>
     <script type="text/javascript" src="js/jqplot.highlighter.js"></script>
 	<script type="text/javascript" src="js/jqplot.cursor.js"></script>
-	
 	<script type="text/javascript" src="js/jquery-gauge.min.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,12 +36,8 @@
 
     	//  microsec interval
     	var t = 1000;
-    	
-		
-		$(document).ready(function() {
 
-
-	        $('.temperature_gauge').gauge({
+    	  $('.temperature_gauge').gauge({
 	            values: {
 	                0 : '0',
 	                20: '2',
@@ -72,6 +63,12 @@
 
 	            value: 30
 	        });
+    	
+		
+		$(document).ready(function() {
+
+
+	      
 
 	        
 
