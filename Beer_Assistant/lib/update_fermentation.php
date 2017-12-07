@@ -14,7 +14,7 @@
     }
     
     
-    $result = $dbconn->query("SELECT ba.id, ba.name, ft.beer_temp, ft.timestamp, ft.heated, ft.cooled, fc.starting_time, fc.ending_time, fc.cooler, fc.heater, fs.temp_max, fs.temp_min  FROM batch AS ba INNER JOIN fermentation_temp as ft ON ba.id = mt.id INNER JOIN fermentation_config AS fc ON mt.id = mc.id INNER JOIN fermentation_step as fs ON mc.id = ms.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
+    $result = $dbconn->query("SELECT ba.id, ba.name, ft.beer_temp, ft.timestamp, ft.heated, ft.cooled, fc.starting_time, fc.ending_time, fc.cooler, fc.heater, fs.temp_max, fs.temp_min  FROM batch AS ba INNER JOIN fermentation_temp as ft ON ba.id = ft.id INNER JOIN fermentation_config AS fc ON ft.id = fc.id INNER JOIN fermentation_step as fs ON fc.id = fs.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
     
     
     if ($result->num_rows > 0) {
