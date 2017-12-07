@@ -61,12 +61,12 @@
     		
     		$('#pump_on').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/pump_control.php?c=1&id="+$('#batch_id').text() )
+                    $.ajax( "lib/pump_control.php?c=1&id="+$('#batch_id').text()+"&step=mashing" )
                 }
     		});
     		$('#pump_off').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/pump_control.php?c=0&id="+$('#batch_id').text() )
+                    $.ajax( "lib/pump_control.php?c=0&id="+$('#batch_id').text()+"&step=mashing" )
                 }
     		});
     		
