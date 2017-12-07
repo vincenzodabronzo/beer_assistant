@@ -28,6 +28,8 @@
     <script type="text/javascript" src="js/jqplot.highlighter.js"></script>
 	<script type="text/javascript" src="js/jqplot.cursor.js"></script>
 	
+	<script type="text/javascript" src="js/jquery-gauge.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 	
 	
@@ -41,6 +43,36 @@
     	
 		
 		$(document).ready(function() {
+
+
+	        $('.temperature_gauge').gauge({
+	            values: {
+	                0 : '0',
+	                20: '2',
+	                40: '4',
+	                60: '6',
+	                80: '8',
+	                100: '10'
+	            },
+	            colors: {
+	                0 : '#666',
+					9 : '#378618',
+	                60: '#ffa500',
+	                80: '#f00'
+	            },
+	            angles: [
+	                180,
+	                360
+	            ],
+	            lineWidth: 10,
+	            arrowWidth: 20,
+	            arrowColor: '#ccc',
+	            inset:true,
+
+	            value: 30
+	        });
+
+	        
 
 			// Check for open batch (if yes, collect graph data and hide "start fermentation")
 			// $('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
@@ -253,6 +285,8 @@
                 <div id="cool">--</div>
                 Starting time at:
                 <div id="starting_time">--</div>
+            </div>
+            <div class="temperature_gauge" id="show_data_gauge">
             </div>
     	</div>
     </div>
