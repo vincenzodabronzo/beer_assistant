@@ -40,7 +40,7 @@
 		$(document).ready(function() {
 
 			// Check for open batch (if yes, collect graph data and hide "start fermentation")
-			$('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
+			// $('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
 
 			// RADIO BUTTON HANDLING  ------------------------------
 			$('#heat_auto').click(function () {
@@ -50,12 +50,28 @@
    			});
     		$('#heat_on').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
+                    $.ajax( "lib/device_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
                 }
     		});
     		$('#heat_off').click(function () {
                 if ($(this).is(':checked')) {
-                    $.ajax( "lib/heat_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
+                    $.ajax( "lib/device_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
+                }
+    		});
+			// RADIO BUTTON HANDLING  ------------------------------
+			$('#cool_auto').click(function () {
+                if ($(this).is(':checked')) {
+                    $.ajax( "lib/device_control.php?command=NULL&id="+$('#batch_id').text()+"&step=fermentation&device=cooler" )
+                }
+   			});
+    		$('#cool_on').click(function () {
+                if ($(this).is(':checked')) {
+                    $.ajax( "lib/device_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=cooler" )
+                }
+    		});
+    		$('#cool_off').click(function () {
+                if ($(this).is(':checked')) {
+                    $.ajax( "lib/device_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=cooler" )
                 }
     		});
     		
@@ -233,6 +249,15 @@
                     <input type="radio" name="heat_group" id="heat_on">
                     <label for="heat_off">OFF</label>
                     <input type="radio" name="heat_group" id="heat_off">
+				</fieldset>
+				<fieldset id="cool_group">
+                    <legend>Cooler management: </legend>
+                    <label for="cool_auto">Auto</label>
+                    <input type="radio" name="cool_group" id="cool_auto" checked="checked">
+                    <label for="cool_on">ON</label>
+                    <input type="radio" name="cool_group" id="cool_on">
+                    <label for="cool_off">OFF</label>
+                    <input type="radio" name="cool_group" id="cool_off">
 				</fieldset>
 
 				<fieldset id="target_temp_group">
