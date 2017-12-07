@@ -4,12 +4,13 @@
 
 $command = $_GET["c"];
 $id = $_GET["id"];
+$step = $_GET["step"];
 
 $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
 if($dbconn->connect_error) {
     die('Connection error: ' . $dbconn->connect_error);
 }
 
-$dbconn->query("UPDATE mashing_config SET heat = ".$command." WHERE mashing_config.id = ".$id.";");
+$dbconn->query("UPDATE ".$step."_config SET heat = ".$command." WHERE ".$step."_config.id = ".$id.";");
 
 ?>
