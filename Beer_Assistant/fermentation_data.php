@@ -142,7 +142,6 @@
 				});
 				
 				$('#update_temp').click( function(){
-					updateTemp(); 
 					$.ajax( "lib/fermentationtemp_limits.php?id="+$('#batch_id').text()+"&upper_limit="+$('#temp_upper_limit').val()+"&lower_limit="+$('#temp_lower_limit').val() );
 				});
 
