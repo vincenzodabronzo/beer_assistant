@@ -130,7 +130,7 @@
 			   var plot1 = $.jqplot ('myChart', [data],options); 
 			 
 				$('#start').click( function(){
-					$('#batch_title').load( 'lib/start_mashing.php' );
+					$('#batch_title').load( 'lib/start_fermentation.php' );
 					location.reload();
 					// doUpdate();
 					     
