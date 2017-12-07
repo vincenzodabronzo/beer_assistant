@@ -30,10 +30,10 @@ def getTemp():
     return round(temperature, 1)                     
 
 pinHeat = 20                # GPIO pin connected to heater Relay
-pinPump = 21                # GPIO pin connected to cooler Relay
+pinCool = 21                # GPIO pin connected to cooler Relay
 interval = 2                # sec waiting
 heat = 0                    # if set to 1, controller will activate heating
-pump_recirculation = 0      # if set to 0, pump will not recirculate water
+cool = 0                    # if set to 1, controller will activate cooling
 mashing = 0                 # if set to 0, controller will not perform mashing
 
 # Initializing GPIO
@@ -50,22 +50,21 @@ sensor = W1ThermSensor()
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
 # Checking last active batch
-sql = ("""SELECT ba.id, ba.name, mc.starting_time, mc.ending_time FROM mashing_config AS mc INNER JOIN batch AS ba ON mc.id = ba.id where mc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""")
+sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON mc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""")
 
 
 cur.execute(sql,)
 rows = cur.fetchall()
 for row in rows:
     id = row[0]
-    print "Found 1 active batch with id:"
+    print "FERMENTATION - Found 1 active batch with id:"
     print id
     mashing = 1
 
 
- 
 while(mashing):            
 
-    sql = ("""SELECT mc.ending_time, mc.pump, ms.target_temp, mc.heater FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
+    sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id WHERE fc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
@@ -74,36 +73,41 @@ while(mashing):
     for row in rows:
         if(row[0] is None):
             temp = getTemp()
-            pump_recirculation = row[1]
-            target_temp = row[2]
+            temp_max = row[1]
+            temp_min = row[2]
             
             force_heat = row[3]
+            force_cool = row[4]
             
             # Checking current temperature (single step)
-            if ( (temp<target_temp and force_heat!=0 ) or force_heat==1 ):
+            if ( (temp<temp_min and force_heat!=0 ) or force_heat==1 ):
                 heat = 1
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
                 heat = 0
                 GPIO.output(pinHeat, GPIO.HIGH)
                 
-            # Checking recirculation pump config
-            if(pump_recirculation):
-                GPIO.output(pinPump, GPIO.LOW)
+            if ( (temp>temp_max and force_cool!=0 ) or force_cool==1 ):
+                cool = 1
+                GPIO.output(pinCool, GPIO.LOW)
             else:
-                GPIO.output(pinPump, GPIO.HIGH)
+                cool = 0
+                GPIO.output(pinCool, GPIO.HIGH)
+        
             
             print "[1 Mashing opened]"
             print "Temp (Celsius)"
             print temp
-            print "Target"
-            print target_temp
-            print "Pump"
-            print pump_recirculation
+            print "Max temp"
+            print temp_max
+            print "Min temp"
+            print temp_min            
             print "Heat"
             print heat
+            print "Cool"
+            print cool
             
-            sql = ("""INSERT INTO mashing_temp (timestamp, id, temperature, heated, pump_recirculated) VALUES (CURRENT_TIMESTAMP,%s,%s,%s,%s)""",(id, temp, heat, pump_recirculation))
+            sql = ("""INSERT INTO fermentation_temp (timestamp, id, beer_temp, heated, cooled) VALUES (CURRENT_TIMESTAMP,%s,%s,%s,%s)""",(id, temp, heat, cool))
             
             try:
                 # Execute the SQL command
