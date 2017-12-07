@@ -140,13 +140,13 @@
 				   
 				$('#stop').click( function(){
 					update_graph = false;      
-					endMashing(); 
+					endFermentation(); 
 					$(this).hide();
 					$('#start').show();
 				});
 
-				function endMashing() {
-					$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text()+'&end_mash=1' );
+				function endFermentation() {
+					$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text()+'&end_fermentation=1' );
 					location.reload();
 				}
 			 
@@ -219,19 +219,19 @@
     	<div class="innertube"><b>Status: <em>20%</em></b>
     	    <div class="data" id="show_data">
                 Temperature &deg;C: 
-                <div id="mashing_temp">0.0</div>
-                Target temp &deg;C: 
-                <div id="target_temp">0.0</div>
+                <div id="fermentation_temp">0.0</div>
+                Max temp &deg;C: 
+                <div id="max_temp">0.0</div>
+                Min temp &deg;C: 
+                <div id="max_temp">0.0</div>
                 Collected at:
                 <div id="current_timestamp">--</div>
                 Heat:
                 <div id="heat">--</div>
-
-            
+                Cool:
+                <div id="cool">--</div>
                 Starting time at:
                 <div id="starting_time">--</div>
-                Ending time at:
-                <div id="ending_time">--</div>
             </div>
     	</div>
     </div>
