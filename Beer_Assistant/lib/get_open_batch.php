@@ -8,8 +8,6 @@ if($dbconn->connect_error) {
     die('Connection error: ' . $dbconn->connect_error);
 }
 
-echo "SELECT c.id FROM ".$step."_config AS c WHERE c.ending_time is NULL ORDER BY c.id DESC LIMIT 1";
-
 $result = $dbconn->query("SELECT c.id FROM ".$step."_config AS c WHERE c.ending_time is NULL ORDER BY c.id DESC LIMIT 1");
 
 if ($result->num_rows > 0) {

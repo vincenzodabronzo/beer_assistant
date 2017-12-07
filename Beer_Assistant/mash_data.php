@@ -126,7 +126,6 @@
 				$('#start').click( function(){
 					$('#batch_title').load( 'lib/start_mashing.php' );
 					location.reload();
-					// doUpdate();
 					     
 					$(this).hide();
 					$('#stop').show();
