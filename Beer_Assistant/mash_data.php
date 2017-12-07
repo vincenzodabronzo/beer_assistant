@@ -237,18 +237,18 @@
 				<fieldset id="heat_group">
                     <legend>Heat activation: </legend>
                     <label for="heat_auto">Auto</label>
-                    <input type="radio" name="heat_group" id="heat_auto" checked="checked"><br>
+                    <input type="radio" name="heat_group" id="heat_auto" checked="checked">
                     <label for="heat_on">ON</label>
-                    <input type="radio" name="heat_group" id="heat_on"><br>
+                    <input type="radio" name="heat_group" id="heat_on">
                     <label for="heat_off">OFF</label>
-                    <input type="radio" name="heat_group" id="heat_off"><br>
+                    <input type="radio" name="heat_group" id="heat_off">
 				</fieldset>
 				<fieldset id="pump_group">
                     <legend>Pump Control: </legend>
                     <label for="pump_on">ON</label>
-                    <input type="radio" name="pump_group" id="pump_on"><br>
+                    <input type="radio" name="pump_group" id="pump_on">
                     <label for="pump_off">OFF</label>
-                    <input type="radio" name="pump_group" id="pump_off" checked="checked"><br>
+                    <input type="radio" name="pump_group" id="pump_off" checked="checked">
 				</fieldset>
 				<fieldset id="target_temp_group">
                     <legend>Target temperature: </legend>
