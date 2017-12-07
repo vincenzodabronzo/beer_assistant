@@ -1,3 +1,6 @@
+<!-- prevedere meccanismo di gestione della concorrenza per i radio button aggiornati da piu interfacce -->
+<!-- quando si termina script da un dispositivo, tutti gli altri collegati non effettuando il refresh della pagina, continuano a visualizzar l'ultimo valore in doupdate -->
+
 <!DOCTYPE html>
 <html>
 <head>
