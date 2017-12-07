@@ -69,7 +69,7 @@ for row in rows:
     mashing = 1
     print "Initializing data... "
     
-    sql = ("""UPDATE mashing_config SET heat=NULL, pump_recirculation =0 WHERE mashing_config.id=%s""", (id, ))
+    sql = ("""UPDATE mashing_config SET heater=NULL, pump=0 WHERE mashing_config.id=%s""", (id, ))
     
     try:
         # Execute the SQL command
@@ -87,7 +87,7 @@ for row in rows:
  
 while(mashing):            
 
-    sql = ("""SELECT mc.ending_time, mc.pump_recirculation, ms.target_temp, mc.heat FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
+    sql = ("""SELECT mc.ending_time, mc.pump, ms.target_temp, mc.heater FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id WHERE mc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
