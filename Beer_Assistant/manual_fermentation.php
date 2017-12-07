@@ -165,6 +165,8 @@
 							data.shift();
 						}
 
+						gg1.refresh( $('#fermentation_temp').text() );
+
 						var y = $('#fermentation_temp').text();
     					var x = (new Date()).getTime();    					
     					
@@ -254,7 +256,7 @@
                 <div id="starting_time">--</div>
             </div>
 
-    <div id="gg1" class="gauge"></div>
+    	<div id="gg1" class="gauge"></div>
 
   
 
@@ -307,10 +309,10 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     var gg1 = new JustGage({
       id: "gg1",
-      value : 72.15,
+      value : 50.0,
       min: 0,
       max: 100,
-      decimals: 2,
+      decimals: 1,
       gaugeWidthScale: 0.6,
       customSectors: [{
         color : "#00ff00",
