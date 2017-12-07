@@ -9,7 +9,7 @@
         die('Connection error: ' . $dbconn->connect_error);
     }
     
-    if ($end_fermenta == "1") {
+    if ($end_fermentation == "1") {
         $dbconn->query("UPDATE fermentation_config SET ending_time = CURRENT_TIMESTAMP WHERE fermentation_config.id = ".$id.";");
     }
     
