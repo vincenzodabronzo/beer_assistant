@@ -50,8 +50,7 @@ sensor = W1ThermSensor()
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
 # Checking last active batch
-sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON mc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""")
-
+sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON fc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""")
 
 cur.execute(sql,)
 rows = cur.fetchall()
