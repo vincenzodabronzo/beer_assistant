@@ -37,6 +37,7 @@
 
 	        var gageValue = 0;
 
+	        
 	        var g = new JustGage({
 	          id: 'gauge',
 	          value: gageValue,
@@ -46,33 +47,38 @@
 	          label: "(label)",
 	          symbol: '\xB0C',
 	          pointer: true,
-	        //  pointerOptions: {
-	        //    toplength: -15,
-	        //    bottomlength: 10,
-	        //    bottomwidth: 12,
-	        //    color: '#8e8e93',
-	        //    stroke: '#ffffff',
-	        //    stroke_width: 2,
-	        //    stroke_linecap: 'round'
-	        //  },
-	          
+	          pointerOptions: {
+	            toplength: -15,
+	            bottomlength: 10,
+	            bottomwidth: 12,
+	            color: '#8e8e93',
+	            stroke: '#ffffff',
+	            stroke_width: 2,
+	            stroke_linecap: 'round'
+	          },
 	          gaugeWidthScale: 0.6,
-	          counter: true,
-	          ranges: [{
-	              color : "#7CB9E8",
-	              lo : 0,
-	              hi : 14
-	            },{
-	              color : "#008000",
-	              lo : 15,
-	              hi : 20
-	            },{
-	              color : "#ff3b30",
-	              lo : 21,
-	              hi : 40
-	            }]
+	          counter: true,	          
+	          customSectors: {
+	              percents: true,
+    	          ranges: [{
+    	              color : "#7CB9E8",
+    	              lo : 0,
+    	              hi : 14
+    	            },{
+    	              color : "#008000",
+    	              lo : 15,
+    	              hi : 20
+    	            },{
+    	              color : "#ff3b30",
+    	              lo : 21,
+    	              hi : 40
+    	            }]
+	          }
 	        });
 
+	        
+
+	        
 	        
 
 			var elem = document.querySelector('.js-switch');
