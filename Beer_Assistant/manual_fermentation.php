@@ -215,13 +215,9 @@
     </div>
     
     <div id="m_select" class="m_select">
-   		<label for="max_select_group">Max</label>
-    	<select id="max_select_group">
-    	</select>
+   		 Max &deg;C: <div id="max_temp">0.0</div> 
     	&nbsp;&nbsp;&nbsp;
-    	<label for="min_select_group">Min</label>
-    	<select id="min_select_group">
-    	</select>
+    	Min temp &deg;C: <div id="max_temp">0.0</div>
 	</div>
 	
 	<div id="command">
@@ -242,10 +238,8 @@
     	    <div class="data" id="show_data">
                 Temperature &deg;C: 
                 <div id="fermentation_temp">0.0</div>
-                Max temp &deg;C: 
-                <div id="max_temp">0.0</div>
-                Min temp &deg;C: 
-                <div id="max_temp">0.0</div>
+                
+                
                 Collected at:
                 <div id="current_timestamp">--</div>
                 Heat:
