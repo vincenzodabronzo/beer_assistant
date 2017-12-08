@@ -144,8 +144,6 @@
 
 						var temperature = parseInt( $('#fermentation_temp').text() );
 
-						temperature = 50;
-
 						updateGage(temperature);
     
     					setTimeout(doUpdate, t);
@@ -154,7 +152,6 @@
 
 				function updateGage(n) {
 					  g.refresh(n);
-
 				}
 
 				   
