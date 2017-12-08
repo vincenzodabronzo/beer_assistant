@@ -59,50 +59,8 @@
 	            stroke_width: 2,
 	            stroke_linecap: 'round'
 	          },
-	          gaugeWidthScale: 0.6,
-	          
-	          counter: true,
-
-	          customSectors: {
-    	          ranges: [{
-    	              color : "#00fff6",
-    	              lo : 0,
-    	              hi : 12
-    	            },{
-    	              color : "#ff00fc",
-    	              lo : 13,
-    	              hi : 25
-    	            },{
-    	              color : "#ff00fc",
-    	              lo : 26,
-    	              hi : 40
-    	            }]
-	          }
-
-	          /*
-	          levelColors: [
-	              "#00fff6",
-	              "#ff00fc",
-	              "#1200ff"
-	            ]
-	    	          	 
-	                   
-	          customSectors: {
-    	          ranges: [{
-    	              color : "#7CB9E8",
-    	              lo : 0,
-    	              hi : 12
-    	            },{
-    	              color : "#008000",
-    	              lo : 13,
-    	              hi : 25
-    	            },{
-    	              color : "#ff3b30",
-    	              lo : 26,
-    	              hi : 40
-    	            }]
-	          }
-	          */
+	          gaugeWidthScale: 0.6,      
+	          counter: true
 	        });
 
 	        
