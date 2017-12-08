@@ -13,12 +13,10 @@
      
      <link href="css/switchery.min.css" rel="stylesheet" type="text/css">
      <link href="css/gauge.css" rel="stylesheet" type="text/css">
-     <link href="css/jquery-ui-slider-pips.css" rel="stylesheet" type="text/css">
      
      <script type="text/javascript" src="js/switchery.min.js"></script>
      <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
      <script type="text/javascript" src="js/justgage.js"></script>
-     <script type="text/javascript" src="js/jquery-ui-slider-pips.js"></script>
      
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -36,13 +34,6 @@
     	var t = 1000;    	
 
 		$(document).ready(function() {
-
-			$(".slider").slider({ 
-		        min: 0, 
-		        max: 1000, 
-		        range: true, 
-		        values: [200, 800] 
-		    });
 		    
 
 	        var gageValue = 0.0;
@@ -198,8 +189,6 @@
         <div id="gauge" class="gauge"></div>
       </div>
     </div>
-    
-    <div class="slider"></div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
