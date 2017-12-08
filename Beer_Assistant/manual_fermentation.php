@@ -10,6 +10,9 @@
     
      <link href="css/manual_fermentation.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+     
+     <link href="css/switchery.css" rel="stylesheet" type="text/css">
+     <script type="text/javascript" src="js/switchery.js"></script>
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -24,6 +27,9 @@
 
     	//  microsec interval
     	var t = 1000;    	
+
+    	var elem = document.querySelector('.js-switch');
+    	var init = new Switchery(elem);
 		
 		$(document).ready(function() {
 
@@ -214,6 +220,8 @@
 
 
 </div>
+
+<input type="checkbox" class="js-switch" checked />
 
 </body>
 
