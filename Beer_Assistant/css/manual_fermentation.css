@@ -1,3 +1,5 @@
 body {
     background: url("../img/hops_background.png") no-repeat top center;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
