@@ -35,34 +35,38 @@
     	//  microsec interval
     	var t = 1000;    	
 
-        var gageValue = 0;
 
-        var g = new JustGage({
-          id: 'gauge',
-          value: gageValue,
-          min: 0,
-          max: 100,
-          title: "Temperature",
-          label: "(label)",
-          symbol: '\xB0C',
-          pointer: true,
-          pointerOptions: {
-            toplength: -15,
-            bottomlength: 10,
-            bottomwidth: 12,
-            color: '#8e8e93',
-            stroke: '#ffffff',
-            stroke_width: 3,
-            stroke_linecap: 'round'
-          },
-          gaugeWidthScale: 0.6,
-          counter: true
-        });
         
 
     	
 		
 		$(document).ready(function() {
+
+	        var gageValue = 0;
+
+	        var g = new JustGage({
+	          id: 'gauge',
+	          value: gageValue,
+	          min: 0,
+	          max: 100,
+	          title: "Temperature",
+	          label: "(label)",
+	          symbol: '\xB0C',
+	          pointer: true,
+	          pointerOptions: {
+	            toplength: -15,
+	            bottomlength: 10,
+	            bottomwidth: 12,
+	            color: '#8e8e93',
+	            stroke: '#ffffff',
+	            stroke_width: 3,
+	            stroke_linecap: 'round'
+	          },
+	          gaugeWidthScale: 0.6,
+	          counter: true
+	        });
+
+	        
 
 			var elem = document.querySelector('.js-switch');
 	    	var init = new Switchery(elem);
