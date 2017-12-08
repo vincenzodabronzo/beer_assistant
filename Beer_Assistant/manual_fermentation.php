@@ -59,6 +59,9 @@
 			    text: '40.0 \xB0C'
 			}));
 
+			$( function() {
+			    $( "#accordion" ).accordion();
+			  } );
 			
 
 	        var gageValue = 0.0;
