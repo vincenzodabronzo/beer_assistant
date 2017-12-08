@@ -1,9 +1,10 @@
 <?php
     $no_fermentation_quote = array(   
         "(It appears that nothing is fermenting... What a pity...)",
-        "Morpheus",
-        "Trinity",
-        "Cypher",
-        "Tank"
+        "I don't need meditation. I need fermentation",
+        "Fermentation may have been a greater discovery than fire",
+        "Fermentation equals civilization",
+        "The sooner you start fermentation, the better",
+        "Hello Sir, I'm thirsty.. Let's start fermentation!"
     );
 ?>
