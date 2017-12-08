@@ -56,7 +56,20 @@
 	            stroke_linecap: 'round'
 	          },
 	          gaugeWidthScale: 0.6,
-	          counter: true
+	          counter: true,
+	          ranges: [{
+	              color : "#7CB9E8",
+	              lo : 0,
+	              hi : 14
+	            },{
+	              color : "#43bf58",
+	              lo : 15,
+	              hi : 20
+	            },{
+	              color : "#ff3b30",
+	              lo : 21,
+	              hi : 40
+	            }]
 	        });
 
 	        
@@ -274,13 +287,6 @@
 <input type="checkbox" class="js-switch" checked />
 <br><br>
 
-<br><br>
-
-
-    
-    <div class="container">
-      <button type="button" id="gauge_refresh">Refresh Gauge</button>
-    </div>
     
 </body>
 
