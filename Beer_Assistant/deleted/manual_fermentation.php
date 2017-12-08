@@ -73,8 +73,7 @@
 					location.reload();					     
 			   });
 				   
-				$('#stop').click( function(){
-					update_graph = false;      
+				$('#stop').click( function(){      
 					endFermentation(); 
 					$(this).hide();
 					$('#start').show();
