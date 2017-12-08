@@ -6,6 +6,6 @@
         "Fermentation equals civilization",
         "The sooner you start fermentation, the better",
         "Hello Sir, I'm thirsty.. Let's start fermentation!",
-        "I do have a dirty senso of humor... Fermentation rhymes with..."
+        "I do have a dirty sense of humor... Fermentation rhymes with..."
     );
 ?>
