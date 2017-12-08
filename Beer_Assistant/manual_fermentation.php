@@ -60,8 +60,15 @@
 	          },
 	          gaugeWidthScale: 0.6,
 	          
-	          counter: true,	 
-	                   
+	          counter: true,
+
+	          levelColors: [
+	              "#00fff6",
+	              "#ff00fc",
+	              "#1200ff"
+	            ]
+	    	          	 
+	                   /*
 	          customSectors: {
     	          ranges: [{
     	              color : "#7CB9E8",
@@ -77,6 +84,7 @@
     	              hi : 40
     	            }]
 	          }
+	          */
 	        });
 
 	        
