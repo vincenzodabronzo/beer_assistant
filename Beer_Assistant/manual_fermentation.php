@@ -23,10 +23,14 @@
     
     <script type="text/javascript">
 
+  
+
     	//  microsec interval
     	var t = 1000;    	
 		
 		$(document).ready(function() {
+
+			  $(".btn-group-toggle").twbsToggleButtons();
 
 			// Check for open batch (if yes, collect graph data and hide "start fermentation")
 			// $('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
