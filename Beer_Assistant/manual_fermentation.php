@@ -35,8 +35,8 @@
 			for (i = 0; i < 41; i++) { 
 				for (j = 0; j <= 9; j++) { 
     				$('#max_select_group').append($('<option>', {
-    				    value: i+'.'+j,
-    				    text: i+'.'+j+' \xB0C'
+    				    value: 40-i+'.'+j,
+    				    text: 40-i+'.'+j+' \xB0C'
     				}));
     				$('#min_select_group').append($('<option>', {
     				    value: i+'.'+j,
