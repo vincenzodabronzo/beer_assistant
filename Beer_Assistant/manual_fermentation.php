@@ -34,10 +34,20 @@
 
 		$(document).ready(function() {
 
-			$('.element').slider(
-					min: 0, 
-				    max: 40
-				    ).slider('pips').slider('float');
+			$(".slider")
+            
+		    .slider({ 
+		        min: 0, 
+		        max: 1000, 
+		        range: true, 
+		        values: [200, 800] 
+		    })
+		                        
+		    .slider("pips", {
+		        rest: "label"
+		    })
+		                        
+		    .slider("float");
 		    
 
 	        var gageValue = 0.0;
@@ -194,7 +204,7 @@
       </div>
     </div>
     
-    <div class="element"></div>
+    <div class="slider"></div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
