@@ -198,16 +198,13 @@
 
 	<div id="topsection">
 		<div class="innertube">
-	
-		<div id="batch_title">
-			<?php
-			 $step = "fermentation";
-			 include 'lib/get_open_batch.php';
-			?>
+    		<div id="batch_title">
+    			<?php
+    			 $step = "fermentation";
+    			 include 'lib/get_open_batch.php';
+    			?>
+    		</div>
 		</div>
-		
-		</div>
-	
 	</div>
 	
 	<div id="max_select" class="m_select">
@@ -226,6 +223,12 @@
     	<label for="min_select_group">Min</label>
     	<select id="min_select_group">
     	</select>
+	</div>
+	
+	<div id="command">
+		<button id="start" data-role="button">Start Fermentation</button>
+		<button id="update_temp" data-role="button">Update values</button>
+		<button id="stop" data-role="button">End</button>
 	</div>
     
 
@@ -284,11 +287,7 @@
 		</div>
 	</div>
 	
-	<div id="command">
-		<button id="start" data-role="button">Start Fermentation</button>
-		<button id="update_temp" data-role="button">Update values</button>
-		<button id="stop" data-role="button">End</button>
-	</div>
+
 	
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 
