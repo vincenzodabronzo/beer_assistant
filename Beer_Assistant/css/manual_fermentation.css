@@ -24,3 +24,14 @@ body {
 #command {
 	text-align: center;
 }
+
+button#stop {
+      margin: 30px 5px 0 2px;
+      padding: 16px 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: none;
+      background: #c60000;
+      color: white;
+      cursor: pointer;
+    }
