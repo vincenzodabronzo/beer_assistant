@@ -36,11 +36,11 @@
 				for (j = 0; j <= 5; j+=5) { 
     				$('#max_select_group').append($('<option>', {
     				    value: i+'.'+j,
-    				    text: i+'.'+j+' deg'
+    				    text: i+'.'+j+' \xB0C'
     				}));
     				$('#min_select_group').append($('<option>', {
     				    value: i+'.'+j,
-    				    text: i+'.'+j+' deg'
+    				    text: i+'.'+j+' \xB0C'
     				}));
 				}
 			}
