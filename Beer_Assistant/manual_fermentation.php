@@ -10,17 +10,12 @@
     
      <link href="css/manual_fermentation.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
-     
      <link href="css/switchery.min.css" rel="stylesheet" type="text/css">
      <link href="css/gauge.css" rel="stylesheet" type="text/css">
-     <link href="css/drum.min.css" rel="stylesheet" type="text/css">
      
      <script type="text/javascript" src="js/switchery.min.js"></script>
      <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
      <script type="text/javascript" src="js/justgage.js"></script>
-     <script type="text/javascript" src="js/drum.min.js"></script>
-     
-    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
@@ -274,79 +269,6 @@
 <input type="checkbox" class="js-switch" checked />
 <br><br>
 
-<div class="outside">
-	<select id="ABC" class="drum" name="abc">
-		<option value="A">A</option>
-		<option value="B">B</option>
-		<option value="C">C</option>
-		<option value="D">D</option>
-		<option value="E">E</option>
-		<option value="F">F</option>
-		<option value="G">G</option>
-		<option value="H">H</option>
-		<option value="I">I</option>
-		<option value="J">J</option>
-		<option value="K">K</option>
-		<option value="L">L</option>
-		<option value="M">M</option>
-		<option value="N">N</option>
-		<option value="O">O</option>
-		<option value="P">P</option>
-		<option value="Q">Q</option>
-		<option value="R">R</option>
-		<option value="S">S</option>
-		<option value="T">T</option>
-		<option value="U">U</option>
-		<option value="V">V</option>
-		<option value="W">W</option>
-		<option value="X">X</option>
-		<option value="Y">Y</option>
-		<option value="Z">Z</option>
-	</select>
-</div>
-<div class="outside">
-	<select id="number1" class="drum" name="numbers">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
-	</select>
-</div>
-<div class="outside">
-	<select id="number2" class="drum" name="numbers">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
-	</select>
-</div>
-<div class="outside">
-	<select id="number3" class="drum" name="numbers">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
-	</select>
-</div>
-    
 </body>
 
 </html>
