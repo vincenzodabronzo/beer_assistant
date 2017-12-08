@@ -40,8 +40,8 @@
 			for (i = 0; i < 40; i++) { 
 				max_value = 39-i;
 				
-				for (j = 0; j <= 9; j++) { 
-					max_value_decimal = 9-j;
+				for (j = 0; j <= 5; j+=5) { 
+					max_value_decimal = 5-j;
 					
     				$('#max_select_group').append($('<option>', {
     				    value: max_value+'.'+ max_value_decimal ,
