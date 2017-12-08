@@ -215,7 +215,7 @@
     </div>
     
     <div id="m_select" class="m_select">
-   		 Max &deg;C: <div id="max_temp">0.0</div> 
+   		 Max &deg;C: <div id="max_temp" style="display: inline">0.0</div> 
     	&nbsp;&nbsp;&nbsp;
     	Min &deg;C: <div id="max_temp" style="display: inline">0.0</div>
 	</div>
