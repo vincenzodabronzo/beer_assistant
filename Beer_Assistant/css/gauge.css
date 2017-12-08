@@ -3,7 +3,8 @@
       width: 240px;
       height: 180px;
       margin: auto auto 0 auto;
-      /* padding-bottom: 30px; */
+      padding-bottom: 10px;
+      padding-top: 10px;
       clear: both;
     }
 
