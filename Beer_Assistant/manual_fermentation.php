@@ -35,7 +35,7 @@
 
 		$(document).ready(function() {
 
-	        var gageValue = 0;
+	        var gageValue = 0.0;
 
 	        
 	        var g = new JustGage({
@@ -46,6 +46,7 @@
 	          title: "Temperature",
 	          label: "(label)",
 	          symbol: '\xB0C',
+	          decimals: 1,
 	          
 	          pointer: true,
 	          
