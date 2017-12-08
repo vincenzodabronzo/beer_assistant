@@ -254,7 +254,7 @@
         max: 100,
         title: "Temperature",
         label: "(label)",
-        symbol: '&#x2103;',
+        symbol: '\xB0',
         pointer: true,
         pointerOptions: {
           toplength: -15,
