@@ -138,8 +138,7 @@
 					location.reload();					     
 			   });
 				   
-				$('#stop').click( function(){
-					update_graph = false;      
+				$('#stop').click( function(){    
 					endFermentation(); 
 					$(this).hide();
 					$('#start').show();
@@ -227,7 +226,6 @@
 	
 	<div id="command">
 		<button id="start" data-role="button">Start Fermentation</button>
-		<button id="update_temp" data-role="button">Update values</button>
 		<button id="stop" data-role="button">End</button>
 		<button id="options" data-role="button">Options</button>
 	</div>
@@ -294,12 +292,21 @@
 
     <div id="tabs">
       <ul>
-        <li><a href="#tabs-1">Devices</a></li>
-        <li><a href="#tabs-2">Options</a></li>
+        <li><a href="#tabs-1">Options</a></li>
+        <li><a href="#tabs-2">Devices</a></li>
         <li><a href="#tabs-3">Info</a></li>
       </ul>
       <div id="tabs-1">
-        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+      	<div id="m_select" class="m_select">
+       		<label for="max_select_group">Max</label>
+        	<select id="max_select_group">
+        	</select>
+        	&nbsp;&nbsp;&nbsp;
+        	<label for="min_select_group">Min</label>
+        	<select id="min_select_group">
+        	</select>
+	    </div>
+	    <button id="update_temp" data-role="button">Update values</button>
       </div>
       <div id="tabs-2">
         <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
