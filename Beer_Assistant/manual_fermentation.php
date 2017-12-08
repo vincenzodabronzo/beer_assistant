@@ -46,15 +46,16 @@
 	          label: "(label)",
 	          symbol: '\xB0C',
 	          pointer: true,
-	          pointerOptions: {
-	            toplength: -15,
-	            bottomlength: 10,
-	            bottomwidth: 12,
-	            color: '#8e8e93',
-	            stroke: '#ffffff',
-	            stroke_width: 2,
-	            stroke_linecap: 'round'
-	          },
+	        //  pointerOptions: {
+	        //    toplength: -15,
+	        //    bottomlength: 10,
+	        //    bottomwidth: 12,
+	        //    color: '#8e8e93',
+	        //    stroke: '#ffffff',
+	        //    stroke_width: 2,
+	        //    stroke_linecap: 'round'
+	        //  },
+	          
 	          gaugeWidthScale: 0.6,
 	          counter: true,
 	          ranges: [{
