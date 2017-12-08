@@ -1,7 +1,7 @@
 <?php
 // ini_set('display_errors', 'On');
 
-include_once '../vocabulary/en/en_nofermentation.php';
+include_once 'vocabulary/en/en_nofermentation.php';
 
 if($_GET["step"] != "") {
     $step = $_GET["step"];
