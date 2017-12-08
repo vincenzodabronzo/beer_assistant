@@ -48,7 +48,7 @@
 	          id: 'gauge',
 	          value: gageValue,
 	          min: 0,
-	          max: 100,
+	          max: 40,
 	          title: "Temperature",
 	          label: "(label)",
 	          symbol: '\xB0C',
@@ -59,10 +59,10 @@
 	            bottomwidth: 12,
 	            color: '#8e8e93',
 	            stroke: '#ffffff',
-	            stroke_width: 3,
+	            stroke_width: 2,
 	            stroke_linecap: 'round'
 	          },
-	          gaugeWidthScale: 0.6,
+	          gaugeWidthScale: 0.1,
 	          counter: true
 	        });
 
@@ -142,7 +142,7 @@
 
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
-						var temperature = parseInt( $('#fermentation_temp').text() );
+						var temperature = Number( $('#fermentation_temp').text() );
 
 						updateGage(temperature);
     
