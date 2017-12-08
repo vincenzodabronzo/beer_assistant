@@ -152,6 +152,11 @@
 
 			   }
 
+				function updateGage(n) {
+					  g.refresh(n);
+
+				}
+
 				   
 				
 				if ( $('#batch_id').text() == "0" ) {
@@ -164,11 +169,9 @@
 					$('#update_temp').show();
 					doUpdate();
 				}
+				
 
-				function updateGage(n) {
-					  g.refresh(gageValue);
 
-				}
 				
 		});
     </script>
