@@ -12,7 +12,11 @@
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      
      <link href="css/switchery.min.css" rel="stylesheet" type="text/css">
+     
      <script type="text/javascript" src="js/switchery.min.js"></script>
+     <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
+     <script type="text/javascript" src="js/justgage.js"></script>
+     
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
