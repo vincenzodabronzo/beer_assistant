@@ -62,7 +62,7 @@
 	            stroke_width: 2,
 	            stroke_linecap: 'round'
 	          },
-	          gaugeWidthScale: 0.1,
+	          gaugeWidthScale: 0.6,
 	          counter: true
 	        });
 
