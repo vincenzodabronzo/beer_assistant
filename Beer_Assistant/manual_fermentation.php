@@ -253,7 +253,7 @@
         min: 0,
         max: 100,
         title: "Temperature",
-        label: "°C",
+        label: "&deg;C",
         symbol: '%',
         pointer: true,
         pointerOptions: {
