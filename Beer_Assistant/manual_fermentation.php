@@ -37,6 +37,22 @@
 
 		$(document).ready(function() {
 
+			$(".slider")
+            
+		    .slider({ 
+		        min: 0, 
+		        max: 1000, 
+		        range: true, 
+		        values: [200, 800] 
+		    })
+		                        
+		    .slider("pips", {
+		        rest: "label"
+		    })
+		                        
+		    .slider("float");
+		    
+
 	        var gageValue = 0.0;
 
 	        var g = new JustGage({
