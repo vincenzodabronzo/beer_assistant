@@ -1,6 +1,6 @@
 <?php
     $no_fermentation_quote = array(   
-        "(It appears that nothing is fermenting... What a pity...)",
+        "It appears that nothing is fermenting... What a pity...",
         "I don't need meditation. I need fermentation",
         "Fermentation may have been a greater discovery than fire",
         "Fermentation equals civilization",
