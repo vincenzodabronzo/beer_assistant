@@ -30,16 +30,9 @@
 	    
     <script type="text/javascript">
 
-  
-
     	//  microsec interval
     	var t = 1000;    	
 
-
-        
-
-    	
-		
 		$(document).ready(function() {
 
 	        var gageValue = 0;
@@ -192,6 +185,12 @@
 		</div>
 	
 	</div>
+	
+	<div class="wrapper">
+      <div class="box">
+        <div id="gauge" class="gauge"></div>
+      </div>
+    </div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
@@ -277,11 +276,7 @@
 
 <br><br>
 
-    <div class="wrapper">
-      <div class="box">
-        <div id="gauge" class="gauge"></div>
-      </div>
-    </div>
+
     
     <div class="container">
       <button type="button" id="gauge_refresh">Refresh Gauge</button>
