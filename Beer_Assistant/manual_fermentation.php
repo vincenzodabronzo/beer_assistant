@@ -112,6 +112,8 @@
 	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/fermentation_control.py > /dev/null 2>/dev/null &"); ?> 
 
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
+
+						g1.refresh( 69 );
     
     					setTimeout(doUpdate, t);
 
