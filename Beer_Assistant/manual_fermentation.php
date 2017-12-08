@@ -197,7 +197,7 @@
       </div>
     </div>
     
-    	<div id="min_select">
+    <div id="min_select">
     	<select id="min_select_group">
             <option value="0.0">0.0</option>
             <option value="0.5">0.5</option>
