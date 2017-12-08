@@ -33,6 +33,8 @@
     	var t = 1000;    	
 
 		$(document).ready(function() {
+
+			$('.element').slider().slider('pips').slider('float');
 		    
 
 	        var gageValue = 0.0;
@@ -188,6 +190,8 @@
         <div id="gauge" class="gauge"></div>
       </div>
     </div>
+    
+    <div class="element"></div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">
