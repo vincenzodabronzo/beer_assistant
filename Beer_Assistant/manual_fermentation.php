@@ -194,7 +194,7 @@
 	</div>
 	
 	<div id="max_select" class="m_select">
-    	<label for="max_select_group">Max temperature</label>
+    	<label for="max_select_group">Max</label>
     	<select id="max_select_group">
     	</select>
 	</div>
@@ -206,7 +206,7 @@
     </div>
     
     <div id="min_select" class="m_select">
-    	<label for="min_select_group">Min temperature</label>
+    	<label for="min_select_group">Min</label>
     	<select id="min_select_group">
     	</select>
 	</div>
