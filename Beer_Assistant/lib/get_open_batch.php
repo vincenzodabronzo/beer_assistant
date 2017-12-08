@@ -1,6 +1,8 @@
 <?php
 // ini_set('display_errors', 'On');
 
+include_once '../vocabulary/en/en_nofermentation.php';
+
 if($_GET["step"] != "") {
     $step = $_GET["step"];
 }
@@ -15,10 +17,9 @@ $result = $dbconn->query("SELECT c.id, ba.name FROM ".$step."_config AS c INNER 
 if ($result->num_rows > 0) {
     if ($row = $result->fetch_assoc()){
         echo    $row['name'] .'<div id="batch_id" style="display: none;">'. $row['id'] .'</div> ';
-        // shell_exec("python py/mashtune_heat.py > /dev/null 2>/dev/null &");
     } 
 } else {
-    echo    '(No open batch found - Start process)<div id="batch_id" style="display: none;">0</div> ';
+    echo $no_fermentation_quote[array_rand($no_fermentation_quote)].'<div id="batch_id" style="display: none;">0</div> ';
 }
 
 ?>
