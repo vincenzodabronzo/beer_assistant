@@ -37,7 +37,6 @@
 
 	        var gageValue = 0.0;
 
-	        
 	        var g = new JustGage({
 	          id: 'gauge',
 	          value: gageValue,
@@ -47,9 +46,7 @@
 	          label: "(label)",
 	          symbol: '\xB0C',
 	          decimals: 1,
-	          
 	          pointer: true,
-	          
 	          pointerOptions: {
 	            toplength: -15,
 	            bottomlength: 10,
@@ -62,11 +59,6 @@
 	          gaugeWidthScale: 0.6,      
 	          counter: true
 	        });
-
-	        
-
-	        
-	        
 
 			var elem = document.querySelector('.js-switch');
 	    	var init = new Switchery(elem);
@@ -143,11 +135,9 @@
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
 						var temperature = Number( $('#fermentation_temp').text() );
-
 						updateGage(temperature);
-    
+  
     					setTimeout(doUpdate, t);
-
 			   }
 
 				function updateGage(n) {
