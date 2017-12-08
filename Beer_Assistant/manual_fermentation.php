@@ -242,8 +242,6 @@
     
     <div class="container">
       <button type="button" id="gauge_refresh">Refresh Gauge</button>
-      <p>After every animation end, function will log it below.</p>
-      <p id="log"></p>
     </div>
 
     <script>
@@ -266,12 +264,7 @@
           stroke_linecap: 'round'
         },
         gaugeWidthScale: 0.6,
-        counter: true,
-        onAnimationEnd: function() {
-          console.log('animation ended');
-          var log = document.getElementById('log');
-          log.innerHTML = log.innerHTML + 'Animation just ended.<br/>';
-        }
+        counter: true
       });
 
       document.getElementById('gauge_refresh').addEventListener('click', function() {
