@@ -218,24 +218,25 @@
 	
 	
 <div class="form-group container">
-  <!-- radio group / required -->
+
   <div class="card">
-    <div class="card-header">Checkboxes</div>
+    <div class="card-header">Custom CSS Classes</div>
     <div class="card-body">
-      <label class="control-label">Pick An Option</label>
+      <label class="control-label">Is it true?</label>
       <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
         <label class="btn active" role="button">
-          <input type="checkbox" name="options[]" value="1">Option 1
+          <input type="radio" name="options" value="1" required>yes
         </label>
-        <label class="btn active" role="button">
-          <input type="checkbox" name="options[]" value="2">Option 2
+        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+          <input type="radio" name="options" value="-1">maybe
         </label>
-        <label class="btn" role="button">
-          <input type="checkbox" name="options[]" value="3">Option 3
+        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
+          <input type="radio" name="options" value="0">no
         </label>
       </div>
     </div>
   </div>
+
 </div>
 
 <script>
