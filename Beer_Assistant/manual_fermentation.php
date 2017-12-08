@@ -59,6 +59,9 @@
 			    text: '40.0 \xB0C'
 			}));
 
+			$('#max_select_group').val( '25.0' );
+			$('#min_select_group').val( '18.0' );
+
 			$( function() {
 			    $( "#tabs" ).tabs();
 			  } );
