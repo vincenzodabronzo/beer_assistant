@@ -182,6 +182,7 @@
 	</div>
 	
 	<div id="max_select" class="m_select">
+    	<label for="max_select_group">Max temperature</label>
     	<select id="max_select_group">
             <option value="0.0">0.0</option>
             <option value="0.5">0.5</option>
@@ -198,6 +199,7 @@
     </div>
     
     <div id="min_select" class="m_select">
+    	<label for="min_select_group">Min temperature</label>
     	<select id="min_select_group">
             <option value="0.0">0.0</option>
             <option value="0.5">0.5</option>
