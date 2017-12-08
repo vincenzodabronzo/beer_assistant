@@ -221,6 +221,7 @@
    		<label for="max_select_group">Max</label>
     	<select id="max_select_group">
     	</select>
+    	&nbsp;&nbsp;&nbsp;
     	<label for="min_select_group">Min</label>
     	<select id="min_select_group">
     	</select>
