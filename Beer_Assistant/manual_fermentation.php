@@ -229,6 +229,7 @@
 		<button id="start" data-role="button">Start Fermentation</button>
 		<button id="update_temp" data-role="button">Update values</button>
 		<button id="stop" data-role="button">End</button>
+		<button id="options" data-role="button">Options</button>
 	</div>
     
 
