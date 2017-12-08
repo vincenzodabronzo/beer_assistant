@@ -181,11 +181,31 @@
 	
 	</div>
 	
+	<div id="max_select">
+    	<select id="max_select_group">
+            <option value="0.0">0.0</option>
+            <option value="0.5">0.5</option>
+            <option value="1.0">1.0</option>
+            <option value="1.5">1.5</option>
+            <option value="2.0">2.0</option>
+    	</select>
+	</div>
+	
 	<div class="wrapper">
       <div class="box">
         <div id="gauge" class="gauge"></div>
       </div>
     </div>
+    
+    	<div id="min_select">
+    	<select id="min_select_group">
+            <option value="0.0">0.0</option>
+            <option value="0.5">0.5</option>
+            <option value="1.0">1.0</option>
+            <option value="1.5">1.5</option>
+            <option value="2.0">2.0</option>
+    	</select>
+	</div>
     
 
     <div id="contentwrapper">
