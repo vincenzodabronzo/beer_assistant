@@ -16,6 +16,7 @@
 
     .container {
       width: 240px;
+      height: 180px;
       margin: 0 auto;
       text-align: center;
     }
