@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
         echo    $row['name'] .'<div id="batch_id" style="display: none;">'. $row['id'] .'</div> ';
     } 
 } else {
-    echo $no_fermentation_quote[array_rand($no_fermentation_quote)].'<div id="batch_id" style="display: none;">0</div> ';
+    echo $no_fermentation_quote[array_rand($no_fermentation_quote)].'<br><br><div id="batch_id" style="display: none;">0</div> ';
 }
 
 ?>
