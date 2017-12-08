@@ -31,7 +31,19 @@
     	var t = 1000;    	
 
 		$(document).ready(function() {
-		    
+
+			for (i = 0; i < 41; i++) { 
+				for (j = 0; j < 5; j+=5) { 
+    				$('#max_select_group').append($('<option>', {
+    				    value: i+'.'+j,
+    				    text: i+'.'+j+' deg'
+    				}));
+    				$('#min_select_group').append($('<option>', {
+    				    value: i+'.'+j,
+    				    text: i+'.'+j+' deg'
+    				}));
+				}
+			}
 
 	        var gageValue = 0.0;
 
@@ -184,11 +196,6 @@
 	<div id="max_select" class="m_select">
     	<label for="max_select_group">Max temperature</label>
     	<select id="max_select_group">
-            <option value="0.0">0.0 &deg;C</option>
-            <option value="0.5">0.5 &deg;C</option>
-            <option value="1.0">1.0 &deg;C</option>
-            <option value="1.5">1.5 &deg;C</option>
-            <option value="2.0">2.0 &deg;C</option>
     	</select>
 	</div>
 	
@@ -201,11 +208,6 @@
     <div id="min_select" class="m_select">
     	<label for="min_select_group">Min temperature</label>
     	<select id="min_select_group">
-            <option value="0.0">0.0 &deg;C</option>
-            <option value="0.5">0.5 &deg;C</option>
-            <option value="1.0">1.0 &deg;C</option>
-            <option value="1.5">1.5 &deg;C</option>
-            <option value="2.0">2.0 &deg;C</option>
     	</select>
 	</div>
     
