@@ -12,6 +12,7 @@
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      
      <link href="css/switchery.min.css" rel="stylesheet" type="text/css">
+     <link href="css/gauge.css" rel="stylesheet" type="text/css">
      
      <script type="text/javascript" src="js/switchery.min.js"></script>
      <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
@@ -225,9 +226,58 @@
 
 
 </div>
-
+<br><br>
 <input type="checkbox" class="js-switch" checked />
+<br><br>
 
+<br><br>
+
+    <div class="wrapper">
+      <div class="box">
+        <div id="g1" class="gauge"></div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <button type="button" id="gauge_refresh">Refresh Gauge</button>
+      <p>After every animation end, function will log it below.</p>
+      <p id="log"></p>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      var g1 = new JustGage({
+        id: 'g1',
+        value: 45,
+        min: 0,
+        max: 100,
+        symbol: '%',
+        pointer: true,
+        pointerOptions: {
+          toplength: -15,
+          bottomlength: 10,
+          bottomwidth: 12,
+          color: '#8e8e93',
+          stroke: '#ffffff',
+          stroke_width: 3,
+          stroke_linecap: 'round'
+        },
+        gaugeWidthScale: 0.6,
+        counter: true,
+        onAnimationEnd: function() {
+          console.log('animation ended');
+          var log = document.getElementById('log');
+          log.innerHTML = log.innerHTML + 'Animation just ended.<br/>';
+        }
+      });
+
+      document.getElementById('gauge_refresh').addEventListener('click', function() {
+        g1.refresh(getRandomInt(0, 100));
+      });
+    });
+    </script>
+    
 </body>
 
 </html>
