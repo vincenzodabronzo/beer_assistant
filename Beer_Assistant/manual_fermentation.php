@@ -262,8 +262,8 @@
 
         var gageValue = 0;
 
-      var g1 = new JustGage({
-        id: 'g1',
+      var g = new JustGage({
+        id: 'gauge',
         value: gageValue,
         min: 0,
         max: 100,
