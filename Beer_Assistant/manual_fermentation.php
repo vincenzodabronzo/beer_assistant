@@ -28,12 +28,13 @@
     	//  microsec interval
     	var t = 1000;    	
 
-    	var elem = document.querySelector('.js-switch');
-    	var init = new Switchery(elem);
+    	
 		
 		$(document).ready(function() {
 
-			  $(".btn-group-toggle").twbsToggleButtons();
+			var elem = document.querySelector('.js-switch');
+	    	var init = new Switchery(elem);
+
 
 			// Check for open batch (if yes, collect graph data and hide "start fermentation")
 			// $('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
