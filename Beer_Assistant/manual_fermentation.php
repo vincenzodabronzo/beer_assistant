@@ -15,6 +15,7 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+    
     <script type="text/javascript" src="js/jquery.twbs-toggle-buttons.min.js"></script>
 
 	
@@ -215,25 +216,22 @@
 	
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 	
-<div class="form-group container">
-  <div class="card">
-    <div class="card-header">Custom CSS Classes</div>
-    <div class="card-body">
-      <label class="control-label">Is it true?</label>
-      <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-        <label class="btn active" role="button">
-          <input type="radio" name="options" value="1" required>yes
-        </label>
-        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-          <input type="radio" name="options" value="-1">maybe
-        </label>
-        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-          <input type="radio" name="options" value="0">no
-        </label>
-      </div>
-    </div>
-  </div>
+	
+<label class="control-label">Is it true?</label>
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn active" role="button">
+        <input type="radio" name="options" value="1" required="required">yes 1
+    </label>
+    <label class="btn active" role="button">
+        <input type="radio" name="options" value="2">yes 2
+    </label>
+    <label class="btn" role="button">
+        <input type="radio" name="options" value="0">no
+    </label>
 </div>
+<script>
+    $(".btn-group-toggle").twbsToggleButtons();
+</script>
 
 
 </div>
