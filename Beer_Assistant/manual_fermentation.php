@@ -8,7 +8,7 @@
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
     
-     <link href="css/fermentation_data.css" rel="stylesheet" type="text/css">
+     <link href="css/manual_fermentation.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
     
     <script type="text/javascript" src="js/jquery.min.js"></script>

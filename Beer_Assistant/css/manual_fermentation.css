@@ -1,0 +1,6 @@
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c5deea+8,8abbd7+26,066dab+100 */
+background: rgb(197,222,234); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(197,222,234,1) 8%, rgba(138,187,215,1) 26%, rgba(6,109,171,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(197,222,234,1) 8%,rgba(138,187,215,1) 26%,rgba(6,109,171,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(197,222,234,1) 8%,rgba(138,187,215,1) 26%,rgba(6,109,171,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
