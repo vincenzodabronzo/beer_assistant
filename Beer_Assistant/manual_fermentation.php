@@ -249,7 +249,7 @@
 
     <div class="wrapper">
       <div class="box">
-        <div id="g1" class="gauge"></div>
+        <div id="gauge" class="gauge"></div>
       </div>
     </div>
     
