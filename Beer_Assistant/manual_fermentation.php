@@ -264,7 +264,7 @@
 
       var g1 = new JustGage({
         id: 'g1',
-        value: 45,
+        value: gageValue,
         min: 0,
         max: 100,
         title: "Temperature",
