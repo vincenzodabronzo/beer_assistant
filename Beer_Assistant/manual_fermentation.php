@@ -217,18 +217,27 @@
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 	
 	
-<label class="control-label">Is it true?</label>
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn active" role="button">
-        <input type="radio" name="options" value="1" required="required">yes 1
-    </label>
-    <label class="btn active" role="button">
-        <input type="radio" name="options" value="2">yes 2
-    </label>
-    <label class="btn" role="button">
-        <input type="radio" name="options" value="0">no
-    </label>
+<div class="form-group container">
+  <!-- radio group / required -->
+  <div class="card">
+    <div class="card-header">Checkboxes</div>
+    <div class="card-body">
+      <label class="control-label">Pick An Option</label>
+      <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
+        <label class="btn active" role="button">
+          <input type="checkbox" name="options[]" value="1">Option 1
+        </label>
+        <label class="btn active" role="button">
+          <input type="checkbox" name="options[]" value="2">Option 2
+        </label>
+        <label class="btn" role="button">
+          <input type="checkbox" name="options[]" value="3">Option 3
+        </label>
+      </div>
+    </div>
+  </div>
 </div>
+
 <script>
     $(".btn-group-toggle").twbsToggleButtons();
 </script>
