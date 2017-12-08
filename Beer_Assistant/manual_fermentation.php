@@ -183,12 +183,13 @@
 	<div id="topsection">
 		<div class="innertube">
 	
-		<h1 id="batch_title">
+		<div id="batch_title">
 			<?php
 			 $step = "fermentation";
 			 include 'lib/get_open_batch.php';
 			?>
-		</h1>
+		</div>
+		
 		</div>
 	
 	</div>
