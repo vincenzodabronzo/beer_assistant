@@ -3,7 +3,7 @@
         "It appears that nothing is fermenting... What a pity...",
         "I don't need meditation. I need fermentation",
         "The sooner you start fermentation, the better",
-        "Hello Sir, I'm thirsty.. Let's start fermentation!",
+        "I cannot drink but you can! Let's start fermentation!",
     );
     
     $fermentation_quote = array(
