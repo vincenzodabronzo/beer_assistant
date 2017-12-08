@@ -215,9 +215,9 @@
     </div>
     
     <div id="m_select" class="m_select">
-   		 Max <div id="max_temp" style="display: inline">0.0</div>&nbsp;&deg;C 
+   		 Max <div id="max_temp_dashboard" style="display: inline">0.0</div>&nbsp;&deg;C 
     	&nbsp;&nbsp;&nbsp;
-    	Min <div id="max_temp" style="display: inline">0.0</div>&nbsp;&deg;C 
+    	Min <div id="max_temp_dashboard" style="display: inline">0.0</div>&nbsp;&deg;C 
 	</div>
 	
 	<div id="command">
@@ -238,8 +238,10 @@
     	    <div class="data" id="show_data">
                 Temperature &deg;C: 
                 <div id="fermentation_temp">0.0</div>
-                
-                
+                Max temp &deg;C: 
+                <div id="max_temp">0.0</div>
+                Min temp &deg;C: 
+                <div id="min_temp">0.0</div>
                 Collected at:
                 <div id="current_timestamp">--</div>
                 Heat:
