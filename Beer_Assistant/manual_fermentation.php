@@ -12,7 +12,6 @@
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      <link href="css/switchery.min.css" rel="stylesheet" type="text/css">
      <link href="css/gauge.css" rel="stylesheet" type="text/css">
-     <link href="css/jquery-ui-slider-pip.min.css" rel="stylesheet" type="text/css">
      
      <script type="text/javascript" src="js/switchery.min.js"></script>
      <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
@@ -21,7 +20,6 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-slider-pip.min.js"></script>
     
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,21 +31,6 @@
     	var t = 1000;    	
 
 		$(document).ready(function() {
-
-			$(".slider")
-            
-		    .slider({ 
-		        min: 0, 
-		        max: 40, 
-		        range: true, 
-		        values: [15, 25] 
-		    })
-		                        
-		    .slider("pips", {
-		        rest: "label"
-		    })
-		                        
-		    .slider("float");
 		    
 
 	        var gageValue = 0.0;
@@ -204,7 +187,6 @@
       </div>
     </div>
     
-    <div class="slider"></div>
 
     <div id="contentwrapper">
         <div id="contentcolumn">

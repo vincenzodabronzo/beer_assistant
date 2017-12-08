@@ -12,9 +12,3 @@ body {
 	font-variant: normal;
 	text-transform: none;
 }
-
-#steps-fivepercent-slider .ui-slider-tip {
-    visibility: visible;
-    opacity: 1;
-    top: -30px;
-}
