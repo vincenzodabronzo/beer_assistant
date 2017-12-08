@@ -215,18 +215,26 @@
 	
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 	
-	<label class="control-label">Cooler management</label>
-	<div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
+<div class="form-group container">
+  <div class="card">
+    <div class="card-header">Custom CSS Classes</div>
+    <div class="card-body">
+      <label class="control-label">Is it true?</label>
+      <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
         <label class="btn active" role="button">
-          <input type="radio" name="options" value="auto" required>AUTO
+          <input type="radio" name="options" value="1" required>yes
         </label>
         <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-          <input type="radio" name="options" value="1">ON
+          <input type="radio" name="options" value="-1">maybe
         </label>
         <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-          <input type="radio" name="options" value="0">OFF
+          <input type="radio" name="options" value="0">no
         </label>
       </div>
+    </div>
+  </div>
+</div>
+
 
 </div>
 
