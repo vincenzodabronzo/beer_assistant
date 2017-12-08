@@ -33,7 +33,7 @@
 		$(document).ready(function() {
 
 			for (i = 0; i < 41; i++) { 
-				for (j = 0; j < 5; j+=5) { 
+				for (j = 0; j <= 5; j+=5) { 
     				$('#max_select_group').append($('<option>', {
     				    value: i+'.'+j,
     				    text: i+'.'+j+' deg'
