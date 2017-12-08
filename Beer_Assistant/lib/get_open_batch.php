@@ -16,7 +16,7 @@ $result = $dbconn->query("SELECT c.id, ba.name FROM ".$step."_config AS c INNER 
 
 if ($result->num_rows > 0) {
     if ($row = $result->fetch_assoc()){
-        echo $no_fermentation_quote[array_rand($no_fermentation_quote)].'<div id="batch_id" style="display: none;">'. $row['id'] .'</div> ';
+        echo $fermentation_quote[array_rand($fermentation_quote)].'<div id="batch_id" style="display: none;">'. $row['id'] .'</div> ';
     } 
 } else {
     echo $no_fermentation_quote[array_rand($no_fermentation_quote)].'<br><br><div id="batch_id" style="display: none;">0</div> ';
