@@ -46,6 +46,7 @@
 	          title: "Temperature",
 	          label: "(label)",
 	          symbol: '\xB0C',
+	          
 	          pointer: true,
 	          pointerOptions: {
 	            toplength: -15,
@@ -57,21 +58,23 @@
 	            stroke_linecap: 'round'
 	          },
 	          gaugeWidthScale: 0.6,
-	          counter: true,	          
+	          
+	          counter: true,	 
+	                   
 	          customSectors: {
 	              percents: true,
     	          ranges: [{
     	              color : "#7CB9E8",
     	              lo : 0,
-    	              hi : 14
-    	            },{
-    	              color : "#008000",
-    	              lo : 15,
     	              hi : 20
     	            },{
-    	              color : "#ff3b30",
+    	              color : "#008000",
     	              lo : 21,
-    	              hi : 40
+    	              hi : 60
+    	            },{
+    	              color : "#ff3b30",
+    	              lo : 61,
+    	              hi : 100
     	            }]
 	          }
 	        });
