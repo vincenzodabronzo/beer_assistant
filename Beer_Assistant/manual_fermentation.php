@@ -32,7 +32,12 @@
 
 		$(document).ready(function() {
 
-			for (i = 0; i <= 40; i++) { 
+			$('#max_select_group').append($('<option>', {
+			    value: '40.0' ,
+			    text: '40.0 \xB0C'
+			}));
+			
+			for (i = 0; i < 40; i++) { 
 				max_value = 40-i;
 				
 				for (j = 0; j <= 9; j++) { 
@@ -48,6 +53,13 @@
     				}));
 				}
 			}
+
+			$('#min_select_group').append($('<option>', {
+			    value: '40.0' ,
+			    text: '40.0 \xB0C'
+			}));
+
+			
 
 	        var gageValue = 0.0;
 
