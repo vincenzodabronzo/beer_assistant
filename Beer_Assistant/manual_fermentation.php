@@ -209,6 +209,19 @@
 	</div>
 	
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
+	
+	<label class="control-label">Cooler management</label>
+	<div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
+        <label class="btn active" role="button">
+          <input type="radio" name="options" value="auto" required>AUTO
+        </label>
+        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+          <input type="radio" name="options" value="1">ON
+        </label>
+        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
+          <input type="radio" name="options" value="0">OFF
+        </label>
+      </div>
 
 </div>
 

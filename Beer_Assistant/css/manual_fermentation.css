@@ -12,3 +12,17 @@ html {
 	background: linear-gradient(135deg, rgba(197,222,234,1) 8%,rgba(138,187,215,1) 26%,rgba(6,109,171,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
+
+h1 { color:#fff;}
+.card-body,.btn-group { background-color:#fafafa;}
+.card {
+  margin-top: 1em;
+}
+
+.form-control {
+  border: none;
+}
+
+.control-label {
+  margin: .5em 1em 0;
+}
