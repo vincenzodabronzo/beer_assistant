@@ -38,9 +38,9 @@
             
 		    .slider({ 
 		        min: 0, 
-		        max: 1000, 
+		        max: 40, 
 		        range: true, 
-		        values: [200, 800] 
+		        values: [15, 25] 
 		    })
 		                        
 		    .slider("pips", {
