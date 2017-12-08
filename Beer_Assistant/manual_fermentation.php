@@ -232,19 +232,6 @@
     <div id="contentwrapper">
         <div id="contentcolumn">
         	<div class="innertube"><b>Information: </b></div>
-        	<fieldset id="receipe_info">
-                    <legend>Receipe details: </legend>
-                    <label for="receipe_name">Receipe name</label>
-                    <input type="text" name="receipe_info" id="receipe_name" maxlength="255" value="insert-receipe-name(no-spaces)"><br>         
-			</fieldset>
-			<fieldset id="target_temp_group">
-                    <legend>Temperature management: </legend>
-                    <label for="temp_upper_limit">Temp max &deg;C</label>
-                    <input type="text" name="target_temp_group" id="temp_upper_limit" maxlength="5" size="10" value="22.5"> (Example <b>22.5</b>)<br>
-                    <label for="temp_lower_limit">Temp min &deg;C</label>
-                    <input type="text" name="target_temp_group" id="temp_lower_limit" maxlength="5" size="10" value="20.0"> (Example <b>20.0</b>)<br>
-                    <button id="update_temp" data-role="button">Update values</button>                   
-			</fieldset>
         </div>
     </div>
 
@@ -299,8 +286,8 @@
 	
 	<div id="command">
 		<button id="start" data-role="button">Start Fermentation</button>
+		<button id="update_temp" data-role="button">Update values</button>
 		<button id="stop" data-role="button">End</button>
-		<button id="option" data-role="button">Options</button>
 	</div>
 	
 	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
