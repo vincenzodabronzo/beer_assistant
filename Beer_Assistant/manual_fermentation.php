@@ -33,10 +33,14 @@
 		$(document).ready(function() {
 
 			for (i = 0; i <= 40; i++) { 
+				max_value = 40-i;
+				
 				for (j = 0; j <= 9; j++) { 
+					max_value_decimal = 9-j;
+					
     				$('#max_select_group').append($('<option>', {
-    				    value: 40-i+'.'+ 9-j ,
-    				    text: 40-i+'.'+ 9-j +' \xB0C'
+    				    value: max_value+'.'+ max_value_decimal ,
+    				    text: max_value+'.'+ max_value_decimal +' \xB0C'
     				}));
     				$('#min_select_group').append($('<option>', {
     				    value: i+'.'+j,
