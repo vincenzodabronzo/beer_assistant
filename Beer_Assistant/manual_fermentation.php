@@ -113,11 +113,16 @@
 
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
-						g1.refresh( 69 );
+						var temperature = Number( $('#fermentation_temp').text() );
+												
+
+						updateGage(temperature);
     
     					setTimeout(doUpdate, t);
 
 			   }
+
+				   
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#stop').hide();
@@ -129,6 +134,12 @@
 					$('#update_temp').show();
 					doUpdate();
 				}
+
+				function updateGage(n) {
+					  g.refresh(gageValue);
+
+				}
+				
 		});
     </script>
     
@@ -248,6 +259,8 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+
+        var gageValue = 0;
 
       var g1 = new JustGage({
         id: 'g1',
