@@ -142,7 +142,7 @@
 
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 
-						var temperature = Number( $('#fermentation_temp').text() );
+						var temperature = parseInt( $('#fermentation_temp').text() );
 												
 
 						updateGage(temperature);
