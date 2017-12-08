@@ -208,9 +208,11 @@
 	</div>
 	
 	<div class="wrapper">
+	  <div>MAX</div> 
       <div class="box">
         <div id="gauge" class="gauge"></div>
       </div>
+      <div>MIN</div>
     </div>
     
     <div id="m_select" class="m_select">
