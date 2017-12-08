@@ -34,7 +34,10 @@
 
 		$(document).ready(function() {
 
-			$('.element').slider().slider('pips').slider('float');
+			$('.element').slider(
+					min: 0, 
+				    max: 40
+				    ).slider('pips').slider('float');
 		    
 
 	        var gageValue = 0.0;
