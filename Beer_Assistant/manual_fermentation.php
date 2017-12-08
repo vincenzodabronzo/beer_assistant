@@ -69,7 +69,7 @@
 	          min: 0,
 	          max: 40,
 	          title: "Temperature",
-	          label: "(label)",
+	          label: "(beer)",
 	          symbol: '\xB0C',
 	          decimals: 1,
 	          pointer: true,
