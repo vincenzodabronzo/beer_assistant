@@ -1,5 +1,14 @@
 body {
     background: url("../img/hops_background.png") no-repeat top center;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+	
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 33px;
+	letter-spacing: 0.8px;
+	word-spacing: -0.2px;
+	color: #000000;
+	font-weight: 700;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: small-caps;
+	text-transform: none;
 }
