@@ -32,19 +32,11 @@
 
 		$(document).ready(function() {
 
-			$('#max_select_group').append($('<option>', {
-			    value: 40.0,
-			    text: '40 \xB0C'
-			}));
-			$('#min_select_group').append($('<option>', {
-			    value: 0.0,
-			    text: '0.0 \xB0C'
-			}));
 			for (i = 0; i <= 40; i++) { 
 				for (j = 0; j <= 9; j++) { 
     				$('#max_select_group').append($('<option>', {
-    				    value: 39-i+'.'+ 9-j ,
-    				    text: 39-i+'.'+ 9-j +' \xB0C'
+    				    value: 40-i+'.'+ j ,
+    				    text: 40-i+'.'+ j +' \xB0C'
     				}));
     				$('#min_select_group').append($('<option>', {
     				    value: i+'.'+j,
