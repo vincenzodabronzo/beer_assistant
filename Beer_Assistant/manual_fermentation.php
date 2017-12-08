@@ -11,8 +11,8 @@
      <link href="css/manual_fermentation.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      
-     <link href="css/switchery.css" rel="stylesheet" type="text/css">
-     <script type="text/javascript" src="js/switchery.js"></script>
+     <link href="css/switchery.min.css" rel="stylesheet" type="text/css">
+     <script type="text/javascript" src="js/switchery.min.js"></script>
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
