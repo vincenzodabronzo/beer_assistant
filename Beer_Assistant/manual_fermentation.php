@@ -48,6 +48,7 @@
 	          symbol: '\xB0C',
 	          
 	          pointer: true,
+	          
 	          pointerOptions: {
 	            toplength: -15,
 	            bottomlength: 10,
