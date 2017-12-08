@@ -1,4 +1,13 @@
+html {
+    height: 100%;
+}
+
 body {
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c5deea+8,8abbd7+26,066dab+100 */
 	background: rgb(197,222,234); /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
