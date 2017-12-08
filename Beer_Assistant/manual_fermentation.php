@@ -240,22 +240,7 @@
 
     <div id="leftcolumn">
     	<div class="innertube"><b>Status: <em>20%</em></b>
-    	    <div class="data" id="show_data">
-                Temperature &deg;C: 
-                <div id="fermentation_temp">0.0</div>
-                Max temp &deg;C: 
-                <div id="max_temp">0.0</div>
-                Min temp &deg;C: 
-                <div id="min_temp">0.0</div>
-                Collected at:
-                <div id="current_timestamp">--</div>
-                Heat:
-                <div id="heat">--</div>
-                Cool:
-                <div id="cool">--</div>
-                Starting time at:
-                <div id="starting_time">--</div>
-            </div>
+    	    
 
     	</div>
     </div>
@@ -324,6 +309,23 @@
 <br><br>
 <input type="checkbox" class="js-switch" checked />
 <br><br>
+
+<div class="data" id="show_data" style="display: none;>
+    Temperature &deg;C: 
+    <div id="fermentation_temp">0.0</div>
+    Max temp &deg;C: 
+    <div id="max_temp">0.0</div>
+    Min temp &deg;C: 
+    <div id="min_temp">0.0</div>
+    Collected at:
+    <div id="current_timestamp">--</div>
+    Heat:
+    <div id="heat">--</div>
+    Cool:
+    <div id="cool">--</div>
+    Starting time at:
+    <div id="starting_time">--</div>
+ </div>
 
 </body>
 
