@@ -62,19 +62,18 @@
 	          counter: true,	 
 	                   
 	          customSectors: {
-	              percents: true,
     	          ranges: [{
     	              color : "#7CB9E8",
     	              lo : 0,
-    	              hi : 20
+    	              hi : 12
     	            },{
     	              color : "#008000",
-    	              lo : 21,
-    	              hi : 60
+    	              lo : 13,
+    	              hi : 25
     	            },{
     	              color : "#ff3b30",
-    	              lo : 61,
-    	              hi : 100
+    	              lo : 26,
+    	              hi : 40
     	            }]
 	          }
 	        });
