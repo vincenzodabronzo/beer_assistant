@@ -89,51 +89,6 @@
 	          gaugeWidthScale: 0.6,      
 	          counter: true
 	        });
-
-			// var elem = document.querySelector('.js-switch');
-	    	// var init = new Switchery(elem);
-
-
-			// Check for open batch (if yes, collect graph data and hide "start fermentation")
-			// $('#batch_title').load( 'lib/get_open_batch.php?step=fermentation' );
-
-			// RADIO BUTTON HANDLING  ------------------------------
-			$('#heat_auto').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/device_control.php?command=NULL&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
-                }
-   			});
-    		$('#heat_on').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/device_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
-                }
-    		});
-    		$('#heat_off').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/device_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=heater" )
-                }
-    		});
-			// RADIO BUTTON HANDLING  ------------------------------
-			$('#cool_auto').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/device_control.php?command=NULL&id="+$('#batch_id').text()+"&step=fermentation&device=cooler" )
-                }
-   			});
-    		$('#cool_on').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/device_control.php?command=1&id="+$('#batch_id').text()+"&step=fermentation&device=cooler" )
-                }
-    		});
-    		$('#cool_off').click(function () {
-                if ($(this).is(':checked')) {
-                    $.ajax( "lib/device_control.php?command=0&id="+$('#batch_id').text()+"&step=fermentation&device=cooler" )
-                }
-    		});
-    		
-    		
-    		// END RADIO BUTTON HANDLING ------------------------------
-    		
-
 			 
 				$('#start').click( function(){
 					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
@@ -149,6 +104,9 @@
 					$('#receipe_info').show();
 					$('#update_temp').hide();
 
+					$('#heat_auto').attr('disabled', 'disabled');
+					$('#heat_on').attr('disabled', 'disabled');
+					$('#heat_off').attr('disabled', 'disabled');
 					$('#cool_auto').attr('disabled', 'disabled');
 					$('#cool_on').attr('disabled', 'disabled');
 					$('#cool_off').attr('disabled', 'disabled');
@@ -189,6 +147,9 @@
 					$('#stop').hide();
 					$('#update_temp').hide();
 
+					$('#heat_auto').attr('disabled', 'disabled');
+					$('#heat_on').attr('disabled', 'disabled');
+					$('#heat_off').attr('disabled', 'disabled');
 					$('#cool_auto').attr('disabled', 'disabled');
 					$('#cool_on').attr('disabled', 'disabled');
 					$('#cool_off').attr('disabled', 'disabled');
@@ -198,6 +159,9 @@
 					$('#receipe_info').hide();
 					$('#update_temp').show();
 
+					$('#heat_auto').removeAttr('disabled');
+					$('#heat_on').removeAttr('disabled');
+					$('#heat_off').removeAttr('disabled');					
 					$('#cool_auto').removeAttr('disabled');
 					$('#cool_on').removeAttr('disabled');
 					$('#cool_off').removeAttr('disabled');
@@ -261,6 +225,7 @@
         <li><a href="#tabs-1">Options</a></li>
         <li><a href="#tabs-2">Info</a></li>
       </ul>
+      
       <div id="tabs-1">
       
       	<div id="m_select" class="m_select">
@@ -283,6 +248,27 @@
                 <input type="radio" name="heat_group" id="heat_on">
                 <label for="heat_off">OFF</label>
                 <input type="radio" name="heat_group" id="heat_off">
+			</fieldset>
+			
+			<fieldset id="heat_group">
+				<legend>Heater management: </legend>
+    			<div class="control-group">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
+                        Auto
+                            <input type="radio" id="heat_auto" name="radio" checked="checked" disabled="disabled"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
+                        On
+                            <input type="radio" id="heat_on" name="radio" disabled="disabled" />
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
+                        Off
+                            <input type="radio" id="heat_off" name="radio" disabled="disabled"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
 			</fieldset>
 			
 			<fieldset id="cool_group">
