@@ -92,7 +92,6 @@
 			 
 				$('#start').click( function(){
 					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
-
 					location.reload();					     
 			   });
 
@@ -197,8 +196,24 @@
 				}
 
 				document.getElementById("play").addEventListener("click", function(){
-					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
-					location.reload()
+					if( $('#batch_id').text() == "0" ) {
+    					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
+    					location.reload()
+					} else {
+						endFermentation(); 
+						$(this).hide();
+						$('#start').show();
+						$('#receipe_info').show();
+						$('#update_temp').hide();
+
+						$('#play').attr('src', 'img/play.png');
+						$('#heat_auto').attr('disabled', 'disabled');
+						$('#heat_on').attr('disabled', 'disabled');
+						$('#heat_off').attr('disabled', 'disabled');
+						$('#cool_auto').attr('disabled', 'disabled');
+						$('#cool_on').attr('disabled', 'disabled');
+						$('#cool_off').attr('disabled', 'disabled');
+					}
 				});
 				document.getElementById("help").addEventListener("click", function(){
 				    manageTabHelp();
