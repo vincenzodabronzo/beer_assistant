@@ -18,6 +18,7 @@
      <script type="text/javascript" src="js/jquery-ui.min.js"></script>
      <script type="text/javascript" src="js/moment.min.js"></script>
      <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+     <script type="text/javascript" src="js/jquery.twbs-toggle-buttons.min.js"></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -321,6 +322,44 @@
     Starting time at:
     <div id="starting_time">--</div>
  </div>
+ 
+ <style>
+ 
+ </style>
+ 
+ <div align="center">Three State Radio Button</div>
+	<div class="wrapper">
+  <label for="yes_radio" id="yes-lbl">si</label><input type="radio" value="" name="choice_radio" id="yes_radio">
+  <label for="maybe_radio" id="maybe-lbl">?</label><input type="radio" value="" name="choice_radio" id="maybe_radio" checked="checked">
+  <label for="no_radio" id="no-lbl">no</label><input type="radio" value="" name="choice_radio" id="no_radio">
+  
+  <div class="toggle"></div>
+</div>
+
+
+  <div class="card">
+    <div class="card-header">Custom CSS Classes</div>
+    <div class="card-body">
+      <label class="control-label">Is it true?</label>
+      <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
+        <label class="btn active" role="button">
+          <input type="radio" name="options" value="1" required>yes
+        </label>
+        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+          <input type="radio" name="options" value="-1">maybe
+        </label>
+        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
+          <input type="radio" name="options" value="0">no
+        </label>
+      </div>
+    </div>
+  </div>
+  <script>
+	$(".btn-group-toggle").twbsToggleButtons();
+	</script>
+  
+
+
 
 </body>
 
