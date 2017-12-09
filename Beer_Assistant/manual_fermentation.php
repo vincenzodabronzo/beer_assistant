@@ -216,6 +216,11 @@
 		<button id="stop" data-role="button">End</button>
 		<br><br>
 	</div>
+	
+	<div id="command">
+		<img src="img/if_Windows_Media_Player_alt_99042.png">&nbsp;&nbsp;
+		<img src="img/if_Help_99022.png">
+	</div>
 	<div id="command">
 		<img src="img/if_Configure_alt_3_98815.png">&nbsp;&nbsp;
 		<img src="img/if_Help_99022.png">
