@@ -35,3 +35,7 @@ button#stop {
       color: white;
       cursor: pointer;
     }
+    
+#footer {
+	text-align: center;
+}
