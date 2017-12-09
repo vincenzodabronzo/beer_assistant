@@ -295,12 +295,11 @@
 
 </div>
 
-<br>
-<br>
-
+<br><br>
 <div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">Beer Assistant</a></div>
+<br><br>
 
-<!--   --> 
+<!-- Hidden variables --> 
 
 <div class="data" id="show_data" style="display: none;">
     Temperature &deg;C: 
