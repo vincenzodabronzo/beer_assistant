@@ -182,8 +182,9 @@
 					
 					doUpdate();
 				}
-				
 
+
+				$('#tab_help').hide();
 				function manageTabHelp() {
 					if ( $('#help').val() == "0" ) {
 						$('#tab_help').show();
@@ -193,6 +194,9 @@
 						$('#help').val("0");
 					}
 				}
+
+				
+				$('#tab_options').hide()
 				function manageTabOptions() {
 					if ( $('#options').val() == "0" ) {
 						$('#tab_options').show();
@@ -272,7 +276,7 @@
       
    <!--    <div id="tabs-1">--> 
       
-      <div id="tab_options" style="display: none;">
+      <div id="tab_options">
       	<div id="m_select" class="m_select">
        			<label for="max_select_group">Max</label>
         		<select id="max_select_group">
@@ -332,7 +336,7 @@
 
 <!-- <div id="tabs-2"> -->
 
-      <div id="tab_help" style="display: none;">
+      <div id="tab_help">
       	<?php 
       	 include_once 'vocabulary/en_fermentation.php';
       	 echo $info;
