@@ -13,6 +13,6 @@
     );
     
     $info = "   <p>If temperature raises above the Max value spacified, the system will activate the cooler (if it is set to 'Auto'). It is possibile to override the auto option, specifying if the cooler has to be activated or deactivaed.</p>
-                <p>Furthermore if the temperature drops under the Min value specified, the system will activate the heater (if it is set to 'Auto'). It is possibile to override the auto option, specifying if the heater has to be activated or deactivaed</p>";
+                <p>Furthermore if the temperature drops under the Min value specified, the system will activate the heater (if it is set to 'Auto'). It is possibile to override the auto option, specifying if the heater has to be activated or deactivated</p>";
     
 ?>
