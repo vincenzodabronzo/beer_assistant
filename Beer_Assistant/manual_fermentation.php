@@ -307,7 +307,41 @@
 	    
       </div>
       <div id="tabs-2">
-        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        
+              <div class="card">
+                <div class="card-header">Device Management</div>
+                <div class="card-body">
+                  <label class="control-label">Heater</label>
+                  <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
+                    <label class="btn active" role="button">
+                      <input type="radio" name="options" value="1" required>On
+                    </label>
+                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+                      <input type="radio" name="options" value="null">Auto
+                    </label>
+                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
+                      <input type="radio" name="options" value="0">Off
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="card-body">
+                  <label class="control-label">Cooler</label>
+                  <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
+                    <label class="btn active" role="button">
+                      <input type="radio" name="options" value="1" required>On
+                    </label>
+                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+                      <input type="radio" name="options" value="null">Auto
+                    </label>
+                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
+                      <input type="radio" name="options" value="0">Off
+                    </label>
+                  </div>
+                </div>
+                
+              </div>
+      
       </div>
       <div id="tabs-3">
       	<?php 
@@ -340,23 +374,7 @@
 
 
 
-<div class="card">
-    <div class="card-header">Device Management</div>
-    <div class="card-body">
-      <label class="control-label">Heater</label>
-      <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-        <label class="btn active" role="button">
-          <input type="radio" name="options" value="1" required>On
-        </label>
-        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-          <input type="radio" name="options" value="null">Auto
-        </label>
-        <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-          <input type="radio" name="options" value="0">Off
-        </label>
-      </div>
-    </div>
-  </div>
+
  
 
   
