@@ -328,14 +328,14 @@
                 <div class="card-body">
                   <label class="control-label">Cooler</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-                    <label class="btn active" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="cooler_group" id="cool_auto" required>Auto
+                    <label class="btn active" id="cool_auto" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+                      <input type="radio" name="cooler_group"  required>Auto
                     </label>
-                    <label class="btn" role="button">
-                      <input type="radio" name="cooler_group" id="cool_on">On
+                    <label class="btn" id="cool_on" role="button">
+                      <input type="radio" name="cooler_group" >On
                     </label>
-                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="cooler_group" id="cool_off">Off
+                    <label class="btn" id="cool_off" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
+                      <input type="radio" name="cooler_group" >Off
                     </label>
                   </div>
                 </div>
