@@ -313,11 +313,11 @@
                 <div class="card-body">
                   <label class="control-label">Heater</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-                    <label class="btn active" role="button">
-                      <input type="radio" name="heater_group" value="1" required>On
+                    <label class="btn active" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+                      <input type="radio" name="heater_group" value="null" required>Auto
                     </label>
-                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="heater_group" value="null" checked="checked">Auto
+                    <label class="btn" role="button">
+                      <input type="radio" name="heater_group" value="1">On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
                       <input type="radio" name="heater_group" value="0">Off
@@ -328,11 +328,11 @@
                 <div class="card-body">
                   <label class="control-label">Cooler</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-                    <label class="btn active" role="button">
-                      <input type="radio" name="cooler_group" value="1" required>On
+                    <label class="btn active" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
+                      <input type="radio" name="cooler_group" value="null" required>Auto
                     </label>
-                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="cooler_group" value="null" checked="checked">Auto
+                    <label class="btn" role="button">
+                      <input type="radio" name="cooler_group" value="1">On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
                       <input type="radio" name="cooler_group" value="0">Off
