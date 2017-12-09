@@ -11,9 +11,7 @@
      <link href="css/manual_fermentation.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      <link href="css/gauge.css" rel="stylesheet" type="text/css">
-     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-     
-     <link href="css/tether.min.css" rel="stylesheet" type="text/css">
+
      
      <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
      <script type="text/javascript" src="js/justgage.js"></script>
@@ -21,12 +19,8 @@
      <script type="text/javascript" src="js/jquery-ui.min.js"></script>
      <script type="text/javascript" src="js/moment.min.js"></script>
      <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
-     <script type="text/javascript" src="js/jquery.twbs-toggle-buttons.min.js"></script>
-     <script type="text/javascript" src="js/tether.min.js"></script>
-     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-     
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	    
     <script type="text/javascript">
@@ -271,7 +265,6 @@
                     <label for="heat_off">OFF</label>
                     <input type="radio" name="heat_group" id="heat_off">
 				</fieldset>
-				<!-- 
 				<fieldset id="cool_group">
                     <legend>Cooler management: </legend>
                     <label for="cool_auto">Auto</label>
@@ -281,7 +274,6 @@
                     <label for="cool_off">OFF</label>
                     <input type="radio" name="cool_group" id="cool_off">
 				</fieldset>
-				 -->
 				
 			</div>
 		</div>
@@ -297,6 +289,7 @@
         <li><a href="#tabs-2">Info</a></li>
       </ul>
       <div id="tabs-1">
+      
       	<div id="m_select" class="m_select">
        			<label for="max_select_group">Max</label>
         		<select id="max_select_group">
@@ -308,39 +301,6 @@
         		<button id="update_temp" data-role="button">Update values</button>
 	    </div>
 	    
-              <div class="card">
-                <div class="card-header">Device Management</div>
-                <div class="card-body">
-                  <label class="control-label">Heater</label>
-                  <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-                    <label class="btn active" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="heater_group" value="null" required>Auto
-                    </label>
-                    <label class="btn" role="button">
-                      <input type="radio" name="heater_group" value="1">On
-                    </label>
-                    <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="heater_group" value="0">Off
-                    </label>
-                  </div>
-                </div>
-                
-                <div class="card-body">
-                  <label class="control-label">Cooler</label>
-                  <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
-                    <label class="btn active" id="cool_auto" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="cooler_group"  required>Auto
-                    </label>
-                    <label class="btn" id="cool_on" role="button">
-                      <input type="radio" name="cooler_group" >On
-                    </label>
-                    <label class="btn" id="cool_off" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="cooler_group" >Off
-                    </label>
-                  </div>
-                  
-                </div>
-               </div>
 	    
       </div>
 
