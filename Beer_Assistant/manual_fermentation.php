@@ -231,9 +231,9 @@
 	
 	<div id="command">
 		<img id="play" src="img/play.png">
-		<img src="img/configure.png">
-		<img src="img/home.png">
-		<img src="img/help.png">
+		<img id="configure" src="img/configure.png">
+		<img id="home" src="img/home.png">
+		<img id="help" src="img/help.png">
 	</div>
 	
 	
