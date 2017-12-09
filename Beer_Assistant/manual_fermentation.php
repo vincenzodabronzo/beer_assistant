@@ -295,7 +295,10 @@
 
 </div>
 
-<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
+<br>
+<br>
+
+<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">Beer Assistant</a></div>
 
 <!--   --> 
 
