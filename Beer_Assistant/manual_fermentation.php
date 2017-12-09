@@ -323,18 +323,6 @@
     <div id="starting_time">--</div>
  </div>
  
- <style>
- 
- </style>
- 
- <div align="center">Three State Radio Button</div>
-	<div class="wrapper">
-  <label for="yes_radio" id="yes-lbl">si</label><input type="radio" value="" name="choice_radio" id="yes_radio">
-  <label for="maybe_radio" id="maybe-lbl">?</label><input type="radio" value="" name="choice_radio" id="maybe_radio" checked="checked">
-  <label for="no_radio" id="no-lbl">no</label><input type="radio" value="" name="choice_radio" id="no_radio">
-  
-  <div class="toggle"></div>
-</div>
 
 
   <div class="card">
