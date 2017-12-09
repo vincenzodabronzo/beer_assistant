@@ -238,7 +238,7 @@
     <br>
     
 	
-	<div id="command" style="display: inline">
+	<div id="command">
 		<button id="start" data-role="button">Start Fermentation</button>
 		<button id="stop" data-role="button">End</button>
 	</div>
