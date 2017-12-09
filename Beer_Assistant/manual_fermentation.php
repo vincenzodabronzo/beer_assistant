@@ -152,7 +152,7 @@
 					$(this).hide();
 					$('#start').show();
 					$('#receipe_info').show();
-					$('#update_temp').prop("disabled",true);
+					$('#update_temp').hide();
 				});
 				
 				$('#update_temp').click( function(){
@@ -187,12 +187,12 @@
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#stop').hide();
-					$('#update_temp').prop("disabled", true);
+					$('#update_temp').hide();
 					
 				} else {
 					$('#start').hide();
 					$('#receipe_info').hide();
-					$('#update_temp').prop("disabled",false);
+					$('#update_temp').show();
 					doUpdate();
 				}
 				
