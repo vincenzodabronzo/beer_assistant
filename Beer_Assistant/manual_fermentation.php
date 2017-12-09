@@ -313,23 +313,26 @@
  </div>
  
  
- <label class="container_radio">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container_radio">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container_radio">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container_radio">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
 
+<div class="control-group">
+	<h1>Radio buttons</h1>
+	<label class="control control--radio">First radio
+		<input type="radio" name="radio" checked="checked"/>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Second radio
+		<input type="radio" name="radio"/>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Disabled
+		<input type="radio" name="radio2" disabled="disabled"/>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Disabled & checked
+		<input type="radio" name="radio2" disabled="disabled" checked="checked"/>
+		<div class="control__indicator"></div>
+	</label>
+</div>
 </body>
 
 </html>
