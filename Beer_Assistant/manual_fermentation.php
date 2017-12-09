@@ -317,7 +317,7 @@
                       <input type="radio" name="options" value="1" required>On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="options" value="null">Auto
+                      <input type="radio" name="options" value="null" checked="checked">Auto
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
                       <input type="radio" name="options" value="0">Off
@@ -332,7 +332,7 @@
                       <input type="radio" name="options" value="1" required>On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="options" value="null">Auto
+                      <input type="radio" name="options" value="null" checked="checked">Auto
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
                       <input type="radio" name="options" value="0">Off
