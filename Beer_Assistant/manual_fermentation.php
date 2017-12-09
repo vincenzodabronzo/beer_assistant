@@ -314,13 +314,13 @@
                   <label class="control-label">Heater</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
                     <label class="btn active" role="button">
-                      <input type="radio" name="options" value="1" required>On
+                      <input type="radio" name="heater_group" value="1" required>On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="options" value="null" checked="checked">Auto
+                      <input type="radio" name="heater_group" value="null" checked="checked">Auto
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="options" value="0">Off
+                      <input type="radio" name="heater_group" value="0">Off
                     </label>
                   </div>
                 </div>
@@ -329,13 +329,13 @@
                   <label class="control-label">Cooler</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
                     <label class="btn active" role="button">
-                      <input type="radio" name="options" value="1" required>On
+                      <input type="radio" name="cooler_group" value="1" required>On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="options" value="null" checked="checked">Auto
+                      <input type="radio" name="cooler_group" value="null" checked="checked">Auto
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="options" value="0">Off
+                      <input type="radio" name="cooler_group" value="0">Off
                     </label>
                   </div>
                 </div>
