@@ -192,11 +192,8 @@
 				
 				$('#tab_options').hide()
 				function manageTabOptions() {
-					if ( $('#options').is(":visible") ) {
-						$('#tab_options').hide();
-					} else {
-						$('#tab_options').show();
-					}
+					$('#tab_options').toggle();
+
 				}
 
 				document.getElementById("help").addEventListener("click", function(){
