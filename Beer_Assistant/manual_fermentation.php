@@ -230,10 +230,10 @@
 	</div>
 	
 	<div id="command">
-		<img id="play" src="img/play.png">
-		<img id="configure" src="img/configure.png">
-		<img id="home" src="img/home.png">
-		<img id="help" src="img/help.png">
+		<img id="play" src="img/play.png" value="0">
+		<img id="configure" src="img/configure.png" value="0">
+		<img id="home" src="img/home.png" value="0">
+		<img id="help" src="img/help.png" value="0">
 	</div>
 	
 	
@@ -242,14 +242,11 @@
 	<br>
 	
 
-    <div id="tabs">
-      <ul>
-        <li><a href="#tabs-1">Options</a></li>
-        <li><a href="#tabs-2">Info</a></li>
-      </ul>
+
       
-      <div id="tabs-1">
+   <!--    <div id="tabs-1">--> 
       
+      <div id="tab_options">
       	<div id="m_select" class="m_select">
        			<label for="max_select_group">Max</label>
         		<select id="max_select_group">
@@ -307,7 +304,9 @@
 	    
       </div>
 
-      <div id="tabs-2">
+<!-- <div id="tabs-2"> -->
+
+      <div id="tab_info">
       	<?php 
       	 include_once 'vocabulary/en_fermentation.php';
       	 echo $info;
@@ -315,7 +314,7 @@
       </div>
     </div>
 
-</div>
+
 
 <br><br>
 <div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">Beer Assistant</a></div>
