@@ -286,6 +286,7 @@
 			</fieldset>
 			
 			<fieldset id="cool_group">
+				<legend>Cooler management: </legend>
     			<div class="control-group">
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
                         Auto
