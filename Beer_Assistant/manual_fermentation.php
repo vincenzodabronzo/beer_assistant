@@ -329,9 +329,8 @@
  
 
 
-  <div class="card">
-    <div class="card-header">Card header</div>
-    <div class="card-body">
+
+
       <label class="control-label">Pump Management</label>
       <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
         <label class="btn active" role="button">
@@ -344,8 +343,8 @@
           <input type="radio" name="options" value="0">Off
         </label>
       </div>
-    </div>
-  </div>
+ 
+
   
   
 
