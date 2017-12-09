@@ -90,10 +90,6 @@
 	          counter: true
 	        });
 			 
-				$('#start').click( function(){
-					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
-					location.reload();					     
-			   });
 
 				function updateOnStop() {
 					// function to call to clean page
@@ -102,26 +98,10 @@
 				function updateOnStart() {
 					// function to call to clean page
 				}
-				   
-				$('#stop').click( function(){    
-					endFermentation(); 
-					$(this).hide();
-					$('#start').show();
-					$('#receipe_info').show();
-					$('#update_temp').hide();
-
-					$('#play').attr('src', 'img/play.png');
-					$('#heat_auto').attr('disabled', 'disabled');
-					$('#heat_on').attr('disabled', 'disabled');
-					$('#heat_off').attr('disabled', 'disabled');
-					$('#cool_auto').attr('disabled', 'disabled');
-					$('#cool_on').attr('disabled', 'disabled');
-					$('#cool_off').attr('disabled', 'disabled');
-				});
-
-
-
 				
+
+
+
 				$('#update_temp').click( function(){
 					$.ajax( "lib/fermentationtemp_limits.php?id="+$('#batch_id').text()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
 				});
@@ -153,7 +133,6 @@
 				   
 				
 				if ( $('#batch_id').text() == "0" ) {
-					$('#stop').hide();
 					$('#update_temp').hide();
 
 					$('#play').attr('src', 'img/play.png');
@@ -166,7 +145,6 @@
 					$('#cool_off').attr('disabled', 'disabled');
 					
 				} else {
-					$('#start').hide();
 					$('#receipe_info').hide();
 					$('#update_temp').show();
 
@@ -196,13 +174,13 @@
 				}
 
 				document.getElementById("play").addEventListener("click", function(){
+					
 					if( $('#batch_id').text() == "0" ) {
     					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
     					location.reload()
 					} else {
 						endFermentation(); 
-						$(this).hide();
-						$('#start').show();
+
 						$('#receipe_info').show();
 						$('#update_temp').hide();
 
@@ -261,12 +239,6 @@
 	<br>
     <br>
     
-	
-	<div id="command">
-		<button id="start" data-role="button">Start Fermentation</button>
-		<button id="stop" data-role="button">End</button>
-		<br><br>
-	</div>
 	
 	<div id="command">
 		<img id="play" src="img/play.png">
