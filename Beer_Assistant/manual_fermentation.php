@@ -239,16 +239,7 @@
         		<button id="update_temp" data-role="button">Update values</button>
 	    </div>
 	    
-    	<div class="device" id="show_devices">
-			<fieldset id="heat_group">
-                <legend>Heater management: </legend>
-                <label for="heat_auto">Auto</label>
-                <input type="radio" name="heat_group" id="heat_auto" checked="checked">
-                <label for="heat_on">ON</label>
-                <input type="radio" name="heat_group" id="heat_on">
-                <label for="heat_off">OFF</label>
-                <input type="radio" name="heat_group" id="heat_off">
-			</fieldset>
+
 			
 			<fieldset id="heat_group">
 				<legend>Heater management: </legend>
@@ -291,8 +282,6 @@
                     </label>
                 </div>
 			</fieldset>
-			
-		</div>
 	    
       </div>
 
