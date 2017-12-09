@@ -325,8 +325,8 @@
   <input type="radio" name="radio">
   <span class="checkmark"></span>
 </label>
-<label class="container">Four
-  <input type="container_radio" name="radio">
+<label class="container_radio">Four
+  <input type="radio" name="radio">
   <span class="checkmark"></span>
 </label>
 
