@@ -255,17 +255,17 @@
     			<div class="control-group">
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
                         Auto
-                            <input type="radio" id="heat_auto" name="radio" checked="checked" disabled="disabled"/>
+                            <input type="radio" id="heat_auto" name="radio_heat" checked="checked" disabled="disabled"/>
                         <div class="control_indicator"></div>
                     </label>
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
                         On
-                            <input type="radio" id="heat_on" name="radio" disabled="disabled" />
+                            <input type="radio" id="heat_on" name="radio_heat" disabled="disabled" />
                         <div class="control_indicator"></div>
                     </label>
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
                         Off
-                            <input type="radio" id="heat_off" name="radio" disabled="disabled"/>
+                            <input type="radio" id="heat_off" name="radio_heat" disabled="disabled"/>
                         <div class="control_indicator"></div>
                     </label>
                 </div>
@@ -276,17 +276,17 @@
     			<div class="control-group">
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
                         Auto
-                            <input type="radio" id="cool_auto" name="radio" checked="checked" disabled="disabled"/>
+                            <input type="radio" id="cool_auto" name="radio_cool" checked="checked" disabled="disabled"/>
                         <div class="control_indicator"></div>
                     </label>
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
                         On
-                            <input type="radio" id="cool_on" name="radio" disabled="disabled" />
+                            <input type="radio" id="cool_on" name="radio_cool" disabled="disabled" />
                         <div class="control_indicator"></div>
                     </label>
                     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
                         Off
-                            <input type="radio" id="cool_off" name="radio" disabled="disabled"/>
+                            <input type="radio" id="cool_off" name="radio_cool" disabled="disabled"/>
                         <div class="control_indicator"></div>
                     </label>
                 </div>
