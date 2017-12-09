@@ -22,9 +22,9 @@
      <script type="text/javascript" src="js/moment.min.js"></script>
      <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
      <script type="text/javascript" src="js/jquery.twbs-toggle-buttons.min.js"></script>
+     <script type="text/javascript" src="js/tether.min.js"></script>
      <script type="text/javascript" src="js/bootstrap.min.js"></script>
      
-     <script type="text/javascript" src="js/tether.min.js"></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
