@@ -214,6 +214,7 @@
 	<div id="command">
 		<button id="start" data-role="button">Start Fermentation</button>
 		<button id="stop" data-role="button">End</button>
+		<br>
 		<img src="img/if_Configure_alt_3_98815.png">&nbsp;&nbsp;&nbsp;
 		<img src="img/if_Help_99022.png">
 	</div>
