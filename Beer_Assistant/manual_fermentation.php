@@ -182,7 +182,15 @@
 				}
 				
 
-
+				function manageTabInfo() {
+					if ( $('#info').val() == "0" ) {
+						$('#tab_info').show();
+						$('#info').val("1");
+					} else {
+						$('#tab_info').hide();
+						$('#info').val("0");
+					}
+				}
 				
 		});
     </script>
