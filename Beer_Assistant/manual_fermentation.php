@@ -30,7 +30,6 @@
 
 		$(document).ready(function() {
 
-			$(".btn-group-toggle").twbsToggleButtons();
 
 			$('#max_select_group').append($('<option>', {
 			    value: '40.0' ,
