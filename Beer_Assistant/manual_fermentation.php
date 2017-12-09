@@ -257,7 +257,7 @@
 	
 	<div id="command">
 		<img id="play" src="img/play.png" value="0">
-		<img id="configure" src="img/configure.png" value="0">
+		<img id="options" src="img/options.png" value="0">
 		<img id="home" src="img/home.png" value="0">
 		<img id="help" src="img/help.png" value="0">
 	</div>
