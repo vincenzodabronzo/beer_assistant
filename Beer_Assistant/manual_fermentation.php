@@ -217,7 +217,7 @@
 		<br><br>
 	</div>
 	<div id="command">
-		<img src="img/if_Configure_alt_3_98815.png">&nbsp;&nbsp;&nbsp;
+		<img src="img/if_Configure_alt_3_98815.png">&nbsp;&nbsp;
 		<img src="img/if_Help_99022.png">
 	</div>
 	
