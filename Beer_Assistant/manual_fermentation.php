@@ -193,9 +193,21 @@
 						$('#help').val("0");
 					}
 				}
+				function manageTabOptions() {
+					if ( $('#options').val() == "0" ) {
+						$('#tab_options').show();
+						$('#options').val("1");
+					} else {
+						$('#tab_options').hide();
+						$('#options').val("0");
+					}
+				}
 
 				document.getElementById("help").addEventListener("click", function(){
 				    manageTabHelp();
+				});
+				document.getElementById("options").addEventListener("click", function(){
+				    manageTabOptions();
 				});
 				
 		});
@@ -260,7 +272,7 @@
       
    <!--    <div id="tabs-1">--> 
       
-      <div id="tab_options">
+      <div id="tab_options" style="display: none;">
       	<div id="m_select" class="m_select">
        			<label for="max_select_group">Max</label>
         		<select id="max_select_group">
@@ -320,7 +332,7 @@
 
 <!-- <div id="tabs-2"> -->
 
-      <div id="tab_help">
+      <div id="tab_help" style="display: none;">
       	<?php 
       	 include_once 'vocabulary/en_fermentation.php';
       	 echo $info;
