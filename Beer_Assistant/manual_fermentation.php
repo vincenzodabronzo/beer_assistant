@@ -120,9 +120,7 @@
 					$('#cool_off').attr('disabled', 'disabled');
 				});
 
-				$('#help').addEventListener("click", function(){
-				    manageTabHelp();
-				});
+
 
 				
 				$('#update_temp').click( function(){
@@ -195,6 +193,10 @@
 						$('#help').val("0");
 					}
 				}
+
+				document.getElementById("help").addEventListener("click", function(){
+				    manageTabHelp();
+				});
 				
 		});
     </script>
