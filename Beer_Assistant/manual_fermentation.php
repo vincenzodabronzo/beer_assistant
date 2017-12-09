@@ -290,8 +290,7 @@
     <div id="tabs">
       <ul>
         <li><a href="#tabs-1">Options</a></li>
-        <li><a href="#tabs-2">Devices</a></li>
-        <li><a href="#tabs-3">Info</a></li>
+        <li><a href="#tabs-2">Info</a></li>
       </ul>
       <div id="tabs-1">
       	<div id="m_select" class="m_select">
@@ -305,9 +304,6 @@
         		<button id="update_temp" data-role="button">Update values</button>
 	    </div>
 	    
-      </div>
-      <div id="tabs-2">
-        
               <div class="card">
                 <div class="card-header">Device Management</div>
                 <div class="card-body">
@@ -339,11 +335,11 @@
                     </label>
                   </div>
                 </div>
-                
-              </div>
-      
+               </div>
+	    
       </div>
-      <div id="tabs-3">
+
+      <div id="tabs-2">
       	<?php 
       	 include_once 'vocabulary/en_fermentation.php';
       	 echo $info;
