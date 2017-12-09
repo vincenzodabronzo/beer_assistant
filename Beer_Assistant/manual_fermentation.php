@@ -353,7 +353,9 @@
 
 </div>
 
-<div class="data" <!--  id="show_data" style="display: none;"--> >
+<!--   style="display: none;"--> 
+
+<div class="data" id="show_data">
     Temperature &deg;C: 
     <div id="fermentation_temp">0.0</div>
     Max temp &deg;C: 
