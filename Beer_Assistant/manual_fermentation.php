@@ -182,13 +182,13 @@
 				}
 				
 
-				function manageTabInfo() {
-					if ( $('#info').val() == "0" ) {
-						$('#tab_info').show();
-						$('#info').val("1");
+				function manageTabHelp() {
+					if ( $('#help').val() == "0" ) {
+						$('#tab_help').show();
+						$('#help').val("1");
 					} else {
-						$('#tab_info').hide();
-						$('#info').val("0");
+						$('#tab_help').hide();
+						$('#help').val("0");
 					}
 				}
 				
@@ -241,7 +241,7 @@
 		<img id="play" src="img/play.png" value="0">
 		<img id="configure" src="img/configure.png" value="0">
 		<img id="home" src="img/home.png" value="0">
-		<img id="help" src="img/help.png" value="0">
+		<img id="help" src="img/help.png" value="0" onclick="manageTabHelp();">
 	</div>
 	
 	
@@ -314,7 +314,7 @@
 
 <!-- <div id="tabs-2"> -->
 
-      <div id="tab_info">
+      <div id="tab_help">
       	<?php 
       	 include_once 'vocabulary/en_fermentation.php';
       	 echo $info;
