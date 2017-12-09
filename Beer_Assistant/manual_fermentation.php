@@ -338,6 +338,7 @@
                       <input type="radio" name="cooler_group" >Off
                     </label>
                   </div>
+                  
                 </div>
                </div>
 	    
