@@ -42,7 +42,7 @@ button#stop {
 
 
 
-img#play:hover, img#configure:hover, img#home:hover, img#help:hover{
+img#play:hover, img#options:hover, img#home:hover, img#help:hover{
     cursor: pointer;
 }
 
