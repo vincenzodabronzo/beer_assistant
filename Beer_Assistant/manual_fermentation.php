@@ -90,8 +90,8 @@
 	          counter: true
 	        });
 
-			var elem = document.querySelector('.js-switch');
-	    	var init = new Switchery(elem);
+			// var elem = document.querySelector('.js-switch');
+	    	// var init = new Switchery(elem);
 
 
 			// Check for open batch (if yes, collect graph data and hide "start fermentation")
@@ -306,7 +306,7 @@
 
 </div>
 <br><br>
-<input type="checkbox" class="js-switch" checked />
+<input type="checkbox" class="js-" checked />
 <br><br>
 
 <div class="data" id="show_data" style="display: none;">
