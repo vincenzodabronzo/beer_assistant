@@ -236,7 +236,8 @@
 		<button id="stop" data-role="button">End</button>
 	</div>
 
-	
+	<br>
+	<br>
 	
 
     <div id="tabs">
