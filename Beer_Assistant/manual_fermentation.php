@@ -312,30 +312,7 @@
     <div id="starting_time">--</div>
  </div>
  
- 
 
-<div class="control-group">
-
-	<h1>Radio buttons</h1>
-	<label class="control control--radio">First radio
-		<input type="radio" name="radio" checked="checked"/>
-		<div class="control__indicator"></div>
-	</label>
-	
-	<label class="control control--radio">Second radio
-		<input type="radio" name="radio"/>
-		<div class="control__indicator"></div>
-	</label>
-	<label class="control control--radio">3
-		<input type="radio" name="radio" />
-		<div class="control__indicator"></div>
-	</label>
-	<label class="control control--radio">4
-		<input type="radio" name="radio" />
-		<div class="control__indicator"></div>
-	</label>
-	
-</div>
 
 </body>
 
