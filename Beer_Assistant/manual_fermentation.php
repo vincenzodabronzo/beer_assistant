@@ -11,6 +11,7 @@
      <link href="css/manual_fermentation.css" rel="stylesheet" type="text/css">
      <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
      <link href="css/gauge.css" rel="stylesheet" type="text/css">
+     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
      
      <script type="text/javascript" src="js/raphael-2.1.4.min.js"></script>
      <script type="text/javascript" src="js/justgage.js"></script>
@@ -19,6 +20,7 @@
      <script type="text/javascript" src="js/moment.min.js"></script>
      <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
      <script type="text/javascript" src="js/jquery.twbs-toggle-buttons.min.js"></script>
+     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
