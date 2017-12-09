@@ -325,7 +325,7 @@
     </label>
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
         Off
-            <input type="radio" name="radio" />
+            <input type="radio" name="radio" disabled="disabled"/>
         <div class="control_indicator"></div>
     </label>
 </div>
