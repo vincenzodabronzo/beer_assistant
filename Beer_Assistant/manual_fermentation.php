@@ -331,7 +331,7 @@
 
 
 
-      <label class="control-label">Pump Management</label>
+      Pump Management
       <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
         <label class="btn active" role="button">
           <input type="radio" name="options" value="1" required>On
