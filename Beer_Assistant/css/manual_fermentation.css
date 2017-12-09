@@ -106,3 +106,7 @@ button#stop {
 	border-radius: 50%;
 	background: white;
 }
+
+span{
+  white-space: nowrap;
+}
