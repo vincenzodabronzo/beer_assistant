@@ -329,13 +329,13 @@
                   <label class="control-label">Cooler</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
                     <label class="btn active" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="cooler_group" id="cool_auto" value="null" required>Auto
+                      <input type="radio" name="cooler_group" id="cool_auto" required>Auto
                     </label>
                     <label class="btn" role="button">
-                      <input type="radio" name="cooler_group" id="cool_on" value="1">On
+                      <input type="radio" name="cooler_group" id="cool_on">On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="cooler_group" id="cool_off" value="0">Off
+                      <input type="radio" name="cooler_group" id="cool_off">Off
                     </label>
                   </div>
                 </div>
@@ -353,7 +353,7 @@
 
 </div>
 
-<div class="data" id="show_data" style="display: none;">
+<div class="data" <!--  id="show_data" style="display: none;"--> >
     Temperature &deg;C: 
     <div id="fermentation_temp">0.0</div>
     Max temp &deg;C: 
