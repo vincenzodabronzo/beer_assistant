@@ -95,7 +95,14 @@
 
 					location.reload();					     
 			   });
-				   
+
+				function updateOnStop() {
+					// function to call to clean page
+				}
+
+				function updateOnStart() {
+					// function to call to clean page
+				}
 				   
 				$('#stop').click( function(){    
 					endFermentation(); 
@@ -104,6 +111,7 @@
 					$('#receipe_info').show();
 					$('#update_temp').hide();
 
+					$('#play').attr('src', 'img/play.png');
 					$('#heat_auto').attr('disabled', 'disabled');
 					$('#heat_on').attr('disabled', 'disabled');
 					$('#heat_off').attr('disabled', 'disabled');
@@ -147,6 +155,8 @@
 					$('#stop').hide();
 					$('#update_temp').hide();
 
+					$('#play').attr('src', 'img/play.png');
+
 					$('#heat_auto').attr('disabled', 'disabled');
 					$('#heat_on').attr('disabled', 'disabled');
 					$('#heat_off').attr('disabled', 'disabled');
@@ -165,6 +175,8 @@
 					$('#cool_auto').removeAttr('disabled');
 					$('#cool_on').removeAttr('disabled');
 					$('#cool_off').removeAttr('disabled');
+
+					$('#play').attr('src', 'img/shutdown.png');
 					
 					doUpdate();
 				}
@@ -218,10 +230,10 @@
 	</div>
 	
 	<div id="command">
-		<img src="img/if_Windows_Media_Player_alt_99042.png">
-		<img src="img/if_Help_99022.png">
-		<img src="img/if_Configure_alt_3_98815.png">
-		<img src="img/if_Home_99060.png">
+		<img id="play" src="img/play.png">
+		<img src="img/help.png">
+		<img src="img/configure.png">
+		<img src="img/home.png">
 	</div>
 	
 	
