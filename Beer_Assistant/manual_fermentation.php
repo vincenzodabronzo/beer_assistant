@@ -186,24 +186,20 @@
 
 				$('#tab_help').hide();
 				function manageTabHelp() {
-					if ( $('#help').val() == "0" ) {
-						$('#tab_help').show();
-						$('#help').val("1");
-					} else {
+					if ( $('#help').is(":visible") ) {
 						$('#tab_help').hide();
-						$('#help').val("0");
+					} else {
+						$('#tab_help').show();
 					}
 				}
 
 				
 				$('#tab_options').hide()
 				function manageTabOptions() {
-					if ( $('#options').val() == "0" ) {
-						$('#tab_options').show();
-						$('#options').val("1");
-					} else {
+					if ( $('#options').is(":visible") ) {
 						$('#tab_options').hide();
-						$('#options').val("0");
+					} else {
+						$('#tab_options').show();
 					}
 				}
 
@@ -260,10 +256,10 @@
 	</div>
 	
 	<div id="command">
-		<img id="play" src="img/play.png" value="0">
-		<img id="options" src="img/options.png" value="0">
-		<img id="home" src="img/home.png" value="0">
-		<img id="help" src="img/help.png" value="0">
+		<img id="play" src="img/play.png">
+		<img id="options" src="img/options.png">
+		<img id="home" src="img/home.png">
+		<img id="help" src="img/help.png">
 	</div>
 	
 	
