@@ -196,12 +196,17 @@
 
 				}
 
+				document.getElementById("play").addEventListener("click", function(){
+					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
+					location.reload()
+				});
 				document.getElementById("help").addEventListener("click", function(){
 				    manageTabHelp();
 				});
 				document.getElementById("options").addEventListener("click", function(){
 				    manageTabOptions();
 				});
+				
 				
 		});
     </script>
