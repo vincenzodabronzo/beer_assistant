@@ -32,6 +32,8 @@
 
 		$(document).ready(function() {
 
+			$(".btn-group-toggle").twbsToggleButtons();
+
 			$('#max_select_group').append($('<option>', {
 			    value: '40.0' ,
 			    text: '40.0 \xB0C'
@@ -328,26 +330,23 @@
 
 
   <div class="card">
-    <div class="card-header">Custom CSS Classes</div>
+    <div class="card-header">Card header</div>
     <div class="card-body">
-      <label class="control-label">Is it true?</label>
+      <label class="control-label">Pump Management</label>
       <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
         <label class="btn active" role="button">
-          <input type="radio" name="options" value="1" required>yes
+          <input type="radio" name="options" value="1" required>On
         </label>
         <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-          <input type="radio" name="options" value="-1">maybe
+          <input type="radio" name="options" value="null">Auto
         </label>
         <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-          <input type="radio" name="options" value="0">no
+          <input type="radio" name="options" value="0">Off
         </label>
       </div>
     </div>
   </div>
   
-  <script>
-	$(".btn-group-toggle").twbsToggleButtons();
-	</script>
   
 
 
