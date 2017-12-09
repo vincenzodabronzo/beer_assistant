@@ -311,6 +311,24 @@
     Starting time at:
     <div id="starting_time">--</div>
  </div>
+ 
+ 
+ <label class="container_radio">One
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container_radio">Two
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container_radio">Three
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Four
+  <input type="container_radio" name="radio">
+  <span class="checkmark"></span>
+</label>
 
 </body>
 
