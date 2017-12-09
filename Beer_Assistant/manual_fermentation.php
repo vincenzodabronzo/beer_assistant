@@ -315,12 +315,12 @@
 <div class="control-group">
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
         Auto
-            <input type="radio" name="radio" checked="checked" />
+            <input type="radio" name="radio" checked="checked" disabled="disabled"/>
         <div class="control_indicator"></div>
     </label>
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
         On
-            <input type="radio" name="radio" />
+            <input type="radio" name="radio" disabled="disabled" />
         <div class="control_indicator"></div>
     </label>
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
