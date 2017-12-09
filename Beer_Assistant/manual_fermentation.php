@@ -149,9 +149,9 @@
 					$('#receipe_info').show();
 					$('#update_temp').hide();
 
-					$('#prova1').attr('disabled', 'disabled');
-					$('#prova2').attr('disabled', 'disabled');
-					$('#prova3').attr('disabled', 'disabled');
+					$('#cool_auto').attr('disabled', 'disabled');
+					$('#cool_on').attr('disabled', 'disabled');
+					$('#cool_off').attr('disabled', 'disabled');
 				});
 
 				
@@ -189,18 +189,18 @@
 					$('#stop').hide();
 					$('#update_temp').hide();
 
-					$('#prova1').attr('disabled', 'disabled');
-					$('#prova2').attr('disabled', 'disabled');
-					$('#prova3').attr('disabled', 'disabled');
+					$('#cool_auto').attr('disabled', 'disabled');
+					$('#cool_on').attr('disabled', 'disabled');
+					$('#cool_off').attr('disabled', 'disabled');
 					
 				} else {
 					$('#start').hide();
 					$('#receipe_info').hide();
 					$('#update_temp').show();
 
-					$('#prova1').removeAttr('disabled');
-					$('#prova2').removeAttr('disabled');
-					$('#prova3').removeAttr('disabled');
+					$('#cool_auto').removeAttr('disabled');
+					$('#cool_on').removeAttr('disabled');
+					$('#cool_off').removeAttr('disabled');
 					
 					doUpdate();
 				}
@@ -331,17 +331,17 @@
 <div class="control-group">
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
         Auto
-            <input type="radio" id="prova1" name="radio" checked="checked" disabled="disabled"/>
+            <input type="radio" id="cool_auto" name="radio" checked="checked" disabled="disabled"/>
         <div class="control_indicator"></div>
     </label>
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
         On
-            <input type="radio" id="prova2" name="radio" disabled="disabled" />
+            <input type="radio" id="cool_on" name="radio" disabled="disabled" />
         <div class="control_indicator"></div>
     </label>
     <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
         Off
-            <input type="radio" id="prova3" name="radio" disabled="disabled"/>
+            <input type="radio" id="cool_off" name="radio" disabled="disabled"/>
         <div class="control_indicator"></div>
     </label>
 </div>
