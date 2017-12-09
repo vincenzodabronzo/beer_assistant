@@ -332,8 +332,7 @@
 
 
       
-      <!--  <div class="btn-group btn-group-toggle form-control" data-toggle="buttons"> -->
-      
+      <div class="btn-group btn-group-toggle form-control" data-toggle="buttons"> 
       Pump Management
         <label class="btn active" role="button">
           <input type="radio" name="options" value="1" required>On
@@ -344,7 +343,7 @@
         <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
           <input type="radio" name="options" value="0">Off
         </label>
-     <!-- </div> -->
+     </div> 
  
 
   
