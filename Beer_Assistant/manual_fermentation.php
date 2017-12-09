@@ -235,52 +235,9 @@
 		<button id="start" data-role="button">Start Fermentation</button>
 		<button id="stop" data-role="button">End</button>
 	</div>
-    
-
-    <div id="contentwrapper">
-        <div id="contentcolumn">
-        	<div class="innertube"><b>Information: </b></div>
-        </div>
-    </div>
-
-    <div id="leftcolumn">
-    	<div class="innertube"><b>Status: <em>20%</em></b>
-    	    
-
-    	</div>
-    </div>
-
-	<!-- prevedere meccanismo di gestione della concorrenza per i radio button aggiornati da piu interfacce -->
-
-    <div id="rightcolumn">
-		<div class="innertube"><b>Devices: <em>20%</em></b>
-			<div class="device" id="show_devices">
-				<fieldset id="heat_group">
-                    <legend>Heater management: </legend>
-                    <label for="heat_auto">Auto</label>
-                    <input type="radio" name="heat_group" id="heat_auto" checked="checked">
-                    <label for="heat_on">ON</label>
-                    <input type="radio" name="heat_group" id="heat_on">
-                    <label for="heat_off">OFF</label>
-                    <input type="radio" name="heat_group" id="heat_off">
-				</fieldset>
-				<fieldset id="cool_group">
-                    <legend>Cooler management: </legend>
-                    <label for="cool_auto">Auto</label>
-                    <input type="radio" name="cool_group" id="cool_auto" checked="checked">
-                    <label for="cool_on">ON</label>
-                    <input type="radio" name="cool_group" id="cool_on">
-                    <label for="cool_off">OFF</label>
-                    <input type="radio" name="cool_group" id="cool_off">
-				</fieldset>
-				
-			</div>
-		</div>
-	</div>
-	
 
 	
-	<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
+	
 
     <div id="tabs">
       <ul>
@@ -300,6 +257,26 @@
         		<button id="update_temp" data-role="button">Update values</button>
 	    </div>
 	    
+    	<div class="device" id="show_devices">
+			<fieldset id="heat_group">
+                <legend>Heater management: </legend>
+                <label for="heat_auto">Auto</label>
+                <input type="radio" name="heat_group" id="heat_auto" checked="checked">
+                <label for="heat_on">ON</label>
+                <input type="radio" name="heat_group" id="heat_on">
+                <label for="heat_off">OFF</label>
+                <input type="radio" name="heat_group" id="heat_off">
+			</fieldset>
+			<fieldset id="cool_group">
+                <legend>Cooler management: </legend>
+                <label for="cool_auto">Auto</label>
+                <input type="radio" name="cool_group" id="cool_auto" checked="checked">
+                <label for="cool_on">ON</label>
+                <input type="radio" name="cool_group" id="cool_on">
+                <label for="cool_off">OFF</label>
+                <input type="radio" name="cool_group" id="cool_off">
+			</fieldset>
+		</div>
 	    
       </div>
 
@@ -312,6 +289,8 @@
     </div>
 
 </div>
+
+<div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank">https://github.com/vincenzodabronzo/beer_assistant</a></div>
 
 <!--   --> 
 
