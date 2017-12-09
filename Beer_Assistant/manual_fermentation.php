@@ -271,6 +271,7 @@
                     <label for="heat_off">OFF</label>
                     <input type="radio" name="heat_group" id="heat_off">
 				</fieldset>
+				<!-- 
 				<fieldset id="cool_group">
                     <legend>Cooler management: </legend>
                     <label for="cool_auto">Auto</label>
@@ -280,6 +281,8 @@
                     <label for="cool_off">OFF</label>
                     <input type="radio" name="cool_group" id="cool_off">
 				</fieldset>
+				 -->
+				
 			</div>
 		</div>
 	</div>
@@ -326,13 +329,13 @@
                   <label class="control-label">Cooler</label>
                   <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
                     <label class="btn active" role="button" data-twbs-toggle-buttons-class-active="btn-warning" data-twbs-toggle-buttons-class-inactive="btn-error">
-                      <input type="radio" name="cooler_group" value="null" required>Auto
+                      <input type="radio" name="cooler_group" id="cool_auto" value="null" required>Auto
                     </label>
                     <label class="btn" role="button">
-                      <input type="radio" name="cooler_group" value="1">On
+                      <input type="radio" name="cooler_group" id="cool_on" value="1">On
                     </label>
                     <label class="btn" role="button" data-twbs-toggle-buttons-class-active="btn-danger">
-                      <input type="radio" name="cooler_group" value="0">Off
+                      <input type="radio" name="cooler_group" id="cool_off" value="0">Off
                     </label>
                   </div>
                 </div>
