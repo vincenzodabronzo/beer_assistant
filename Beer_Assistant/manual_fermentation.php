@@ -233,11 +233,12 @@
     	&nbsp;&nbsp;&nbsp;
     	Min <div id="min_temp_dashboard" style="display: inline">0.0</div>&nbsp;&deg;C 
 	</div>
+	
 	<br>
     <br>
     
 	
-	<div id="command">
+	<div id="command" style="display: inline">
 		<button id="start" data-role="button">Start Fermentation</button>
 		<button id="stop" data-role="button">End</button>
 	</div>
