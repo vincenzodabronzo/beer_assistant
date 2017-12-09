@@ -186,11 +186,7 @@
 
 				$('#tab_help').hide();
 				function manageTabHelp() {
-					if ( $('#help').is(":visible") ) {
-						$('#tab_help').hide();
-					} else {
-						$('#tab_help').show();
-					}
+					$('#tab_help').toggle();
 				}
 
 				
