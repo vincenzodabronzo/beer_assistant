@@ -342,6 +342,7 @@
       </div>
     </div>
   </div>
+  
   <script>
 	$(".btn-group-toggle").twbsToggleButtons();
 	</script>
