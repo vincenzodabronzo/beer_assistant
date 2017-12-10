@@ -163,7 +163,7 @@
 
 				$('#tab_help').hide();
 				function manageTabHelp() {
-					$('#tab_help').toggle();
+					$('#tab_help').toggle( fade );
 				}
 				
 				$('#tab_options').hide()
