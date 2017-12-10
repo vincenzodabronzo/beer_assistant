@@ -48,6 +48,7 @@ button#stop {
       border: none;
       background: #318e38;
       color: white;
+      cursor: pointer;
     }
     
     button#update_temp:disabled {
