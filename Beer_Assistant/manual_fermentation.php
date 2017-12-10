@@ -132,7 +132,7 @@
 				   
 				
 				if ( $('#batch_id').text() == "0" ) {
-					$('#update_temp').hide();
+					$('#update_temp').attr('disabled', 'disabled');
 
 					$('#play').attr('src', 'img/play.png');
 
@@ -145,7 +145,8 @@
 					
 				} else {
 					$('#receipe_info').hide();
-					$('#update_temp').show();
+
+					$('#update_temp').removeAttr('disabled');
 
 					$('#heat_auto').removeAttr('disabled');
 					$('#heat_on').removeAttr('disabled');
@@ -177,7 +178,7 @@
 					} else {
 						endFermentation(); 
 						$('#receipe_info').show();
-						$('#update_temp').hide();
+						$('#update_temp').attr('disabled', 'disabled');
 						$('#play').attr('src', 'img/play.png');
 						$('#heat_auto').attr('disabled', 'disabled');
 						$('#heat_on').attr('disabled', 'disabled');
@@ -267,7 +268,7 @@
         		<label for="min_select_group">Min</label>
         		<select id="min_select_group">
         		</select>
-        		<button id="update_temp" data-role="button">Update values</button>
+        		<button id="update_temp" data-role="button">Update Max and Min</button>
 	    </div>
 
 			<fieldset id="heat_group">
