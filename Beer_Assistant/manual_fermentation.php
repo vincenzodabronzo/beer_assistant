@@ -116,6 +116,10 @@
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
 						$('#max_temp_dashboard').text( $('#max_temp').text() );
 						$('#min_temp_dashboard').text( $('#min_temp').text() );
+
+						$('#starting_time_calendar').text( $('#starting_time').text() );
+						$('#current_timestamp_calendar').text( $('#current_timestamp').text() );
+
 						var temperature = Number( $('#fermentation_temp').text() );
 						updateGage(temperature);
     					setTimeout(doUpdate, t);
@@ -311,9 +315,9 @@
 
 	<div id="tab_calendar">
     	Last temperature reading at:
-        <div id="fdata_timestamp">--</div>
+        <div id="current_timestamp_calendar">--</div>
         Fermentation started at:
-        <div id="fdata_start">--</div>
+        <div id="starting_time_calendar">--</div>
 	</div>
 
       <div id="tab_help">
