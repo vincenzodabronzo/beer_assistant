@@ -40,6 +40,28 @@ button#stop {
 	text-align: center;
 }
 
+    button#update_temp:enabled {
+      margin: 30px 5px 0 2px;
+      padding: 16px 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: none;
+      background: #318e38;
+      color: white;
+      cursor: pointer;
+    }
+    
+    button#update_temp:disabled {
+      margin: 30px 5px 0 2px;
+      padding: 16px 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: none;
+      background: #76cf7c;
+      color: white;
+      cursor: pointer;
+      pointer: default;
+    }
 
 
 img#play:hover, img#options:hover, img#help:hover, img#calendar:hover{
