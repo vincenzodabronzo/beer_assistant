@@ -166,6 +166,8 @@
 					$('#tab_help').toggle( "fade" );
 					if( $('#tab_help').is(':visible') ){
 						$('html, body').animate({ scrollTop: $('#tab_help').offset().top }, 'slow');
+					} else {
+						alert("not visible");
 					}
 				}
 				
