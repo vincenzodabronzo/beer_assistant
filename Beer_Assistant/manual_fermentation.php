@@ -133,6 +133,7 @@
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#update_temp').attr('disabled', 'disabled');
+					$('#update_temp').text('Select Max and Min');
 
 					$('#play').attr('src', 'img/play.png');
 
@@ -147,6 +148,7 @@
 					$('#receipe_info').hide();
 
 					$('#update_temp').removeAttr('disabled');
+					$('#update_temp').text('Click to update');
 
 					$('#heat_auto').removeAttr('disabled');
 					$('#heat_on').removeAttr('disabled');
@@ -179,6 +181,7 @@
 						endFermentation(); 
 						$('#receipe_info').show();
 						$('#update_temp').attr('disabled', 'disabled');
+						$('#update_temp').text('Select Max and Min');
 						$('#play').attr('src', 'img/play.png');
 						$('#heat_auto').attr('disabled', 'disabled');
 						$('#heat_on').attr('disabled', 'disabled');
