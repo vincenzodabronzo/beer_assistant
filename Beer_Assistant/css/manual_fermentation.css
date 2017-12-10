@@ -46,7 +46,7 @@ img#play:hover, img#options:hover, img#help:hover{
     cursor: pointer;
 }
 
-img#chart:hover, #share:hover {
+img#chart, img#share {
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
