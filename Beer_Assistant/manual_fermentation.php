@@ -348,6 +348,7 @@
     <div id="cool">--</div>
     Starting time at:
     <div id="starting_time">--</div>
+    
  </div>
  
 
