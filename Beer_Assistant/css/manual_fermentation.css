@@ -58,8 +58,7 @@ button#stop {
       border: none;
       background: #76cf7c;
       color: white;
-      cursor: pointer;
-      pointer: not-allowed;
+      cursor: not-allowed;
     }
 
 
