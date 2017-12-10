@@ -112,17 +112,12 @@
 				}
 			 
 				function doUpdate() {
-
 	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/fermentation_control.py > /dev/null 2>/dev/null &"); ?> 
-
 						$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text());
-
 						$('#max_temp_dashboard').text( $('#max_temp').text() );
 						$('#min_temp_dashboard').text( $('#min_temp').text() );
-
 						var temperature = Number( $('#fermentation_temp').text() );
 						updateGage(temperature);
-  
     					setTimeout(doUpdate, t);
 			   }
 
