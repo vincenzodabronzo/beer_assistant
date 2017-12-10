@@ -165,12 +165,15 @@
 				function manageTabHelp() {
 					$('#tab_help').toggle();
 				}
-
 				
 				$('#tab_options').hide()
 				function manageTabOptions() {
 					$('#tab_options').toggle();
+				}
 
+				$('#tab_calendar').hide();
+				function manageTabCalendar() {
+					$('#tab_calendar').toggle();
 				}
 
 				document.getElementById("play").addEventListener("click", function(){
@@ -198,6 +201,9 @@
 				});
 				document.getElementById("options").addEventListener("click", function(){
 				    manageTabOptions();
+				});
+				document.getElementById("calendar").addEventListener("click", function(){
+				    manageTabCalendar();
 				});
 				
 				
@@ -246,7 +252,7 @@
 		<img id="options" src="img/options.png">
 		<img id="calendar" src="img/calendar.png">
 		<img id="chart" src="img/chart.png">
-		<img id="chart" src="img/share.png">
+		<img id="share" src="img/share.png">
 		<img id="help" src="img/help.png">
 	</div>
 	
@@ -271,9 +277,7 @@
         		</select>
         		<button id="update_temp" data-role="button">Update values</button>
 	    </div>
-	    
 
-			
 			<fieldset id="heat_group">
 				<legend>Heater management: </legend>
     			<div class="control-group">
@@ -314,11 +318,15 @@
                         <div class="control_indicator"></div>
                     </label>
                 </div>
-			</fieldset>
-	    
+			</fieldset>   
       </div>
 
-<!-- <div id="tabs-2"> -->
+	<div id="tab_calendar">
+    	Last temperature reading at:
+        <div id="fdata_timestamp">--</div>
+        Fermentation started at:
+        <div id="fdata_start">--</div>
+	</div>
 
       <div id="tab_help">
       	<?php 
@@ -327,6 +335,8 @@
       	?>  
       </div>
     </div>
+    
+    
 
 
 
