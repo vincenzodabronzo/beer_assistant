@@ -171,17 +171,14 @@
 				}
 
 
-				document.getElementById("play").addEventListener("click", function(){
-					
+				document.getElementById("play").addEventListener("click", function(){				
 					if( $('#batch_id').text() == "0" ) {
     					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
     					location.reload()
 					} else {
 						endFermentation(); 
-
 						$('#receipe_info').show();
 						$('#update_temp').hide();
-
 						$('#play').attr('src', 'img/play.png');
 						$('#heat_auto').attr('disabled', 'disabled');
 						$('#heat_on').attr('disabled', 'disabled');
