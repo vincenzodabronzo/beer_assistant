@@ -238,8 +238,8 @@
 		<img id="play" src="img/play.png">
 		<img id="options" src="img/options.png">
 		<img id="calendar" src="img/calendar.png">
-		<img id="chart" src="img/chart.png">
-		<img id="share" src="img/share.png">
+		<img id="chart" src="img/chart.png" style="display: none;">
+		<img id="share" src="img/share.png" style="display: none;">
 		<img id="help" src="img/help.png">
 	</div>
 	
