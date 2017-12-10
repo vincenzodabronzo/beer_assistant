@@ -231,9 +231,9 @@
     <br>
     
     <div id="m_select" class="m_select">
-   		 Max <div id="max_temp_dashboard" style="display: inline">0.0</div>&nbsp;&deg;C 
+   		 Max <div id="max_temp_dashboard" style="display: inline">25.0</div>&nbsp;&deg;C 
     	&nbsp;&nbsp;&nbsp;
-    	Min <div id="min_temp_dashboard" style="display: inline">0.0</div>&nbsp;&deg;C 
+    	Min <div id="min_temp_dashboard" style="display: inline">18.0</div>&nbsp;&deg;C 
 	</div>
 	
 	<br>
