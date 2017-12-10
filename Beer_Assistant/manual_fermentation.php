@@ -236,6 +236,7 @@
     	Min <div id="min_temp_dashboard" style="display: inline">18.0</div>&nbsp;&deg;C 
 	</div>
 	
+	
 	<br>
     <br>
     
