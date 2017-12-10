@@ -140,9 +140,9 @@ img#chart, img#share {
     background: #7b7b7b;
 }
 
-img#logo {
-	img.resize {
+img#logo.resize {
+
     width:130px; /* you can use % */
     height: auto;
-}
+
 }
