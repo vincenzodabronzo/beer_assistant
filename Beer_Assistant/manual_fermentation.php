@@ -26,7 +26,7 @@
     <script type="text/javascript">
 
     	//  microsec interval
-    	var t = 1000;    	
+    	var t = 2000;
 
 		$(document).ready(function() {
 
@@ -120,8 +120,7 @@
 						$('#starting_time_calendar').text( $('#starting_time').text() );
 						$('#current_timestamp_calendar').text( $('#current_timestamp').text() );
 
-						var temperature = Number( $('#fermentation_temp').text() );
-						updateGage(temperature);
+						updateGage( Number($('#fermentation_temp').text()) );
     					setTimeout(doUpdate, t);
 			   }
 
