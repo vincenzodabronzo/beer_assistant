@@ -164,7 +164,11 @@
 				$('#tab_help').hide();
 				function manageTabHelp() {
 					$('#tab_help').toggle( "fade" );
-					$('html, body').animate({ scrollTop: $('#tab_help').offset().top }, 'slow');
+					if($('#tab_help').is(':visible')){
+						$('html, body').animate({ scrollTop: $('#tab_help').offset().top }, 'slow');
+					} else {
+						$('html, body').animate({ scrollTop: $('#help').offset().top }, 'slow');
+					}
 				}
 				
 				$('#tab_options').hide()
