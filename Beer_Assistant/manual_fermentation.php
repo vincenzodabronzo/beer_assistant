@@ -162,13 +162,9 @@
 
 
 				$('#tab_help').hide();
-				function manageTabHelp() {
-					$('#tab_help').toggle( "fade" );
-					if( $('#tab_help').is(':visible') ){
-						$('html, body').animate({ scrollTop: $('#tab_help').offset().top }, 'slow');
-					} else {
-						alert("not visible");
-					}
+				function manageTabHelp(name) {
+					$('#tab_'+name).toggle( "fade" );
+					$('html, body').animate({ scrollTop: $('#tab_'+name).offset().top }, 'slow');
 				}
 				
 				$('#tab_options').hide()
@@ -201,8 +197,9 @@
 						$('#cool_off').attr('disabled', 'disabled');
 					}
 				});
+				
 				document.getElementById("help").addEventListener("click", function(){
-				    manageTabHelp();
+				    manageTabHelp("help");
 				});
 				document.getElementById("options").addEventListener("click", function(){
 				    manageTabOptions();
