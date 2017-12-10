@@ -92,7 +92,7 @@
 			 
 
 	        
-	        $('#loading').hide();
+	       
 
 				$('#update_temp').click( function(){
 					$.ajax( "lib/fermentationtemp_limits.php?id="+$('#batch_id').text()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
@@ -137,7 +137,6 @@
 					
 				} else {
 
-					$('#loading').show();
 					$('#receipe_info').hide();
 
 					$('#update_temp').removeAttr('disabled');
@@ -232,7 +231,6 @@
 	</div>
 	
 	<br>
-	<div id="loading">Loading ...</div>
     <br>
     
 	
