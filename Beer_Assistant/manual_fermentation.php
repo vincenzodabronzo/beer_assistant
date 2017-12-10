@@ -91,16 +91,8 @@
 	        });
 			 
 
-				function updateOnStop() {
-					// function to call to clean page
-				}
-
-				function updateOnStart() {
-					// function to call to clean page
-				}
-				
-
-
+	        
+	        $('#loading').hide();
 
 				$('#update_temp').click( function(){
 					$.ajax( "lib/fermentationtemp_limits.php?id="+$('#batch_id').text()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
@@ -144,6 +136,8 @@
 					$('#cool_off').attr('disabled', 'disabled');
 					
 				} else {
+
+					$('#loading').show();
 					$('#receipe_info').hide();
 
 					$('#update_temp').removeAttr('disabled');
@@ -237,8 +231,8 @@
     	Min <div id="min_temp_dashboard" style="display: inline">18.0</div>&nbsp;&deg;C 
 	</div>
 	
-	
 	<br>
+	<div id="loading">Loading ...</div>
     <br>
     
 	
