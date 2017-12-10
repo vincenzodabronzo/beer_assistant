@@ -139,10 +139,3 @@ img#chart, img#share {
 .control-radio input:disabled ~ .control_indicator:after {
     background: #7b7b7b;
 }
-
-img#logo.resize {
-
-    width:130px; /* you can use % */
-    height: auto;
-
-}
