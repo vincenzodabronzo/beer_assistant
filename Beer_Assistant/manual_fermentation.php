@@ -164,6 +164,7 @@
 				$('#tab_help').hide();
 				function manageTabHelp() {
 					$('#tab_help').toggle( "fade" );
+					$('#tab_help').focus();
 				}
 				
 				$('#tab_options').hide()
