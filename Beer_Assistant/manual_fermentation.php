@@ -242,8 +242,9 @@
 	
 	<div id="command">
 		<img id="play" src="img/play.png">
+		<img id="clock" src="img/clock.png">
 		<img id="options" src="img/options.png">
-		<img id="home" src="img/chart.png">
+		<img id="chart" src="img/chart.png">
 		<img id="help" src="img/help.png">
 	</div>
 	
