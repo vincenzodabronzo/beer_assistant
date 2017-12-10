@@ -164,7 +164,7 @@
 				$('#tab_help').hide();
 				function manageTabHelp() {
 					$('#tab_help').toggle( "fade" );
-					$('#tab_help').focus();
+					$('html, body').animate({ scrollTop: $('#tab_help').offset().top }, 'slow');
 				}
 				
 				$('#tab_options').hide()
