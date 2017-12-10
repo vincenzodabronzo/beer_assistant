@@ -162,20 +162,14 @@
 
 
 				$('#tab_help').hide();
-				function manageTabHelp(name) {
+				$('#tab_options').hide()
+				$('#tab_calendar').hide();
+				
+				function manageTab(name) {
 					$('#tab_'+name).toggle( "fade" );
 					$('html, body').animate({ scrollTop: $('#tab_'+name).offset().top }, 'slow');
 				}
-				
-				$('#tab_options').hide()
-				function manageTabOptions() {
-					$('#tab_options').toggle();
-				}
 
-				$('#tab_calendar').hide();
-				function manageTabCalendar() {
-					$('#tab_calendar').toggle();
-				}
 
 				document.getElementById("play").addEventListener("click", function(){
 					
@@ -199,13 +193,13 @@
 				});
 				
 				document.getElementById("help").addEventListener("click", function(){
-				    manageTabHelp("help");
+				    manageTab("help");
 				});
 				document.getElementById("options").addEventListener("click", function(){
-				    manageTabOptions();
+				    manageTab("options");
 				});
 				document.getElementById("calendar").addEventListener("click", function(){
-				    manageTabCalendar();
+				    manageTab("calendar");
 				});
 				
 				
