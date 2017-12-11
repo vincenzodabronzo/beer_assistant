@@ -245,8 +245,8 @@
       
       <div id="tab_options">
       	<div id="m_select" class="m_select">
-       			<label for="temo_select_group">Target temp</label>
-        		<select id="max_select_group">
+       			<label for="temp_select_group">Target temp</label>
+        		<select id="temp_select_group">
         		</select>
         		&nbsp;&nbsp;&nbsp;
         		<button id="update_temp" data-role="button">Update Target temp</button>
