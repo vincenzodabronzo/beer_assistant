@@ -1,3 +1,12 @@
+import telepot
+token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
+TelegramBot = telepot.Bot(token)
+
+print TelegramBot.getMe()
+
+
+
+'''
 import json 
 import requests
 import urllib
@@ -69,3 +78,4 @@ if __name__ == '__main__':
 
 text, chat = get_last_chat_id_and_text(get_updates())
 send_message(text, chat)
+'''
