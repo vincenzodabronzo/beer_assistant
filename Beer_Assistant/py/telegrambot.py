@@ -1,4 +1,5 @@
 import telepot
+from telepot.loop import MessageLoop
 import sys
 import os
 import datetime
