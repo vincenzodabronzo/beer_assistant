@@ -8,7 +8,7 @@ import time
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
 
-id_a = [1141049290]
+id_a = [114104929]
 
 # print TelegramBot.getMe()
 
@@ -22,11 +22,11 @@ def handle(msg):
     if sender in id_a:
         if command == '/ciao':
             bot.sendMessage(chat_id, 'Hei, ciao!')
-        elif command == '/apri':
+        elif command == '/joke':
             os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, 'Ti ho aperto!')
     else:
-        bot.sendMessage(chat_id, 'We all start as strangers... Prove yourself worthy, Sweetheart')
+        bot.sendMessage(chat_id, 'Prove yourself worthy, Sweetheart...')
         bot.sendMessage(chat_id, 'Please include following ID to authorized users:')
         bot.sendMessage(chat_id, sender)
  
