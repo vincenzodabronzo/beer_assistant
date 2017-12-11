@@ -30,7 +30,7 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         elif command == 'bye':
             bot.sendMessage(chat_id, '... Goodbye, old friend. I\'ll go out and have a drink. See you soon')
-            loop = 0
+            ml.cancel()
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it...')
@@ -58,7 +58,7 @@ def on_callback_query(msg):
 
 bot = telepot.Bot(token)
  #MessageLoop(bot, {'chat': on_chat_message}).run_as_thread(); # if chat, execute chat function.
-MessageLoop(bot, {'chat': on_chat_message, 'callback_query': on_callback_query}).run_as_thread()
+ml = MessageLoop(bot, {'chat': on_chat_message, 'callback_query': on_callback_query}).run_as_thread()
 print('Listening ...')
  
 while loop:
