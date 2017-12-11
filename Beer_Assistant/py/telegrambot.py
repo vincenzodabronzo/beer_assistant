@@ -45,7 +45,6 @@ def on_callback_query(msg):
     
     if query_data=='mashing':
         bot.sendMessage(chat_id, 'Here\'s mashing status:')
-
     elif query_data=='fermentation':
         bot.sendMessage(chat_id, 'Here\'s fermentation status:')
         bot.sendMessage(chat_id, 'Blop blop blop...')
