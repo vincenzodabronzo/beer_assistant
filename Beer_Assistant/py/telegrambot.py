@@ -1,5 +1,6 @@
 import telepot
 from telepot.loop import MessageLoop
+from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 import sys
 import os
 import datetime
