@@ -37,7 +37,7 @@
 			}));
 			
 			for (i = 0; i < 100; i++) { 
-				max_value = 39-i;
+				max_value = 100-i;
 				
 				for (j = 0; j <= 5; j+=5) { 
 					max_value_decimal = 5-j;
@@ -217,7 +217,7 @@
     <br>
     
     <div id="m_select" class="m_select">
-   		 Target temperature <div id="max_temp_dashboard" style="display: inline">67.0</div>&nbsp;&deg;C 
+   		 Target temperature <div id="target_temp_dashboard" style="display: inline">67.0</div>&nbsp;&deg;C 
 	</div>
 	
 	<br>
