@@ -60,8 +60,8 @@ bot = telepot.Bot(token)
 MessageLoop(bot, {'chat': on_chat_message, 'callback_query': on_callback_query}).run_as_thread()
 print('Listening ...')
  
-#while 1:
-#    time.sleep(10)
+while 1:
+    time.sleep(10)
     
 '''    
 bot.message_loop(handle)
