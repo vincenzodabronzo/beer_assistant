@@ -8,7 +8,7 @@ if($step=="fermentation") {
 }
 
 $display = ' style="display: none;"';
-$display="";
+// $display="";
 
 if($_GET["step"] != "") {
     $step = $_GET["step"];
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
     if($step=="fermentation") {
         echo '<b>'.$no_fermentation_quote[array_rand($no_fermentation_quote)].'</b><br><br><div id="batch_id" '.$display.'">0</div> ';
     } else if ($step=="mashing") {
-        echo '<b>'.$no_mashing_quote[array_rand($no_mashing_quote)].'</b><br><br><div id="batch_id" '.$display.'">'. $row['id'] .'</div> ';
+        echo '<b>'.$no_mashing_quote[array_rand($no_mashing_quote)].'</b><br><br><div id="batch_id" '.$display.'">0</div> ';
     }
        
     
