@@ -20,11 +20,15 @@ def handle(msg):
     print 'Got command: %s' % command
     
     if sender in id_a:
-        if command == '/ciao':
+        if command == 'hi':
             bot.sendMessage(chat_id, 'Hei, ciao!')
         elif command == '/joke':
             os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, 'Ti ho aperto!')
+        else:
+            bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it')
+            bot.sendMessage(chat_id, 'Here\'s a list of approved commands from my dear creator:')
+            # Include command list
     else:
         bot.sendMessage(chat_id, 'Prove yourself worthy, Sweetheart...')
         bot.sendMessage(chat_id, 'Please include following ID to authorized users:')
