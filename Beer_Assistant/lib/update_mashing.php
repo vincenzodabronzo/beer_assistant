@@ -2,7 +2,7 @@
     // ini_set('display_errors', 'On');
     
     $id = $_GET["id"];
-    $end_mash = $_GET["end_mash"];
+    $end_mash = $_GET["end_mashing"];
     
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
     if($dbconn->connect_error) {
