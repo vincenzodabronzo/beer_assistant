@@ -31,8 +31,7 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, 'Here\'s a list of approved commands from my dear creator:')
             # Include command list
     else:
-        bot.sendMessage(chat_id, 'Prove yourself worthy, Sweetheart...')
-        bot.sendMessage(chat_id, 'Please include following ID to authorized users:')
+        bot.sendMessage(chat_id, 'Prove yourself worthy, Sweetheart... Please include following ID to authorized users:')
         bot.sendMessage(chat_id, sender)
  
 bot = telepot.Bot(token)
