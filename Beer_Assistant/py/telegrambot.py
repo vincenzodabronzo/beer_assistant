@@ -23,20 +23,40 @@ def on_chat_message(msg):
     if sender in id_a:
         if command == 'hi':
             bot.sendMessage(chat_id, 'Ciao! Here to serve you!')
-        elif command == '/joke':
+        elif command == 'joke':
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         else:
-            bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it')
-            bot.sendMessage(chat_id, 'Here\'s a list of approved commands from my dear creator:')
+            bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it...')
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[
+                     [InlineKeyboardButton(text='Mashing', callback_data='mashing'),
+                     InlineKeyboardButton(text='Fermentation', callback_data='fermentation')],
+                     [InlineKeyboardButton(text='Info', callback_data='info')],
+                 ])
+            bot.sendMessage(chat_id, 'Wanna check status instead?', reply_markup=keyboard)
             # Include command list
     else:
         bot.sendMessage(chat_id, 'Prove yourself worthy, Sweetheart... Please include following ID to authorized users:')
         bot.sendMessage(chat_id, sender)
  
-bot = telepot.Bot(token)
+ 
+def on_callback_query(msg):
+    query_id, chat_id, query_data = telepot.glance(msg, flavor='callback_query')
+    print('Callback Query:', query_id, chat_id, query_data)
+    
+    if query_data=='mashing':
+        bot.sendMessage(chat_id, 'Here\'s mashing status:')
 
-MessageLoop(bot, {'chat': on_chat_message}).run_as_thread(); # if chat, esegui il metodo on_chat_message.
+    elif query_data=='fermentation':
+        bot.sendMessage(chat_id, 'Here\'s fermentation status:')
+        bot.sendMessage(chat_id, 'Blop blop blop...')
+    elif query_data=='info':
+        ts = time.time()
+        bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
+
+bot = telepot.Bot(token)
+ #MessageLoop(bot, {'chat': on_chat_message}).run_as_thread(); # if chat, execute chat function.
+MessageLoop(bot, {'chat': on_chat_message, 'callback_query': on_callback_query}).run_as_thread()
 print('Listening ...')
  
 while 1:
