@@ -30,11 +30,7 @@ def on_chat_message(msg):
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it...')
-            keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                     [InlineKeyboardButton(text='Mashing', callback_data='mashing'),
-                     InlineKeyboardButton(text='Fermentation', callback_data='fermentation')],
-                     [InlineKeyboardButton(text='Info', callback_data='info')],
-                 ])
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
             bot.sendMessage(chat_id, 'Wanna check status instead?', reply_markup=keyboard)
             # Include command list
     else:
