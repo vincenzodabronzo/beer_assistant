@@ -300,7 +300,7 @@
       <div id="tab_help">
       	<?php 
       	 include_once 'vocabulary/en_mashing.php';
-      	 echo $info;
+      	 echo $mashing_info;
       	?>  
       </div>
     </div>
