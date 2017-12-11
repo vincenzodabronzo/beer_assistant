@@ -22,10 +22,10 @@ def on_chat_message(msg):
     
     if sender in id_a:
         if command == 'hi':
-            bot.sendMessage(chat_id, 'Hei, ciao!')
+            bot.sendMessage(chat_id, 'Ciao! Here to serve you!')
         elif command == '/joke':
-            os.system("sudo python /home/pi/tg/apricancello.py")
-            bot.sendMessage(chat_id, 'Ti ho aperto!')
+            # os.system("sudo python /home/pi/tg/apricancello.py")
+            bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         else:
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it')
             bot.sendMessage(chat_id, 'Here\'s a list of approved commands from my dear creator:')
