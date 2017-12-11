@@ -111,7 +111,7 @@
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#update_temp').attr('disabled', 'disabled');
-					$('#update_temp').text('Select Max and Min');
+					$('#update_temp').text('Select Target temp');
 
 					$('#play').attr('src', 'img/play.png');
 
