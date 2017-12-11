@@ -17,6 +17,7 @@ def on_chat_message(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
     sender = msg['from']['id']
+    
 
     print 'Got command: %s' % command
     
@@ -27,6 +28,7 @@ def on_chat_message(msg):
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         else:
+            content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it...')
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
                      [InlineKeyboardButton(text='Mashing', callback_data='mashing'),
