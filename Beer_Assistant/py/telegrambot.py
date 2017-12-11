@@ -1,9 +1,43 @@
 import telepot
+import sys
+import os
+import datetime
+import time
+
+
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
 
-print TelegramBot.getMe()
+id_a[458737458]
 
+# print TelegramBot.getMe()
+
+def handle(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    sender = msg['from']['id']
+
+    print 'Got command: %s' % command
+    
+    if sender in id_a:
+        if command == '/ciao':
+            bot.sendMessage(chat_id, 'Hei, ciao!')
+        elif command == '/apri':
+            os.system("sudo python /home/pi/tg/apricancello.py")
+            bot.sendMessage(chat_id, 'Ti ho aperto!')
+    elif command == '/riavvia':
+            bot.sendMessage(chat_id, 'Riavvio in corso...')
+            os.system("sudo reboot")
+    else:
+        bot.sendMessage(chat_id, 'Non sei autorizzate a darmi ordini!')
+        bot.sendMessage(chat_id, sender)
+ 
+bot = telepot.Bot(token)
+bot.message_loop(handle)
+print 'I am listening ...'
+ 
+while 1:
+    time.sleep(10)
 
 
 '''
