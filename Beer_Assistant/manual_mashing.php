@@ -157,20 +157,22 @@
 
 				document.getElementById("play").addEventListener("click", function(){				
 					if( $('#batch_id').text() == "0" ) {
-    					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
+    					$('#batch_title').load( 'lib/start_mashing.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#temp_select_group').val() );
     					location.reload()
 					} else {
-						endFermentation(); 
+						endMashing(); 
 						$('#receipe_info').show();
 						$('#update_temp').attr('disabled', 'disabled');
-						$('#update_temp').text('Select Max and Min');
+						$('#update_temp').text('Select Target temp');
+						
 						$('#play').attr('src', 'img/play.png');
 						$('#heat_auto').attr('disabled', 'disabled');
 						$('#heat_on').attr('disabled', 'disabled');
 						$('#heat_off').attr('disabled', 'disabled');
-						$('#cool_auto').attr('disabled', 'disabled');
-						$('#cool_on').attr('disabled', 'disabled');
-						$('#cool_off').attr('disabled', 'disabled');
+						
+						//$('#cool_auto').attr('disabled', 'disabled');
+						$('#pump_on').attr('disabled', 'disabled');
+						$('#pump_off').attr('disabled', 'disabled');
 					}
 				});
 				
@@ -188,7 +190,7 @@
 		});
     </script>
     
-	<title>Fermentation</title>
+	<title>Mashing</title>
 </head>
 
 <body>
@@ -200,7 +202,7 @@
 		<div class="innertube">
     		<div id="batch_title">
     			<?php
-    			 $step = "fermentation";
+    			 $step = "mashing";
     			 include 'lib/get_open_batch.php';
     			?>
     		</div>
@@ -215,9 +217,7 @@
     <br>
     
     <div id="m_select" class="m_select">
-   		 Max <div id="max_temp_dashboard" style="display: inline">25.0</div>&nbsp;&deg;C 
-    	&nbsp;&nbsp;&nbsp;
-    	Min <div id="min_temp_dashboard" style="display: inline">18.0</div>&nbsp;&deg;C 
+   		 Target temperature <div id="max_temp_dashboard" style="display: inline">67.0</div>&nbsp;&deg;C 
 	</div>
 	
 	<br>
@@ -245,30 +245,27 @@
       
       <div id="tab_options">
       	<div id="m_select" class="m_select">
-       			<label for="max_select_group">Max</label>
+       			<label for="temo_select_group">Target temp</label>
         		<select id="max_select_group">
         		</select>
         		&nbsp;&nbsp;&nbsp;
-        		<label for="min_select_group">Min</label>
-        		<select id="min_select_group">
-        		</select>
-        		<button id="update_temp" data-role="button">Update Max and Min</button>
+        		<button id="update_temp" data-role="button">Update Target temp</button>
 	    </div>
 
 			<fieldset id="heat_group">
 				<legend>Heater management: </legend>
     			<div class="control-group">
-                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=mashing&device=heater' );">
                         Auto
                             <input type="radio" id="heat_auto" name="radio_heat" checked="checked" disabled="disabled"/>
                         <div class="control_indicator"></div>
                     </label>
-                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=mashing&device=heater' );">
                         On
                             <input type="radio" id="heat_on" name="radio_heat" disabled="disabled" />
                         <div class="control_indicator"></div>
                     </label>
-                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=heater' );">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=mashing&device=heater' );">
                         Off
                             <input type="radio" id="heat_off" name="radio_heat" disabled="disabled"/>
                         <div class="control_indicator"></div>
@@ -276,22 +273,17 @@
                 </div>
 			</fieldset>
 			
-			<fieldset id="cool_group">
-				<legend>Cooler management: </legend>
+			<fieldset id="pump_group">
+				<legend>Pump management: </legend>
     			<div class="control-group">
-                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=NULL&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
-                        Auto
-                            <input type="radio" id="cool_auto" name="radio_cool" checked="checked" disabled="disabled"/>
-                        <div class="control_indicator"></div>
-                    </label>
-                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=1&id='+$('#batch_id').text()+'&step=mashing&device=pump' );">
                         On
-                            <input type="radio" id="cool_on" name="radio_cool" disabled="disabled" />
+                            <input type="radio" id="pump_on" name="radio_pump" disabled="disabled" />
                         <div class="control_indicator"></div>
                     </label>
-                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=fermentation&device=cooler' );">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/device_control.php?command=0&id='+$('#batch_id').text()+'&step=mashing&device=pump' );">
                         Off
-                            <input type="radio" id="cool_off" name="radio_cool" disabled="disabled"/>
+                            <input type="radio" id="pump_off" name="radio_pump" checked="checked" disabled="disabled"/>
                         <div class="control_indicator"></div>
                     </label>
                 </div>
@@ -307,7 +299,7 @@
 
       <div id="tab_help">
       	<?php 
-      	 include_once 'vocabulary/en_fermentation.php';
+      	 include_once 'vocabulary/en_mashing.php';
       	 echo $info;
       	?>  
       </div>
@@ -325,17 +317,15 @@
 
 <div class="data" id="show_data" style="display: none;">
     Temperature &deg;C: 
-    <div id="fermentation_temp">0.0</div>
-    Max temp &deg;C: 
-    <div id="max_temp">0.0</div>
-    Min temp &deg;C: 
-    <div id="min_temp">0.0</div>
+    <div id="mashing_temp">0.0</div>
+    Target temp &deg;C: 
+    <div id="target_temp">0.0</div>
     Collected at:
     <div id="current_timestamp">--</div>
     Heat:
     <div id="heat">--</div>
     Cool:
-    <div id="cool">--</div>
+    <div id="pump">--</div>
     Starting time at:
     <div id="starting_time">--</div>
     

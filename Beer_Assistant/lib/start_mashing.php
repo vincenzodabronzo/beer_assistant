@@ -1,7 +1,8 @@
 <?php
     // ini_set('display_errors', 'On');
     
-    $receipe_name = "nuovo nome";
+    $receipe_name = $_GET["receipe_name"];
+    $target_temp = $_GET["upper_limit"];
     
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
     if($dbconn->connect_error) {
@@ -13,8 +14,8 @@
     $id = $dbconn->insert_id;
     
     $dbconn->query("INSERT INTO mashing_config(id, starting_time, pump) VALUES ( '".$id."', CURRENT_TIMESTAMP, '0' ) " );
-    $dbconn->query("INSERT INTO mashing_step(id, target_temp, minutes, step_number) VALUES ( '".$id."', '66.7', '60', '1' ) " );
+    $dbconn->query("INSERT INTO mashing_step(id, target_temp, step_number) VALUES ( '".$id."', '".$target_temp."', '1' ) " );
     
-    echo    '(Receipe name)<div id="batch_id">'. $id .'</div> ';
+    echo    $receipe_name.'<div id="batch_id">'. $id .'</div> ';
 
 ?>
