@@ -35,7 +35,7 @@ def handle(msg):
         bot.sendMessage(chat_id, sender)
  
 bot = telepot.Bot(token)
-bot.message_loop(handle)
+bot.MessageLoop(handle)
 
 print 'Waiting for commands ...'
  
