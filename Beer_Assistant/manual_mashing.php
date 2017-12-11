@@ -94,12 +94,12 @@
 	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashing_control.py > /dev/null 2>/dev/null &"); ?> 
 						$('#show_data').load('lib/update_mashing.php?id='+$('#batch_id').text());
 
-						$('#target_temp_dashboard').text( $('#mashing_temp').text() );
+						$('#target_temp_dashboard').text( $('#target_temp').text() );
 
 						$('#starting_time_calendar').text( $('#starting_time').text() );
 						$('#current_timestamp_calendar').text( $('#current_timestamp').text() );
 
-						updateGage( Number($('#target_temp').text()) );
+						updateGage( Number($('#mashing_temp').text()) );
     					setTimeout(doUpdate, t);
 			   }
 
