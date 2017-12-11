@@ -8,7 +8,7 @@ import time
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
 
-id_a = [114104929]
+id_a = [1141049290]
 
 # print TelegramBot.getMe()
 
@@ -25,16 +25,15 @@ def handle(msg):
         elif command == '/apri':
             os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, 'Ti ho aperto!')
-    elif command == '/riavvia':
-            bot.sendMessage(chat_id, 'Riavvio in corso...')
-            os.system("sudo reboot")
     else:
-        bot.sendMessage(chat_id, 'Non sei autorizzate a darmi ordini!')
+        bot.sendMessage(chat_id, 'We all start as strangers... Prove yourself worthy, Sweetheart')
+        bot.sendMessage(chat_id, 'Please include following ID to authorized users:')
         bot.sendMessage(chat_id, sender)
  
 bot = telepot.Bot(token)
 bot.message_loop(handle)
-print 'I am listening ...'
+
+print 'Waiting for commands ...'
  
 while 1:
     time.sleep(10)
