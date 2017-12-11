@@ -8,7 +8,7 @@ import time
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
 
-id_a = [458737458]
+id_a = [114104929]
 
 # print TelegramBot.getMe()
 
