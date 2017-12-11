@@ -2,7 +2,7 @@
     $no_mashing_quote = array(   
         "It appears that nothing is mashing... What a pity...",
         "The sooner you start mashing, the better",
-        "I cannot drink but you can! Let's start fermentation!",
+        "I cannot drink but you can! Let's start mashing!",
     );
     
     $mashing_quote = array(
