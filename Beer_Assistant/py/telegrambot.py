@@ -5,6 +5,11 @@ import sys
 import os
 import datetime
 import time
+import MySQLdb
+
+# Checking single instance
+import singleton
+me = singleton.SingleInstance()
 
 
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
