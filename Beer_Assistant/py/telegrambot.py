@@ -12,7 +12,7 @@ id_a = [114104929]
 
 # print TelegramBot.getMe()
 
-def handle(msg):
+def on_chat_message(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
     sender = msg['from']['id']
@@ -35,13 +35,20 @@ def handle(msg):
         bot.sendMessage(chat_id, sender)
  
 bot = telepot.Bot(token)
-bot.message_loop(handle)
 
-print 'Waiting for commands ...'
+MessageLoop(bot, {'chat': on_chat_message}).run_as_thread(); # if chat, esegui il metodo on_chat_message.
+print('Listening ...')
  
 while 1:
     time.sleep(10)
-
+    
+'''    
+bot.message_loop(handle)
+print 'Waiting for commands ...'
+while 1:
+    time.sleep(10)
+'''
+    
 
 '''
 import json 
