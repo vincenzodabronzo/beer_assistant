@@ -50,7 +50,7 @@
 				}
 			}
 
-			$('#max_select_group').val( '67.0' );
+			$('#temp_select_group').val( '67.0' );
 
 			$( function() {
 			    $( "#tabs" ).tabs();
@@ -313,9 +313,9 @@
 <div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank"><img id="logo" src="img/logo.png"></a></div>
 <br><br>
 
-<!-- Hidden variables --> 
+<!-- Hidden variables style="display: none;" --> 
 
-<div class="data" id="show_data" style="display: none;">
+<div class="data" id="show_data" >
     Temperature &deg;C: 
     <div id="mashing_temp">0.0</div>
     Target temp &deg;C: 
