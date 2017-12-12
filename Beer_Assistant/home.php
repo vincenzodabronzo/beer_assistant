@@ -22,8 +22,6 @@
 			function removeUser(token, userid) {
 				alert(token+" "+userid);
 			}
-
-			removeUser('458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY','114104929');
 			
 			document.getElementById("options").addEventListener("click", function(){
 			    manageTab("options");
