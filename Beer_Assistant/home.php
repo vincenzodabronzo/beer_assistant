@@ -1,4 +1,8 @@
-<?php include 'lib/telegrambot_control.php?command=loadvariables'; ?>
+<?php 
+
+    require_once 'lib/telegrambot_control.php?command=loadvariables';
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,7 +117,7 @@
     </div>
 
 <input type="checkbox" id="testradio" >
-<?php echo $checkbox; ?>
+<?php echo $checkbox; echo $prova; ?>
 
 </body>
 

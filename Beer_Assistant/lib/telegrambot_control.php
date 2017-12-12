@@ -6,6 +6,7 @@ $command = $_GET["command"];
 $id = "1";
 
 $checkbox = "";
+$prova = "provaloaded";
 
 $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
 if($dbconn->connect_error) {
