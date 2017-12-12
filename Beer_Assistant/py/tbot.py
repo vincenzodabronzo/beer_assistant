@@ -49,6 +49,8 @@ def echo(bot, update):
     update.message.reply_text(update.message.text)
     print update.message.text
     if update.message.text == "fermentation":
+        db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
+        cur = db.cursor()
         sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.ending_time is NULL ORDER BY ft.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
