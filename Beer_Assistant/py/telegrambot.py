@@ -84,9 +84,7 @@ def on_callback_query(msg):
         bot.sendMessage(chat_id, 'Here\'s mashing status:')
         
     elif query_data=='fermentation':
-        bot.sendMessage(chat_id, 'Here\'s fermentation status:')
-      
-        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.id=1 ORDER BY ft.timestamp DESC LIMIT 1""")
+       sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.id=1 ORDER BY ft.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
     
