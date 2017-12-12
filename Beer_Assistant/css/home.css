@@ -61,7 +61,7 @@ button#stop {
     }
 
 
-img#options:hover, img#telegram:hover {
+img#options:hover, img#telegram:hover, img#remove_user {
     cursor: pointer;
 }
 
