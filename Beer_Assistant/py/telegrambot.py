@@ -81,14 +81,25 @@ def on_callback_query(msg):
     print('Callback Query:', query_id, chat_id, query_data)
     
     if query_data=='mashing':
-        bot.sendMessage(chat_id, 'Here\'s mashing status:')
-        
-    elif query_data=='fermentation':
-        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.id=1 ORDER BY ft.timestamp DESC LIMIT 1""")
+        sql = ("""SELECT mc.ending_time, ms.target_temp, mt.temperature, mt.heated, mt.pump_recirculated FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id INNER JOIN mashing_temp AS mt ON mc.id = mt.id WHERE mc.ending_time is NULL ORDER BY mt.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
         opened = "0";
-    
+        for row in rows:
+                opened = "1"
+                target_temp = row[1]
+                heated = row[3]
+                pump = row[4]
+                temp = row[2]
+                bot.sendMessage(chat_id, '[Mashing opened]\n\nTemp(Celsius): %s\nTarget temp: %s\nHeated: %s\nPump: %s' % (temp, target_temp, heated, pump) )
+        if opened=="0":
+            bot.sendMessage(chat_id, "No mashing opened" )
+        
+    elif query_data=='fermentation':
+        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.ending_time is NULL ORDER BY ft.timestamp DESC LIMIT 1""")
+        cur.execute(sql,)
+        rows = cur.fetchall()
+        opened = "0";
         for row in rows:
                 opened = "1"
                 temp_max = row[1]
@@ -96,8 +107,7 @@ def on_callback_query(msg):
                 heated = row[3]
                 cooled = row[4]
                 temp = row[5]
-                bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp (Celsius) %s\nTemp max%s\nTemp min%s\nHeated%s\nCooled%s' % (temp, temp_max, temp_min, heated, cooled) )
-                
+                bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
         if opened=="0":
             bot.sendMessage(chat_id, "No fermentation opened" )
             
