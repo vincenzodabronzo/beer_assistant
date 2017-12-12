@@ -63,7 +63,7 @@ button#stop {
     }
 
 
-img#options:hover {
+img#options:hover, img#telegram:hover {
     cursor: pointer;
 }
 
