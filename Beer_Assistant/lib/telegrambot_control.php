@@ -20,16 +20,6 @@ if ($command == "1" || $command == "0") {
         Telegram bot:
         <div id="telegram_bot">'.$command.'</div>'
      ;
-} else if ($command == "getinfo" ) {
-    $result = $dbconn->query("SELECT system_config.id, system_config.telegram FROM system_config WHERE system_config.id = ".$id.";");
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()){
-            echo '
-                Telegram bot:
-                <div id="telegram_bot">'.$row['telegram'].'</div>'
-                   ;
-        }
-    }
 } else if ($command == "loadvariables" ) {
     $result = $dbconn->query("SELECT system_config.id, system_config.telegram FROM system_config WHERE system_config.id = ".$id.";");
     if ($result->num_rows > 0) {

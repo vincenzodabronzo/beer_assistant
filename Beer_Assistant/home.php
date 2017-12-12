@@ -29,7 +29,6 @@
 				if ( $( '#telegram_bot_input' ).is( ":checked" ) ) {
 					active = "1";
 				}
-				$('#show_data').load( 'lib/telegrambot_control.php?command='+active );	
 			});
 
 
@@ -82,16 +81,17 @@
 			
 		</div>
 		
-		<!--    style="display: none;"      -->
+		<!--         -->
 		
 
     
  </div>
 		
 
-	<div class="data" id="show_data" >
-		Telegram bot:
-                <div id="telegram_bot">--</div>
+	<div class="data" id="show_data" style="display: none;"  >
+
+
+
     </div>
 
 
