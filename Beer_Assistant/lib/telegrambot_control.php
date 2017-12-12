@@ -2,12 +2,11 @@
  // ini_set('display_errors', 'On');
 
 // Command: getinfo, 1, 0
-$command = $_GET["command"];
 $id = "1";
 $checked = "";
 
-if ($command == "") {
-    $command = $set_command;
+if ($_GET["command"] == "") {
+    $command = $_GET["command"];
 }
 
 $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
