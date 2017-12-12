@@ -61,7 +61,7 @@ def on_chat_message(msg):
         elif command == 'joke':
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
-        elif command == 'status':
+        elif command == 'status' or command == 'Status':
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
             bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
         else:
@@ -84,27 +84,23 @@ def on_callback_query(msg):
         bot.sendMessage(chat_id, 'Here\'s mashing status:')
         
     elif query_data=='fermentation':
-        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.id=1 ORDER BY ft.timestamp DESC LIMIT 1""")
+        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.id=1 ORDER BY ft.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
+        opened = "0";
     
         for row in rows:
+                opened = "1"
                 temp_max = row[1]
                 temp_min = row[2]
-                force_heat = row[3]
-                force_cool = row[4]
+                heated = row[3]
+                cooled = row[4]
                 temp = row[5]
-                bot.sendMessage(chat_id, '[1 Fermentation opened]\nTemp (Celsius)%s' % temp)
-
-                print "Max temp"
-                print temp_max
-                print "Min temp"
-                print temp_min            
-                print "Heat"
-                print heat
-                print "Cool"
-                print cool
-        
+                bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp (Celsius) %s\nTemp max%s\nTemp min%s\nHeated%s\nCooled%s' % temp % temp_max % temp_min % heated % cooled)
+                
+        if opened=="0":
+            bot.sendMessage(chat_id, "No fermentation opened" )
+            
     elif query_data=='info':
         ts = time.time()
         bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
