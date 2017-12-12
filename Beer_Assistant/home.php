@@ -7,6 +7,26 @@
 	
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link href="css/home.css" rel="stylesheet" type="text/css">
+	 
+	     <script type="text/javascript">
+
+    	//  microsec interval
+    	var t = 2000;
+
+		$(document).ready(function() {
+
+			function manageTab(name) {
+				$('#tab_'+name).toggle( "fade" );
+				$('html, body').animate({ scrollTop: $('#tab_'+name).offset().top }, 'slow');
+			}
+
+			document.getElementById("calendar").addEventListener("click", function(){
+			    manageTab("calendar");
+			});
+			
+			
+	});
+</script>
 	
 	<title>Main menu</title>
 </head>
@@ -36,6 +56,18 @@
 
 	<br>
 	<br>
+	
+	     <div id="tab_options">
+      	<div id="m_select" class="m_select">
+       			<label for="max_select_group">Max</label>
+        		<select id="max_select_group">
+        		</select>
+        		&nbsp;&nbsp;&nbsp;
+        		<label for="min_select_group">Min</label>
+        		<select id="min_select_group">
+        		</select>
+        		<button id="update_temp" data-role="button">Update Max and Min</button>
+	    </div>
 	
 </div>
 
