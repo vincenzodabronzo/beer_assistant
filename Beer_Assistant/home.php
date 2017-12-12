@@ -112,6 +112,7 @@
     </div>
 
 <input type="checkbox" id="testradio" >
+<?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?>
 
 </body>
 
