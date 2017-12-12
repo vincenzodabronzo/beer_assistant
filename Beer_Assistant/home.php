@@ -77,11 +77,10 @@
                     </label>
                     
                     <br><br>Authorized users:
-                    
+                    <div id="authorized_users"><div id="authorized_users">(none)</div>
                     
                     <br><br>Add new user:
                     <br>
-                    <div id="authorized_users"><div id="authorized_users">(none)</div>
                     <div id="add_new_user"> <div>Token</div> <input type="text" id="token"><div>User id</div><input type="text" id="userid"><br><img src="img/add.png"></div>
                     
                     
