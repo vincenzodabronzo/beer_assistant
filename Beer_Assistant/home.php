@@ -61,7 +61,22 @@
 	
 	     <div id="tab_options">
 	     
-			<img id="telegram" src="img/telegram.png"></a>
+			<img id="telegram" src="img/telegram.png">
+				<fieldset id="bot_group">
+				<legend>Bot management: </legend>
+    			<div class="control-group">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=1 );">
+                        On
+                            <input type="radio" id="bot_on" name="radio_pump" disabled="disabled" />
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=0' );">
+                        Off
+                            <input type="radio" id="bot_off" name="radio_pump" checked="checked" disabled="disabled"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+				</fieldset>   
 			
 		</div>
 
