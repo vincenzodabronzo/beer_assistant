@@ -83,6 +83,8 @@ def on_callback_query(msg):
     opened = "0"
     
     if query_data=='mashing':
+        db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
+        cur = db.cursor()
         sql = ("""SELECT mc.ending_time, ms.target_temp, mt.temperature, mt.heated, mt.pump_recirculated FROM mashing_config AS mc INNER JOIN mashing_step AS ms ON mc.id = ms.id INNER JOIN mashing_temp AS mt ON mc.id = mt.id WHERE mc.ending_time is NULL ORDER BY mt.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
@@ -101,6 +103,8 @@ def on_callback_query(msg):
         bot.answerCallbackQuery( query_id, text="Mashing" )
         
     elif query_data=='fermentation':
+        db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
+        cur = db.cursor()
         sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.ending_time is NULL ORDER BY ft.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
