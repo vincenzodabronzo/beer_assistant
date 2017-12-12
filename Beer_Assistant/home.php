@@ -15,11 +15,14 @@
 
 <div id="maincontainer">
 
-
+	<br>
 	
+	<br>
 	<div id="command">
+	<br><br>
 		<img id="mashing" src="img/mashing_menu.jpg">
 		<img id="frementation" src="img/fermentation_menu.jpg">
+		<br><br>
 		<img id="options" src="img/options.png">
 		<img id="share" src="img/share.png">
 		<img id="help" src="img/help.png">
