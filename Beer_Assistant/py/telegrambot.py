@@ -50,8 +50,6 @@ def on_chat_message(msg):
 
     print 'Received command: %s' % command
     
-    print str(sender)
-    
     if str(sender) in id_a:
         if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
             bot.sendMessage(chat_id, random.choice (hi_a))
