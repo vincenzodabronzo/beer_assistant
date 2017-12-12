@@ -15,8 +15,7 @@
 
 		$(document).ready(function() {
 
-			$.ajax( 'lib/telegrambot_control.php?command=getinfo');
-
+			$('#show_data').load( 'lib/telegrambot_control.php?command=getinfo');
 			if( $('#telegram_bot').text() =="1" ) {
 				$('#bot_on').attr('checked', 'checked');
 			} else {
@@ -33,6 +32,17 @@
 			document.getElementById("options").addEventListener("click", function(){
 			    manageTab("options");
 			});
+
+			
+			document.getElementById("bot_on").addEventListener("click", function(){
+				$.ajax( 'lib/telegrambot_control.php?command=1' );
+				
+			});
+			document.getElementById("bot_off").addEventListener("click", function(){
+				$.ajax( 'lib/telegrambot_control.php?command=0' );
+				
+			});
+			
 			
 			
 	});
