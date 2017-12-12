@@ -15,11 +15,8 @@
 
 		$(document).ready(function() {
 
-		    $('#show_data').load( 'lib/telegrambot_control.php?command=getinfo' );
-			if ( $( '#telegram_bot' ).text()=="1" ) {
-				$( '#telegram_bot_input' ).attr('checked', true);
-				$( '#test_radio' ).attr('checked', true);
-			} 
+
+			
 			$('#tab_options').hide();
 
 			function manageTab(name) {
@@ -41,7 +38,11 @@
 				
 			});
 			
-			
+		    $('#show_data').load( 'lib/telegrambot_control.php?command=getinfo' );
+			if ( $( '#telegram_bot' ).text()=="1" ) {
+				$( '#telegram_bot_input' ).attr('checked', true);
+				$( '#test_radio' ).attr('checked', true);
+			} 
 			
 	});
 </script>
