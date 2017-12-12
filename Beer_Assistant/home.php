@@ -20,8 +20,8 @@
 				$('html, body').animate({ scrollTop: $('#tab_'+name).offset().top }, 'slow');
 			}
 
-			document.getElementById("calendar").addEventListener("click", function(){
-			    manageTab("calendar");
+			document.getElementById("options").addEventListener("click", function(){
+			    manageTab("options");
 			});
 			
 			
