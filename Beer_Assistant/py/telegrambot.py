@@ -30,6 +30,8 @@ for row in rows:
     token = row[2]
     id_a.append( row[3] )
 
+print row[3]
+
 TelegramBot = telepot.Bot(token)
 
 #id_a = [114104929]
