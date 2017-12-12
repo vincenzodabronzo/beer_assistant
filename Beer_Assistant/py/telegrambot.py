@@ -43,7 +43,7 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
             # Include command list
     else:
-        bot.sendMessage(chat_id, ( 'Prove yourself worthy, %s... Please add following ID to authorized users:', random.choice (name_a)) )
+        bot.sendMessage(chat_id, 'Prove yourself worthy, %s... Please add following ID to authorized users:' % random.choice(name_a) )
         bot.sendMessage(chat_id, sender)
  
  
