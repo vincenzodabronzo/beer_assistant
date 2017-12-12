@@ -79,7 +79,7 @@
                     <br><br>Authorized users:
                     <br>
                     <div id="authorized_users"></div>
-                    <div id="add_new_user"> Token: <input type="text" id="token">&nbsp;User id <input type="text" id="userid">&nbsp;&nbsp;&nbsp;<img src="img/add.png"></div>
+                    <div id="add_new_user"> Token: <input type="text" id="token"><br>User id <input type="text" id="userid"><br><img src="img/add.png"></div>
                     
                     
                     
