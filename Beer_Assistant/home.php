@@ -14,10 +14,6 @@
     	var t = 2000;
 
 		$(document).ready(function() {
-			
-			if( $('#telegram_bot').text() =="0" ) {
-				$('#telegram_bot_input').removeAttr('checked');
-			}
 			 
 			$('#tab_options').hide();
 
@@ -93,7 +89,7 @@
                         <div class="control_indicator"></div>
                     </label>
                     
-                    
+                    <?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?>
                     
                 </div>
 				</fieldset>   
@@ -108,7 +104,7 @@
 		
 
 	<div class="data" id="show_data" >
-        <?php include 'lib/telegrambot_control.php?command=getinfo'; ?>
+        --
     </div>
 
 
