@@ -17,6 +17,7 @@ name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 id = 1
 token = ""
 id_a = []
+print id_a
 
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
@@ -31,6 +32,7 @@ for row in rows:
     id_a.append( row[3] )
 
 print row[3]
+print id_a
 
 TelegramBot = telepot.Bot(token)
 
