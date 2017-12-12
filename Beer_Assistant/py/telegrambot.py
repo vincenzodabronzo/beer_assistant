@@ -21,9 +21,11 @@ id_a = []
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
 cur = db.cursor()
+
 sql = ("""SELECT sc.id, sc.telegram, tg.token, tg.user_id FROM system_config AS sc INNER JOIN system_config_telegram_gatekeeper AS tg ON sc.id = tg.id where sc.id=%s ORDER BY sc.id DESC LIMIT 1""", (id, ))
-cur.execute(sql,)
+cur.execute(*sql)
 rows = cur.fetchall()
+
 for row in rows:
     token = row[2]
     id_a.append( row[3] )
