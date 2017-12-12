@@ -79,7 +79,8 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, 'Prove yourself worthy, %s... Please add following ID to authorized users:' % random.choice(name_a) )
             bot.sendMessage(chat_id, sender)
     else:
-        exit(0)
+        # do nothing
+        print "Reply blocked"
  
 def on_callback_query(msg):
     query_id, chat_id, query_data = telepot.glance(msg, flavor='callback_query')
