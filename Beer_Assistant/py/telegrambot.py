@@ -88,16 +88,16 @@ def on_callback_query(msg):
         cur.execute(sql,)
         rows = cur.fetchall()
 
-        for row in rows:
+        if cur.rowcount!=0:
+            for row in rows:
                 opened = "1"
                 target_temp = row[1]
                 heated = row[3]
                 pump = row[4]
                 temp = row[2]
-        if opened=="0":
-            bot.sendMessage(chat_id, "No mashing opened" )
-        else:
             bot.sendMessage(chat_id, '[Mashing opened]\n\nTemp(Celsius): %s\nTarget temp: %s\nHeated: %s\nPump: %s' % (temp, target_temp, heated, pump) )
+        else:
+            bot.sendMessage(chat_id, "No mashing opened" )
         
         bot.answerCallbackQuery( query_id, text="Mashing" )
         
@@ -107,20 +107,20 @@ def on_callback_query(msg):
         sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.ending_time is NULL ORDER BY ft.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
         rows = cur.fetchall()
-        print cur.rowcount
-        
-        for row in rows:
-                opened = "1"
-                temp_max = row[1]
-                temp_min = row[2]
-                heated = row[3]
-                cooled = row[4]
-                temp = row[5]
-        if opened=="0":
-            bot.sendMessage(chat_id, "No fermentation opened" )
-        else:
+        print "Rows found: %s" % cur.rowcount
+
+        if cur.rowcount!=0:
+            for row in rows:
+                    opened = "1"
+                    temp_max = row[1]
+                    temp_min = row[2]
+                    heated = row[3]
+                    cooled = row[4]
+                    temp = row[5]
             bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
-            
+        else:
+            bot.sendMessage(chat_id, "No fermentation opened" )
+        
         bot.answerCallbackQuery( query_id, text="Fermentation" )    
     elif query_data=='info':
         ts = time.time()
