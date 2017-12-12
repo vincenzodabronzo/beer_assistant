@@ -7,6 +7,7 @@ import datetime
 import time
 import MySQLdb
 import random
+from sys import exit
 
 # Checking single instance
 import singleton
@@ -16,6 +17,7 @@ hi_a = ['Ciao','Hi','Hi there!','Hello','Hi Sweety', 'Hello Sir']
 name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 id = 1
 token = ""
+active = "0"
 id_a = []
 # id_a = [114104929]
 
@@ -50,22 +52,32 @@ def on_chat_message(msg):
 
     print 'Received command: %s' % command
     
-    if str(sender) in id_a:
-        if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
-            bot.sendMessage(chat_id, random.choice (hi_a))
-        elif command == 'joke':
-            # os.system("sudo python /home/pi/tg/apricancello.py")
-            bot.sendMessage(chat_id, '... I run out of jokes lately ...')
+    sql = ("""SELECT sc.id, sc.telegramFROM system_config AS sc WHERE sc.id=%s ORDER BY sc.id DESC LIMIT 1""", (id, ))
+    cur.execute(*sql)
+    rows = cur.fetchall()
+    for row in rows:
+        active = row[1]
+        
+    
+    if active:
+        if str(sender) in id_a:
+            if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
+                bot.sendMessage(chat_id, random.choice (hi_a))
+            elif command == 'joke':
+                # os.system("sudo python /home/pi/tg/apricancello.py")
+                bot.sendMessage(chat_id, '... I run out of jokes lately ...')
+            else:
+                content_type, chat_type, chat_id = telepot.glance(msg)
+                bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
+                keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
+                bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
+                # Include command list
+            
         else:
-            content_type, chat_type, chat_id = telepot.glance(msg)
-            bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
-            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
-            bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
-            # Include command list
+            bot.sendMessage(chat_id, 'Prove yourself worthy, %s... Please add following ID to authorized users:' % random.choice(name_a) )
+            bot.sendMessage(chat_id, sender)
     else:
-        bot.sendMessage(chat_id, 'Prove yourself worthy, %s... Please add following ID to authorized users:' % random.choice(name_a) )
-        bot.sendMessage(chat_id, sender)
- 
+        exit(0)
  
 def on_callback_query(msg):
     query_id, chat_id, query_data = telepot.glance(msg, flavor='callback_query')
