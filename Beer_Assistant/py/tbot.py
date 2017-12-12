@@ -7,7 +7,7 @@ import time
 import MySQLdb
 import random
 
-
+id = 1
 token = ""
 id_a = []
 # id_a = [114104929]
