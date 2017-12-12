@@ -23,6 +23,9 @@
 			    manageTab("options");
 			});
 
+			function removeUser(token, userid) {
+				alert(token+" "+userid);
+			}
 			
 			document.getElementById("telegram_bot_input").addEventListener("change", function(){
 				var active = "0";
