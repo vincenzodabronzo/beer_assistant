@@ -58,6 +58,7 @@ def on_chat_message(msg):
 
     for row in rows:
         active = row[1]
+        print active
         
     
     if active:
