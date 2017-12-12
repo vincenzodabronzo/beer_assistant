@@ -48,6 +48,21 @@ def echo(bot, update):
     """Echo the user message."""
     update.message.reply_text(update.message.text)
     print update.message.text
+    if update.message.text == "fermentation":
+        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.ending_time is NULL ORDER BY ft.timestamp DESC LIMIT 1""")
+        cur.execute(sql,)
+        rows = cur.fetchall()
+        print cur.rowcount
+        if cur.rowcount:   
+            for row in rows:
+                    temp_max = row[1]
+                    temp_min = row[2]
+                    heated = row[3]
+                    cooled = row[4]
+                    temp = row[5]
+                    update.message.reply_text('[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
+        else:
+            update.message.reply_text("No fermentation opened" )
 
 
 def error(bot, update, error):
