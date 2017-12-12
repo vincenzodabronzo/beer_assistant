@@ -78,8 +78,6 @@ def on_chat_message(msg):
  
 def on_callback_query(msg):
     query_id, chat_id, query_data = telepot.glance(msg, flavor='callback_query')
-    print('Callback Query:', query_id, chat_id, query_data)
-    opened = "0"
     
     if query_data=='mashing':
         db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
@@ -122,6 +120,7 @@ def on_callback_query(msg):
             bot.sendMessage(chat_id, "No fermentation opened" )
         
         bot.answerCallbackQuery( query_id, text="Fermentation" )    
+        
     elif query_data=='info':
         ts = time.time()
         bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
