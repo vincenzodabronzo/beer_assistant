@@ -13,6 +13,7 @@ import singleton
 me = singleton.SingleInstance()
 
 hi_a = ['Ciao','Hi','Hi there!','Hello','Hi Sweety', 'Hello Sir']
+name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
@@ -37,12 +38,12 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
-            bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\' read it...')
+            bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
-            bot.sendMessage(chat_id, 'Wanna check status instead?', reply_markup=keyboard)
+            bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
             # Include command list
     else:
-        bot.sendMessage(chat_id, 'Prove yourself worthy, Sweetheart... Please include following ID to authorized users:')
+        bot.sendMessage(chat_id, ( 'Prove yourself worthy, %s... Please add following ID to authorized users:', random.choice (name_a)) )
         bot.sendMessage(chat_id, sender)
  
  
