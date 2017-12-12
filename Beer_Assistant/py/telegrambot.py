@@ -18,7 +18,6 @@ id = 1
 token = ""
 id_a = []
 # id_a = [114104929]
-print id_a
 
 # Variables for MySQL
 db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
@@ -32,11 +31,7 @@ for row in rows:
     token = row[2]
     id_a.append( row[3] )
 
-print row[3]
-print id_a
-
 TelegramBot = telepot.Bot(token)
-
 
 loop = 1
 
