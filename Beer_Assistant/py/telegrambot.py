@@ -33,14 +33,6 @@ TelegramBot = telepot.Bot(token)
 #id_a = [114104929]
 loop = 1
 
-
-def on_chat_message(msg):
-    chat_id = msg['chat']['id']
-    command = msg['text']
-    sender = msg['from']['id']
-
-    print 'Received command: %s' % command
-    
 '''
     sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON fc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""" )
     cur.execute(sql,)
@@ -49,6 +41,12 @@ def on_chat_message(msg):
         print "FERMENTATION - Found 1 active batch with id:"
 '''
 
+def on_chat_message(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    sender = msg['from']['id']
+
+    print 'Received command: %s' % command
     
     if sender in id_a:
         if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
