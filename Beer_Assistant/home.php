@@ -19,13 +19,13 @@
 				$('html, body').animate({ scrollTop: $('#tab_'+name).offset().top }, 'slow');
 			}
 
-			document.getElementById("options").addEventListener("click", function(){
-			    manageTab("options");
-			});
-
 			function removeUser(token, userid) {
 				alert(token+" "+userid);
 			}
+			
+			document.getElementById("options").addEventListener("click", function(){
+			    manageTab("options");
+			});
 			
 			document.getElementById("telegram_bot_input").addEventListener("change", function(){
 				var active = "0";
@@ -80,7 +80,7 @@
                     </label>
                     
                     <br><br><b>Authorized users</b>:
-                    <div id="authorized_users"><div id="authorized_users"><?php include "lib/load_telegram_users.php"; ?></div>
+                    <div id="authorized_users"><?php include "lib/load_telegram_users.php"; ?></div>
                     
                     <br><br><b>Add new user</b>:
                     <br>
@@ -103,7 +103,14 @@
 	<div class="data" id="show_data" style="display: none;"  >
     </div>
 
-<div id="authorized_users"><div id="authorized_users"><div id="458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY"><div>&nbsp;Token</div><div>&nbsp;458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY</div><div>&nbsp;User Id</div><div>&nbsp;114104929</div><div>&nbsp;<img id="remove_user" src="img/remove.png" onclick="removeUser('458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY','114104929');"></div></div></div>
+
+<div id="458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY">
+	<div>&nbsp;Token</div>
+	<div>&nbsp;458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY</div>
+	<div>&nbsp;User Id</div>
+	<div>&nbsp;114104929</div>
+	<div>&nbsp;<img id="remove_user" src="img/remove.png" onclick="removeUser('458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY','114104929');"></div>
+</div>
                     
 
 </body>
