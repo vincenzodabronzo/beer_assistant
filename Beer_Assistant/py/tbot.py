@@ -1,3 +1,100 @@
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import logging
+import sys
+import os
+import datetime
+import time
+import MySQLdb
+import random
+
+
+token = ""
+id_a = []
+# id_a = [114104929]
+
+# Variables for MySQL
+db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
+cur = db.cursor()
+
+sql = ("""SELECT sc.id, sc.telegram, tg.token, tg.user_id FROM system_config AS sc INNER JOIN system_config_telegram_gatekeeper AS tg ON sc.id = tg.id where sc.id=%s ORDER BY sc.id DESC LIMIT 1""", (id, ))
+cur.execute(*sql)
+rows = cur.fetchall()
+
+for row in rows:
+    token = row[2]
+    id_a.append( row[3] )
+
+
+# Enable logging
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
+logger = logging.getLogger(__name__)
+
+
+# Define a few command handlers. These usually take the two arguments bot and
+# update. Error handlers also receive the raised TelegramError object in error.
+def start(bot, update):
+    """Send a message when the command /start is issued."""
+    update.message.reply_text('Hi!')
+
+
+def help(bot, update):
+    """Send a message when the command /help is issued."""
+    update.message.reply_text('Help!')
+
+
+def echo(bot, update):
+    """Echo the user message."""
+    update.message.reply_text(update.message.text)
+
+
+def error(bot, update, error):
+    """Log Errors caused by Updates."""
+    logger.warning('Update "%s" caused error "%s"', update, error)
+
+
+def main():
+    """Start the bot."""
+    # Create the EventHandler and pass it your bot's token.
+    updater = Updater(token)
+
+    # Get the dispatcher to register handlers
+    dp = updater.dispatcher
+
+    # on different commands - answer in Telegram
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("help", help))
+
+    # on noncommand i.e message - echo the message on Telegram
+    dp.add_handler(MessageHandler(Filters.text, echo))
+
+    # log all errors
+    dp.add_error_handler(error)
+
+    # Start the Bot
+    updater.start_polling()
+
+    # Run the bot until you press Ctrl-C or the process receives SIGINT,
+    # SIGTERM or SIGABRT. This should be used most of the time, since
+    # start_polling() is non-blocking and will stop the bot gracefully.
+    updater.idle()
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+
+
+
+'''
+
+
 import sys
 import os
 import datetime
@@ -41,13 +138,14 @@ TelegramBot = telepot.Bot(token)
 loop = 1
 
 '''
+'''
     sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON fc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""" )
     cur.execute(sql,)
     rows = cur.fetchall()
     for row in rows:
         print "FERMENTATION - Found 1 active batch with id:"
 '''
-
+'''
 def on_chat_message(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
@@ -146,3 +244,4 @@ print('Listening ...')
  
 while loop:
     time.sleep(10)
+'''
