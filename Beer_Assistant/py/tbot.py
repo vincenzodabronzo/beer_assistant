@@ -69,18 +69,17 @@ def on_chat_message(msg):
             cur.execute(sql,)
             rows = cur.fetchall()
             print cur.rowcount
-            
-            for row in rows:
-                    opened = "1"
-                    temp_max = row[1]
-                    temp_min = row[2]
-                    heated = row[3]
-                    cooled = row[4]
-                    temp = row[5]
-            if opened=="0":
-                bot.sendMessage(chat_id, "No fermentation opened" )
+            if cur.rowcount:   
+                for row in rows:
+                        opened = "1"
+                        temp_max = row[1]
+                        temp_min = row[2]
+                        heated = row[3]
+                        cooled = row[4]
+                        temp = row[5]
+                        bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
             else:
-                bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
+                bot.sendMessage(chat_id, "No fermentation opened" )
                 
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
