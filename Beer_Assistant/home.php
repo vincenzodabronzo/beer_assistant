@@ -14,8 +14,6 @@
     	var t = 2000;
 
 		$(document).ready(function() {
-
-			$('#show_data').load( 'lib/telegrambot_control.php?command=getinfo');
 			
 			if( $('#telegram_bot').text() =="0" ) {
 				$('#telegram_bot_input').removeAttr('checked');
@@ -113,8 +111,7 @@
 		
 
 	<div class="data" id="show_data" >
-        Telegram bot: 
-        <div id="telegram_bot">0</div>
+        <?php include 'lib/telegrambot_control.php?command=getinfo'; ?>
     </div>
 
 
