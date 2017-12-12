@@ -7,7 +7,7 @@ import random
 from os.path import dirname
 
 # os.putenv('PYTHONPATH=/home/pi/.local/lib/python2.7/site-packages');
-sys.path.append('/home/pi/.local/lib/python2.7/site-packages')
+sys.path.append('/home/pi/.local/lib/python2.7/site-packages/telepot')
 
 import telepot
 from telepot.loop import MessageLoop
