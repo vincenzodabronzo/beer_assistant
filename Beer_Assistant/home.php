@@ -103,7 +103,7 @@
 	<div class="data" id="show_data" style="display: none;"  >
     </div>
 
-<div id="authorized_users"><div id="authorized_users"><div id="458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY"><div>&nbsp;Token</div><div>&nbsp;458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY</div><div>&nbsp;User Id</div><div>&nbsp;114104929</div><div>&nbsp;<img id="remove_user" src="img/remove.png" onclick="javascript: removeUser('458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY','114104929');"></div></div></div>
+<div id="authorized_users"><div id="authorized_users"><div id="458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY"><div>&nbsp;Token</div><div>&nbsp;458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY</div><div>&nbsp;User Id</div><div>&nbsp;114104929</div><div>&nbsp;<img id="remove_user" src="img/remove.png" onclick="removeUser('458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY','114104929');"></div></div></div>
                     
 
 </body>
