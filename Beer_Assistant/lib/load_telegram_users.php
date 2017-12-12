@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
                     	document.getElementById("img'.$token.$userid.'").addEventListener("click", function(){
 
                             alert(\''.$token.$userid.'\');
-                            $.ajax( "lib/telegrambot_contro.php?command=remove&token='.$token.'&userid='.$token.'");
+                            $.ajax( "lib/telegrambot_control.php?command=remove&token='.$token.'&userid='.$token.'");
 
 			             });
                     </script>';
