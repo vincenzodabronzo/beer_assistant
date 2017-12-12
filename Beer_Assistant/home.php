@@ -95,10 +95,10 @@
                         <div class="control_indicator"></div>
                     </label>
                     
-                    <label class="switch">
-                      On&nbsp;<input type="checkbox" id="telegram_bot_activation">&nbsp;Off
+                    Off&nbsp;<label class="switch">
+                      <input type="checkbox" id="telegram_bot_activation">
                       <span class="slider round"></span>
-                    </label>
+                    </label>&nbsp;On
                     
                 </div>
 				</fieldset>   
