@@ -18,11 +18,9 @@
 			$('#show_data').load( 'lib/telegrambot_control.php?command=getinfo');
 			
 			if( $('#telegram_bot').text() =="1" ) {
-				$('#bot_on').attr('checked', 'checked');
-				$('#telegram_bot_activation').prop('checked', true);
+				$('#telegram_bot_input').prop('checked', true);
 			} else {
-				$('#bot_off').attr('checked', 'checked');
-				$('#telegram_bot_activation').prop('checked', false);
+				$('#telegram_bot_input').prop('checked', false);
 			}
 			 
 			$('#tab_options').hide();
@@ -37,12 +35,14 @@
 			});
 
 			
-			document.getElementById("bot_on").addEventListener("click", function(){
-				$.ajax( 'lib/telegrambot_control.php?command=1' );
+			document.getElementById("telegram_bot_activation").addEventListener("click", function(){
+
+				var active = "0";
+				if ( $( '#telegram_bot_input' ).is( ":checked" ) ) {
+					active = "1";
+				}
 				
-			});
-			document.getElementById("bot_off").addEventListener("click", function(){
-				$.ajax( 'lib/telegrambot_control.php?command=0' );
+				$.ajax( 'lib/telegrambot_control.php?command='+active );
 				
 			});
 			
@@ -97,8 +97,8 @@
                         <div class="control_indicator"></div>
                     </label>
                     
-                    Bot activation<br><label class="switch">
-                      <input type="checkbox" id="telegram_bot_activation">
+                    Bot activation<br><label class="switch" id="telegram_bot_activation">
+                      <input type="checkbox" id="telegram_bot_input">
                       <span class="slider round"></span>
                     </label>
                     
