@@ -32,6 +32,7 @@
 				if ( $( '#telegram_bot_input' ).is( ":checked" ) ) {
 					active = "1";
 				}
+				$.ajax( "lib/telegrambot_control.php?command="+active );
 			});
 
 			document.getElementById("add_new_user").addEventListener("click", function(){
