@@ -1,3 +1,4 @@
+<?php  shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/telegrambot.py > /dev/null 2>/dev/null &"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +7,7 @@
      <script type="text/javascript" src="js/jquery.min.js"></script>
 	
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <link href="css/home.css" rel="stylesheet" type="text/css">
-	 
-	 <?php  ini_set('display_errors', 'On'); echo shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/telegrambot.py 2>&1"); // shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/telegrambot.py > /dev/null 2>/dev/null &"); ?>
-	 
+	 <link href="css/home.css" rel="stylesheet" type="text/css">	 
 	 
 	     <script type="text/javascript">
 
