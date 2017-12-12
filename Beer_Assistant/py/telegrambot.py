@@ -17,7 +17,7 @@ name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 id = 1
 token = ""
 id_a = []
-id_a = [114104929]
+# id_a = [114104929]
 print id_a
 
 # Variables for MySQL
