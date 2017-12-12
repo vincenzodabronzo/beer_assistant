@@ -94,6 +94,12 @@
                             <input type="radio" id="bot_off" name="radio_bot" />
                         <div class="control_indicator"></div>
                     </label>
+                    
+                    <label class="switch">
+                      On&nbsp;<input type="checkbox" id="telegram_bot_activation">&nbsp;Off
+                      <span class="slider round"></span>
+                    </label>
+                    
                 </div>
 				</fieldset>   
 			
