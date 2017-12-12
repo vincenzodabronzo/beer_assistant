@@ -9,6 +9,9 @@ import MySQLdb
 import random
 from sys import exit
 
+
+print sys.path
+
 # Checking single instance
 import singleton
 me = singleton.SingleInstance()
