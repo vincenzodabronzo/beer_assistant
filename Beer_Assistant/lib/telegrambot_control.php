@@ -5,7 +5,7 @@
 $id = "1";
 $checked = "";
 
-if ($_GET["command"] == "") {
+if ($_GET["command"] != "") {
     $command = $_GET["command"];
 }
 
