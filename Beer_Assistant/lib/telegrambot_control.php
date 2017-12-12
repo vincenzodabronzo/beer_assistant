@@ -5,6 +5,8 @@
 $command = $_GET["command"];
 $id = "1";
 
+$checkbox = "";
+
 $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
 if($dbconn->connect_error) {
     die('Connection error: ' . $dbconn->connect_error);
@@ -26,12 +28,12 @@ if ($command == "1" || $command == "0") {
                    ;
         }
     }
-} else if ($command == "loadcheckbox" ) {
+} else if ($command == "loadvariables" ) {
     $result = $dbconn->query("SELECT system_config.id, system_config.telegram FROM system_config WHERE system_config.id = ".$id.";");
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             if ($row['telegram'] == "1") {
-                echo 'checked';
+                $checkbox = "checked";
             }
         }
     }

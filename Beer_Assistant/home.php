@@ -1,3 +1,4 @@
+<?php include 'lib/telegrambot_control.php?command=loadvariables'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,7 +91,7 @@
     			<div class="control-group">
             
                     Bot activation<br><label class="switch" id="telegram_bot_activation" >
-                      <input type="checkbox" id="telegram_bot_input"  <?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?> >
+                      <input type="checkbox" id="telegram_bot_input"  <?php echo $checkbox; ?> >
                       <span class="slider round"></span>
                     </label>
                     
@@ -112,7 +113,7 @@
     </div>
 
 <input type="checkbox" id="testradio" >
-<?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?>
+<?php echo $checkbox; ?>
 
 </body>
 
