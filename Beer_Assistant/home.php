@@ -79,10 +79,12 @@
 				<legend>Telegram Bot </legend>
     			<div class="control-group">
             
-                    <br><br><b>Bot activation</b><br><br><label class="switch" id="telegram_bot_activation" >
+            		<div style="display: none;">
+                    <br><b>Bot activation</b><br><br><label class="switch" id="telegram_bot_activation" >
                       <input type="checkbox" id="telegram_bot_input"  <?php $command = "loadvariables"; include "lib/telegrambot_control.php"; echo $checked; ?> >
                       <span class="slider round"></span>
                     </label>
+                    </div>
                     
                     <br><br><b>Authorized users</b>:
                     <div id="authorized_users"><?php include "lib/load_telegram_users.php"; ?></div>
