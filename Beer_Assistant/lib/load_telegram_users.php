@@ -10,7 +10,7 @@ $result = $dbconn->query("SELECT tg.token, tg.user_id FROM system_config_telegra
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()){
         $token = $row["token"];
-        $userid = $row["userid"];
+        $userid = $row["user_id"];
         
         echo    '<div id="'.$token.$userid.'"><div>&nbsp;Token</div><div>&nbsp;'.$token.'</div><div>&nbsp;User Id</div><div>&nbsp;'.$userid.'</div><div>&nbsp;<img id="img'.$token.$userid.'" src="img/remove.png"></div></div>
                     <script>
