@@ -6,11 +6,13 @@ import os
 import datetime
 import time
 import MySQLdb
+import random
 
 # Checking single instance
 import singleton
 me = singleton.SingleInstance()
 
+hi_a = ['Ciao','Hi','Hi there!','Hello','Hi Sweety', 'Hello Sir']
 
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
@@ -29,7 +31,7 @@ def on_chat_message(msg):
     
     if sender in id_a:
         if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
-            bot.sendMessage(chat_id, 'Ciao! Here to serve you!')
+            bot.sendMessage(chat_id, random.choice (hi_a))
         elif command == 'joke':
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
