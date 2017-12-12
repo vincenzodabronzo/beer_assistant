@@ -10,9 +10,6 @@
 	 
 	     <script type="text/javascript">
 
-    	//  microsec interval
-    	var t = 2000;
-
 		$(document).ready(function() {
 			
 			$('#tab_options').hide();
@@ -32,8 +29,7 @@
 				if ( $( '#telegram_bot_input' ).is( ":checked" ) ) {
 					active = "1";
 				}
-				$('#show_data').load( 'lib/telegrambot_control.php?command='+active );
-				
+				$('#show_data').load( 'lib/telegrambot_control.php?command='+active );	
 			});
 
 
@@ -47,9 +43,6 @@
 <body>
 
 <div id="maincontainer">
-
-<?php include_once 'lib/telegrambot_control.php?command=getinfo'; ?>
-
 
 	<div id="command">
 		<br>
