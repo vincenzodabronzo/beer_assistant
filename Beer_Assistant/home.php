@@ -84,7 +84,7 @@
                     
                     <br><br><b>Add new user</b>:
                     <br>
-                    <div id="add_new_user"> <div>Token</div> <input type="text" id="token"><div>User Id</div><input type="text" id="userid"><br><img src="img/add.png"></div>
+                    <div id="add_new_user"> <div>Token</div> <input type="text" id="token"><div>User Id</div><input type="text" id="userid"><br><img class="add_user" src="img/add.png"></div>
                     
                     
                     
