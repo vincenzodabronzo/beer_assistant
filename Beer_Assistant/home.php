@@ -24,8 +24,8 @@
     	?>
 		<br>
 	<br><br>
-		<img id="mashing" src="img/mashing_menu.jpg">
-		<img id="frementation" src="img/fermentation_menu.jpg">
+		<a href="manual_mashing.php"><img id="mashing" src="img/mashing_menu.jpg"></a>
+		<a href="manual_fermentation.php"><img id="fermentation" src="img/fermentation_menu.jpg"></a>
 		<br><br>
 		<img id="options" src="img/options.png">
 		<img id="share" src="img/share.png">
