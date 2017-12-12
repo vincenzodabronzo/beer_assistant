@@ -24,11 +24,11 @@
 
 			document.getElementById("options").addEventListener("click", function(){
 			    manageTab("options");
+			    $('#show_data').load( 'lib/telegrambot_control.php?command=getinfo' );
 			});
 
 			
 			document.getElementById("telegram_bot_input").addEventListener("change", function(){
-
 				var active = "0";
 				if ( $( '#telegram_bot_input' ).is( ":checked" ) ) {
 					active = "1";
