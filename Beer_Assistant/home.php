@@ -28,8 +28,8 @@
 		<a href="manual_fermentation.php"><img id="fermentation" src="img/fermentation_menu.jpg"></a>
 		<br><br>
 		<img id="options" src="img/options.png">
-		<img id="share" src="img/share.png">
-		<img id="help" src="img/help.png">
+		<img id="share" src="img/share.png" style="display: none;">
+		<img id="help" src="img/help.png" style="display: none;">
 	</div>
 	
 	

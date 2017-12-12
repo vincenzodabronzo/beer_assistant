@@ -63,15 +63,9 @@ button#stop {
     }
 
 
-img#play:hover, img#options:hover, img#help:hover, img#calendar:hover{
+img#options:hover {
     cursor: pointer;
 }
-
-img#chart, img#share {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-}
-
 
 
 .control {
