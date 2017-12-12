@@ -14,16 +14,6 @@
     	var t = 2000;
 
 		$(document).ready(function() {
-
-			/*
-			alert($( '#telegram_bot' ).text());
-		    $('#show_data').load( 'lib/telegrambot_control.php?command=getinfo' );
-			alert($( '#telegram_bot' ).text());
-			if ( $( '#telegram_bot' ).text()=="1" ) {
-				$( '#telegram_bot_input' ).attr('checked', true);
-				$( '#test_radio' ).attr('checked', true);
-			} 
-			*/
 			
 			$('#tab_options').hide();
 
