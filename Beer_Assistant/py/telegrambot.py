@@ -17,6 +17,7 @@ name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 id = 1
 token = ""
 id_a = []
+id_a = [114104929]
 print id_a
 
 # Variables for MySQL
@@ -36,7 +37,7 @@ print id_a
 
 TelegramBot = telepot.Bot(token)
 
-#id_a = [114104929]
+
 loop = 1
 
 '''
