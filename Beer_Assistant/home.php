@@ -89,7 +89,10 @@
                         <div class="control_indicator"></div>
                     </label>
                     
-                    <?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?>
+                    Bot activation<br><label class="switch" id="telegram_bot_activation" >
+                      <input type="checkbox" id="telegram_bot_input">
+                      <span class="slider round"></span>
+                    </label>
                     
                 </div>
 				</fieldset>   

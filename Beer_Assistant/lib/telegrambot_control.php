@@ -31,17 +31,7 @@ if ($command == "1" || $command == "0") {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             if ($row['telegram'] == "1") {
-                echo 'Bot activation<br><label class="switch" id="telegram_bot_activation" >
-                      <input type="checkbox" id="telegram_bot_input" checked>
-                      <span class="slider round"></span>
-                    </label>'
-                        ;
-            } else {
-                echo 'Bot activation<br><label class="switch" id="telegram_bot_activation" >
-                      <input type="checkbox" id="telegram_bot_input">
-                      <span class="slider round"></span>
-                    </label>'
-                    ;
+                echo 'checked';
             }
         }
     }
