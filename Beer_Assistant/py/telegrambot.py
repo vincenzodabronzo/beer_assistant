@@ -14,14 +14,25 @@ me = singleton.SingleInstance()
 
 hi_a = ['Ciao','Hi','Hi there!','Hello','Hi Sweety', 'Hello Sir']
 name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
+id = 1
+token = ""
+id_a = []
 
-token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
+# Variables for MySQL
+db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
+cur = db.cursor()
+sql = ("""SELECT sc.id, sc.telegram, tg.token, tg.user_id FROM system_config AS sc INNER JOIN system_config_telegram_gatekeeper AS tg ON sc.id = tg.id where sc.id=%s ORDER BY sc.id DESC LIMIT 1""", (id, ))
+cur.execute(sql,)
+rows = cur.fetchall()
+for row in rows:
+    token = row[2]
+    id_a.append( row[3] )
+
 TelegramBot = telepot.Bot(token)
 
-id_a = [114104929]
+#id_a = [114104929]
 loop = 1
 
-# print TelegramBot.getMe()
 
 def on_chat_message(msg):
     chat_id = msg['chat']['id']
@@ -29,6 +40,15 @@ def on_chat_message(msg):
     sender = msg['from']['id']
 
     print 'Received command: %s' % command
+    
+
+    sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON fc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""" )
+    cur.execute(sql,)
+    rows = cur.fetchall()
+    for row in rows:
+        print "FERMENTATION - Found 1 active batch with id:"
+
+
     
     if sender in id_a:
         if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
