@@ -4,6 +4,7 @@
 // Command: getinfo, 1, 0
 $command = $_GET["command"];
 $id = "1";
+$checked = "";
 
 if ($command == "") {
     $command = $set_command;
@@ -35,7 +36,7 @@ if ($command == "1" || $command == "0") {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             if ($row['telegram'] == "1") {
-                echo'checked';
+                $checked = 'checked';
             }
         }
     }
