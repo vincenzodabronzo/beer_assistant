@@ -16,6 +16,7 @@
 		$(document).ready(function() {
 
 			$('#show_data').load( 'lib/telegrambot_control.php?command=getinfo');
+			
 			if( $('#telegram_bot').text() =="1" ) {
 				$('#bot_on').attr('checked', 'checked');
 			} else {
@@ -83,7 +84,7 @@
 				<fieldset id="bot_group">
 				<legend>Bot management: </legend>
     			<div class="control-group">
-                    <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=1 );">
+                    <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=1' );">
                         On
                       <input type="radio" id="bot_on" name="radio_bot" />
                         <div class="control_indicator"></div>
