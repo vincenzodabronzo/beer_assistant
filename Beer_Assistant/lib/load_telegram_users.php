@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
         $token = $row["token"];
         $userid = $row["user_id"];
         
-        echo    '<div id="'.$token.$userid.'"><div>&nbsp;Token</div><div>&nbsp;'.$token.'</div><div>&nbsp;User Id</div><div>&nbsp;'.$userid.'</div><div>&nbsp;<img id="img'.$token.$userid.'" src="img/remove.png"></div></div>
+        echo    '<div id="'.$token.$userid.'"><div>&nbsp;Token</div><div>&nbsp;'.$token.'</div><div>&nbsp;User Id</div><div>&nbsp;'.$userid.'</div><div>&nbsp;<img id="img'.$token.$userid.'" class="remove_user" src="img/remove.png"></div></div>
                     <script>
                     	document.getElementById("img'.$token.$userid.'").addEventListener("click", function(){
                             $.ajax( "lib/telegrambot_control.php?command=remove&token='.$token.'&userid='.$userid.'");
