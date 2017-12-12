@@ -53,7 +53,7 @@ def on_chat_message(msg):
     print 'Received command: %s' % command
     
     sql = ("""SELECT sc.id, sc.telegramFROM system_config AS sc WHERE sc.id=%s ORDER BY sc.id DESC LIMIT 1""", (id, ))
-    cur.execute(*sql)
+    cur.execute(sql,)
     rows = cur.fetchall()
     for row in rows:
         active = row[1]
