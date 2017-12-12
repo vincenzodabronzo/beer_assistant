@@ -109,15 +109,15 @@
 		
 		<!--    style="display: none;"      -->
 		
-	<div class="data" id="show_data" >
-    Telegram bot: 
-    <div id="telegram_bot">0</div>
-    </div>
+
     
  </div>
 		
-</div>
 
+	<div class="data" id="show_data" >
+        Telegram bot: 
+        <div id="telegram_bot">0</div>
+    </div>
 
 
 
