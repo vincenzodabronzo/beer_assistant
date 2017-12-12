@@ -1,5 +1,5 @@
 <?php
-// ini_set('display_errors', 'On');
+ini_set('display_errors', 'On');
 
 // Command: getinfo, 1, 0
 $command = $_GET["command"];
