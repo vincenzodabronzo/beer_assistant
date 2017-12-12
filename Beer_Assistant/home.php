@@ -15,15 +15,14 @@
 
 <div id="maincontainer">
 
-	<br>
-	
-	<?php 
-	   include_once 'vocabulary/en/en_general.php';
-	   echo '<b>'.$mainmenu_quote[array_rand($mainmenu_quote)].'</b>';
-	?>
-	
-	<br>
+
 	<div id="command">
+		<br>
+    	<?php 
+    	   include_once 'vocabulary/en/en_general.php';
+    	   echo '<b>'.$mainmenu_quote[array_rand($mainmenu_quote)].'</b>';
+    	?>
+		<br>
 	<br><br>
 		<img id="mashing" src="img/mashing_menu.jpg">
 		<img id="frementation" src="img/fermentation_menu.jpg">
