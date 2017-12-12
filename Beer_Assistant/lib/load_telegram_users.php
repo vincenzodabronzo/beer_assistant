@@ -15,7 +15,8 @@ if ($result->num_rows > 0) {
         echo    '<div id="'.$token.$userid.'"><div>&nbsp;Token</div><div>&nbsp;'.$token.'</div><div>&nbsp;User Id</div><div>&nbsp;'.$userid.'</div><div>&nbsp;<img id="img'.$token.$userid.'" src="img/remove.png"></div></div>
                     <script>
                     	document.getElementById("img'.$token.$userid.'").addEventListener("click", function(){
-			                removeUser(\''.$token.'\', \''.$userid.'\');
+			                // removeUser(\''.$token.'\', \''.$userid.'\');
+                            alert(\''.$token.$userid.'\');
 			             });
                     </script>';
     }
