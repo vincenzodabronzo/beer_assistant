@@ -50,7 +50,7 @@
 
 <div id="maincontainer">
 
-<?php include 'lib/telegrambot_control.php?command=getinfo'; ?>
+<?php include_once 'lib/telegrambot_control.php?command=getinfo'; ?>
 
 
 	<div id="command">
