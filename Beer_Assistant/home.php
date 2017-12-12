@@ -90,7 +90,7 @@
                     </label>
                     
                     Bot activation<br><label class="switch" id="telegram_bot_activation" >
-                      <input type="checkbox" id="telegram_bot_input" <?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?> >
+                      <input type="checkbox" id="telegram_bot_input" >
                       <span class="slider round"></span>
                     </label>
                     
@@ -107,7 +107,7 @@
 		
 
 	<div class="data" id="show_data" >
-        --
+        <?php include 'lib/telegrambot_control.php?command=getinfo'; ?>
     </div>
 
 
