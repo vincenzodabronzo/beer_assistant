@@ -109,7 +109,8 @@
 		
 
 	<div class="data" id="show_data" >
-        <?php include 'lib/telegrambot_control.php?command=getinfo'; ?>
+		Telegram bot:
+                <div id="telegram_bot">--</div>
     </div>
 
 
