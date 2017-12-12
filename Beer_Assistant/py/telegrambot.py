@@ -1,6 +1,3 @@
-import telepot
-from telepot.loop import MessageLoop
-from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 import sys
 import os
 import datetime
@@ -9,8 +6,11 @@ import MySQLdb
 import random
 from sys import exit
 
-
 print sys.path
+
+import telepot
+from telepot.loop import MessageLoop
+from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Checking single instance
 import singleton
