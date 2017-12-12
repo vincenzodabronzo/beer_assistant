@@ -41,13 +41,13 @@ def on_chat_message(msg):
 
     print 'Received command: %s' % command
     
-
+'''
     sql = ("""SELECT ba.id, ba.name, fc.starting_time, fc.ending_time FROM fermentation_config AS fc INNER JOIN batch AS ba ON fc.id = ba.id where fc.ending_time is NULL ORDER BY ba.id DESC LIMIT 1""" )
     cur.execute(sql,)
     rows = cur.fetchall()
     for row in rows:
         print "FERMENTATION - Found 1 active batch with id:"
-
+'''
 
     
     if sender in id_a:
