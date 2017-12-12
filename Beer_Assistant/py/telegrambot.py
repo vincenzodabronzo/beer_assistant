@@ -28,7 +28,7 @@ def on_chat_message(msg):
     print 'Got command: %s' % command
     
     if sender in id_a:
-        if command == 'hi':
+        if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
             bot.sendMessage(chat_id, 'Ciao! Here to serve you!')
         elif command == 'joke':
             # os.system("sudo python /home/pi/tg/apricancello.py")
