@@ -33,7 +33,7 @@ if ($command == "1" || $command == "0") {
     $rm_token = $_GET["token"];
     $rm_userid = $_GET["userid"];
     
-    $dbconn->query(" DELETE FROM system_config_telegram_gatekeeper WHERE token=".$rm_token." AND user_id=".$rm_userid."; ");
+    $dbconn->query(" DELETE FROM system_config_telegram_gatekeeper WHERE token='".$rm_token."' AND user_id='".$rm_userid."'; ");
 
 }
 
