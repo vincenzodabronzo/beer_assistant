@@ -96,6 +96,8 @@ def on_callback_query(msg):
         else:
             bot.sendMessage(chat_id, '[Mashing opened]\n\nTemp(Celsius): %s\nTarget temp: %s\nHeated: %s\nPump: %s' % (temp, target_temp, heated, pump) )
         
+        bot.answerCallbackQuery( "Mashing" )
+        
     elif query_data=='fermentation':
         sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, ft.heated, ft.cooled, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.ending_time is NULL ORDER BY ft.timestamp DESC LIMIT 1""")
         cur.execute(sql,)
@@ -113,8 +115,8 @@ def on_callback_query(msg):
             bot.sendMessage(chat_id, "No fermentation opened" )
         else:
             bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
-
             
+        bot.answerCallbackQuery( "Fermentation" )    
     elif query_data=='info':
         ts = time.time()
         bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
