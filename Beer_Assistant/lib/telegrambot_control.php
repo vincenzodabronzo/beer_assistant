@@ -17,7 +17,7 @@ if ($command == "1" || $command == "0") {
         <div id="telegram_bot">'.$command.'</div>'
      ;
 } else if ($command == "getinfo" ) {
-    $dbconn->query("SELECT system_config.id, system_config.telegram FROM system_config WHERE system_config.id = ".$id.";");
+    $result = $dbconn->query("SELECT system_config.id, system_config.telegram FROM system_config WHERE system_config.id = ".$id.";");
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             echo '
