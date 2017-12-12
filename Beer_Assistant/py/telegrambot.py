@@ -30,7 +30,7 @@ rows = cur.fetchall()
 
 for row in rows:
     token = row[2]
-    id_a.append( int(row[3]) )
+    id_a.append( row[3] )
 
 print row[3]
 print id_a
@@ -55,7 +55,7 @@ def on_chat_message(msg):
 
     print 'Received command: %s' % command
     
-    if sender in id_a:
+    if str(sender) in id_a:
         if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
             bot.sendMessage(chat_id, random.choice (hi_a))
         elif command == 'joke':
