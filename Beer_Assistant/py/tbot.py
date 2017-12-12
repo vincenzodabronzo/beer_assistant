@@ -47,7 +47,7 @@ def help(bot, update):
 def echo(bot, update):
     """Echo the user message."""
     update.message.reply_text(update.message.text)
-    print update
+    print update.message.text
 
 
 def error(bot, update, error):
