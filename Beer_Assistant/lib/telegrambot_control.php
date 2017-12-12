@@ -29,6 +29,11 @@ if ($command == "1" || $command == "0") {
             }
         }
     }
+}  else if ($command == "add") {
+    $add_token = $_GET["token"];
+    $add_userid = $_GET["userid"];
+    $dbconn->query("INSERT INTO system_config_telegram_gatekeeper(id, token, user_id) VALUES ( '".$id."', '".$add_token."', '".add_userid."' ) " );
+    
 } else if ($command == "remove") {
     $rm_token = $_GET["token"];
     $rm_userid = $_GET["userid"];

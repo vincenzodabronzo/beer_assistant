@@ -35,9 +35,9 @@
 			});
 
 			document.getElementById("add_new_user").addEventListener("click", function(){
-                // $.ajax( "lib/telegrambot_control.php?command=add&token='"+$('#token').val()+"'&userid='"+$('#userid').val()+"'");
-				alert("lib/telegrambot_control.php?command=add&token='"+$('#token').val()+"'&userid='"+$('#userid').val()+"'");
-                //location.reload();
+                $.ajax( "lib/telegrambot_control.php?command=add&token='"+$('#token').val()+"'&userid='"+$('#userid').val()+"'");
+				// alert("lib/telegrambot_control.php?command=add&token="+$('#token').val()+"&userid="+$('#userid').val());
+                location.reload();
              });
 
 			
