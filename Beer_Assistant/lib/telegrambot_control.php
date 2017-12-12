@@ -1,12 +1,13 @@
 <?php
- ini_set('display_errors', 'On');
+ // ini_set('display_errors', 'On');
 
 // Command: getinfo, 1, 0
 $command = $_GET["command"];
 $id = "1";
 
-$checkbox = "";
-$prova = "provaloaded";
+if ($command == "") {
+    $command = $set_command;
+}
 
 $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
 if($dbconn->connect_error) {
@@ -34,7 +35,7 @@ if ($command == "1" || $command == "0") {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             if ($row['telegram'] == "1") {
-                $checkbox = "checked";
+                echo'checked';
             }
         }
     }
