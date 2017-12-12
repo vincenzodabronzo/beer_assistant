@@ -15,6 +15,7 @@
 
 		$(document).ready(function() {
 
+			/*
 			alert($( '#telegram_bot' ).text());
 		    $('#show_data').load( 'lib/telegrambot_control.php?command=getinfo' );
 			alert($( '#telegram_bot' ).text());
@@ -22,6 +23,7 @@
 				$( '#telegram_bot_input' ).attr('checked', true);
 				$( '#test_radio' ).attr('checked', true);
 			} 
+			*/
 			
 			$('#tab_options').hide();
 
@@ -88,7 +90,7 @@
     			<div class="control-group">
             
                     Bot activation<br><label class="switch" id="telegram_bot_activation" >
-                      <input type="checkbox" id="telegram_bot_input" >
+                      <input type="checkbox" id="telegram_bot_input"  <?php include 'lib/telegrambot_control.php?command=loadcheckbox'; ?> >
                       <span class="slider round"></span>
                     </label>
                     
