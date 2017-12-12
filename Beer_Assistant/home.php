@@ -95,7 +95,7 @@
                         <div class="control_indicator"></div>
                     </label>
                     
-                    Bot activation<br><label class="switch" id="telegram_bot_activation">
+                    Bot activation<br><label class="switch" id="telegram_bot_activation" checked>
                       <input type="checkbox" id="telegram_bot_input">
                       <span class="slider round"></span>
                     </label>
