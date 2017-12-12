@@ -96,7 +96,7 @@ def on_callback_query(msg):
                 heated = row[3]
                 cooled = row[4]
                 temp = row[5]
-                bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp (Celsius) %s\nTemp max%s\nTemp min%s\nHeated%s\nCooled%s' % temp % temp_max % temp_min % heated % cooled)
+                bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp (Celsius) %s\nTemp max%s\nTemp min%s\nHeated%s\nCooled%s' % (temp, temp_max, temp_min, heated, cooled) )
                 
         if opened=="0":
             bot.sendMessage(chat_id, "No fermentation opened" )
