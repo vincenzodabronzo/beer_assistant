@@ -108,13 +108,16 @@
 		</div>
 		
 		<!--    style="display: none;"      -->
-</div>
-
-<div class="data" id="show_data" >
+		
+	<div class="data" id="show_data" >
     Telegram bot: 
     <div id="telegram_bot">0</div>
     
  </div>
+		
+</div>
+
+
 
 
 </body>
