@@ -139,6 +139,14 @@ img#options:hover, img#telegram:hover {
 
 
 
+div#add_new_user {
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+}
+
+
+
 
 
 

@@ -77,7 +77,7 @@
                     </label>
                     
                     <br><br>Authorized users:
-                    <br><br>
+                    <br>
                     <div id="authorized_users"></div>
                     <div id="add_new_user"> Token: <input type="text" id="token">&nbsp;User id <input type="text" id="userid">&nbsp;&nbsp;&nbsp;<img src="img/add.png"></div>
                     
