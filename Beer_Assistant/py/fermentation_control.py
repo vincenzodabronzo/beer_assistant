@@ -94,7 +94,7 @@ while(mashing):
                 GPIO.output(pinCool, GPIO.HIGH)
         
             
-            print "[1 Mashing opened]"
+            print "[1 Fermentation opened]"
             print "Temp (Celsius)"
             print temp
             print "Max temp"

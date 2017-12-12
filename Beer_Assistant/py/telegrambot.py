@@ -61,6 +61,9 @@ def on_chat_message(msg):
         elif command == 'joke':
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
+        elif command == 'status':
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
+            bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
@@ -79,9 +82,34 @@ def on_callback_query(msg):
     
     if query_data=='mashing':
         bot.sendMessage(chat_id, 'Here\'s mashing status:')
+        
     elif query_data=='fermentation':
         bot.sendMessage(chat_id, 'Here\'s fermentation status:')
         bot.sendMessage(chat_id, 'Blop blop blop...')
+        
+        sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, ft.beer_temp, ft.timestamp FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id INNER JOIN fermentation_temp AS ft ON fc.id = ft.id WHERE fc.id=1 ORDER BY ft.timestamp DESC LIMIT 1""")
+        cur.execute(sql,)
+        rows = cur.fetchall()
+    
+        if row in rows:
+                temp_max = row[1]
+                temp_min = row[2]
+                force_heat = row[3]
+                force_cool = row[4]
+                temp = row[5]
+                
+                print "[1 Fermentation opened]"
+                print "Temp (Celsius)"
+                print temp
+                print "Max temp"
+                print temp_max
+                print "Min temp"
+                print temp_min            
+                print "Heat"
+                print heat
+                print "Cool"
+                print cool
+        
     elif query_data=='info':
         ts = time.time()
         bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
