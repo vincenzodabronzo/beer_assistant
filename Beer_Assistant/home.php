@@ -17,7 +17,7 @@
 
 			$.ajax( 'lib/telegrambot_control.php?command=getinfo ');
 
-			if( $('#telegra_bot').text() =="1" {
+			if( $('#telegra_bot').text() =="1" ) {
 				$('#bot_on').attr('checked', 'checked');
 			} else {
 				$('#bot_off').attr('checked', 'checked');
