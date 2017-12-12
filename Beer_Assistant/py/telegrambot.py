@@ -6,7 +6,7 @@ import MySQLdb
 import random
 from sys import exit
 
-putenv('PYTHONPATH=/home/pi/.local/lib/python2.7/site-packages');
+os.putenv('PYTHONPATH=/home/pi/.local/lib/python2.7/site-packages');
 
 import telepot
 from telepot.loop import MessageLoop
