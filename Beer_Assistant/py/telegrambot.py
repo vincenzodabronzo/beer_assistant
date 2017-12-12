@@ -88,7 +88,7 @@ def on_callback_query(msg):
         cur.execute(sql,)
         rows = cur.fetchall()
     
-        if row in rows:
+        for row in rows:
                 temp_max = row[1]
                 temp_min = row[2]
                 force_heat = row[3]
