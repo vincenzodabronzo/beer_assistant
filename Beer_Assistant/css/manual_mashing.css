@@ -1,0 +1,141 @@
+body {
+    /* background: url("../img/hops_background.png") no-repeat top center; */
+	
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 15px;
+	letter-spacing: 0.8px;
+	word-spacing: -0.2px;
+	color: #000000;
+	font-weight: 400;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+
+.m_select {
+	text-align: center;
+}
+
+#batch_title {
+	text-align: center;
+}
+
+#command {
+	text-align: center;
+}
+
+button#stop {
+      margin: 30px 5px 0 2px;
+      padding: 16px 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: none;
+      background: #c60000;
+      color: white;
+      cursor: pointer;
+    }
+    
+#footer {
+	text-align: center;
+}
+
+    button#update_temp:enabled {
+      margin: 30px 5px 0 2px;
+      padding: 16px 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: none;
+      background: #318e38;
+      color: white;
+      cursor: pointer;
+    }
+    
+    button#update_temp:disabled {
+      margin: 30px 5px 0 2px;
+      padding: 16px 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: none;
+      background: #76cf7c;
+      color: white;
+      cursor: not-allowed;
+    }
+
+
+img#play:hover, img#options:hover, img#help:hover, img#calendar:hover{
+    cursor: pointer;
+}
+
+img#chart, img#share {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+}
+.control-radio .control_indicator {
+    border-radius: 50%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-radio .control_indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.control-radio input:disabled ~ .control_indicator:after {
+    background: #7b7b7b;
+}

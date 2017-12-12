@@ -6,6 +6,7 @@
      <script type="text/javascript" src="js/jquery.min.js"></script>
 	
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link href="css/home.css" rel="stylesheet" type="text/css">
 	
 	<title>Main menu</title>
 </head>
