@@ -17,6 +17,11 @@
 
 	<br>
 	
+	<?php 
+	   include_once 'vocabulary/en_general.php';
+	   echo '<b>'.$mainmenu_quote[array_rand($mainmenu_quote)].'</b>';
+	?>
+	
 	<br>
 	<div id="command">
 	<br><br>

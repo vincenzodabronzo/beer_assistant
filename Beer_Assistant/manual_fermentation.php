@@ -211,7 +211,7 @@
     		<div id="batch_title">
     			<?php
     			 $step = "fermentation";
-    			 include 'lib/get_open_batch.php';
+    			 include_once 'lib/get_open_batch.php';
     			?>
     		</div>
 		</div>
