@@ -80,7 +80,7 @@
 	     
 			<img id="telegram" src="img/telegram.png">
 				<fieldset id="bot_group">
-				<legend>Bot management: </legend>
+				<legend>Telegram Bot </legend>
     			<div class="control-group">
             
                     Bot activation<br><label class="switch" id="telegram_bot_activation" >
