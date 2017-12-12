@@ -67,12 +67,12 @@
     			<div class="control-group">
                     <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=1 );">
                         On
-                            <input type="radio" id="bot_on" name="radio_pump" disabled="disabled" />
+                            <input type="radio" id="bot_on" name="radio_pump" />
                         <div class="control_indicator"></div>
                     </label>
                     <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=0' );">
                         Off
-                            <input type="radio" id="bot_off" name="radio_pump" checked="checked" disabled="disabled"/>
+                            <input type="radio" id="bot_off" name="radio_pump" />
                         <div class="control_indicator"></div>
                     </label>
                 </div>
