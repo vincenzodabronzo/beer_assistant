@@ -19,8 +19,10 @@
 			
 			if( $('#telegram_bot').text() =="1" ) {
 				$('#bot_on').attr('checked', 'checked');
+				$('#telegram_bot_activation').prop('checked', true);
 			} else {
 				$('#bot_off').attr('checked', 'checked');
+				$('#telegram_bot_activation').prop('checked', false);
 			}
 			 
 			$('#tab_options').hide();
