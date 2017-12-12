@@ -9,10 +9,13 @@ $result = $dbconn->query("SELECT tg.token, tg.user_id FROM system_config_telegra
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()){
-        echo    '<div id="'.$row["token"].$row["userid"].'"><div>&nbsp;Token</div><div>&nbsp;'.$row["token"].'</div><div>&nbsp;User Id</div><div>&nbsp;'.$row["user_id"].'</div><div>&nbsp;<img id="img'.$row["token"].$row["userid"].'" src="img/remove.png"></div></div>
+        $token = $row["token"];
+        $userid = $row["userid"];
+        
+        echo    '<div id="'.$token.$userid.'"><div>&nbsp;Token</div><div>&nbsp;'.$token.'</div><div>&nbsp;User Id</div><div>&nbsp;'.$userid.'</div><div>&nbsp;<img id="img'.$token.$userid.'" src="img/remove.png"></div></div>
                     <script>
-                    	document.getElementById("img'.$row["token"].$row["userid"].'").addEventListener("click", function(){
-			             removeUser(\''.$row["token"].'\', \''.$row["userid"].'\');
+                    	document.getElementById("img'.$token.$userid.'").addEventListener("click", function(){
+			                removeUser(\''.$token.'\', \''.$userid.'\');
 			             });
                     </script>';
     }
