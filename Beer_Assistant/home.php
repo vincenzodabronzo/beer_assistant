@@ -82,17 +82,7 @@
 				<fieldset id="bot_group">
 				<legend>Bot management: </legend>
     			<div class="control-group">
-                    <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=1' );">
-                        On
-                      <input type="radio" id="bot_on" name="radio_bot" />
-                        <div class="control_indicator"></div>
-                    </label>
-                    <label class="control control-radio" onclick="$.ajax( 'lib/telegrambot_control.php?command=0' );">
-                        Off
-                            <input type="radio" id="bot_off" name="radio_bot" />
-                        <div class="control_indicator"></div>
-                    </label>
-                    
+            
                     Bot activation<br><label class="switch" id="telegram_bot_activation" >
                       <input type="checkbox" id="telegram_bot_input" >
                       <span class="slider round"></span>
