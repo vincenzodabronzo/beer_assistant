@@ -27,7 +27,7 @@ def on_chat_message(msg):
     command = msg['text']
     sender = msg['from']['id']
 
-    print 'Got command: %s' % command
+    print 'Received command: %s' % command
     
     if sender in id_a:
         if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
