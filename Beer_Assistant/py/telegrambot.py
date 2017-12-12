@@ -64,7 +64,6 @@ def on_chat_message(msg):
         elif command == 'status' or command == 'Status':
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
             bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
-        
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
