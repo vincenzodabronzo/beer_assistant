@@ -156,7 +156,7 @@
 
 
 				$('#tab_help').hide();
-				$('#tab_options').hide()
+				$('#tab_options').hide();
 				$('#tab_calendar').hide();
 				
 				function manageTab(name) {

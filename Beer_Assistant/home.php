@@ -15,6 +15,8 @@
 
 		$(document).ready(function() {
 
+			$('#tab_options').hide();
+
 			function manageTab(name) {
 				$('#tab_'+name).toggle( "fade" );
 				$('html, body').animate({ scrollTop: $('#tab_'+name).offset().top }, 'slow');
