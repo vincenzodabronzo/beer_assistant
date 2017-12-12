@@ -18,7 +18,7 @@ name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 token = '458737458:AAHskrQVsMN32bBeexZcruDK3x9hz8vmhaY'
 TelegramBot = telepot.Bot(token)
 
-id_a = [1141049290]
+id_a = [114104929]
 loop = 1
 
 # print TelegramBot.getMe()
