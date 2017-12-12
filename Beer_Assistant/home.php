@@ -42,7 +42,7 @@
 					active = "1";
 				}
 				
-				$.ajax( 'lib/telegrambot_control.php?command='+active );
+				$('#show_data').load( 'lib/telegrambot_control.php?command='+active );
 				
 			});
 			
