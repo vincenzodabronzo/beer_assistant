@@ -5,6 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
     
