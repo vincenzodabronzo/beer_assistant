@@ -33,18 +33,8 @@ button#stop {
       color: white;
       cursor: pointer;
     }
-    
 
-#header{
-	clear: left;
-	width: 100%;
-	background: #c82828;
-	color: #0080c0;
-	text-align: center;
-	padding: 4px 0;
-}
-
-    button#update_temp:enabled {
+button#update_temp:enabled {
       margin: 30px 5px 0 2px;
       padding: 16px 40px;
       border-radius: 5px;
@@ -55,7 +45,7 @@ button#stop {
       cursor: pointer;
     }
     
-    button#update_temp:disabled {
+button#update_temp:disabled {
       margin: 30px 5px 0 2px;
       padding: 16px 40px;
       border-radius: 5px;
