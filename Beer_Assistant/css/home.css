@@ -34,8 +34,14 @@ button#stop {
       cursor: pointer;
     }
     
-#footer {
+
+#header{
+	clear: left;
+	width: 100%;
+	background: #c82828;
+	color: #FFF;
 	text-align: center;
+	padding: 4px 0;
 }
 
     button#update_temp:enabled {
