@@ -15,6 +15,14 @@
 
 			var ctx = $("#myChart");
 			
+			data: [{
+		        x: 10,
+		        y: 20
+		    }, {
+		        x: 15,
+		        y: 10
+		    }]
+		    
 			new Chart(ctx, {
 			    type: 'line',
 			    data: data,
