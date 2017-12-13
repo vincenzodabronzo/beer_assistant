@@ -50,6 +50,8 @@
 
 <body>
 
+<div id="header">Welcome !</div>
+
 <div id="maincontainer">
 
 
