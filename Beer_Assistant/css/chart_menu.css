@@ -15,7 +15,6 @@ body {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	/* width: 450px; */
 }
 
 li.mashing_list_item {
@@ -23,8 +22,8 @@ li.mashing_list_item {
 	margin: 3px 3px 3px 0;
 	padding: 1px;
 	float: left;
-	width: 100px;
-	height: 90px;
+	width: 80px;
+	height: 80px;
 	font-size: 3em;
 	text-align: center;
 }
