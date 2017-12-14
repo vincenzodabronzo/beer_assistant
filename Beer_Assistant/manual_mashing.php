@@ -128,6 +128,8 @@
 					
 				} else {
 
+					$('#batch_name_container').html( $('#batch_name_loaded').text() );
+					
 					$('#receipe_info').hide();
 
 					$('#update_temp').removeAttr('disabled');
@@ -159,7 +161,8 @@
 
 				document.getElementById("play").addEventListener("click", function(){				
 					if( $('#batch_id').text() == "0" ) {
-    					$('#batch_title').load( 'lib/start_mashing.php?'+"receipe_name="+$('#receipe_name').val()+"&upper_limit="+$('#temp_select_group').val() );
+						var batch_name = $('#batch_name').val().replace(/\s/g, "%20");
+    					$('#batch_title').load( 'lib/start_mashing.php?'+"receipe_name="+batch_name+"&upper_limit="+$('#temp_select_group').val() );
     					location.reload()
 					} else {
 						endMashing(); 
@@ -219,6 +222,8 @@
         <div id="gauge" class="gauge"></div>
       </div>
     </div>
+
+<div id="batch_name_container">Name: <input id="batch_name" type="text" maxlength="255"></div>
     <br>
     
     <div id="m_select" class="m_select">
