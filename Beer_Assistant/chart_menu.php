@@ -35,9 +35,8 @@
     <li><a href="#tabs-2">Fermentation</a></li>
   </ul>
   <div id="tabs-1">
-  	<p>Mashing graphs
-  	
-
+  	<p>Mashing graphs</p> 
+  	<div>
       	<ul id="mashing_list">
           <li class="mashing_list_item">1</li>
           <li class="mashing_list_item">2</li>
@@ -52,8 +51,10 @@
           <li class="mashing_list_item">11</li>
           <li class="mashing_list_item">12</li>
     	</ul>
-
-</p>  
+	</div>
+	
+	<div style="clear:both; float:none"></div>
+ 
   	
   </div>
   <div id="tabs-2">
