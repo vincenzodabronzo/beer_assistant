@@ -161,6 +161,9 @@
 </div>
 
 <br><br>
+<div id="footer"><a href="home.php"><img id="home" src="img/home.png"></a></div>
+<br><br>
+<br><br>
 <div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank"><img id="logo" src="img/logo.png"></a></div>
 <br><br>		
 
