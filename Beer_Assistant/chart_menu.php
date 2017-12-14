@@ -38,12 +38,9 @@
   	<p>Mashing graphs available:</p> 
   	<div>
       	<ul id="mashing_list" class="list">
-          <li class="list_item">1</li>
-          <li class="list_item">2</li>
-          <li class="list_item">3</li>
-          <li class="list_item">4</li>
-          <li class="list_item">5</li>
-          <li class="list_item">6</li>
+			<?php 
+			 $step = "mashing";
+			 include 'lib/load_graph.php'; ?>
     	</ul>
 	</div>
 	

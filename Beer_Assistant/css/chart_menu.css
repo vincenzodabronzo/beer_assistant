@@ -19,6 +19,7 @@ ul.list {
 
 li.list_item {
 	background: #e1e1e1;
+	/* margin: top right bottom left  */
 	margin: 3px 3px 3px 0;
 	padding: 1px;
 	float: left;
@@ -26,16 +27,8 @@ li.list_item {
 	height: 120px;
 	text-align: center;
 	
-	/* font-size: 3em; 
-	margin: 0;
-	
-    position: absolute;
-    */
-    
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+	/* font-size: 3em;  */  
+
 }
     
 
