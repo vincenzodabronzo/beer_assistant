@@ -139,12 +139,11 @@
 					
 				} else {
 
+					$('#batch_name_container').html( $('#batch_name_loaded').val() );
 					
 					$('#receipe_info').hide();
-
 					$('#update_temp').removeAttr('disabled');
 					$('#update_temp').text('Click to update');
-
 					$('#heat_auto').removeAttr('disabled');
 					$('#heat_on').removeAttr('disabled');
 					$('#heat_off').removeAttr('disabled');					
