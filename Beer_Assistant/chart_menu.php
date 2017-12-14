@@ -54,6 +54,7 @@
 						var timestamp = [];
 						var temperature = [];
 
+						
 						for(var i in data) {
 							timestamp.push(data[i].timestamp);
 							temperature.push(data[i].temperature);
