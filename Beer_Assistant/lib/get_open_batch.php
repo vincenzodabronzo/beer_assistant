@@ -25,9 +25,9 @@ if ($result->num_rows > 0) {
     if ($row = $result->fetch_assoc()){
         
         if($step=="fermentation") {
-            echo '<b>'.$fermentation_quote[array_rand($fermentation_quote)].'</b><br><br><div id="batch_id" '.$display.'>'. $row['id'] .'</div> ';
+            echo '<b>'.$fermentation_quote[array_rand($fermentation_quote)].'</b><br><br><div id="batch_id" '.$display.'>'. $row['id'] .'</div><div id="batch_name_loaded" '.$display.'>'. $row['name'] .'</div>';
         } else if ($step=="mashing") {
-            echo '<b>'.$mashing_quote[array_rand($mashing_quote)].'</b><br><br><div id="batch_id" '.$display.'">'. $row['id'] .'</div> ';
+            echo '<b>'.$mashing_quote[array_rand($mashing_quote)].'</b><br><br><div id="batch_id" '.$display.'">'. $row['id'] .'</div><div id="batch_name_loaded" '.$display.'>'. $row['name'] .'</div>';
         }
         
     } 

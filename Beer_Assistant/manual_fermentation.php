@@ -139,6 +139,7 @@
 					
 				} else {
 
+					
 					$('#receipe_info').hide();
 
 					$('#update_temp').removeAttr('disabled');
