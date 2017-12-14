@@ -80,9 +80,14 @@
 						]
 					};
 
+					var intro = null;
+					if(step=="mashing") {
+						intro = "(Mashing)";
+					} else intro = "(Fermentation)";
+
 					$('#chart').remove(); // this is my <canvas> element
 					$('#chart_container').append('<canvas id="chart"><canvas>');
-					$('#header').text( '('+step.charAt(0).toUpperCase()+') '+$('#'+id ).text() );
+					$('#header').text( intro+' '+$('#'+id ).text() );
 					
 					var ctx = $("#chart");
 
