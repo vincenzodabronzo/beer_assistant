@@ -65,7 +65,7 @@
 							labels: timestamp,
 							datasets: [
 								{
-									label: "temperature",
+									label: "Temperature \xB0C",
 									fill: false,
 									lineTension: 0.1,
 									backgroundColor: "rgba(59, 89, 152, 0.75)",
