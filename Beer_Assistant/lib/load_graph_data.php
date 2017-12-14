@@ -8,7 +8,7 @@ define('DB_USERNAME', 'pi');
 define('DB_PASSWORD', 'raspberry');
 define('DB_NAME', 'dbeer');
 
-$id = 0;
+$id = 14;
 
 if($_GET["step"] != "") {
     $id = $_GET["id"];
