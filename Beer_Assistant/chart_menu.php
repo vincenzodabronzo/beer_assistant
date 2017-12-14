@@ -77,6 +77,13 @@
 							]
 						};
 
+						var ctx = $("#chart");
+
+						var LineGraph = new Chart(ctx, {
+							type: 'line',
+							data: data
+						});
+
 					},
 					error : function(data) {
 						alert("Unable to load chart data");
