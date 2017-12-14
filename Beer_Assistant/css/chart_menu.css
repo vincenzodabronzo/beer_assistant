@@ -11,28 +11,15 @@ body {
 	text-transform: none;
 }
 
-.m_select {
+li.mashing_list_item {
+	margin: 3px 3px 3px 0;
+	padding: 1px;
+	float: left;
+	width: 100px;
+	height: 90px;
+	font-size: 4em;
 	text-align: center;
 }
-
-#batch_title {
-	text-align: center;
-}
-
-#command {
-	text-align: center;
-}
-
-button#stop {
-      margin: 30px 5px 0 2px;
-      padding: 16px 40px;
-      border-radius: 5px;
-      font-size: 18px;
-      border: none;
-      background: #c60000;
-      color: white;
-      cursor: pointer;
-    }
     
 
 #header{
@@ -48,159 +35,3 @@ button#stop {
 	text-align: center;
 }
 
-    button#update_temp:enabled {
-      margin: 30px 5px 0 2px;
-      padding: 16px 40px;
-      border-radius: 5px;
-      font-size: 18px;
-      border: none;
-      background: #318e38;
-      color: white;
-      cursor: pointer;
-    }
-    
-    button#update_temp:disabled {
-      margin: 30px 5px 0 2px;
-      padding: 16px 40px;
-      border-radius: 5px;
-      font-size: 18px;
-      border: none;
-      background: #76cf7c;
-      color: white;
-      cursor: not-allowed;
-    }
-
-
-img#options:hover, img#telegram:hover, img.remove_user, img.add_user {
-    cursor: pointer;
-}
-
-
-.control {
-    font-family: arial;
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 5px;
-    padding-top: 3px;
-    cursor: pointer;
-    font-size: 16px;
-}
-    .control input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-.control_indicator {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background: #e6e6e6;
-    border: 0px solid #000000;
-}
-.control-radio .control_indicator {
-    border-radius: 50%;
-}
-
-.control:hover input ~ .control_indicator,
-.control input:focus ~ .control_indicator {
-    background: #cccccc;
-}
-
-.control input:checked ~ .control_indicator {
-    background: #2aa1c0;
-}
-.control:hover input:not([disabled]):checked ~ .control_indicator,
-.control input:checked:focus ~ .control_indicator {
-    background: #0e6647d;
-}
-.control input:disabled ~ .control_indicator {
-    background: #e6e6e6;
-    opacity: 0.6;
-    pointer-events: none;
-}
-.control_indicator:after {
-    box-sizing: unset;
-    content: '';
-    position: absolute;
-    display: none;
-}
-.control input:checked ~ .control_indicator:after {
-    display: block;
-}
-.control-radio .control_indicator:after {
-    left: 7px;
-    top: 7px;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background: #ffffff;
-}
-.control-radio input:disabled ~ .control_indicator:after {
-    background: #7b7b7b;
-}
-
-
-
-
-
-
-
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {display:none;}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
