@@ -42,7 +42,7 @@
 			});
 
 			// chart.update();
-			getChartData(21, data);
+			getChartData(34, data);
 			// chart.update();
 			
 			function getChartData(id, data) {
