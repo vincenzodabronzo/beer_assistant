@@ -20,9 +20,9 @@
 			
 			var data = null;
 			
-			var options = null;/*{
+			var options = {
 					maintainAspectRatio: false,
-					spanGaps: false,
+					spanGaps: false /*,
 					scales: {
 			            yAxes: [{
 			                ticks: {
@@ -31,7 +31,7 @@
 			                    stepSize: 0.5
 			                }
 			            }]
-			        }
+			        } */
 					
 				};
 
