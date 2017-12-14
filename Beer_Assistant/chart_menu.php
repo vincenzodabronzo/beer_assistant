@@ -85,7 +85,7 @@
 							data: data,
 							options: {
 									maintainAspectRatio: false,
-									spanGaps: false,
+									spanGaps: false /*,
 									scales: {
 							            yAxes: [{
 							                ticks: {
@@ -93,7 +93,7 @@
 							                    suggestedMin: 0
 							                }
 							            }]
-							        }
+							        } */
 							}
 						});
 
