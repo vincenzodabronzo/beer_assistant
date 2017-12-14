@@ -17,6 +17,7 @@
 		$(document).ready(function() {
 			$( "#tabs" ).tabs();
 
+			
 			var data = null;
 			
 			var options = {
@@ -41,9 +42,9 @@
 				options: options
 			});
 
-			// chart.update();
-			getChartData(34, "fermentation");
-			// chart.update();
+
+			
+
 			
 	});
 
