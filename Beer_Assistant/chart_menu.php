@@ -82,7 +82,19 @@
 
 						var LineGraph = new Chart(ctx, {
 							type: 'line',
-							data: data
+							data: data,
+							options: {
+									maintainAspectRatio: false,
+									spanGaps: false,
+									scales: {
+							            yAxes: [{
+							                ticks: {
+							                	max: 100,
+							                    min: 0,
+							                    stepSize: 0.5
+							                }
+							            }]
+							        }
 						});
 
 					},
