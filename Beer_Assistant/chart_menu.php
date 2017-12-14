@@ -35,7 +35,7 @@
     <li><a href="#tabs-2">Fermentation</a></li>
   </ul>
   <div id="tabs-1">
-  	<p>Mashing graphs</p> 
+  	<p>Mashing graphs available:</p> 
   	<div>
       	<ul id="mashing_list">
           <li class="mashing_list_item">1</li>
@@ -58,7 +58,7 @@
   	
   </div>
   <div id="tabs-2">
-	<p>Fermentation graphs</p>  
+	<p>Fermentation graphs available:</p>  
   </div>
 
 </div>
