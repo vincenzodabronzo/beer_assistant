@@ -1,7 +1,7 @@
 <?php
     // ini_set('display_errors', 'On');
     
-    $receipe_name = $_GET["receipe_name"];
+    $receipe_name = urldecode( $_GET["receipe_name"] );
     $target_temp = $_GET["upper_limit"];
     
     $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
