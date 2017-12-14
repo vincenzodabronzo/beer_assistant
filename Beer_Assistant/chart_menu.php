@@ -15,7 +15,20 @@
 
 		$(document).ready(function() {
 			$( "#tabs" ).tabs();
+
+			var data = null;
 			
+			var options = {
+					maintainAspectRatio: false,
+					spanGaps: false
+					
+				};
+
+			var chart = new Chart('chart', {
+				type: 'line',
+				data: data,
+				options: options
+			});
 	});
 </script>
 	
@@ -28,6 +41,10 @@
 <br>
 
 <div id="maincontainer">
+
+	<div id="chart_container">
+		<canvas id="chart"></canvas>
+	</div>
 
 <div id="tabs">
   <ul>
