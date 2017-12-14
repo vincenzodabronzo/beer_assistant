@@ -35,6 +35,9 @@
 					
 				};
 
+			$('#chart').remove(); // this is my <canvas> element
+			$('#chart_container').append('<canvas id="chart"><canvas>');
+			
 
 			var chart = new Chart('chart', {
 				type: 'line',
