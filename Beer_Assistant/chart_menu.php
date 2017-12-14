@@ -70,7 +70,7 @@
 							{
 								label: "Temperature \xB0C",
 								fill: false,
-								lineTension: 0.1,
+								lineTension: 0,
 								backgroundColor: "rgba(59, 89, 152, 0.75)",
 								borderColor: "rgba(59, 89, 152, 1)",
 								pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
@@ -87,8 +87,7 @@
 						data: data,
 						options: {
 								maintainAspectRatio: false,
-								spanGaps: false,
-								bezierCurve : false /*,
+								spanGaps: false /*,
 								scales: {
 						            yAxes: [{
 						                ticks: {
