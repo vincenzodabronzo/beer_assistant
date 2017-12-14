@@ -21,7 +21,7 @@ if(!$mysqli){
 	die("Connection failed: " . $mysqli->error);
 }
 
-echo '"SELECT timestamp, temperature FROM ".$step."_temp WHERE id=".$id';
+echo '"SELECT timestamp, temperature FROM '.$step.'_temp WHERE id='.$id;
 
 //query to get data from the table
 $query = sprintf("SELECT timestamp, temperature FROM ".$step."_temp WHERE id=".$id);
