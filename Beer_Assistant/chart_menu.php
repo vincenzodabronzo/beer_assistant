@@ -21,9 +21,18 @@
 			
 			var options = {
 					maintainAspectRatio: false,
-					spanGaps: false
+					spanGaps: false,
+					scales: {
+			            yAxes: [{
+			                ticks: {
+			                    suggestedMin: 0.0
+			                    suggestedMax: 100.0
+			                }
+			            }]
+			        }
 					
 				};
+
 
 			var chart = new Chart('chart', {
 				type: 'line',
