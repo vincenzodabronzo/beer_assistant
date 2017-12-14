@@ -87,7 +87,8 @@
 						data: data,
 						options: {
 								maintainAspectRatio: false,
-								spanGaps: false /*,
+								spanGaps: false,
+								bezierCurve : false /*,
 								scales: {
 						            yAxes: [{
 						                ticks: {
