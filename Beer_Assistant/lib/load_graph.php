@@ -1,6 +1,10 @@
 <?php 
 
-$step = $_GET["step"];
+// ini_set('display_errors', 'On');
+
+if($_GET["step"] != "") {
+    $step = $_GET["step"];
+}
 
 $dbconn =  new mysqli('localhost', 'pi', 'raspberry', 'dbeer');
 if($dbconn->connect_error) {
