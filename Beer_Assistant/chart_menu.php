@@ -42,7 +42,7 @@
 			});
 
 			// chart.update();
-			getChartData(32, "fermentation");
+			getChartData(34, "fermentation");
 			// chart.update();
 			
 			function getChartData(id, step) {
