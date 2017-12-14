@@ -15,7 +15,7 @@
 	     <script type="text/javascript">
 
 		$(document).ready(function() {
-			// $( "#tabs" ).tabs();
+			$( "#tabs" ).tabs();
 
 			
 			var data = null;
