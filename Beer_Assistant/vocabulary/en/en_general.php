@@ -13,7 +13,7 @@ $mainmenu_quote = array(
     "B.E.E.R. - Brew Enjoy Empty Repeat",
     "Beer: Life is Brewtiful",
     "I want someone to look at me the way I look Beer",
-    "Two Beer or not to Beer (Shakesbeer)",
+    "Two Beer or not two Beer (Shakesbeer)",
     "Beer is good, but beers are better"
 );
 
