@@ -89,8 +89,8 @@
 									scales: {
 							            yAxes: [{
 							                ticks: {
-							                	max: 100,
-							                    min: 0
+							                	suggestedMax: 100,
+							                    suggestedMin: 0
 							                }
 							            }]
 							        }
