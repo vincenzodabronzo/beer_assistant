@@ -20,7 +20,7 @@
 			
 			var data = null;
 			
-			var options = {
+			var options = null;/*{
 					maintainAspectRatio: false,
 					spanGaps: false,
 					scales: {
@@ -42,7 +42,7 @@
 				options: options
 			});
 
-
+*/
 			
 
 			
