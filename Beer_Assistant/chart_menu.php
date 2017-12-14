@@ -37,20 +37,22 @@
   <div id="tabs-1">
   	<p>Mashing graphs</p>  
   	
-  	<ul id="mashing_list">
-      <li class="mashing_list_item">1</li>
-      <li class="mashing_list_item">2</li>
-      <li class="mashing_list_item">3</li>
-      <li class="mashing_list_item">4</li>
-      <li class="mashing_list_item">5</li>
-      <li class="mashing_list_item">6</li>
-      <li class="mashing_list_item">7</li>
-      <li class="mashing_list_item">8</li>
-      <li class="mashing_list_item">9</li>
-      <li class="mashing_list_item">10</li>
-      <li class="mashing_list_item">11</li>
-      <li class="mashing_list_item">12</li>
-	</ul>
+  	<div>
+      	<ul id="mashing_list">
+          <li class="mashing_list_item">1</li>
+          <li class="mashing_list_item">2</li>
+          <li class="mashing_list_item">3</li>
+          <li class="mashing_list_item">4</li>
+          <li class="mashing_list_item">5</li>
+          <li class="mashing_list_item">6</li>
+          <li class="mashing_list_item">7</li>
+          <li class="mashing_list_item">8</li>
+          <li class="mashing_list_item">9</li>
+          <li class="mashing_list_item">10</li>
+          <li class="mashing_list_item">11</li>
+          <li class="mashing_list_item">12</li>
+    	</ul>
+  	</div>
   	
   </div>
   <div id="tabs-2">
