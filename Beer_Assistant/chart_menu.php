@@ -70,7 +70,7 @@
 									borderColor: "rgba(59, 89, 152, 1)",
 									pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
 									pointHoverBorderColor: "rgba(59, 89, 152, 1)",
-									data: facebook_follower
+									data: temperature
 								}
 							]
 						};
