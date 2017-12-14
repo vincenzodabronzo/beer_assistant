@@ -45,64 +45,66 @@
 			getChartData(34, "fermentation");
 			// chart.update();
 			
-			function getChartData(id, step) {
-				$.ajax({
-					url : "lib/load_graph_data.php?id="+id+"&step="+step,
-					type : "GET",
-					success : function(data){
-						console.log(data);
-
-						var timestamp = [];
-						var temperature = [];
-
-						
-						for(var i in data) {
-							timestamp.push(data[i].timestamp);
-							temperature.push(data[i].temperature);
-						}
-
-						data = {
-							labels: timestamp,
-							datasets: [
-								{
-									label: "Temperature \xB0C",
-									fill: false,
-									lineTension: 0.1,
-									backgroundColor: "rgba(59, 89, 152, 0.75)",
-									borderColor: "rgba(59, 89, 152, 1)",
-									pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
-									pointHoverBorderColor: "rgba(59, 89, 152, 1)",
-									data: temperature
-								}
-							]
-						};
-
-						var ctx = $("#chart");
-
-						var LineGraph = new Chart(ctx, {
-							type: 'line',
-							data: data,
-							options: {
-									maintainAspectRatio: false,
-									spanGaps: false /*,
-									scales: {
-							            yAxes: [{
-							                ticks: {
-							                	suggestedMax: 100,
-							                    suggestedMin: 0
-							                }
-							            }]
-							        } */
-							}
-						});
-
-					},
-					error : function(data) {
-						alert("Unable to load chart data");
-					}
-				});
-			}
 	});
+
+		function getChartData(id, step) {
+			$.ajax({
+				url : "lib/load_graph_data.php?id="+id+"&step="+step,
+				type : "GET",
+				success : function(data){
+					console.log(data);
+
+					var timestamp = [];
+					var temperature = [];
+
+					
+					for(var i in data) {
+						timestamp.push(data[i].timestamp);
+						temperature.push(data[i].temperature);
+					}
+
+					data = {
+						labels: timestamp,
+						datasets: [
+							{
+								label: "Temperature \xB0C",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor: "rgba(59, 89, 152, 0.75)",
+								borderColor: "rgba(59, 89, 152, 1)",
+								pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
+								pointHoverBorderColor: "rgba(59, 89, 152, 1)",
+								data: temperature
+							}
+						]
+					};
+
+					var ctx = $("#chart");
+
+					var LineGraph = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+								maintainAspectRatio: false,
+								spanGaps: false /*,
+								scales: {
+						            yAxes: [{
+						                ticks: {
+						                	suggestedMax: 100,
+						                    suggestedMin: 0
+						                }
+						            }]
+						        } */
+						}
+					});
+
+				},
+				error : function(data) {
+					alert("Unable to load chart data");
+				}
+			});
+		}
+		
 </script>
 	
 	<title>Chart menu</title>
