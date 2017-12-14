@@ -197,6 +197,9 @@
 
 <body>
 
+<div id="header">Mashing</div>
+<br>
+
 <div id="maincontainer">
 
 	<br>

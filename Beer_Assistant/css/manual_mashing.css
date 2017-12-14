@@ -13,6 +13,15 @@ body {
 	text-transform: none;
 }
 
+#header{
+	clear: left;
+	width: 100%;
+	background: #3582bb;
+	color: #ffffff;
+	text-align: center;
+	padding: 4px 0;
+}
+
 .m_select {
 	text-align: center;
 }
