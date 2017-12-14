@@ -1,7 +1,7 @@
 <?php
     // ini_set('display_errors', 'On');
     
-    $receipe_name = $_GET["receipe_name"];
+    $receipe_name = str_replace(' ', '%20', $_GET["receipe_name"]);
     $upper_limit = $_GET["upper_limit"];
     $lower_limit = $_GET["lower_limit"];
 
