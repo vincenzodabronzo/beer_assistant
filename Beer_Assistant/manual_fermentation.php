@@ -123,7 +123,6 @@
 					  g.refresh(n);
 				}
 
-				   
 				
 				if ( $('#batch_id').text() == "0" ) {
 					$('#update_temp').attr('disabled', 'disabled');
@@ -229,6 +228,8 @@
       </div>
     </div>
     <br>
+    
+    <div id="batch_name_container">Name: <input id="batch_name" type="text"></div>
     
     <div id="m_select" class="m_select">
    		 Max <div id="max_temp_dashboard" style="display: inline">25.0</div>&nbsp;&deg;C 
