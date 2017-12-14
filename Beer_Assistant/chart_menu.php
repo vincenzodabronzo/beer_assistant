@@ -43,7 +43,8 @@
 			// chart.update();
 			
 			getChartData(21, data);
-
+			chart.update();
+			
 			function getChartData(id, data) {
 				$.ajax({
 					url : "lib/load_graph_data.php?id="+id,
