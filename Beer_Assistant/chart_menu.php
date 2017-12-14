@@ -39,7 +39,7 @@
   </div>
   <div id="tabs-2">
 	<p>Fermentation graphs</p>  
-	</div>
+  </div>
 
 </div>
 
