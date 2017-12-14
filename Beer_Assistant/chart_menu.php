@@ -60,7 +60,7 @@
 
 					
 					for(var i in data) {
-						timestamp.push( data[i].timestamp.slice(5) );
+						timestamp.push( data[i].timestamp );
 						temperature.push(data[i].temperature);
 					}
 
