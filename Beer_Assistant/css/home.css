@@ -44,6 +44,10 @@ button#stop {
 	padding: 4px 0;
 }
 
+#footer{
+	text-align: center;
+}
+
     button#update_temp:enabled {
       margin: 30px 5px 0 2px;
       padding: 16px 40px;
