@@ -56,7 +56,7 @@
 	
 	  	<div>
       	<ul id="fermentation_list" class="list">
-			<?php include 'lib/load_graph.php'; ?>
+			<?php include 'lib/load_graph.php?step=fermentation'; ?>
     	</ul>
     	
 	</div>
