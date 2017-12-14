@@ -31,8 +31,9 @@
 <div id="footer"><a href="https://github.com/vincenzodabronzo/beer_assistant" target="_blank"><img id="logo" src="img/logo.png"></a></div>
 <br><br>		
 
-	<div class="data" id="show_data" style="display: none;"  >
-    </div>           
+	<div class="data" id="show_data" style="display: none;" >  </div>           
+
+</div>
 
 </body>
 
