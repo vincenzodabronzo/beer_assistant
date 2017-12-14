@@ -30,6 +30,10 @@ li.list_item {
 	text-align: center;
 	cursor: pointer;
 	
+	border-style: solid;
+    border-width: thin;
+    border-color: #3582bb;
+	
 	/* font-size: 3em;  */  
 
 }
@@ -42,6 +46,7 @@ li.list_item {
 	color: #ffffff;
 	text-align: center;
 	padding: 4px 0;
+    
 }
 
 #footer{
