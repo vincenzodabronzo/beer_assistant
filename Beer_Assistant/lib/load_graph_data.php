@@ -8,11 +8,8 @@ define('DB_USERNAME', 'pi');
 define('DB_PASSWORD', 'raspberry');
 define('DB_NAME', 'dbeer');
 
-$id = "";
-
-if($_GET["id"] != "") {
-    $id = $_GET["id"];
-}
+$id = $_GET["id"];
+$step = $_GET["step"];
 
 //get connection
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -22,7 +19,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT timestamp, temperature FROM mashing_temp WHERE id=".$id);
+$query = sprintf("SELECT timestamp, temperature FROM ".$step."_temp WHERE id=".$id);
 
 //execute query
 $result = $mysqli->query($query);

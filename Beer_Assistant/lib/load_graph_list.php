@@ -17,7 +17,7 @@ $result = $dbconn->query("SELECT b.id, b.name, c.starting_time FROM  ".$step."_c
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()){
-        echo    ' <li id="'.$row['id'].'" class="list_item"><br>'.$row['starting_time'].'<br>'.$row['name'].'</li>';
+        echo    ' <li id="'.$row['id'].'" class="list_item" onclick="getChartData()"><br>'.$row['starting_time'].'<br>'.$row['name'].'</li>';
     }
 } else {
     echo '(No Graphs available)' ;
