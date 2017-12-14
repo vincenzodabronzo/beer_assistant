@@ -82,6 +82,7 @@
 
 					$('#chart').remove(); // this is my <canvas> element
 					$('#chart_container').append('<canvas id="chart"><canvas>');
+					$('#header').text( $('#'+id ).text() );
 					
 					var ctx = $("#chart");
 
