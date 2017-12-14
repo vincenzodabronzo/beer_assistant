@@ -39,6 +39,48 @@
 				data: data,
 				options: options
 			});
+
+			// chart.update();
+			
+			getChartData(21, data);
+
+			function getChartData(id, data) {
+				$.ajax({
+					url : "lib/load_graph_data?id="+id,
+					type : "GET",
+					success : function(data){
+						console.log(data);
+
+						var timestamp = [];
+						var temperature = [];
+
+						for(var i in data) {
+							timestamp.push(data[i].timestamp);
+							temperature.push(data[i].temperature);
+						}
+
+						data = {
+							labels: timestamp,
+							datasets: [
+								{
+									label: "temperature",
+									fill: false,
+									lineTension: 0.1,
+									backgroundColor: "rgba(59, 89, 152, 0.75)",
+									borderColor: "rgba(59, 89, 152, 1)",
+									pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
+									pointHoverBorderColor: "rgba(59, 89, 152, 1)",
+									data: facebook_follower
+								}
+							]
+						};
+
+					},
+					error : function(data) {
+						alert("Unable to load chart data");
+					}
+				});
+			}
 	});
 </script>
 	
@@ -67,7 +109,7 @@
       	<ul id="mashing_list" class="list">
 			<?php 
 			 $step = "mashing";
-			 include 'lib/load_graph.php'; ?>
+			 include 'lib/load_graph_list.php'; ?>
     	</ul>
 	</div>
 	
@@ -82,7 +124,7 @@
       	<ul id="fermentation_list" class="list">
 			<?php 
 			 $step = "fermentation";
-			 include 'lib/load_graph.php'; ?>
+			 include 'lib/load_graph_list.php'; ?>
     	</ul>
         </div>
         
