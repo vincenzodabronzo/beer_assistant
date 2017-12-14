@@ -139,7 +139,7 @@
 					
 				} else {
 
-					$('#batch_name_container').html( $('#batch_name_loaded').val() );
+					$('#batch_name_container').html( $('#batch_name_loaded').text() );
 					
 					$('#receipe_info').hide();
 					$('#update_temp').removeAttr('disabled');
