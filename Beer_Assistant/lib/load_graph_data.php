@@ -8,7 +8,9 @@ define('DB_USERNAME', 'pi');
 define('DB_PASSWORD', 'raspberry');
 define('DB_NAME', 'dbeer');
 
-$id = "14";
+if($_GET["step"] != "") {
+    $id = $_GET["id"];
+}
 
 //get connection
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);

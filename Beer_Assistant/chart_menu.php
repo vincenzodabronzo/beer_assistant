@@ -42,9 +42,8 @@
 			});
 
 			// chart.update();
-			
 			getChartData(21, data);
-			chart.update();
+			// chart.update();
 			
 			function getChartData(id, data) {
 				$.ajax({
