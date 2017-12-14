@@ -46,7 +46,7 @@
 
 			function getChartData(id, data) {
 				$.ajax({
-					url : "lib/load_graph_data?id="+id,
+					url : "lib/load_graph_data.php?id="+id,
 					type : "GET",
 					success : function(data){
 						console.log(data);
