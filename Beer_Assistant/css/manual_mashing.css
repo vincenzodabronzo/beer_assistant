@@ -26,7 +26,7 @@ body {
 	text-align: center;
 }
 
-#batch_title {
+#batch_title, #batch_name_container {
 	text-align: center;
 }
 
