@@ -25,7 +25,7 @@
 					scales: {
 			            yAxes: [{
 			                ticks: {
-			                    suggestedMin: 0
+			                    suggestedMin: 0,
 			                    suggestedMax: 100
 			                }
 			            }]
