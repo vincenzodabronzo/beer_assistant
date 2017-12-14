@@ -330,7 +330,9 @@
     </div>
     
     
-
+<br><br>
+<div id="footer"><a href="home.php"><img id="home" src="img/home.png"></a></div>
+<br><br>
 
 
 <br><br>
