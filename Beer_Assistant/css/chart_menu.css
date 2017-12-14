@@ -19,7 +19,7 @@ body {
 }
 
 li.mashing_list_item {
-	background-color: #e1e1e1;
+	background: #e1e1e1;
 	margin: 3px 3px 3px 0;
 	padding: 1px;
 	float: left;
