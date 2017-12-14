@@ -60,8 +60,10 @@
 			 $step = "fermentation";
 			 include 'lib/load_graph.php'; ?>
     	</ul>
-    	
-	</div>
+        </div>
+        
+        <div style="clear:both; float:none"></div>
+	
   </div>
 
 </div>
