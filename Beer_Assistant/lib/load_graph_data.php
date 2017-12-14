@@ -1,4 +1,7 @@
 <?php
+
+ini_set('display_errors', 'On');
+
 //setting header to json
 header('Content-Type: application/json');
 
