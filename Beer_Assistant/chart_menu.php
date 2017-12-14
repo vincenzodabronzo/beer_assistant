@@ -36,7 +36,7 @@
   </ul>
   <div id="tabs-1">
   	<p>Mashing graphs</p> 
-  	<div>
+  	<div class="center">
       	<ul id="mashing_list">
           <li class="mashing_list_item">1</li>
           <li class="mashing_list_item">2</li>
