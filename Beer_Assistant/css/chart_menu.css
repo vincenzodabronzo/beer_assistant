@@ -19,8 +19,9 @@ ul.list {
 
 li.list_item {
 	/* background: #8ebdcc;
-	margin: top right bottom left  */
-	background: #ffffff;
+	margin: top right bottom left  
+	background: #ffffff;*/
+	background: #e1eef7;
 	color: #3582bb;
 	margin: 3px 3px 3px 0;
 	padding: 1px;
