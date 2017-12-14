@@ -11,13 +11,13 @@ body {
 	text-transform: none;
 }
 
-#mashing_list { 
+ul.list { 
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-li.mashing_list_item {
+li.list_item {
 	background: #e1e1e1;
 	margin: 3px 3px 3px 0;
 	padding: 1px;
