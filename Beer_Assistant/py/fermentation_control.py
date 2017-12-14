@@ -106,7 +106,7 @@ while(mashing):
             print "Cool"
             print cool
             
-            sql = ("""INSERT INTO fermentation_temp (timestamp, id, beer_temp, heated, cooled) VALUES (CURRENT_TIMESTAMP,%s,%s,%s,%s)""",(id, temp, heat, cool))
+            sql = ("""INSERT INTO fermentation_temp (timestamp, id, temperature, heated, cooled) VALUES (CURRENT_TIMESTAMP,%s,%s,%s,%s)""",(id, temp, heat, cool))
             
             try:
                 # Execute the SQL command

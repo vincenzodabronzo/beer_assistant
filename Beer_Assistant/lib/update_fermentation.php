@@ -14,13 +14,13 @@
     }
     
     
-    $result = $dbconn->query("SELECT ba.id, ba.name, ft.beer_temp, ft.timestamp, ft.heated, ft.cooled, fc.starting_time, fc.ending_time, fc.cooler, fc.heater, fs.temp_max, fs.temp_min  FROM batch AS ba INNER JOIN fermentation_temp as ft ON ba.id = ft.id INNER JOIN fermentation_config AS fc ON ft.id = fc.id INNER JOIN fermentation_step as fs ON fc.id = fs.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
+    $result = $dbconn->query("SELECT ba.id, ba.name, ft.temperature, ft.timestamp, ft.heated, ft.cooled, fc.starting_time, fc.ending_time, fc.cooler, fc.heater, fs.temp_max, fs.temp_min  FROM batch AS ba INNER JOIN fermentation_temp as ft ON ba.id = ft.id INNER JOIN fermentation_config AS fc ON ft.id = fc.id INNER JOIN fermentation_step as fs ON fc.id = fs.id WHERE ba.id=".$id." ORDER BY timestamp DESC LIMIT 1");
     
     
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             echo    '  Temperature &deg;C:
-                <div id="fermentation_temp">' . $row['beer_temp'] . '</div>
+                <div id="fermentation_temp">' . $row['temperature'] . '</div>
                 Max temp &deg;C:
                 <div id="max_temp">' . $row['temp_max'] . '</div>
                 Min temp &deg;C:
