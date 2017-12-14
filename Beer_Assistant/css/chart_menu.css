@@ -22,8 +22,8 @@ li.mashing_list_item {
 	margin: 3px 3px 3px 0;
 	padding: 1px;
 	float: left;
-	width: 80px;
-	height: 80px;
+	width: 120px;
+	height: 120px;
 	font-size: 3em;
 	text-align: center;
 }
@@ -39,10 +39,6 @@ li.mashing_list_item {
 }
 
 #footer{
-	text-align: center;
-}
-
-.center {
 	text-align: center;
 }
 
