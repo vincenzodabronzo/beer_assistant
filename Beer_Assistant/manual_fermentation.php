@@ -229,7 +229,7 @@
     </div>
     
     
-    <div id="batch_name_container">Name: <input id="batch_name" type="text"></div>
+    <div id="batch_name_container">Name: <input id="batch_name" type="text" maxlength="255"></div>
     <br>
     
     <div id="m_select" class="m_select">
