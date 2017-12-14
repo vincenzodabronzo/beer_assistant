@@ -34,9 +34,6 @@
 			        } */
 					
 				};
-
-			$('#chart').remove(); // this is my <canvas> element
-			$('#chart_container').append('<canvas id="chart"><canvas>');
 			
 
 			var chart = new Chart('chart', {
@@ -83,6 +80,9 @@
 						]
 					};
 
+					$('#chart').remove(); // this is my <canvas> element
+					$('#chart_container').append('<canvas id="chart"><canvas>');
+					
 					var ctx = $("#chart");
 
 					var LineGraph = new Chart(ctx, {
