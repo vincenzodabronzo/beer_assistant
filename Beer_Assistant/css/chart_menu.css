@@ -18,8 +18,10 @@ ul.list {
 }
 
 li.list_item {
-	background: #8ebdcc;
-	/* margin: top right bottom left  */
+	/* background: #8ebdcc;
+	margin: top right bottom left  */
+	background: #3582bb;
+	color: #ffffff;
 	margin: 3px 3px 3px 0;
 	padding: 1px;
 	float: left;
