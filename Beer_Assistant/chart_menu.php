@@ -107,6 +107,8 @@
 	<div id="chart_container">
 		<canvas id="chart"></canvas>
 	</div>
+	
+<br><br>
 
 <div id="tabs">
   <ul>
