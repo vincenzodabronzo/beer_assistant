@@ -19,4 +19,5 @@
     
     echo    $receipe_name.'<div id="batch_id">'. $id .'</div> ';
     
+    
 ?>
