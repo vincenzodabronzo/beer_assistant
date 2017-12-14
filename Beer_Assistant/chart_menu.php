@@ -90,8 +90,7 @@
 							            yAxes: [{
 							                ticks: {
 							                	max: 100,
-							                    min: 0,
-							                    stepSize: 0.5
+							                    min: 0
 							                }
 							            }]
 							        }
