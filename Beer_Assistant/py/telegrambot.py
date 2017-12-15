@@ -5,6 +5,7 @@ import time
 import MySQLdb
 import random
 from os.path import dirname
+from subprocess import call
 
 # os.putenv('PYTHONPATH=/home/pi/.local/lib/python2.7/site-packages');
 sys.path.append('/home/pi/.local/lib/python2.7/site-packages/telepot')
@@ -62,12 +63,12 @@ def on_chat_message(msg):
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         elif command == 'status' or command == 'Status':
-            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Shutdown', callback_data='shutdown')], ])
             bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
-            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Info', callback_data='info')], ])
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Shutdown', callback_data='shutdown')], ])
             bot.sendMessage(chat_id, 'Wanna check beer status instead?', reply_markup=keyboard)
             # Include command list
         
@@ -93,9 +94,9 @@ def on_callback_query(msg):
                 heated = row[3]
                 pump = row[4]
                 temp = row[2]
-            bot.sendMessage(chat_id, '[Mashing opened]\n\nTemp(Celsius): %s\nTarget temp: %s\nHeated: %s\nPump: %s' % (temp, target_temp, heated, pump) )
+            bot.sendMessage(chat_id, '[Mashing started]\n\nTemp(Celsius): %s\nTarget temp: %s\nHeated: %s\nPump: %s' % (temp, target_temp, heated, pump) )
         else:
-            bot.sendMessage(chat_id, "No mashing opened" )
+            bot.sendMessage(chat_id, "No mashing started" )
         
         bot.answerCallbackQuery( query_id, text="Mashing" )
         
@@ -115,15 +116,17 @@ def on_callback_query(msg):
                     heated = row[3]
                     cooled = row[4]
                     temp = row[5]
-            bot.sendMessage(chat_id, '[Fermentation opened]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
+            bot.sendMessage(chat_id, '[Fermentation started]\n\nTemp(Celsius): %s\nTemp max: %s\nTemp min: %s\nHeated: %s\nCooled: %s' % (temp, temp_max, temp_min, heated, cooled) )
         else:
-            bot.sendMessage(chat_id, "No fermentation opened" )
+            bot.sendMessage(chat_id, "No fermentation started" )
         
         bot.answerCallbackQuery( query_id, text="Fermentation" )    
         
-    elif query_data=='info':
-        ts = time.time()
-        bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
+    elif query_data=='shutdown':
+        bot.sendMessage(chat_id, "Bye Bye %s" % random.choice(name_a) )
+        call("sudo shutdown -h now", shell=True)
+        #ts = time.time()
+        #bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
 
 bot = telepot.Bot(token)
  #MessageLoop(bot, {'chat': on_chat_message}).run_as_thread(); # if chat, execute chat function.
