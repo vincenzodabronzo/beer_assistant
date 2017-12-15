@@ -12,6 +12,7 @@ All the folders listed below are not required when running Beer Assistant in pro
 * _recycle_bin (used during deveolpment to recover parts of working code)
 * _test (used to test developed code)
 * txt (including addional information)
+
 Remaining folders are all required to run Beer Assistant.
 
 
