@@ -124,7 +124,7 @@ def on_callback_query(msg):
         
     elif query_data=='shutdown':
         bot.sendMessage(chat_id, "Bye Bye %s" % random.choice(name_a) )
-        os.system("sudo shutdown -h now")
+        os.system("sudo shutdown now")
         #ts = time.time()
         #bot.answerCallbackQuery(query_id, text=datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')) #messaggio a comparsa
 
