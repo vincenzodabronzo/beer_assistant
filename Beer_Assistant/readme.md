@@ -11,7 +11,7 @@ All the folders listed below are not required when running Beer Assistant in pro
 * _recycle_bin (used during deveolpment to recover parts of working code)
 * _test (used to test developed code)
 * circuit_schematics (containing images of electronic parts wiring)
-* txt (including addional information)
+* txt (including addional information such as DB)
 
 Remaining folders are all required to run Beer Assistant.
 
