@@ -93,7 +93,7 @@
 				}
 			 
 				function doUpdate() {
-	                    <?php shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/mashing_control.py > /dev/null 2>/dev/null &"); ?> 
+	                    <?php shell_exec("python py/mashing_control.py > /dev/null 2>/dev/null &"); ?> 
 						$('#show_data').load('lib/update_mashing.php?id='+$('#batch_id').text());
 
 						$('#target_temp_dashboard').text( $('#target_temp').text() );

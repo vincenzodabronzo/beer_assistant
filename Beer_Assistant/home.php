@@ -1,4 +1,4 @@
-<?php  shell_exec("python /var/www/html/beer_assistant/Beer_Assistant/py/telegrambot.py > /dev/null 2>/dev/null &"); ?>
+<?php  shell_exec("python py/telegrambot.py > /dev/null 2>/dev/null &"); ?>
 <!DOCTYPE html>
 <html>
 <head>
