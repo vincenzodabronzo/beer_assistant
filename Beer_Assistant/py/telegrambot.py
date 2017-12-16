@@ -56,6 +56,7 @@ def remove_init_zero(str):
         str = str[1:]
         remove_init_zero(str)
     else:
+        print '(Return) Command transformed: %s' % str
         return str
 
 def to_upper(oldList):
@@ -91,7 +92,7 @@ def on_chat_message(msg):
             command = command.replace(" ", "")
             print 'Command transformed: %s' % command
             command = remove_init_zero(command)
-            print 'Command transformed: %s' % command
+            print '(finak) Command transformed: %s' % command
             
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
