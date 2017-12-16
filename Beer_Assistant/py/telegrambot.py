@@ -23,6 +23,7 @@ name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 id = 1
 token = ""
 id_a = []
+
 # id_a = [114104929]
 
 # Variables for MySQL
@@ -61,6 +62,7 @@ def on_chat_message(msg):
     command = str(msg['text'].upper())
     sender = msg['from']['id']
     print 'Received command: %s' % command
+    command_des = command
         
     if str(sender) in id_a:
         hi_A = hi_a
@@ -74,6 +76,23 @@ def on_chat_message(msg):
         elif command == 'STATUS':
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Shutdown', callback_data='shutdown')], ])
             bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
+        elif command.startswith('BJCP'):
+            print '(processed as BJCP)'
+            command.replace("BJCP","")
+            print 'Command transformed: %s' % command
+            command.replace(" ", "")
+            print 'Command transformed: %s' % command
+            ############
+            db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
+            cur = db.cursor()
+            sql = ("""SELECT * FROM bjcp_style WHERE code='%s'""", (command, ))
+            cur.execute(*sql)
+            rows = cur.fetchall()
+            if cur.rowcount!=0:
+                 bot.sendMessage(chat_id, '1 Record found:')
+            else:
+                 bot.sendMessage(chat_id, 'Sorry pal, I wasn\'t able to find anything')
+            
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
