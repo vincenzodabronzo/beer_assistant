@@ -58,7 +58,7 @@ def to_upper(oldList):
 
 def on_chat_message(msg):
     chat_id = msg['chat']['id']
-    command = msg['text'].upper()
+    command = str(msg['text'].upper())
     sender = msg['from']['id']
     print 'Received command: %s' % command
         
