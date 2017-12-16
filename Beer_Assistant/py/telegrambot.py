@@ -18,7 +18,7 @@ from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 import singleton
 me = singleton.SingleInstance()
 
-hi_a = ['Ciao','Hi','Hi there!','Hello','Hi Sweety', 'Hello Sir']
+hi_a = ['Ciao','Hi','Hi there!','Hello','Hi Sweety', 'Hello Sir', 'Yo']
 name_a = ['Sweety','Sweetheart','Princess','Darling','Honey']
 id = 1
 token = ""
@@ -51,13 +51,13 @@ loop = 1
 
 def on_chat_message(msg):
     chat_id = msg['chat']['id']
-    command = msg['text']
+    command = msg['text'].upper()
     sender = msg['from']['id']
 
     print 'Received command: %s' % command
         
     if str(sender) in id_a:
-        if command == 'hi' or command == 'Hi' or command == 'hello' or command == 'Hello' or command == 'ciao' or command == 'Ciao' or command == 'Hei' or command == 'hei':
+        if command == 'HI' or command == 'HELLO' or command == 'CIAO' or command == 'HEI' or command == 'YO':
             bot.sendMessage(chat_id, random.choice (hi_a))
         elif command == 'joke':
             # os.system("sudo python /home/pi/tg/apricancello.py")
