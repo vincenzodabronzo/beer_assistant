@@ -65,7 +65,7 @@ def on_chat_message(msg):
         hi_A = hi_a
         to_upper(hi_A)
         
-        if command == "HI" or command== "HELLO" or command == "CIAO":
+        if command in hi_A:
             bot.sendMessage(chat_id, random.choice (hi_a))
         elif command == 'JOKE':
             # os.system("sudo python /home/pi/tg/apricancello.py")
