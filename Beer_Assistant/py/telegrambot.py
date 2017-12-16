@@ -51,14 +51,13 @@ loop = 1
 '''
 
 def remove_init_zero(str):
-    print '(Remove zero) Command transformed: %s' % str
     if str.startswith('0'):
         str = str[1:]
         remove_init_zero(str)
     else:
-        print '(Return) Command transformed: %s' % str
         return str
-
+    return str
+    
 def to_upper(oldList):
     newList = []
     for element in oldList:
