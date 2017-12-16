@@ -51,12 +51,8 @@ loop = 1
 '''
 
 def remove_init_zero(str):
-    print 'Current string : %s' % str
-    if str.startswith('0'):
+    while str.startswith('0'):
         str = str[1:]
-        remove_init_zero(str)
-    else:
-        return str
     return str
     
 def to_upper(oldList):
