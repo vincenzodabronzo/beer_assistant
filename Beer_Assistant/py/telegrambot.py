@@ -78,14 +78,14 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
         elif command.startswith('BJCP'):
             print '(processed as BJCP)'
-            command.replace("BJCP","")
+            command = command.replace("BJCP","")
             print 'Command transformed: %s' % command
-            command.replace(" ", "")
+            command = command.replace(" ", "")
             print 'Command transformed: %s' % command
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
-            sql = ("""SELECT * FROM bjcp_style WHERE code='%s'""", (command, ))
+            sql = ("""SELECT * FROM bjcp_style WHERE code=’%s’""", (command, ))
             cur.execute(*sql)
             rows = cur.fetchall()
             if cur.rowcount!=0:
