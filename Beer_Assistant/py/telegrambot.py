@@ -54,8 +54,6 @@ def remove_init_zero(str):
     if str.startswith('0'):
         str = str[1:]
         remove_init_zero(str)
-    else:
-        return str
     return str
     
 def to_upper(oldList):
