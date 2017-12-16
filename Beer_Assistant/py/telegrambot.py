@@ -49,17 +49,17 @@ loop = 1
         print "FERMENTATION - Found 1 active batch with id:"
 '''
 
-def on_chat_message(msg):
-    chat_id = msg['chat']['id']
-    command = msg['text'].upper()
-    sender = msg['from']['id']
-    print 'Received command: %s' % command
-    
 def to_upper(oldList):
     newList = []
     for element in oldList:
         newList.append(element.upper())
     return newList
+
+def on_chat_message(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text'].upper()
+    sender = msg['from']['id']
+    print 'Received command: %s' % command
         
     if str(sender) in id_a:
         hi_A = hi_a
