@@ -51,6 +51,7 @@ loop = 1
 '''
 
 def remove_init_zero(str):
+    print '(Remove zero) Command transformed: %s' % str
     if str.startswith('0'):
         str = str[1:]
         remove_init_zero(str)
