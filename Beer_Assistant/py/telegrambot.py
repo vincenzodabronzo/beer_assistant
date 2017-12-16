@@ -99,7 +99,7 @@ def on_chat_message(msg):
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
-            sql = ("""SELECT TRIM(LEADING '0' FROM code), category_name, style_name FROM bjcp_style WHERE code=%s""", ( remove_init_zero(command) , ))
+            sql = ("""SELECT * FROM bjcp_style WHERE code=`%s`""", ( remove_init_zero(command) , ))
             cur.execute(*sql)
             rows = cur.fetchall()
             if cur.rowcount!=0:
