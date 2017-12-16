@@ -93,13 +93,15 @@ def on_chat_message(msg):
             print 'Command transformed: %s' % command
             # command = remove_init_zero(command)
             # print '(Final) Command transformed: %s' % command
-            print '(Final) Command transformed: %s' % remove_init_zero(command)
-            print '(Final) Command transformed: %s' % remove_init_zero(command)
+            # print '(Final) Command transformed: %s' % remove_init_zero(command)
             
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
             sql = ("SELECT * FROM bjcp_style WHERE code='%s'", ( remove_init_zero(command) , ))
+            
+            print 'Query: %s' % sql
+            
             cur.execute(*sql)
             rows = cur.fetchall()
             if cur.rowcount!=0:
