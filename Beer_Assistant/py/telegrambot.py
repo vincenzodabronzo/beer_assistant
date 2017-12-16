@@ -65,12 +65,14 @@ def to_upper(oldList):
         hi_A = hi_a
         to_upper(hi_A)
         
-        if command.upper() in id_A:
+        COM = command.upper()
+        
+        if COM == "HI" or COM == "HELLO" or COM == "CIAO":
             bot.sendMessage(chat_id, random.choice (hi_a))
-        elif command.upper() == 'JOKE':
+        elif COM == 'JOKE':
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
-        elif command.upper() == 'STATUS':
+        elif COM == 'STATUS':
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Shutdown', callback_data='shutdown')], ])
             bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
         else:
