@@ -89,7 +89,7 @@ def on_chat_message(msg):
             cur.execute(*sql)
             rows = cur.fetchall()
             if cur.rowcount!=0:
-                 bot.sendMessage(chat_id, '1 Record found:')
+                 bot.sendMessage(chat_id, '%s Description:' % command)
             else:
                  bot.sendMessage(chat_id, 'Sorry pal, I wasn\'t able to find anything')
             
