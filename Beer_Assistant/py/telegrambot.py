@@ -65,7 +65,7 @@ def to_upper(oldList):
         hi_A = hi_a
         to_upper(hi_A)
         
-        if command.upper()  in id_A:
+        if command.upper() in id_A:
             bot.sendMessage(chat_id, random.choice (hi_a))
         elif command.upper() == 'JOKE':
             # os.system("sudo python /home/pi/tg/apricancello.py")
