@@ -88,10 +88,7 @@ def on_chat_message(msg):
         elif command.startswith('BJCP'):
             print '(processed as BJCP)'
             command = command.replace("BJCP","")
-            print 'Command transformed: %s' % command
             command = command.replace(" ", "")
-            print 'Command transformed: %s' % command
-            # command = remove_init_zero(command)
             # print '(Final) Command transformed: %s' % command
             # print '(Final) Command transformed: %s' % remove_init_zero(command)
             command = remove_init_zero(command)
@@ -99,7 +96,7 @@ def on_chat_message(msg):
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
             sql = ("SELECT * FROM bjcp_style WHERE code='%s'", ( command , ))
-            sql_string = "SELECT * FROM bjcp_style WHERE code='%s'" %  command
+            sql_string = "SELECT * FROM bjcp_style WHERE code=%s" %  command
             
             print 'Query: %s' % sql_string
             
