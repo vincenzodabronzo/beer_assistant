@@ -50,6 +50,13 @@ loop = 1
         print "FERMENTATION - Found 1 active batch with id:"
 '''
 
+def remove_init_zero(str):
+    if str.startswith('0'):
+        str = str[1:]
+        remove_init_zero(str)
+    else:
+        return str
+
 def to_upper(oldList):
     newList = []
     for element in oldList:
@@ -82,10 +89,13 @@ def on_chat_message(msg):
             print 'Command transformed: %s' % command
             command = command.replace(" ", "")
             print 'Command transformed: %s' % command
+            command = remove_init_zero(command)
+            print 'Command transformed: %s' % command
+            
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
-            sql = ("""SELECT * FROM bjcp_style WHERE code=%s""", (command, ))
+            sql = ("""SELECT TRIM(LEADING '0' FROM code), category_name, style_name FROM bjcp_style WHERE code=%s""", (command, ))
             cur.execute(*sql)
             rows = cur.fetchall()
             if cur.rowcount!=0:
