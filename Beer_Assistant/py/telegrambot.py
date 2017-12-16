@@ -99,8 +99,9 @@ def on_chat_message(msg):
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
             sql = ("SELECT * FROM bjcp_style WHERE code='%s'", ( remove_init_zero(command) , ))
+            sql_string = "SELECT * FROM bjcp_style WHERE code='%s'" %  remove_init_zero(command)
             
-            print 'Query: %s' % sql
+            print 'Query: %s' % sql_string
             
             cur.execute(*sql)
             rows = cur.fetchall()
