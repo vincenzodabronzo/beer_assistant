@@ -91,13 +91,14 @@ def on_chat_message(msg):
             print 'Command transformed: %s' % command
             command = command.replace(" ", "")
             print 'Command transformed: %s' % command
-            command = remove_init_zero(command)
-            print '(finak) Command transformed: %s' % command
+            # command = remove_init_zero(command)
+            # print '(Final) Command transformed: %s' % command
+            print '(Final) Command transformed: %s' % remove_init_zero(command)
             
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
             cur = db.cursor()
-            sql = ("""SELECT TRIM(LEADING '0' FROM code), category_name, style_name FROM bjcp_style WHERE code=%s""", (command, ))
+            sql = ("""SELECT TRIM(LEADING '0' FROM code), category_name, style_name FROM bjcp_style WHERE code=%s""", ( remove_init_zero(command) , ))
             cur.execute(*sql)
             rows = cur.fetchall()
             if cur.rowcount!=0:
