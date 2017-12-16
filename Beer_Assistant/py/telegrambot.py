@@ -53,16 +53,24 @@ def on_chat_message(msg):
     chat_id = msg['chat']['id']
     command = msg['text'].upper()
     sender = msg['from']['id']
-
     print 'Received command: %s' % command
+    
+def to_upper(oldList):
+    newList = []
+    for element in oldList:
+        newList.append(element.upper())
+    return newList
         
     if str(sender) in id_a:
-        if command == 'HI' or command == 'HELLO' or command == 'CIAO' or command == 'HEI' or command == 'YO':
+        hi_A = hi_a
+        to_upper(hi_A)
+        
+        if command.upper()  in id_A:
             bot.sendMessage(chat_id, random.choice (hi_a))
-        elif command == 'joke':
+        elif command.upper() == 'JOKE':
             # os.system("sudo python /home/pi/tg/apricancello.py")
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
-        elif command == 'status' or command == 'Status':
+        elif command.upper() == 'STATUS':
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Shutdown', callback_data='shutdown')], ])
             bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
         else:
