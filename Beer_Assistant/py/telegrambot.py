@@ -94,6 +94,7 @@ def on_chat_message(msg):
             # command = remove_init_zero(command)
             # print '(Final) Command transformed: %s' % command
             print '(Final) Command transformed: %s' % remove_init_zero(command)
+            print '(Final) Command transformed: %s' % remove_init_zero(command)
             
             ############
             db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
