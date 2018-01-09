@@ -25,6 +25,9 @@ body {
 .m_select {
 	text-align: center;
 }
+.b_select {
+	text-align: center;
+}
 
 #batch_title, #batch_name_container {
 	text-align: center;
