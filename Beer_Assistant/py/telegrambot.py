@@ -49,11 +49,6 @@ loop = 1
     for row in rows:
         print "FERMENTATION - Found 1 active batch with id:"
 '''
-
-def remove_init_zero(str):
-    while str.startswith('0'):
-        str = str[1:]
-    return str
     
 def to_upper(oldList):
     newList = []
