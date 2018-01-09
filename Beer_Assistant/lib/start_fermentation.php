@@ -16,8 +16,8 @@
     
     $id = $dbconn->insert_id;
     
-    $dbconn->query("INSERT INTO fermentation_config(id, starting_time, upper_buffer, lower_buffer) VALUES ( '".$id."', CURRENT_TIMESTAMP, '".$upper_buffer."', '".$lower_buffer."' ) " );
-    $dbconn->query("INSERT INTO fermentation_step(id, temp_min, temp_max, step_number) VALUES ( '".$id."', '".$lower_limit."', '".$upper_limit."', '1' ) " );
+    $dbconn->query("INSERT INTO fermentation_config(id, starting_time) VALUES ( '".$id."', CURRENT_TIMESTAMP ) " );
+    $dbconn->query("INSERT INTO fermentation_step(id, temp_min, temp_max, step_number, upper_buffer, lower_buffer) VALUES ( '".$id."', '".$lower_limit."', '".$upper_limit."', '1', '".$upper_buffer."', '".$lower_buffer."' ) " );
     
     echo    $receipe_name.'<div id="batch_id">'. $id .'</div> ';
     
