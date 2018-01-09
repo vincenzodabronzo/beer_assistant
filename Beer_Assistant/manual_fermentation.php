@@ -275,6 +275,16 @@
         		</select>
         		<button id="update_temp" data-role="button">Update Max and Min</button>
 	    </div>
+	    <div id="b_select" class="b_select">
+       			<label for="upperb_select_group">Upper buffer (mins)</label>
+        		<select id="upperb_select_group">
+        		</select>
+        		&nbsp;&nbsp;&nbsp;
+        		<label for="lowerb_select_group">Lower buffer (mins)</label>
+        		<select id="lowerb_select_group">
+        		</select>
+        		<button id="update_boundaries" data-role="button">Update Boundaries</button>
+	    </div>
 
 			<fieldset id="heat_group">
 				<legend>Heater management: </legend>
