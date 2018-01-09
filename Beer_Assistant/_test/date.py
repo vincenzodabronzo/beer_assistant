@@ -3,7 +3,7 @@ import datetime
 ts = '2013-01-12 15:27:43'
 f = '%Y-%m-%d %H:%M:%S'
 
-print datetime.datetime.strptime(mysql, f)
+print datetime.datetime.strptime(ts, f)
 
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
