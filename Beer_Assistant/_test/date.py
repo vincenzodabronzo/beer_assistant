@@ -22,7 +22,7 @@ else:
         print "current time maggiore"
         
 
-now_plus_buffer_more = datetime.datetime.now() + datetime.datetime.strptime(mysql, f).timedelta(minutes = 10)
+now_plus_buffer_more = datetime.datetime.strptime(ts, f) + datetime.timedelta(minutes = 10)
 
 if ( now_plus_buffer_more < now_plus_buffer ):
         print "current time minore"
