@@ -1,6 +1,6 @@
 import datetime
 
-mysql = '2013-01-12 15:27:43'
+ts = '2013-01-12 15:27:43'
 f = '%Y-%m-%d %H:%M:%S'
 
 print datetime.datetime.strptime(mysql, f)
