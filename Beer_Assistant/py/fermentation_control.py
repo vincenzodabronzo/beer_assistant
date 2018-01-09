@@ -89,10 +89,6 @@ while(mashing):
             lower_buffer_mins = row[7]
             lower_last_off = row[8]
             
-            '''
-                sql = ("""UPDATE fermentation_step SET upper_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
-                    cur.execute(*sql)
-            '''
             f = '%Y-%m-%d %H:%M:%S'
             
             # Checking current temperature (single step)
@@ -126,11 +122,33 @@ while(mashing):
                         cur.execute(*sql)           
                 
             if ( (temp>temp_max and force_cool!=0 ) or force_cool==1 ):
-                cool = 1
-                GPIO.output(pinCool, GPIO.LOW)
+                
+                can_turnon_cooler = 0
+                if(lower_last_off is None):
+                    ## update last on with current time
+                    can_turnon_cooler = 1
+                elif ( lower_last_off+datetime.timedelta(minutes=int(lower_buffer_mins)) <= datetime.datetime.now()):
+                    can_turnon_cooler = 1
+                else:
+                    can_turnon_cooler = 0
+                
+                if(can_turnon_cooler or force_cool==1):               
+                    cool = 1
+                    GPIO.output(pinCool, GPIO.LOW)                
+
             else:
                 cool = 0
                 GPIO.output(pinCool, GPIO.HIGH)
+                
+                  # Check if heat was 1 and if so turn to zero and update last_off
+                sql = ("""SELECT cooled FROM `fermentation_temp` WHERE id=%s ORDER BY timestamp DESC LIMIT 1""", (id, ))
+                cur.execute(*sql)
+                result_heat = cur.fetchall()
+                for result_cool_1 in result_cool:
+                    # Last time was turned on before being switched off
+                    if (result_cool_1[0]==1):
+                        sql = ("""UPDATE fermentation_step SET lower_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
+                        cur.execute(*sql)                   
         
             
             print "[1 Fermentation opened]"
