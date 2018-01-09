@@ -294,11 +294,11 @@
 	    </div>
 	    
 	    <div id="b_select" class="b_select">
-       			<label for="upperb_select_group">Upper buffer</label>
+       			<label for="upperb_select_group">Heater buffer</label>
         		<select id="upperb_select_group">
         		</select>
         		&nbsp;&nbsp;&nbsp;
-        		<label for="lowerb_select_group">Lower buffer</label>
+        		<label for="lowerb_select_group">Cooler buffer</label>
         		<select id="lowerb_select_group">
         		</select>
         		<button id="update_boundaries" data-role="button">Update Boundaries</button>
