@@ -147,7 +147,7 @@
 					$('#update_temp').attr('disabled', 'disabled');
 					$('#update_temp').text('Select Max and Min');
 					$('#update_boundaries').attr('disabled', 'disabled');
-					$('#update_boundaries').text('Select Max and Min');
+					$('#update_boundaries').text('Select Buffers');
 					
 
 					$('#play').attr('src', 'img/play.png');
@@ -208,7 +208,7 @@
 						$('#update_temp').text('Select Max and Min');
 
 						$('#update_boundaries').attr('disabled', 'disabled');
-						$('#update_boundaries').text('Select Max and Min');
+						$('#update_boundaries').text('Select Buffers');
 						
 						$('#play').attr('src', 'img/play.png');
 						$('#heat_auto').attr('disabled', 'disabled');
