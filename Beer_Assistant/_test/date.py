@@ -13,6 +13,6 @@ int_buffer = int(buffer)
 
 print now
 
-now_plus_buffer = now + datetime.timedelta(minutes = 2)
+now_plus_buffer = datetime.datetime.now() + datetime.timedelta(minutes = 2)
 
 print now
