@@ -116,6 +116,10 @@
 					$.ajax( "lib/fermentationtemp_limits.php?id="+$('#batch_id').text()+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
 				});
 
+				$('#update_boundaries').click( function(){
+					$.ajax( "lib/fermentationtemp_buffers.php?id="+$('#batch_id').text()+"&upper_limit="+$('#upperb_select_group').val()+"&lower_limit="+$('#lowerb_select_group').val() );
+				});
+
 				function endFermentation() {
 					$('#show_data').load('lib/update_fermentation.php?id='+$('#batch_id').text()+'&end_fermentation=1' );
 					location.reload();
@@ -142,6 +146,9 @@
 				if ( $('#batch_id').text() == "0" ) {
 					$('#update_temp').attr('disabled', 'disabled');
 					$('#update_temp').text('Select Max and Min');
+					$('#update_boundaries').attr('disabled', 'disabled');
+					$('#update_boundaries').text('Select Max and Min');
+					
 
 					$('#play').attr('src', 'img/play.png');
 
@@ -157,8 +164,12 @@
 					$('#batch_name_container').html( $('#batch_name_loaded').text() );
 					
 					$('#receipe_info').hide();
+					
 					$('#update_temp').removeAttr('disabled');
 					$('#update_temp').text('Click to update');
+					$('#update_boundaries').removeAttr('disabled');
+					$('#update_boundaries').text('Click to update');
+					
 					$('#heat_auto').removeAttr('disabled');
 					$('#heat_on').removeAttr('disabled');
 					$('#heat_off').removeAttr('disabled');					
@@ -195,6 +206,9 @@
 						$('#receipe_info').show();
 						$('#update_temp').attr('disabled', 'disabled');
 						$('#update_temp').text('Select Max and Min');
+
+						$('#update_boundaries').attr('disabled', 'disabled');
+						$('#update_boundaries').text('Select Max and Min');
 						
 						$('#play').attr('src', 'img/play.png');
 						$('#heat_auto').attr('disabled', 'disabled');
