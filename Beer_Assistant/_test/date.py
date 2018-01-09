@@ -7,4 +7,10 @@ print datetime.datetime.strptime(mysql, f)
 
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+buffer = '8'
+
+print now
+
+now_plus_buffer = now + datetime.timedelta(minutes = buffer)
+
 print now
