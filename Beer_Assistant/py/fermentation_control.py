@@ -143,7 +143,7 @@ while(mashing):
                   # Check if heat was 1 and if so turn to zero and update last_off
                 sql = ("""SELECT cooled FROM `fermentation_temp` WHERE id=%s ORDER BY timestamp DESC LIMIT 1""", (id, ))
                 cur.execute(*sql)
-                result_heat = cur.fetchall()
+                result_cool = cur.fetchall()
                 for result_cool_1 in result_cool:
                     # Last time was turned on before being switched off
                     if (result_cool_1[0]==1):
