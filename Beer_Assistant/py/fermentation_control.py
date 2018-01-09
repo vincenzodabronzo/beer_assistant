@@ -97,7 +97,7 @@ while(mashing):
                 can_turnon_heater = 1
                 sql = ("""UPDATE fermentation_step SET upper_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
                 cur.execute(*sql)
-            elif ( datetime.datetime.strptime(upper_last_off, f)+datetime.timedelta(minutes=int(upper_buffer_mins)) <= datetime.datetime.now()):
+            elif ( upper_last_off+datetime.timedelta(minutes=int(upper_buffer_mins)) <= datetime.datetime.now()):
                 can_turnon_heater = 1
             else:
                 can_turnon_heater = 0
