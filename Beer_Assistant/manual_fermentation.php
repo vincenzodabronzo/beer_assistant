@@ -275,6 +275,7 @@
         		</select>
         		<button id="update_temp" data-role="button">Update Max and Min</button>
 	    </div>
+	    
 	    <div id="b_select" class="b_select">
        			<label for="upperb_select_group">Upper buffer (mins)</label>
         		<select id="upperb_select_group">
