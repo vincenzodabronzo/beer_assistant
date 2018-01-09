@@ -63,7 +63,7 @@ for row in rows:
 
 while(mashing):            
 
-    sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id WHERE fc.id=%s""", (id, ))
+    sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, fs.upper_buffer, fs.upper_last_on, fs.lower_buffer, fs.lower_last_on FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id WHERE fc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
@@ -77,6 +77,14 @@ while(mashing):
             
             force_heat = row[3]
             force_cool = row[4]
+            
+            upper_buffer_mins = row[5]
+            upper_last_on = row[6]
+            
+            lower_buffer_mins = row[7]
+            lower_last_on = row[8]
+            
+           ### 5 fs.upper_buffer, 6 fs.upper_last_on, 7 fs.lower_buffer, 8 fs.lower_last_on 
             
             # Checking current temperature (single step)
             if ( (temp<temp_min and force_heat!=0 ) or force_heat==1 ):
