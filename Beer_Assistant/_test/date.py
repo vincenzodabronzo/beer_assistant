@@ -20,3 +20,12 @@ if ( datetime.datetime.now() < now_plus_buffer ):
         print "current time minore"
 else:
         print "current time maggiore"
+        
+
+now_plus_buffer_more = datetime.datetime.now() + datetime.timedelta(minutes = 10)
+
+if ( now_plus_buffer_more < now_plus_buffer ):
+        print "current time minore"
+else:
+        print "current time maggiore"
+        
