@@ -16,3 +16,8 @@ now_plus_buffer = datetime.datetime.now() + datetime.timedelta(minutes = int(buf
 
 print now_plus_buffer
 print now_plus_buffer.strftime("%Y-%m-%d %H:%M:%S")
+
+if ( datetime.datetime.now() < now_plus_buffer ):
+        print "current time minore"
+else:
+        print "current time maggiore"
