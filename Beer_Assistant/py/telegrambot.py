@@ -80,29 +80,7 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, '... I run out of jokes lately ...')
         elif command == 'STATUS':
             keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Mashing', callback_data='mashing'), InlineKeyboardButton(text='Fermentation', callback_data='fermentation')], [InlineKeyboardButton(text='Shutdown', callback_data='shutdown')], ])
-            bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)
-        elif command.startswith('BJCP'):
-            print '(processed as BJCP)'
-            command = command.replace("BJCP","")
-            command = command.replace(" ", "")
-            # print '(Final) Command transformed: %s' % command
-            # print '(Final) Command transformed: %s' % remove_init_zero(command)
-            command = remove_init_zero(command)
-            ############
-            db = MySQLdb.connect(host="localhost", user="pi", passwd="raspberry", db="dbeer")
-            cur = db.cursor()
-            sql = ("SELECT * FROM bjcp_style WHERE code=%s", ( command , ))
-            sql_string = "SELECT * FROM bjcp_style WHERE code=%s" %  command
-            
-            print 'Query: %s' % sql_string
-            
-            cur.execute(*sql)
-            rows = cur.fetchall()
-            if cur.rowcount!=0:
-                 bot.sendMessage(chat_id, '%s Description:' % command)
-            else:
-                 bot.sendMessage(chat_id, 'Sorry pal, I wasn\'t able to find anything')
-            
+            bot.sendMessage(chat_id, 'Choose one of these:', reply_markup=keyboard)            
         else:
             content_type, chat_type, chat_id = telepot.glance(msg)
             bot.sendMessage(chat_id, 'mmm ... It\'s some kind of elvish... I can\'t read it...')
