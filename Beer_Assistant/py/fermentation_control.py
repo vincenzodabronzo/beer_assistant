@@ -106,9 +106,10 @@ while(mashing):
                     can_turnon_heater = 1
                 else:
                     can_turnon_heater = 0
-                               
-                heat = 1
-                GPIO.output(pinHeat, GPIO.LOW)
+                
+                if(can_turnon_heater or force_heat==1):               
+                    heat = 1
+                    GPIO.output(pinHeat, GPIO.LOW)
             else:
                 heat = 0
                 GPIO.output(pinHeat, GPIO.HIGH)
