@@ -13,6 +13,6 @@ int_buffer = int(buffer)
 
 print now
 
-now_plus_buffer = now + datetime.timedelta(minutes = int_buffer )
+now_plus_buffer = now + datetime.timedelta(minutes = int_buffer ).strftime("%Y-%m-%d %H:%M:%S")
 
 print now
