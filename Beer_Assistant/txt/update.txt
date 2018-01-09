@@ -1,0 +1,2 @@
+ALTER TABLE `fermentation_config` ADD `upper_buffer` INT UNSIGNED NULL DEFAULT NULL AFTER `cooler`, ADD `lower_buffer` INT UNSIGNED NULL DEFAULT NULL AFTER `upper_buffer`;
+
