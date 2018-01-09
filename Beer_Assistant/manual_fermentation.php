@@ -56,7 +56,7 @@
 				}
 			}
 
-			for (i = 0; i < 15; i++) { 	
+			for (i = 0; i < 16; i++) { 	
     				$('#upperb_select_group').append($('<option>', {
     				    value: i,
     				    text: i+' mins'
