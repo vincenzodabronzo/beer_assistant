@@ -403,10 +403,6 @@
     <div id="cool">--</div>
     Starting time at:
     <div id="starting_time">--</div>
-    Upper buffer: 
-    <div id="max_temp">8 mins</div>
-    Lower buffer: 
-    <div id="min_temp">8 mins</div>
  </div>
  
 
