@@ -56,6 +56,18 @@
 				}
 			}
 
+			for (i = 0; i < 15; i++) { 	
+    				$('#upperb_select_group').append($('<option>', {
+    				    value: i,
+    				    text: i+' mins'
+    				}));
+    				
+    				$('#lowerb_select_group').append($('<option>', {
+    				    value: i,
+    				    text: i+' mins'
+    				}));
+			}
+
 			$('#min_select_group').append($('<option>', {
 			    value: '40.0' ,
 			    text: '40.0 \xB0C'
@@ -63,6 +75,9 @@
 
 			$('#max_select_group').val( '25.0' );
 			$('#min_select_group').val( '18.0' );
+			$('#upperb_select_group').val( '8' );
+			$('#lowerb_select_group').val( '8' );
+			
 
 			$( function() {
 			    $( "#tabs" ).tabs();
