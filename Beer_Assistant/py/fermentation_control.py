@@ -16,6 +16,7 @@ TODOS:
 
 import MySQLdb
 import time
+import datetime
 from w1thermsensor import W1ThermSensor 
 #from _mysql import NULL
 import RPi.GPIO as GPIO
@@ -60,6 +61,8 @@ for row in rows:
     print id
     mashing = 1
 
+### Get current time
+now = datetime.datetime.now()
 
 while(mashing):            
 
@@ -80,9 +83,10 @@ while(mashing):
             
             upper_buffer_mins = row[5]
             upper_last_on = row[6]
-            
             lower_buffer_mins = row[7]
             lower_last_on = row[8]
+            
+            
             
            ### 5 fs.upper_buffer, 6 fs.upper_last_on, 7 fs.lower_buffer, 8 fs.lower_last_on 
             
