@@ -301,7 +301,7 @@
         		<label for="lowerb_select_group">Cooler buffer</label>
         		<select id="lowerb_select_group">
         		</select>
-        		<button id="update_boundaries" data-role="button">Update Boundaries</button>
+        		<button id="update_boundaries" data-role="button">Update buffers</button>
 	    </div>
 
 			<fieldset id="heat_group">
