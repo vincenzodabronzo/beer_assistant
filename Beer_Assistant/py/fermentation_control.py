@@ -88,29 +88,40 @@ while(mashing):
             upper_last_off = row[6]
             lower_buffer_mins = row[7]
             lower_last_off = row[8]
-        
+            
+            '''
+                sql = ("""UPDATE fermentation_step SET upper_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
+                    cur.execute(*sql)
+            '''
             f = '%Y-%m-%d %H:%M:%S'
             
-            can_turnon_heater = 0
-            if(upper_last_off is None):
-                ## update last on with current time
-                can_turnon_heater = 1
-                sql = ("""UPDATE fermentation_step SET upper_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
-                cur.execute(*sql)
-            elif ( upper_last_off+datetime.timedelta(minutes=int(upper_buffer_mins)) <= datetime.datetime.now()):
-                can_turnon_heater = 1
-            else:
-                can_turnon_heater = 0
-           
-            
             # Checking current temperature (single step)
-            if ( (temp<temp_min and force_heat!=0 and can_turnon_heater) or force_heat==1 ):                   
+            if ( (temp<temp_min and force_heat!=0) or force_heat==1 ):    
+
+                can_turnon_heater = 0
+                if(upper_last_off is None):
+                    ## update last on with current time
+                    can_turnon_heater = 1
+                elif ( upper_last_off+datetime.timedelta(minutes=int(upper_buffer_mins)) <= datetime.datetime.now()):
+                    can_turnon_heater = 1
+                else:
+                    can_turnon_heater = 0
+                               
                 heat = 1
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
                 heat = 0
                 GPIO.output(pinHeat, GPIO.HIGH)
                 
+                # Check if heat was 1 and if so turn to zero and update last_off
+                sql = ("""SELECT heated FROM `fermentation_temp` WHERE id=%s ORDER BY timestamp DESC LIMIT 1""", (id, ))
+                cur.execute(*sql)
+                result_heat = cur.fetchall()
+                for result_heat_1 in result_heat:
+                    # Last time was turned on before being switched off
+                    if (result_heat_1[0]==1):
+                        sql = ("""UPDATE fermentation_step SET upper_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
+                        cur.execute(*sql)           
                 
             if ( (temp>temp_max and force_cool!=0 ) or force_cool==1 ):
                 cool = 1
