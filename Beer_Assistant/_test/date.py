@@ -16,3 +16,4 @@ print now
 now_plus_buffer = datetime.datetime.now() + datetime.timedelta(minutes = int_buffer)
 
 print now_plus_buffer
+print now_plus_buffer.strftime("%Y-%m-%d %H:%M:%S")
