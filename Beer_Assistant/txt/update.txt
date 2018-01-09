@@ -1,1 +1,3 @@
 ALTER TABLE `fermentation_step` ADD `upper_buffer` INT UNSIGNED NULL DEFAULT NULL AFTER `step_number`, ADD `upper_last_on` TIMESTAMP NULL DEFAULT NULL AFTER `upper_buffer`, ADD `lower_buffer` INT UNSIGNED NULL DEFAULT NULL AFTER `upper_last_on`, ADD `lower_last_on` TIMESTAMP NULL DEFAULT NULL AFTER `lower_buffer`;
+
+ALTER TABLE `fermentation_step` CHANGE `upper_last_on` `upper_last_off` TIMESTAMP NULL DEFAULT NULL, CHANGE `lower_last_on` `lower_last_off` TIMESTAMP NULL DEFAULT NULL;

@@ -66,7 +66,7 @@ now = datetime.datetime.now()
 
 while(mashing):            
 
-    sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, fs.upper_buffer, fs.upper_last_on, fs.lower_buffer, fs.lower_last_on FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id WHERE fc.id=%s""", (id, ))
+    sql = ("""SELECT fc.ending_time, fs.temp_max, fs.temp_min, fc.heater, fc.cooler, fs.upper_buffer, fs.upper_last_off, fs.lower_buffer, fs.lower_last_off FROM fermentation_config AS fc INNER JOIN fermentation_step AS fs ON fc.id = fs.id WHERE fc.id=%s""", (id, ))
     cur.execute(*sql)
     rows = cur.fetchall()
     
@@ -74,6 +74,9 @@ while(mashing):
     
     for row in rows:
         if(row[0] is None):
+            
+
+            
             temp = getTemp()
             temp_max = row[1]
             temp_min = row[2]
@@ -82,21 +85,32 @@ while(mashing):
             force_cool = row[4]
             
             upper_buffer_mins = row[5]
-            upper_last_on = row[6]
+            upper_last_off = row[6]
             lower_buffer_mins = row[7]
-            lower_last_on = row[8]
+            lower_last_off = row[8]
+        
+            f = '%Y-%m-%d %H:%M:%S'
             
-            
-            
-           ### 5 fs.upper_buffer, 6 fs.upper_last_on, 7 fs.lower_buffer, 8 fs.lower_last_on 
+            can_turnon_heater = 0
+            if(upper_last_off is None):
+                ## update last on with current time
+                can_turnon_heater = 1
+                sql = ("""UPDATE fermentation_step SET upper_last_off = CURRENT_TIMESTAMP WHERE fermentation_step.id=%s""",(id, ))
+                cur.execute(*sql)
+            elif ( datetime.datetime.strptime(upper_last_off, f)+datetime.timedelta(minutes=int(upper_buffer_mins)) <= datetime.datetime.now()):
+                can_turnon_heater = 1
+            else:
+                can_turnon_heater = 0
+           
             
             # Checking current temperature (single step)
-            if ( (temp<temp_min and force_heat!=0 ) or force_heat==1 ):
+            if ( (temp<temp_min and force_heat!=0 and can_turnon_heater) or force_heat==1 ):                   
                 heat = 1
                 GPIO.output(pinHeat, GPIO.LOW)
             else:
                 heat = 0
                 GPIO.output(pinHeat, GPIO.HIGH)
+                
                 
             if ( (temp>temp_max and force_cool!=0 ) or force_cool==1 ):
                 cool = 1
@@ -119,6 +133,9 @@ while(mashing):
             print cool
             
             sql = ("""INSERT INTO fermentation_temp (timestamp, id, temperature, heated, cooled) VALUES (CURRENT_TIMESTAMP,%s,%s,%s,%s)""",(id, temp, heat, cool))
+            
+            # Se heat è passato a zero (ma valore precedente era 1), aggiornare last_off
+            
             
             try:
                 # Execute the SQL command
