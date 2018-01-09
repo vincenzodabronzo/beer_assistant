@@ -61,7 +61,7 @@ button#stop {
       cursor: pointer;
     }
     
-    button#update_temp:disabled, button#update_boundaries:enabled {
+    button#update_temp:disabled, button#update_boundaries:disabled {
       margin: 30px 5px 0 2px;
       padding: 16px 40px;
       border-radius: 5px;
