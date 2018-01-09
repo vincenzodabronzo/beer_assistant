@@ -23,6 +23,7 @@ else:
         
 
 now_plus_buffer_more = datetime.datetime.strptime(ts, f) + datetime.timedelta(minutes = 10)
+print now_plus_buffer_more
 
 if ( now_plus_buffer_more < now_plus_buffer ):
         print "current time minore"
