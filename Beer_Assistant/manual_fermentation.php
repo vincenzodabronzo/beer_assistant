@@ -187,7 +187,7 @@
 
 						var batch_name = $('#batch_name').val().replace(/\s/g, "%20");
 
-    					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+batch_name+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val() );
+    					$('#batch_title').load( 'lib/start_fermentation.php?'+"receipe_name="+batch_name+"&upper_limit="+$('#max_select_group').val()+"&lower_limit="+$('#min_select_group').val()+"&upper_buffer="+$('#upperb_select_group').val()+"&lower_buffer="+$('#lowerb_select_group').val() );
     					location.reload();
     					
 					} else {
