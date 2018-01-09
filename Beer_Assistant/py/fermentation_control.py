@@ -134,7 +134,7 @@ while(mashing):
             
             sql = ("""INSERT INTO fermentation_temp (timestamp, id, temperature, heated, cooled) VALUES (CURRENT_TIMESTAMP,%s,%s,%s,%s)""",(id, temp, heat, cool))
             
-            # Se heat è passato a zero (ma valore precedente era 1), aggiornare last_off
+            # Se heat e' passato a zero (ma valore precedente era 1), aggiornare last_off
             
             
             try:
