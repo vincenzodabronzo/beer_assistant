@@ -5,6 +5,6 @@ f = '%Y-%m-%d %H:%M:%S'
 
 print datetime.datetime.strptime(mysql, f)
 
-now = datetime.datetime.now()
+now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 print now
