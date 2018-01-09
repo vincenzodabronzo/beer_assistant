@@ -11,6 +11,6 @@ buffer = '8'
 
 print now
 
-now_plus_buffer = now + datetime.timedelta(minutes = buffer)
+now_plus_buffer = now + datetime.timedelta(minutes = int(buffer))
 
 print now
